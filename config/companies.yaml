@@ -817,15 +817,6 @@ companies:
   active: false
   verified: false
   notes: Workday tenant not found.
-- id: roche
-  name: Roche
-  hq_country: CH
-  region: europe
-  industry: pharma_medtech
-  ats: unknown
-  active: false
-  verified: false
-  notes: Not resolved.
 - id: loreal
   name: L'Oréal
   hq_country: FR
@@ -889,3 +880,69 @@ companies:
   active: false
   verified: false
   notes: SuccessFactors portal; not resolved.
+- id: carrier
+  name: Carrier
+  hq_country: US
+  region: americas
+  industry: industrial_automation
+  ats: workday
+  workday:
+    tenant: carrier
+    wd: wd5
+    site: jobs
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 7
+- id: air_liquide
+  name: Air Liquide
+  hq_country: FR
+  region: europe
+  industry: materials_chemicals
+  ats: workday
+  workday:
+    tenant: airliquidehr
+    wd: wd3
+    site: AirLiquideExternalCareer
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 4
+- id: roche
+  name: Roche
+  hq_country: CH
+  region: europe
+  industry: pharma_medtech
+  ats: workday
+  workday:
+    tenant: roche
+    wd: wd3
+    site: roche-ext
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 3
+- id: grab
+  name: Grab
+  hq_country: SG
+  region: asia
+  industry: technology
+  ats: smartrecruiters
+  ats_id: Grab
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 51
+  notes: Singapore HQ (criteria extended to Singapore on 2026-11-18 at owner's request).
+- id: ninja_van
+  name: Ninja Van
+  hq_country: SG
+  region: asia
+  industry: logistics
+  ats: lever
+  ats_id: ninjavan
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 2
+  notes: Singapore HQ.

@@ -1,7 +1,7 @@
 {
- "run_at": "2026-11-18T11:33:52Z",
- "total_open": 984,
- "new": 0,
+ "run_at": "2026-11-18T11:52:23Z",
+ "total_open": 1055,
+ "new": 71,
  "closed": 0,
  "pending_missing": 0,
  "merged_duplicates": 0,
@@ -14,808 +14,95 @@
   "mode": "rules"
  },
  "sources": {
+  "workday": {
+   "ok": true,
+   "jobs_found": 18,
+   "jobs_kept": 18,
+   "http_errors": 0,
+   "duration_s": 31.3,
+   "companies": 3
+  },
   "smartrecruiters": {
    "ok": true,
-   "jobs_found": 428,
-   "jobs_kept": 428,
+   "jobs_found": 51,
+   "jobs_kept": 51,
    "http_errors": 0,
-   "duration_s": 9.3,
-   "companies": 5
+   "duration_s": 52.0,
+   "companies": 1
   },
-  "custom": {
+  "lever": {
    "ok": true,
-   "jobs_found": 28,
-   "jobs_kept": 28,
+   "jobs_found": 2,
+   "jobs_kept": 2,
    "http_errors": 0,
-   "duration_s": 21.0,
-   "companies": 2
-  },
-  "workday": {
-   "ok": false,
-   "jobs_found": 63,
-   "jobs_kept": 63,
-   "http_errors": 0,
-   "duration_s": 1083.5,
-   "companies": 38
-  },
-  "greenhouse": {
-   "ok": true,
-   "jobs_found": 24,
-   "jobs_kept": 24,
-   "http_errors": 0,
-   "duration_s": 2.4,
-   "companies": 2
-  },
-  "ybox": {
-   "ok": true,
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "http_errors": 0,
-   "duration_s": 1.6,
+   "duration_s": 4.3,
    "companies": 1
   }
  },
  "companies": {
-  "bosch": {
+  "carrier": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 7,
+   "jobs_kept": 7,
+   "duration_s": 12.3,
+   "error": null
+  },
+  "air_liquide": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 4,
+   "jobs_kept": 4,
+   "duration_s": 8.1,
+   "error": null
+  },
+  "roche": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 7,
+   "jobs_kept": 7,
+   "duration_s": 10.9,
+   "error": null
+  },
+  "grab": {
    "ok": true,
    "adapter": "smartrecruiters",
-   "jobs_found": 219,
-   "jobs_kept": 219,
-   "duration_s": 2.4,
+   "jobs_found": 51,
+   "jobs_kept": 51,
+   "duration_s": 52.0,
    "error": null
   },
-  "schneider_electric": {
+  "ninja_van": {
    "ok": true,
-   "adapter": "jibe",
-   "jobs_found": 16,
-   "jobs_kept": 16,
-   "duration_s": 5.3,
-   "error": null
-  },
-  "siemens": {
-   "ok": true,
-   "adapter": "avature",
-   "jobs_found": 12,
-   "jobs_kept": 12,
-   "duration_s": 15.7,
-   "error": null
-  },
-  "nike": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 31.3,
-   "error": "HTTPError: 429 for https://nike.wd1.myworkdayjobs.com/wday/cxs/nike/nke/jobs"
-  },
-  "intel": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 31.3,
-   "error": "HTTPError: 429 for https://intel.wd1.myworkdayjobs.com/wday/cxs/intel/External/jobs"
-  },
-  "cisco": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 31.3,
-   "error": "HTTPError: 429 for https://cisco.wd5.myworkdayjobs.com/wday/cxs/cisco/Cisco_Careers/jobs"
-  },
-  "ge_vernova": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 31.3,
-   "error": "HTTPError: 429 for https://gevernova.wd5.myworkdayjobs.com/wday/cxs/gevernova/Vernova_ExternalSite/jobs"
-  },
-  "baker_hughes": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 31.2,
-   "error": "HTTPError: 429 for https://bakerhughes.wd5.myworkdayjobs.com/wday/cxs/bakerhughes/BakerHughes/jobs"
-  },
-  "kimberly_clark": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 3,
-   "jobs_kept": 3,
-   "duration_s": 8.9,
-   "error": null
-  },
-  "three_m": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 9,
-   "jobs_kept": 9,
-   "duration_s": 9.2,
-   "error": null
-  },
-  "dow": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 32.6,
-   "error": "HTTPError: 429 for https://dow.wd1.myworkdayjobs.com/wday/cxs/dow/ExternalCareers/jobs"
-  },
-  "sanofi": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 32.9,
-   "error": "HTTPError: 429 for https://sanofi.wd3.myworkdayjobs.com/wday/cxs/sanofi/SanofiCareers/jobs"
-  },
-  "novartis": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 32.8,
-   "error": "HTTPError: 429 for https://novartis.wd3.myworkdayjobs.com/wday/cxs/novartis/Novartis_Careers/jobs"
-  },
-  "gsk": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 31.2,
-   "error": "HTTPError: 429 for https://gsk.wd5.myworkdayjobs.com/wday/cxs/gsk/GSKCareers/jobs"
-  },
-  "astrazeneca": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 32.8,
-   "error": "HTTPError: 429 for https://astrazeneca.wd3.myworkdayjobs.com/wday/cxs/astrazeneca/Careers/jobs"
-  },
-  "philips": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 32.9,
-   "error": "HTTPError: 429 for https://philips.wd3.myworkdayjobs.com/wday/cxs/philips/jobs-and-careers/jobs"
-  },
-  "maersk": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 32.9,
-   "error": "HTTPError: 429 for https://maersk.wd3.myworkdayjobs.com/wday/cxs/maersk/Maersk_Careers/jobs"
-  },
-  "mastercard": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 31.3,
-   "error": "HTTPError: 429 for https://mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs"
-  },
-  "medtronic": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 31.4,
-   "error": "HTTPError: 429 for https://medtronic.wd1.myworkdayjobs.com/wday/cxs/medtronic/MedtronicCareers/jobs"
-  },
-  "pfizer": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 31.3,
-   "error": "HTTPError: 429 for https://pfizer.wd1.myworkdayjobs.com/wday/cxs/pfizer/PfizerCareers/jobs"
-  },
-  "abbott": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 31.2,
-   "error": "HTTPError: 429 for https://abbott.wd5.myworkdayjobs.com/wday/cxs/abbott/abbottcareers/jobs"
-  },
-  "hp": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 31.3,
-   "error": "HTTPError: 429 for https://hp.wd5.myworkdayjobs.com/wday/cxs/hp/ExternalCareerSite/jobs"
-  },
-  "marvell": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 3,
-   "jobs_kept": 3,
-   "duration_s": 2.4,
-   "error": null
-  },
-  "nvidia": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 32.5,
-   "error": "HTTPError: 429 for https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs"
-  },
-  "jabil": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 32.2,
-   "error": "HTTPError: 429 for https://jabil.wd5.myworkdayjobs.com/wday/cxs/jabil/Jabil_Careers/jobs"
-  },
-  "lego": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 32.9,
-   "error": "HTTPError: 429 for https://lego.wd103.myworkdayjobs.com/wday/cxs/lego/LEGO_External/jobs"
-  },
-  "pwc": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 32.9,
-   "error": "HTTPError: 429 for https://pwc.wd3.myworkdayjobs.com/wday/cxs/pwc/Global_Experienced_Careers/jobs"
-  },
-  "pg": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 31.3,
-   "error": "HTTPError: 429 for https://pg.wd5.myworkdayjobs.com/wday/cxs/pg/1000/jobs"
-  },
-  "jnj": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 31.3,
-   "error": "HTTPError: 429 for https://jj.wd5.myworkdayjobs.com/wday/cxs/jj/JJ/jobs"
-  },
-  "abb": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 32.9,
-   "error": "HTTPError: 429 for https://abb.wd3.myworkdayjobs.com/wday/cxs/abb/external_career_page/jobs"
-  },
-  "accenture": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 32.9,
-   "error": "HTTPError: 429 for https://accenture.wd103.myworkdayjobs.com/wday/cxs/accenture/AccentureCareers/jobs"
-  },
-  "manulife": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 32.8,
-   "error": "HTTPError: 429 for https://manulife.wd3.myworkdayjobs.com/wday/cxs/manulife/MFCJH_Jobs/jobs"
-  },
-  "citi": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 31.2,
-   "error": "HTTPError: 429 for https://citi.wd5.myworkdayjobs.com/wday/cxs/citi/2/jobs"
-  },
-  "msd": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 31.2,
-   "error": "HTTPError: 429 for https://msd.wd5.myworkdayjobs.com/wday/cxs/msd/SearchJobs/jobs"
-  },
-  "baxter": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 31.2,
-   "error": "HTTPError: 429 for https://baxter.wd1.myworkdayjobs.com/wday/cxs/baxter/baxter/jobs"
-  },
-  "thermo_fisher": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 31.3,
-   "error": "HTTPError: 429 for https://thermofisher.wd5.myworkdayjobs.com/wday/cxs/thermofisher/ThermoFisherCareers/jobs"
-  },
-  "vf": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 46,
-   "jobs_kept": 46,
-   "duration_s": 6.6,
-   "error": null
-  },
-  "pvh": {
-   "ok": true,
-   "adapter": "workday",
+   "adapter": "lever",
    "jobs_found": 2,
    "jobs_kept": 2,
-   "duration_s": 5.1,
-   "error": null
-  },
-  "ecolab": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 31.2,
-   "error": "HTTPError: 429 for https://ecolab.wd1.myworkdayjobs.com/wday/cxs/ecolab/Ecolab_External/jobs"
-  },
-  "visa": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 31.2,
-   "error": "HTTPError: 429 for https://visa.wd5.myworkdayjobs.com/wday/cxs/visa/Visa/jobs"
-  },
-  "workday": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 31.3,
-   "error": "HTTPError: 429 for https://workday.wd5.myworkdayjobs.com/wday/cxs/workday/Workday/jobs"
-  },
-  "sgs": {
-   "ok": true,
-   "adapter": "smartrecruiters",
-   "jobs_found": 153,
-   "jobs_kept": 153,
-   "duration_s": 1.5,
-   "error": null
-  },
-  "avery_dennison": {
-   "ok": true,
-   "adapter": "smartrecruiters",
-   "jobs_found": 41,
-   "jobs_kept": 41,
-   "duration_s": 1.4,
-   "error": null
-  },
-  "expeditors": {
-   "ok": true,
-   "adapter": "smartrecruiters",
-   "jobs_found": 9,
-   "jobs_kept": 9,
-   "duration_s": 2.0,
-   "error": null
-  },
-  "endava": {
-   "ok": true,
-   "adapter": "smartrecruiters",
-   "jobs_found": 6,
-   "jobs_kept": 6,
-   "duration_s": 2.0,
-   "error": null
-  },
-  "axon": {
-   "ok": true,
-   "adapter": "greenhouse",
-   "jobs_found": 16,
-   "jobs_kept": 16,
-   "duration_s": 1.3,
-   "error": null
-  },
-  "flexport": {
-   "ok": true,
-   "adapter": "greenhouse",
-   "jobs_found": 8,
-   "jobs_kept": 8,
-   "duration_s": 1.1,
-   "error": null
-  },
-  "ybox": {
-   "ok": true,
-   "adapter": "ybox",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 1.6,
+   "duration_s": 4.3,
    "error": null
   }
  },
  "hosts": {
   "api.smartrecruiters.com": {
-   "requests": 8,
+   "requests": 52,
    "errors": 0
   },
-  "nike.wd1.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "intel.wd1.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "cisco.wd5.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "careers.se.com": {
-   "requests": 2,
-   "errors": 0
-  },
-  "jobs.siemens.com": {
+  "carrier.wd5.myworkdayjobs.com": {
    "requests": 10,
    "errors": 0
   },
-  "gevernova.wd5.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "bakerhughes.wd5.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "kimberlyclark.wd1.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 2
-  },
-  "3m.wd1.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 2
-  },
-  "dow.wd1.myworkdayjobs.com": {
-   "requests": 6,
-   "errors": 4
-  },
-  "sanofi.wd3.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "novartis.wd3.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "gsk.wd5.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "astrazeneca.wd3.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "philips.wd3.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "medtronic.wd1.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "mastercard.wd1.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "maersk.wd3.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "pfizer.wd1.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "abbott.wd5.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "hp.wd5.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "marvell.wd1.myworkdayjobs.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "nvidia.wd5.myworkdayjobs.com": {
-   "requests": 6,
-   "errors": 4
-  },
-  "jabil.wd5.myworkdayjobs.com": {
-   "requests": 6,
-   "errors": 4
-  },
-  "lego.wd103.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "pg.wd5.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "pwc.wd3.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "jj.wd5.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "abb.wd3.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "accenture.wd103.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "manulife.wd3.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "citi.wd5.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "msd.wd5.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "baxter.wd1.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "thermofisher.wd5.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "vfc.wd5.myworkdayjobs.com": {
-   "requests": 6,
-   "errors": 1
-  },
-  "pvh.wd1.myworkdayjobs.com": {
-   "requests": 4,
-   "errors": 1
-  },
-  "visa.wd5.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "ecolab.wd1.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "workday.wd5.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 4
-  },
-  "boards-api.greenhouse.io": {
-   "requests": 3,
-   "errors": 0
-  },
-  "ybox.vn": {
+  "api.lever.co": {
    "requests": 2,
+   "errors": 0
+  },
+  "airliquidehr.wd3.myworkdayjobs.com": {
+   "requests": 7,
+   "errors": 0
+  },
+  "roche.wd3.myworkdayjobs.com": {
+   "requests": 10,
    "errors": 0
   }
  },
- "ybox_rejected": [
-  {
-   "title": "[HCM] Thương Hiệu Quà Tặng HAVIGIFT Tuyển Dụng Thực Tập Sinh Chăm Sóc Khách Hàng/Thủ Kho - Sản Xuất/Thiết Kế Ảnh/Chỉnh Sửa Video/Kinh Doanh B2B/Kế Toán/Nhân Sự,",
-   "reason": "not_whitelisted"
-  },
-  {
-   "title": "[HCM] Công Ty Citi Complex Hospitality Tuyển Dụng Thực Tập Sinh Thu Mua Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HN] Công Ty Truyền Thông & Quảng Cáo MCBIZ Tuyển Dụng Thực Tập Sinh Content Media Part-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Công Ty Tài Chính Công Nghệ Thanh Toán Quốc Tế Ezyremit Worldwide Tuyển Dụng Trợ Lý Pháp Lý Và Tuân Thủ Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Thương Hiệu Thời Trang CARINAMY Tuyển Dụng Thực Tập Sinh Chăm Sóc Khách Hàng/Kinh Doanh B2B/Thủ Kho - Sản Xuất/Photo Design/Video Editor/Kế Toán/Nhân Sự, ",
-   "reason": "not_whitelisted"
-  },
-  {
-   "title": "[Online-HCM] Công Ty MQ House Tuyển Dụng Nhân Viên Kinh Doanh Căn Hộ Cho Thuê Part-time/Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HN] Trường Quốc Tế True North School Tuyển Dụng Chuyên Viên Sản Xuất Hình Ảnh Và Video Full-time 2026",
-   "reason": "not_whitelisted"
-  },
-  {
-   "title": "[HCM] Công Ty Classic Fine Foods Tuyển Dụng Thực Tập Sinh Chăm Sóc Khách Hàng Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Công Ty RECHIC Tuyển Dụng Thực Tập Sinh Marketing Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HN] Công Ty Intech Group Tuyển Dụng Thực Tập Sinh Kế Toán, Nhân Viên Kế Toán/Kế Toán Tổng Hợp Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Công Ty AZTAX Tuyển Dụng Thực Tập Sinh Social Media Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Công Ty Thương Mại Thực Phẩm Khôi An Nguyên Tuyển Dụng Thực Tập Sinh Marketing/Quay Dựng Video, Nhân Viên Sản Xuất Hình Ảnh Và Video Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Công Ty Tư Vấn Asahi Life Việt Nam Tuyển Dụng Chuyên Viên Tư Vấn Bảo Hiểm Nhân Thọ Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Công Ty Tư Vấn Dịch Vụ Thuận Phát Tuyển Dụng Thực Tập Sinh Biên Phiên Dịch Tiếng Trung Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HN] Công Ty CTM Hub Tuyển Dụng Thực Tập Sinh Content Marketing Part-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM, HN] Thương Hiệu Phụ Kiện Anh Phi Bán Táo Tuyển Dụng Nhân Viên Part-time/Full-time: Bán Hàng Và Chăm Sóc Khách Hàng, Vận Hành Sàn TMĐT, Kho Kiêm Kỹ Thuật C",
-   "reason": "not_whitelisted"
-  },
-  {
-   "title": "[HCM] Nhà Hàng Tre Tuyển Dụng Nhân Viên Phục Vụ Full-time 2026",
-   "reason": "not_whitelisted"
-  },
-  {
-   "title": "[HN] Thương Hiệu Thời Trang DEME Tuyển Dụng Thực Tập Sinh Vận Hành Hệ Thống/Logistics Full-time 2026.",
-   "reason": "not_whitelisted"
-  },
-  {
-   "title": "[HN/HCM/Bình Dương/Đồng Nai/Bà Rịa - Vũng Tàu/Hải Phòng] Công Ty Xây Lắp Và Vật Tư Xây Dựng Tuyển Dụng Kỹ Sư Hiện Trường Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[Online-HN] Hệ Thống Gia Sư Edlixir Education Tuyển Dụng Cộng Tác Viên Sales - Chăm Sóc Khách Hàng, Gia Sư Tiếng Anh Đa Cấp Độ 1-1 Part-time/Full-time 2026",
-   "reason": "keyword:cộng tác viên"
-  },
-  {
-   "title": "[HCM] Hệ Thống Chuỗi Siêu Thị Bán Lẻ Con Cưng Tuyển Dụng Online Content Executive (SEO/Web Content) Full-time 2026",
-   "reason": "not_whitelisted"
-  },
-  {
-   "title": "[HN/HCM] Cửa Hàng Kính Mắt LILY Tuyển Dụng Nhân Viên Tư Vấn Bán Hàng Full-time 2026",
-   "reason": "not_whitelisted"
-  },
-  {
-   "title": "[HCM] Công Ty Mô Hình Quảng Cáo Hưng Phát Tuyển Dụng Nhân Viên Thi Công Mô Hình Trưng Bày Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Công Ty Tư Vấn Đầu Tư Phát Triển Và Xây Dựng VINCONS Tuyển Dụng Nhân Viên Hành Chính Nhân Sự Thời Vụ Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HN] Công Ty Hasu Stay Tuyển Dụng Nhân Viên Kinh Doanh/Sáng Tạo Nội Dung Part-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[Startup-HCM] Nền Tảng Ứng Dụng BTASKEE Tuyển Dụng Thực Tập Sinh Tuyển Dụng Full-time 2026",
-   "reason": "not_whitelisted"
-  },
-  {
-   "title": "[HCM] Công Ty Dịch Vụ Chuỗi Nhà Hàng QSR Việt Nam Tuyển Dụng Thực Tập Sinh Kế Toán Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HN] Công Ty Công Nghệ SAPO Tuyển Dụng Cộng Tác Viên Truyền Thông Thương Hiệu, Nhân Viên Business Analyst (AI Applications), Trợ Lý Tổng Giám Đốc (Chiến Lược Và",
-   "reason": "keyword:cộng tác viên"
-  },
-  {
-   "title": "[HCM] Công Ty Sản Xuất Hàng Tiêu Dùng Bình Tiên Biti's Tuyển Dụng Nhân Viên Kế Toán Hàng Hóa Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Hệ Thống Hỗ Trợ Thanh Toán Hóa Đơn PAYOO Tuyển Dụng Nhân Viên Kế Toán – Ngân Quỹ Full-time 2026",
-   "reason": "not_whitelisted"
-  },
-  {
-   "title": "[HN] Công Ty Hoei VN Tuyển Dụng Thực Tập Sinh Nhân Sự/Kế Toán Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HN] Tổ Chức Phi Lợi Nhuận Keep Vietnam Clean Tuyển Dụng Thực Tập Sinh Truyền Thông Part-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HN] Công Ty Công Nghệ APPOTA Tuyển Dụng Cộng Tác Viên Tuyển Dụng Full-time 2026",
-   "reason": "keyword:cộng tác viên"
-  },
-  {
-   "title": "[HCM] Thương Hiệu Chăm Sóc Sức Khỏe Healthy Care Tuyển Dụng Nhân Viên Host Livestream Part-time/Full-time 2026",
-   "reason": "not_whitelisted"
-  },
-  {
-   "title": "[HN] Ngân Hàng Việt Á Bank Tuyển Dụng Cộng Tác Viên Quản Lý Kinh Doanh Khách Hàng Cá Nhân/Marketing Và Truyền Thông Full-time 2026",
-   "reason": "keyword:cộng tác viên"
-  },
-  {
-   "title": "[Online-Toàn Quốc] Công Ty Orange Tree VA Tuyển Dụng Thực Tập Sinh Trợ Lý Ảo Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Hệ Thống Hỗ Trợ Thanh Toán Hóa Đơn PAYOO Tuyển Dụng Thực Tập Sinh Thiết Kế Đồ Họa Full-time 2026",
-   "reason": "not_whitelisted"
-  },
-  {
-   "title": "[HN] Chuỗi Nhà Hàng Đồ Ăn Nhanh KFC (Chi Nhánh: KFC Trương Định Plaza) Tuyển Dụng Nhân Viên Nhà Hàng Part-time 2026",
-   "reason": "not_whitelisted"
-  },
-  {
-   "title": "[HN] Trung Tâm Tham Vấn Phát Triển Bền Vững CSDC Việt Nam Tuyển Dụng Thực Tập Sinh Trợ Lý/Quản Lý Dự Án/Truyền Thông Part-time/Full-time 2026",
-   "reason": "keyword:dự án"
-  },
-  {
-   "title": "[HN] Công Ty Công Nghệ Giáo Dục MANABIE Tuyển Dụng Nhân Viên Marketing Associate Part-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Tập Đoàn Ô Tô Mercedes-Benz Việt Nam Tuyển Dụng Thực Tập Sinh Recruitment & Compliance Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HN] Công Ty AEON Việt Nam Tuyển Dụng Thực Tập Sinh HRBP Part-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Công Ty AEON Việt Nam Chi Nhánh Tân Phú Tuyển Dụng Thực Tập Sinh Admin Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Công Ty TMA Tech Group Tuyển Dụng Thực Tập Sinh Marketing/Fintech Part-time/Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HN] Tập Đoàn Kinh Doanh Đa Ngành Sun Group Tuyển Dụng Thực Tập Sinh Đào Tạo Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Tập Đoàn Kiểm Nghiệm, Giám Định Và Phân Tích Eurofins Scientific Tuyển Dụng Thực Tập Sinh Kế Toán Công Nợ Phải Thu Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Chuỗi Cửa Hàng Tiện Lợi 7-Eleven Tuyển Dụng Thực Tập Sinh Marketing (Social Media) Full-time 2026 (Thu Nhập: 3 - 4.000.000 VNĐ/ Tháng)",
-   "reason": "not_whitelisted"
-  },
-  {
-   "title": "[HCM] Bảo Tàng Thành Phố Hồ Chí Minh Tuyển Dụng Viên Chức Full-time 2026",
-   "reason": "not_whitelisted"
-  },
-  {
-   "title": "[HCM] Tập Đoàn Nông nghiệp TTC Agris Tuyển Dụng Thực Tập Sinh Chính Sách Và Quan Hệ Đối Ngoại Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HN] Công Ty Kiểm Toán Đa Quốc Gia PwC Tuyển Dụng Thực Tập Salesforce Consulting Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  }
- ],
+ "ybox_rejected": [],
  "alerts": []
 }

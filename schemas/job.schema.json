@@ -57,7 +57,8 @@
     "region": {
       "enum": [
         "europe",
-        "americas"
+        "americas",
+        "asia"
       ]
     },
     "industry": {

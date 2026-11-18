@@ -21,14 +21,12 @@
   }
  },
  {
-  "run_at": "2026-11-18T11:33:52Z",
-  "total_open": 984,
+  "run_at": "2026-11-18T11:52:23Z",
+  "total_open": 1055,
   "sources": {
-   "smartrecruiters": 428,
-   "custom": 28,
-   "workday": 63,
-   "greenhouse": 24,
-   "ybox": 0
+   "workday": 18,
+   "smartrecruiters": 51,
+   "lever": 2
   }
  }
 ]

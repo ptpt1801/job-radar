@@ -2,7 +2,7 @@
 
 **Live site:** https://ptpt1801.github.io/job-radar/
 
-Job Radar is a daily-updated board of **open roles in Vietnam at European and American corporations**. It covers supply chain, industrial, tech, pharma, consulting and non-food consumer companies, and leaves out food and beverage FMCG. Each role gets a **match score** against a private skill profile. The site is static, free to run, and refreshed by GitHub Actions every night.
+Job Radar is a daily-updated board of **open roles in Vietnam at European, American and Singaporean corporations**. It covers supply chain, industrial, tech, pharma, consulting and non-food consumer companies, and leaves out food and beverage FMCG. Each role gets a **match score** against a private skill profile. The site is static, free to run, and refreshed by GitHub Actions every night.
 
 ### The problem
 
@@ -10,7 +10,7 @@ Multinationals post Vietnam openings on their own career sites, not on one board
 
 - located in Vietnam,
 - still open (a deadline in the past or a role gone from the source means it is removed),
-- at a company headquartered in Europe or the Americas,
+- at a company headquartered in Europe, the Americas or Singapore,
 - outside food and beverage FMCG.
 
 | Open roles | Market overview |

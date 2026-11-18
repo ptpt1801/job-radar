@@ -147,6 +147,10 @@
   "americas": {
    "vi": "Châu Mỹ",
    "en": "Americas"
+  },
+  "asia": {
+   "vi": "Châu Á (Singapore)",
+   "en": "Asia (Singapore)"
   }
  },
  "work_modes": {
@@ -453,6 +457,10 @@
   "LU": {
    "vi": "Luxembourg",
    "en": "Luxembourg"
+  },
+  "SG": {
+   "vi": "Singapore",
+   "en": "Singapore"
   }
  },
  "benefits_common": {
