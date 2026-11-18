@@ -1,0 +1,93 @@
+# Danh sách công ty khởi đầu cho Job Radar.
+# verified: true  = đã thấy tận mắt URL/ATS khi nghiên cứu (11/2026)
+# verified: false = PHỎNG ĐOÁN, Claude Code BẮT BUỘC kiểm tra lại (BUILD_PROMPT mục 5.2)
+# region: europe | americas ; hq_country: mã ISO-2
+# industry: industrial_automation | automotive | energy | logistics | technology |
+#           consulting_finance | pharma_medtech | nonfood_consumer | fashion_sports
+
+companies:
+  # ---------- đã xác minh một phần ----------
+  - id: bosch
+    name: Bosch
+    hq_country: DE
+    region: europe
+    industry: automotive
+    ats: smartrecruiters
+    ats_id: BoschGroup
+    verified: true
+    notes: "Tin Việt Nam có trên jobs.smartrecruiters.com/BoschGroup (Hà Nội, TP.HCM, Đồng Nai; cả BGSV)."
+  - id: schneider_electric
+    name: Schneider Electric
+    hq_country: FR
+    region: europe
+    industry: energy
+    ats: custom
+    career_url: https://careers.se.com/jobs
+    verified: true
+    notes: "Tin dạng careers.se.com/jobs/<id>?lang=en-us. Cần tìm endpoint JSON qua DevTools."
+  - id: siemens
+    name: Siemens
+    hq_country: DE
+    region: europe
+    industry: industrial_automation
+    ats: custom
+    career_url: https://jobs.siemens.com
+    verified: false
+    notes: "Có nguồn ghi là dùng Avature; trang cũ báo đã chuyển portal. Kiểm tra lại."
+  - id: nike
+    name: Nike
+    hq_country: US
+    region: americas
+    industry: fashion_sports
+    ats: workday
+    workday: { tenant: nike, wd: wd1, site: nke }
+    verified: false
+    notes: "Tenant nike/wd1 xuất hiện trong ví dụ công khai; tên site cần xác minh."
+
+  # ---------- cần xác định ATS ----------
+  - { id: siemens_healthineers, name: Siemens Healthineers, hq_country: DE, region: europe, industry: pharma_medtech, ats: unknown, verified: false }
+  - { id: abb, name: ABB, hq_country: CH, region: europe, industry: industrial_automation, ats: unknown, verified: false }
+  - { id: honeywell, name: Honeywell, hq_country: US, region: americas, industry: industrial_automation, ats: unknown, verified: false }
+  - { id: emerson, name: Emerson, hq_country: US, region: americas, industry: industrial_automation, ats: unknown, verified: false }
+  - { id: ge_vernova, name: GE Vernova, hq_country: US, region: americas, industry: energy, ats: unknown, verified: false }
+  - { id: totalenergies, name: TotalEnergies, hq_country: FR, region: europe, industry: energy, ats: unknown, verified: false }
+  - { id: baker_hughes, name: Baker Hughes, hq_country: US, region: americas, industry: energy, ats: unknown, verified: false }
+  - { id: dhl, name: DHL Group, hq_country: DE, region: europe, industry: logistics, ats: unknown, verified: false }
+  - { id: maersk, name: Maersk, hq_country: DK, region: europe, industry: logistics, ats: unknown, verified: false }
+  - { id: dsv, name: DSV (gồm DB Schenker), hq_country: DK, region: europe, industry: logistics, ats: unknown, verified: false }
+  - { id: kuehne_nagel, name: Kuehne+Nagel, hq_country: CH, region: europe, industry: logistics, ats: unknown, verified: false }
+  - { id: ceva, name: CEVA Logistics, hq_country: FR, region: europe, industry: logistics, ats: unknown, verified: false }
+  - { id: expeditors, name: Expeditors, hq_country: US, region: americas, industry: logistics, ats: unknown, verified: false }
+  - { id: intel, name: Intel, hq_country: US, region: americas, industry: technology, ats: unknown, verified: false, notes: "Thường là Workday; xác minh." }
+  - { id: microsoft, name: Microsoft, hq_country: US, region: americas, industry: technology, ats: unknown, verified: false }
+  - { id: cisco, name: Cisco, hq_country: US, region: americas, industry: technology, ats: unknown, verified: false }
+  - { id: ibm, name: IBM, hq_country: US, region: americas, industry: technology, ats: unknown, verified: false }
+  - { id: ericsson, name: Ericsson, hq_country: SE, region: europe, industry: technology, ats: unknown, verified: false }
+  - { id: nokia, name: Nokia, hq_country: FI, region: europe, industry: technology, ats: unknown, verified: false }
+  - { id: sap, name: SAP, hq_country: DE, region: europe, industry: technology, ats: unknown, verified: false }
+  - { id: deloitte, name: Deloitte Vietnam, hq_country: GB, region: europe, industry: consulting_finance, ats: unknown, verified: false }
+  - { id: pwc, name: PwC Vietnam, hq_country: GB, region: europe, industry: consulting_finance, ats: unknown, verified: false }
+  - { id: ey, name: EY Vietnam, hq_country: GB, region: europe, industry: consulting_finance, ats: unknown, verified: false }
+  - { id: kpmg, name: KPMG Vietnam, hq_country: NL, region: europe, industry: consulting_finance, ats: unknown, verified: false }
+  - { id: accenture, name: Accenture, hq_country: IE, region: europe, industry: consulting_finance, ats: unknown, verified: false }
+  - { id: hsbc, name: HSBC, hq_country: GB, region: europe, industry: consulting_finance, ats: unknown, verified: false }
+  - { id: standard_chartered, name: Standard Chartered, hq_country: GB, region: europe, industry: consulting_finance, ats: unknown, verified: false }
+  - { id: bayer, name: Bayer, hq_country: DE, region: europe, industry: pharma_medtech, ats: unknown, verified: false }
+  - { id: sanofi, name: Sanofi, hq_country: FR, region: europe, industry: pharma_medtech, ats: unknown, verified: false }
+  - { id: roche, name: Roche, hq_country: CH, region: europe, industry: pharma_medtech, ats: unknown, verified: false }
+  - { id: novartis, name: Novartis, hq_country: CH, region: europe, industry: pharma_medtech, ats: unknown, verified: false }
+  - { id: gsk, name: GSK, hq_country: GB, region: europe, industry: pharma_medtech, ats: unknown, verified: false }
+  - { id: astrazeneca, name: AstraZeneca, hq_country: GB, region: europe, industry: pharma_medtech, ats: unknown, verified: false }
+  - { id: philips, name: Philips, hq_country: NL, region: europe, industry: pharma_medtech, ats: unknown, verified: false }
+  - { id: loreal, name: "L'Oréal", hq_country: FR, region: europe, industry: nonfood_consumer, ats: unknown, verified: false }
+  - { id: pg, name: Procter & Gamble, hq_country: US, region: americas, industry: nonfood_consumer, ats: unknown, verified: false }
+  - { id: colgate, name: Colgate-Palmolive, hq_country: US, region: americas, industry: nonfood_consumer, ats: unknown, verified: false }
+  - { id: kimberly_clark, name: Kimberly-Clark, hq_country: US, region: americas, industry: nonfood_consumer, ats: unknown, verified: false }
+  - { id: adidas, name: adidas, hq_country: DE, region: europe, industry: fashion_sports, ats: unknown, verified: false }
+  - { id: puma, name: PUMA, hq_country: DE, region: europe, industry: fashion_sports, ats: unknown, verified: false }
+  - { id: decathlon, name: Decathlon, hq_country: FR, region: europe, industry: fashion_sports, ats: unknown, verified: false }
+  - { id: lego, name: LEGO Group, hq_country: DK, region: europe, industry: nonfood_consumer, ats: unknown, verified: false, notes: "Nhà máy ở Bình Dương." }
+  - { id: ikea, name: IKEA (Ingka/Inter IKEA sourcing), hq_country: SE, region: europe, industry: nonfood_consumer, ats: unknown, verified: false }
+  - { id: three_m, name: 3M, hq_country: US, region: americas, industry: industrial_automation, ats: unknown, verified: false }
+  - { id: dow, name: Dow, hq_country: US, region: americas, industry: industrial_automation, ats: unknown, verified: false }
+  - { id: basf, name: BASF, hq_country: DE, region: europe, industry: industrial_automation, ats: unknown, verified: false }

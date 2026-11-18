@@ -1,0 +1,891 @@
+# Job Radar whitelist. Built from config/companies.seed.yaml after verification on 2026-11-18.
+# active: false = no reliable public data source found yet (reason in notes).
+companies:
+- id: bosch
+  name: Bosch
+  hq_country: DE
+  region: europe
+  industry: automotive
+  ats: smartrecruiters
+  ats_id: BoschGroup
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 219
+  notes: SmartRecruiters official Posting API (robots exemption approved by owner).
+- id: schneider_electric
+  name: Schneider Electric
+  hq_country: FR
+  region: europe
+  industry: energy
+  ats: custom
+  adapter: jibe
+  career_url: https://careers.se.com
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 17
+  notes: Jibe/iCIMS public /api/jobs JSON; robots crawl-delay 5s honoured.
+- id: siemens
+  name: Siemens
+  hq_country: DE
+  region: europe
+  industry: industrial_automation
+  ats: custom
+  adapter: avature
+  career_url: https://jobs.siemens.com/en_US/externaljobs
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 10
+  notes: Avature portal, server-rendered HTML list + detail pages.
+- id: nike
+  name: Nike
+  hq_country: US
+  region: americas
+  industry: fashion_sports
+  ats: workday
+  workday:
+    tenant: nike
+    wd: wd1
+    site: nke
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 8
+- id: intel
+  name: Intel
+  hq_country: US
+  region: americas
+  industry: technology
+  ats: workday
+  workday:
+    tenant: intel
+    wd: wd1
+    site: External
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 6
+- id: cisco
+  name: Cisco
+  hq_country: US
+  region: americas
+  industry: technology
+  ats: workday
+  workday:
+    tenant: cisco
+    wd: wd5
+    site: Cisco_Careers
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 14
+- id: ge_vernova
+  name: GE Vernova
+  hq_country: US
+  region: americas
+  industry: energy
+  ats: workday
+  workday:
+    tenant: gevernova
+    wd: wd5
+    site: Vernova_ExternalSite
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 12
+- id: baker_hughes
+  name: Baker Hughes
+  hq_country: US
+  region: americas
+  industry: energy
+  ats: workday
+  workday:
+    tenant: bakerhughes
+    wd: wd5
+    site: BakerHughes
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 12
+- id: kimberly_clark
+  name: Kimberly-Clark
+  hq_country: US
+  region: americas
+  industry: nonfood_consumer
+  ats: workday
+  workday:
+    tenant: kimberlyclark
+    wd: wd1
+    site: GLOBAL
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 3
+- id: three_m
+  name: 3M
+  hq_country: US
+  region: americas
+  industry: industrial_automation
+  ats: workday
+  workday:
+    tenant: 3m
+    wd: wd1
+    site: Search
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 9
+- id: dow
+  name: Dow
+  hq_country: US
+  region: americas
+  industry: materials_chemicals
+  ats: workday
+  workday:
+    tenant: dow
+    wd: wd1
+    site: ExternalCareers
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 4
+- id: sanofi
+  name: Sanofi
+  hq_country: FR
+  region: europe
+  industry: pharma_medtech
+  ats: workday
+  workday:
+    tenant: sanofi
+    wd: wd3
+    site: SanofiCareers
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 1
+- id: novartis
+  name: Novartis
+  hq_country: CH
+  region: europe
+  industry: pharma_medtech
+  ats: workday
+  workday:
+    tenant: novartis
+    wd: wd3
+    site: Novartis_Careers
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 6
+- id: gsk
+  name: GSK
+  hq_country: GB
+  region: europe
+  industry: pharma_medtech
+  ats: workday
+  workday:
+    tenant: gsk
+    wd: wd5
+    site: GSKCareers
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 9
+- id: astrazeneca
+  name: AstraZeneca
+  hq_country: GB
+  region: europe
+  industry: pharma_medtech
+  ats: workday
+  workday:
+    tenant: astrazeneca
+    wd: wd3
+    site: Careers
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 17
+- id: philips
+  name: Philips
+  hq_country: NL
+  region: europe
+  industry: pharma_medtech
+  ats: workday
+  workday:
+    tenant: philips
+    wd: wd3
+    site: jobs-and-careers
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 1
+- id: maersk
+  name: Maersk
+  hq_country: DK
+  region: europe
+  industry: logistics
+  ats: workday
+  workday:
+    tenant: maersk
+    wd: wd3
+    site: Maersk_Careers
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 41
+- id: mastercard
+  name: Mastercard
+  hq_country: US
+  region: americas
+  industry: consulting_finance
+  ats: workday
+  workday:
+    tenant: mastercard
+    wd: wd1
+    site: CorporateCareers
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 5
+- id: medtronic
+  name: Medtronic
+  hq_country: IE
+  region: europe
+  industry: pharma_medtech
+  ats: workday
+  workday:
+    tenant: medtronic
+    wd: wd1
+    site: MedtronicCareers
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 17
+  notes: Legal HQ Dublin, Ireland.
+- id: pfizer
+  name: Pfizer
+  hq_country: US
+  region: americas
+  industry: pharma_medtech
+  ats: workday
+  workday:
+    tenant: pfizer
+    wd: wd1
+    site: PfizerCareers
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 8
+- id: abbott
+  name: Abbott
+  hq_country: US
+  region: americas
+  industry: pharma_medtech
+  ats: workday
+  workday:
+    tenant: abbott
+    wd: wd5
+    site: abbottcareers
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 98
+  notes: 'Nutrition division excluded via exclude_keywords (exclusions.yaml: Abbott Nutrition).'
+  exclude_keywords:
+  - nutrition
+  - dinh dưỡng
+- id: hp
+  name: HP Inc.
+  hq_country: US
+  region: americas
+  industry: technology
+  ats: workday
+  workday:
+    tenant: hp
+    wd: wd5
+    site: ExternalCareerSite
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 1
+- id: marvell
+  name: Marvell
+  hq_country: US
+  region: americas
+  industry: technology
+  ats: workday
+  workday:
+    tenant: marvell
+    wd: wd1
+    site: MarvellCareers
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 3
+- id: nvidia
+  name: NVIDIA
+  hq_country: US
+  region: americas
+  industry: technology
+  ats: workday
+  workday:
+    tenant: nvidia
+    wd: wd5
+    site: NVIDIAExternalCareerSite
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 27
+- id: jabil
+  name: Jabil
+  hq_country: US
+  region: americas
+  industry: technology
+  ats: workday
+  workday:
+    tenant: jabil
+    wd: wd5
+    site: Jabil_Careers
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 84
+  notes: Electronics manufacturing, plants in HCMC and Dong Nai.
+- id: lego
+  name: LEGO Group
+  hq_country: DK
+  region: europe
+  industry: nonfood_consumer
+  ats: workday
+  workday:
+    tenant: lego
+    wd: wd103
+    site: LEGO_External
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 9
+  notes: Factory in Binh Duong.
+- id: pwc
+  name: PwC Vietnam
+  hq_country: GB
+  region: europe
+  industry: consulting_finance
+  ats: workday
+  workday:
+    tenant: pwc
+    wd: wd3
+    site: Global_Experienced_Careers
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 23
+- id: pg
+  name: Procter & Gamble
+  hq_country: US
+  region: americas
+  industry: nonfood_consumer
+  ats: workday
+  workday:
+    tenant: pg
+    wd: wd5
+    site: '1000'
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 14
+- id: jnj
+  name: Johnson & Johnson
+  hq_country: US
+  region: americas
+  industry: pharma_medtech
+  ats: workday
+  workday:
+    tenant: jj
+    wd: wd5
+    site: JJ
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 5
+- id: abb
+  name: ABB
+  hq_country: CH
+  region: europe
+  industry: industrial_automation
+  ats: workday
+  workday:
+    tenant: abb
+    wd: wd3
+    site: external_career_page
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 17
+- id: accenture
+  name: Accenture
+  hq_country: IE
+  region: europe
+  industry: consulting_finance
+  ats: workday
+  workday:
+    tenant: accenture
+    wd: wd103
+    site: AccentureCareers
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 7
+- id: manulife
+  name: Manulife
+  hq_country: CA
+  region: americas
+  industry: consulting_finance
+  ats: workday
+  workday:
+    tenant: manulife
+    wd: wd3
+    site: MFCJH_Jobs
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 16
+- id: citi
+  name: Citi
+  hq_country: US
+  region: americas
+  industry: consulting_finance
+  ats: workday
+  workday:
+    tenant: citi
+    wd: wd5
+    site: '2'
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 1
+- id: msd
+  name: MSD
+  hq_country: US
+  region: americas
+  industry: pharma_medtech
+  ats: workday
+  workday:
+    tenant: msd
+    wd: wd5
+    site: SearchJobs
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 5
+- id: baxter
+  name: Baxter
+  hq_country: US
+  region: americas
+  industry: pharma_medtech
+  ats: workday
+  workday:
+    tenant: baxter
+    wd: wd1
+    site: baxter
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 1
+- id: thermo_fisher
+  name: Thermo Fisher Scientific
+  hq_country: US
+  region: americas
+  industry: pharma_medtech
+  ats: workday
+  workday:
+    tenant: thermofisher
+    wd: wd5
+    site: ThermoFisherCareers
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 5
+- id: vf
+  name: VF Corporation
+  hq_country: US
+  region: americas
+  industry: fashion_sports
+  ats: workday
+  workday:
+    tenant: vfc
+    wd: wd5
+    site: vfc_careers
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 46
+  notes: Sourcing office (The North Face, Vans, Timberland).
+- id: pvh
+  name: PVH
+  hq_country: US
+  region: americas
+  industry: fashion_sports
+  ats: workday
+  workday:
+    tenant: pvh
+    wd: wd1
+    site: PVH_Careers
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 2
+- id: ecolab
+  name: Ecolab
+  hq_country: US
+  region: americas
+  industry: materials_chemicals
+  ats: workday
+  workday:
+    tenant: ecolab
+    wd: wd1
+    site: Ecolab_External
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 1
+- id: visa
+  name: Visa
+  hq_country: US
+  region: americas
+  industry: consulting_finance
+  ats: workday
+  workday:
+    tenant: visa
+    wd: wd5
+    site: Visa
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 9
+- id: workday
+  name: Workday
+  hq_country: US
+  region: americas
+  industry: technology
+  ats: workday
+  workday:
+    tenant: workday
+    wd: wd5
+    site: Workday
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 4
+  notes: Da Nang office.
+- id: sgs
+  name: SGS
+  hq_country: CH
+  region: europe
+  industry: testing_inspection
+  ats: smartrecruiters
+  ats_id: SGS
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 153
+- id: avery_dennison
+  name: Avery Dennison
+  hq_country: US
+  region: americas
+  industry: materials_chemicals
+  ats: smartrecruiters
+  ats_id: AveryDennison
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 41
+- id: expeditors
+  name: Expeditors
+  hq_country: US
+  region: americas
+  industry: logistics
+  ats: smartrecruiters
+  ats_id: Expeditors
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 9
+- id: endava
+  name: Endava
+  hq_country: GB
+  region: europe
+  industry: technology
+  ats: smartrecruiters
+  ats_id: Endava
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 6
+- id: axon
+  name: Axon
+  hq_country: US
+  region: americas
+  industry: technology
+  ats: greenhouse
+  ats_id: axon
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 16
+- id: flexport
+  name: Flexport
+  hq_country: US
+  region: americas
+  industry: logistics
+  ats: greenhouse
+  ats_id: flexport
+  active: true
+  verified: true
+  verified_at: '2026-11-18'
+  vn_jobs_seen: 8
+- id: siemens_healthineers
+  name: Siemens Healthineers
+  hq_country: DE
+  region: europe
+  industry: pharma_medtech
+  ats: unknown
+  active: false
+  verified: false
+  notes: careers.siemens-healthineers.com redirects to a JS portal; no public JSON found yet.
+- id: honeywell
+  name: Honeywell
+  hq_country: US
+  region: americas
+  industry: industrial_automation
+  ats: unknown
+  active: false
+  verified: false
+  notes: Not on a guessable Workday tenant; custom portal not resolved.
+- id: emerson
+  name: Emerson
+  hq_country: US
+  region: americas
+  industry: industrial_automation
+  ats: unknown
+  active: false
+  verified: false
+  notes: Workday tenant/site not found by probing.
+- id: totalenergies
+  name: TotalEnergies
+  hq_country: FR
+  region: europe
+  industry: energy
+  ats: unknown
+  active: false
+  verified: false
+  notes: Custom portal not resolved.
+- id: dhl
+  name: DHL Group
+  hq_country: DE
+  region: europe
+  industry: logistics
+  ats: unknown
+  active: false
+  verified: false
+  notes: careers.dhl.com custom portal not resolved.
+- id: dsv
+  name: DSV (incl. DB Schenker)
+  hq_country: DK
+  region: europe
+  industry: logistics
+  ats: unknown
+  active: false
+  verified: false
+  notes: Custom portal not resolved.
+- id: kuehne_nagel
+  name: Kuehne+Nagel
+  hq_country: CH
+  region: europe
+  industry: logistics
+  ats: unknown
+  active: false
+  verified: false
+  notes: SuccessFactors-like portal; not resolved.
+- id: ceva
+  name: CEVA Logistics
+  hq_country: FR
+  region: europe
+  industry: logistics
+  ats: unknown
+  active: false
+  verified: false
+  notes: Workday tenant not found.
+- id: microsoft
+  name: Microsoft
+  hq_country: US
+  region: americas
+  industry: technology
+  ats: unknown
+  active: false
+  verified: false
+  notes: Custom portal; not resolved.
+- id: ibm
+  name: IBM
+  hq_country: US
+  region: americas
+  industry: technology
+  ats: unknown
+  active: false
+  verified: false
+  notes: Custom portal; not resolved.
+- id: ericsson
+  name: Ericsson
+  hq_country: SE
+  region: europe
+  industry: technology
+  ats: unknown
+  active: false
+  verified: false
+  notes: Not resolved.
+- id: nokia
+  name: Nokia
+  hq_country: FI
+  region: europe
+  industry: technology
+  ats: unknown
+  active: false
+  verified: false
+  notes: Not resolved.
+- id: sap
+  name: SAP
+  hq_country: DE
+  region: europe
+  industry: technology
+  ats: unknown
+  active: false
+  verified: false
+  notes: SuccessFactors portal; not resolved.
+- id: deloitte
+  name: Deloitte Vietnam
+  hq_country: GB
+  region: europe
+  industry: consulting_finance
+  ats: unknown
+  active: false
+  verified: false
+  notes: Not resolved.
+- id: ey
+  name: EY Vietnam
+  hq_country: GB
+  region: europe
+  industry: consulting_finance
+  ats: unknown
+  active: false
+  verified: false
+  notes: Not resolved.
+- id: kpmg
+  name: KPMG Vietnam
+  hq_country: NL
+  region: europe
+  industry: consulting_finance
+  ats: unknown
+  active: false
+  verified: false
+  notes: Not resolved.
+- id: hsbc
+  name: HSBC
+  hq_country: GB
+  region: europe
+  industry: consulting_finance
+  ats: unknown
+  active: false
+  verified: false
+  notes: Workday tenant not found.
+- id: standard_chartered
+  name: Standard Chartered
+  hq_country: GB
+  region: europe
+  industry: consulting_finance
+  ats: unknown
+  active: false
+  verified: false
+  notes: Not resolved.
+- id: bayer
+  name: Bayer
+  hq_country: DE
+  region: europe
+  industry: pharma_medtech
+  ats: unknown
+  active: false
+  verified: false
+  notes: Workday tenant not found.
+- id: roche
+  name: Roche
+  hq_country: CH
+  region: europe
+  industry: pharma_medtech
+  ats: unknown
+  active: false
+  verified: false
+  notes: Not resolved.
+- id: loreal
+  name: L'Oréal
+  hq_country: FR
+  region: europe
+  industry: nonfood_consumer
+  ats: unknown
+  active: false
+  verified: false
+  notes: Not resolved.
+- id: colgate
+  name: Colgate-Palmolive
+  hq_country: US
+  region: americas
+  industry: nonfood_consumer
+  ats: unknown
+  active: false
+  verified: false
+  notes: Not resolved.
+- id: adidas
+  name: adidas
+  hq_country: DE
+  region: europe
+  industry: fashion_sports
+  ats: unknown
+  active: false
+  verified: false
+  notes: Not resolved.
+- id: puma
+  name: PUMA
+  hq_country: DE
+  region: europe
+  industry: fashion_sports
+  ats: unknown
+  active: false
+  verified: false
+  notes: Workday tenant not found.
+- id: decathlon
+  name: Decathlon
+  hq_country: FR
+  region: europe
+  industry: fashion_sports
+  ats: unknown
+  active: false
+  verified: false
+  notes: SmartRecruiters id 'Decathlon' returns 0 VN postings; other portal not resolved.
+- id: ikea
+  name: IKEA (Ingka/Inter IKEA sourcing)
+  hq_country: SE
+  region: europe
+  industry: nonfood_consumer
+  ats: unknown
+  active: false
+  verified: false
+  notes: Not resolved.
+- id: basf
+  name: BASF
+  hq_country: DE
+  region: europe
+  industry: materials_chemicals
+  ats: unknown
+  active: false
+  verified: false
+  notes: SuccessFactors portal; not resolved.

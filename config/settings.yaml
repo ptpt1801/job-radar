@@ -1,0 +1,40 @@
+# Job Radar pipeline settings
+EXTRACTOR: rules            # rules | claude  (claude needs ANTHROPIC_API_KEY; ask the owner first)
+SHOW_SKILL_TAGS: true       # false = do not publish have[]/missing[] in jobs.json
+MAX_LLM_JOBS_PER_RUN: 150
+LLM_MODEL: claude-haiku-5-5
+
+http:
+  user_agent: "JobRadarBot/1.0 (+https://github.com/ptpt1801/job-radar)"
+  timeout_s: 20
+  min_interval_s: 1.0       # per host; robots.txt crawl-delay wins if larger
+  retries: 3
+  # Hosts whose robots.txt blocks generic bots but which expose an official,
+  # documented public API meant for career sites. Approved by the repo owner
+  # on 2026-11-18. Rate limit still applies.
+  robots_exempt_hosts:
+    - api.smartrecruiters.com
+
+limits:
+  max_jobs_per_company: 400
+  max_workers: 6
+
+closing:
+  missing_runs_to_close: 2  # disappears from source N runs in a row -> archive
+  archive_days: 180
+  weekly_url_check_weekday: 6   # 0=Mon ... 6=Sun (Vietnam time)
+
+health:
+  drop_pct_alert: 50
+  schema_errors_pct_alert: 5
+  stale_hours_alert: 30
+
+details_split_mb: 2
+timezone: Asia/Ho_Chi_Minh
+
+ybox:
+  enabled: true
+  pages: 1                  # Ybox serves only its ~50 newest posts (no server-side paging)
+
+vn_boards:
+  enabled: false            # VietnamWorks / TopCV: only after robots/ToS review + owner approval

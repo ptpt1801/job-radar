@@ -1,0 +1,823 @@
+{
+ "run_at": "2026-11-18T11:19:41Z",
+ "total_open": 984,
+ "new": 0,
+ "closed": 0,
+ "pending_missing": 0,
+ "merged_duplicates": 0,
+ "dropped": {
+  "excluded_keyword": 63
+ },
+ "schema_errors_pct": 0.0,
+ "llm_tokens": {
+  "input": 0,
+  "output": 0,
+  "est_cost_usd": 0,
+  "mode": "rules"
+ },
+ "sources": {
+  "smartrecruiters": {
+   "ok": true,
+   "jobs_found": 428,
+   "jobs_kept": 428,
+   "http_errors": 0,
+   "duration_s": 869.7,
+   "companies": 5
+  },
+  "custom": {
+   "ok": true,
+   "jobs_found": 28,
+   "jobs_kept": 28,
+   "http_errors": 0,
+   "duration_s": 57.1,
+   "companies": 2
+  },
+  "workday": {
+   "ok": true,
+   "jobs_found": 567,
+   "jobs_kept": 504,
+   "http_errors": 0,
+   "duration_s": 722.4,
+   "companies": 38
+  },
+  "greenhouse": {
+   "ok": true,
+   "jobs_found": 24,
+   "jobs_kept": 24,
+   "http_errors": 0,
+   "duration_s": 4.4,
+   "companies": 2
+  },
+  "ybox": {
+   "ok": true,
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "http_errors": 0,
+   "duration_s": 3.7,
+   "companies": 1
+  }
+ },
+ "companies": {
+  "bosch": {
+   "ok": true,
+   "adapter": "smartrecruiters",
+   "jobs_found": 219,
+   "jobs_kept": 219,
+   "duration_s": 356.1,
+   "error": null
+  },
+  "schneider_electric": {
+   "ok": true,
+   "adapter": "jibe",
+   "jobs_found": 16,
+   "jobs_kept": 16,
+   "duration_s": 5.5,
+   "error": null
+  },
+  "siemens": {
+   "ok": true,
+   "adapter": "avature",
+   "jobs_found": 12,
+   "jobs_kept": 12,
+   "duration_s": 51.6,
+   "error": null
+  },
+  "nike": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 8,
+   "jobs_kept": 8,
+   "duration_s": 11.3,
+   "error": null
+  },
+  "intel": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 6,
+   "jobs_kept": 6,
+   "duration_s": 9.5,
+   "error": null
+  },
+  "cisco": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 14,
+   "jobs_kept": 14,
+   "duration_s": 17.1,
+   "error": null
+  },
+  "ge_vernova": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 7,
+   "jobs_kept": 7,
+   "duration_s": 9.5,
+   "error": null
+  },
+  "baker_hughes": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 12,
+   "jobs_kept": 12,
+   "duration_s": 14.9,
+   "error": null
+  },
+  "kimberly_clark": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 3,
+   "jobs_kept": 3,
+   "duration_s": 6.4,
+   "error": null
+  },
+  "three_m": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 9,
+   "jobs_kept": 9,
+   "duration_s": 12.8,
+   "error": null
+  },
+  "dow": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 4,
+   "jobs_kept": 4,
+   "duration_s": 7.0,
+   "error": null
+  },
+  "sanofi": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 1,
+   "jobs_kept": 1,
+   "duration_s": 4.1,
+   "error": null
+  },
+  "novartis": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 6,
+   "jobs_kept": 6,
+   "duration_s": 9.3,
+   "error": null
+  },
+  "gsk": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 9,
+   "jobs_kept": 9,
+   "duration_s": 13.2,
+   "error": null
+  },
+  "astrazeneca": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 17,
+   "jobs_kept": 17,
+   "duration_s": 25.4,
+   "error": null
+  },
+  "philips": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 1,
+   "jobs_kept": 1,
+   "duration_s": 5.4,
+   "error": null
+  },
+  "maersk": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 59,
+   "jobs_kept": 59,
+   "duration_s": 64.2,
+   "error": null
+  },
+  "mastercard": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 5,
+   "jobs_kept": 5,
+   "duration_s": 8.4,
+   "error": null
+  },
+  "medtronic": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 17,
+   "jobs_kept": 17,
+   "duration_s": 21.6,
+   "error": null
+  },
+  "pfizer": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 8,
+   "jobs_kept": 8,
+   "duration_s": 11.6,
+   "error": null
+  },
+  "abbott": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 98,
+   "jobs_kept": 35,
+   "duration_s": 106.5,
+   "error": null
+  },
+  "hp": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 1,
+   "jobs_kept": 1,
+   "duration_s": 3.7,
+   "error": null
+  },
+  "marvell": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 3,
+   "jobs_kept": 3,
+   "duration_s": 5.5,
+   "error": null
+  },
+  "nvidia": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 27,
+   "jobs_kept": 27,
+   "duration_s": 31.0,
+   "error": null
+  },
+  "jabil": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 84,
+   "jobs_kept": 84,
+   "duration_s": 90.9,
+   "error": null
+  },
+  "lego": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 9,
+   "jobs_kept": 9,
+   "duration_s": 11.7,
+   "error": null
+  },
+  "pwc": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 20,
+   "jobs_kept": 20,
+   "duration_s": 29.4,
+   "error": null
+  },
+  "pg": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 14,
+   "jobs_kept": 14,
+   "duration_s": 17.2,
+   "error": null
+  },
+  "jnj": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 4,
+   "jobs_kept": 4,
+   "duration_s": 6.7,
+   "error": null
+  },
+  "abb": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 17,
+   "jobs_kept": 17,
+   "duration_s": 21.5,
+   "error": null
+  },
+  "accenture": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 7,
+   "jobs_kept": 7,
+   "duration_s": 12.7,
+   "error": null
+  },
+  "manulife": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 16,
+   "jobs_kept": 16,
+   "duration_s": 19.1,
+   "error": null
+  },
+  "citi": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 1,
+   "jobs_kept": 1,
+   "duration_s": 5.1,
+   "error": null
+  },
+  "msd": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 5,
+   "jobs_kept": 5,
+   "duration_s": 7.9,
+   "error": null
+  },
+  "baxter": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 1,
+   "jobs_kept": 1,
+   "duration_s": 3.6,
+   "error": null
+  },
+  "thermo_fisher": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 12,
+   "jobs_kept": 12,
+   "duration_s": 14.8,
+   "error": null
+  },
+  "vf": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 46,
+   "jobs_kept": 46,
+   "duration_s": 52.7,
+   "error": null
+  },
+  "pvh": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 2,
+   "jobs_kept": 2,
+   "duration_s": 5.7,
+   "error": null
+  },
+  "ecolab": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 1,
+   "jobs_kept": 1,
+   "duration_s": 4.2,
+   "error": null
+  },
+  "visa": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 9,
+   "jobs_kept": 9,
+   "duration_s": 11.7,
+   "error": null
+  },
+  "workday": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 4,
+   "jobs_kept": 4,
+   "duration_s": 9.1,
+   "error": null
+  },
+  "sgs": {
+   "ok": true,
+   "adapter": "smartrecruiters",
+   "jobs_found": 153,
+   "jobs_kept": 153,
+   "duration_s": 289.6,
+   "error": null
+  },
+  "avery_dennison": {
+   "ok": true,
+   "adapter": "smartrecruiters",
+   "jobs_found": 41,
+   "jobs_kept": 41,
+   "duration_s": 142.9,
+   "error": null
+  },
+  "expeditors": {
+   "ok": true,
+   "adapter": "smartrecruiters",
+   "jobs_found": 9,
+   "jobs_kept": 9,
+   "duration_s": 46.4,
+   "error": null
+  },
+  "endava": {
+   "ok": true,
+   "adapter": "smartrecruiters",
+   "jobs_found": 6,
+   "jobs_kept": 6,
+   "duration_s": 34.7,
+   "error": null
+  },
+  "axon": {
+   "ok": true,
+   "adapter": "greenhouse",
+   "jobs_found": 16,
+   "jobs_kept": 16,
+   "duration_s": 3.2,
+   "error": null
+  },
+  "flexport": {
+   "ok": true,
+   "adapter": "greenhouse",
+   "jobs_found": 8,
+   "jobs_kept": 8,
+   "duration_s": 1.2,
+   "error": null
+  },
+  "ybox": {
+   "ok": true,
+   "adapter": "ybox",
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 3.7,
+   "error": null
+  }
+ },
+ "hosts": {
+  "api.smartrecruiters.com": {
+   "requests": 436,
+   "errors": 0
+  },
+  "careers.se.com": {
+   "requests": 2,
+   "errors": 0
+  },
+  "nike.wd1.myworkdayjobs.com": {
+   "requests": 11,
+   "errors": 0
+  },
+  "intel.wd1.myworkdayjobs.com": {
+   "requests": 9,
+   "errors": 0
+  },
+  "cisco.wd5.myworkdayjobs.com": {
+   "requests": 17,
+   "errors": 0
+  },
+  "jobs.siemens.com": {
+   "requests": 22,
+   "errors": 0
+  },
+  "gevernova.wd5.myworkdayjobs.com": {
+   "requests": 10,
+   "errors": 0
+  },
+  "bakerhughes.wd5.myworkdayjobs.com": {
+   "requests": 15,
+   "errors": 0
+  },
+  "kimberlyclark.wd1.myworkdayjobs.com": {
+   "requests": 6,
+   "errors": 0
+  },
+  "3m.wd1.myworkdayjobs.com": {
+   "requests": 12,
+   "errors": 0
+  },
+  "dow.wd1.myworkdayjobs.com": {
+   "requests": 7,
+   "errors": 0
+  },
+  "sanofi.wd3.myworkdayjobs.com": {
+   "requests": 4,
+   "errors": 0
+  },
+  "novartis.wd3.myworkdayjobs.com": {
+   "requests": 9,
+   "errors": 0
+  },
+  "gsk.wd5.myworkdayjobs.com": {
+   "requests": 12,
+   "errors": 0
+  },
+  "astrazeneca.wd3.myworkdayjobs.com": {
+   "requests": 20,
+   "errors": 0
+  },
+  "philips.wd3.myworkdayjobs.com": {
+   "requests": 4,
+   "errors": 0
+  },
+  "maersk.wd3.myworkdayjobs.com": {
+   "requests": 64,
+   "errors": 0
+  },
+  "mastercard.wd1.myworkdayjobs.com": {
+   "requests": 8,
+   "errors": 0
+  },
+  "medtronic.wd1.myworkdayjobs.com": {
+   "requests": 20,
+   "errors": 0
+  },
+  "pfizer.wd1.myworkdayjobs.com": {
+   "requests": 11,
+   "errors": 0
+  },
+  "abbott.wd5.myworkdayjobs.com": {
+   "requests": 105,
+   "errors": 0
+  },
+  "hp.wd5.myworkdayjobs.com": {
+   "requests": 4,
+   "errors": 0
+  },
+  "marvell.wd1.myworkdayjobs.com": {
+   "requests": 6,
+   "errors": 0
+  },
+  "nvidia.wd5.myworkdayjobs.com": {
+   "requests": 31,
+   "errors": 0
+  },
+  "jabil.wd5.myworkdayjobs.com": {
+   "requests": 91,
+   "errors": 0
+  },
+  "lego.wd103.myworkdayjobs.com": {
+   "requests": 12,
+   "errors": 0
+  },
+  "pwc.wd3.myworkdayjobs.com": {
+   "requests": 23,
+   "errors": 0
+  },
+  "pg.wd5.myworkdayjobs.com": {
+   "requests": 17,
+   "errors": 0
+  },
+  "jj.wd5.myworkdayjobs.com": {
+   "requests": 7,
+   "errors": 0
+  },
+  "abb.wd3.myworkdayjobs.com": {
+   "requests": 20,
+   "errors": 0
+  },
+  "accenture.wd103.myworkdayjobs.com": {
+   "requests": 10,
+   "errors": 0
+  },
+  "manulife.wd3.myworkdayjobs.com": {
+   "requests": 19,
+   "errors": 0
+  },
+  "citi.wd5.myworkdayjobs.com": {
+   "requests": 4,
+   "errors": 0
+  },
+  "msd.wd5.myworkdayjobs.com": {
+   "requests": 8,
+   "errors": 0
+  },
+  "baxter.wd1.myworkdayjobs.com": {
+   "requests": 4,
+   "errors": 0
+  },
+  "thermofisher.wd5.myworkdayjobs.com": {
+   "requests": 15,
+   "errors": 0
+  },
+  "vfc.wd5.myworkdayjobs.com": {
+   "requests": 51,
+   "errors": 0
+  },
+  "pvh.wd1.myworkdayjobs.com": {
+   "requests": 5,
+   "errors": 0
+  },
+  "ecolab.wd1.myworkdayjobs.com": {
+   "requests": 4,
+   "errors": 0
+  },
+  "visa.wd5.myworkdayjobs.com": {
+   "requests": 12,
+   "errors": 0
+  },
+  "workday.wd5.myworkdayjobs.com": {
+   "requests": 7,
+   "errors": 0
+  },
+  "boards-api.greenhouse.io": {
+   "requests": 3,
+   "errors": 0
+  },
+  "ybox.vn": {
+   "requests": 3,
+   "errors": 0
+  }
+ },
+ "ybox_rejected": [
+  {
+   "title": "[HCM] Thương Hiệu Quà Tặng HAVIGIFT Tuyển Dụng Thực Tập Sinh Chăm Sóc Khách Hàng/Thủ Kho - Sản Xuất/Thiết Kế Ảnh/Chỉnh Sửa Video/Kinh Doanh B2B/Kế Toán/Nhân Sự,",
+   "reason": "not_whitelisted"
+  },
+  {
+   "title": "[HCM] Công Ty Citi Complex Hospitality Tuyển Dụng Thực Tập Sinh Thu Mua Full-time 2026",
+   "reason": "keyword:mua"
+  },
+  {
+   "title": "[HN] Công Ty Truyền Thông & Quảng Cáo MCBIZ Tuyển Dụng Thực Tập Sinh Content Media Part-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Công Ty Tài Chính Công Nghệ Thanh Toán Quốc Tế Ezyremit Worldwide Tuyển Dụng Trợ Lý Pháp Lý Và Tuân Thủ Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Thương Hiệu Thời Trang CARINAMY Tuyển Dụng Thực Tập Sinh Chăm Sóc Khách Hàng/Kinh Doanh B2B/Thủ Kho - Sản Xuất/Photo Design/Video Editor/Kế Toán/Nhân Sự, ",
+   "reason": "not_whitelisted"
+  },
+  {
+   "title": "[Online-HCM] Công Ty MQ House Tuyển Dụng Nhân Viên Kinh Doanh Căn Hộ Cho Thuê Part-time/Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HN] Trường Quốc Tế True North School Tuyển Dụng Chuyên Viên Sản Xuất Hình Ảnh Và Video Full-time 2026",
+   "reason": "not_whitelisted"
+  },
+  {
+   "title": "[HCM] Công Ty Classic Fine Foods Tuyển Dụng Thực Tập Sinh Chăm Sóc Khách Hàng Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Công Ty RECHIC Tuyển Dụng Thực Tập Sinh Marketing Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HN] Công Ty Intech Group Tuyển Dụng Thực Tập Sinh Kế Toán, Nhân Viên Kế Toán/Kế Toán Tổng Hợp Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Công Ty AZTAX Tuyển Dụng Thực Tập Sinh Social Media Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Công Ty Thương Mại Thực Phẩm Khôi An Nguyên Tuyển Dụng Thực Tập Sinh Marketing/Quay Dựng Video, Nhân Viên Sản Xuất Hình Ảnh Và Video Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Công Ty Tư Vấn Asahi Life Việt Nam Tuyển Dụng Chuyên Viên Tư Vấn Bảo Hiểm Nhân Thọ Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Công Ty Tư Vấn Dịch Vụ Thuận Phát Tuyển Dụng Thực Tập Sinh Biên Phiên Dịch Tiếng Trung Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HN] Công Ty CTM Hub Tuyển Dụng Thực Tập Sinh Content Marketing Part-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM, HN] Thương Hiệu Phụ Kiện Anh Phi Bán Táo Tuyển Dụng Nhân Viên Part-time/Full-time: Bán Hàng Và Chăm Sóc Khách Hàng, Vận Hành Sàn TMĐT, Kho Kiêm Kỹ Thuật C",
+   "reason": "not_whitelisted"
+  },
+  {
+   "title": "[HCM] Nhà Hàng Tre Tuyển Dụng Nhân Viên Phục Vụ Full-time 2026",
+   "reason": "not_whitelisted"
+  },
+  {
+   "title": "[HN] Thương Hiệu Thời Trang DEME Tuyển Dụng Thực Tập Sinh Vận Hành Hệ Thống/Logistics Full-time 2026.",
+   "reason": "not_whitelisted"
+  },
+  {
+   "title": "[HN/HCM/Bình Dương/Đồng Nai/Bà Rịa - Vũng Tàu/Hải Phòng] Công Ty Xây Lắp Và Vật Tư Xây Dựng Tuyển Dụng Kỹ Sư Hiện Trường Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[Online-HN] Hệ Thống Gia Sư Edlixir Education Tuyển Dụng Cộng Tác Viên Sales - Chăm Sóc Khách Hàng, Gia Sư Tiếng Anh Đa Cấp Độ 1-1 Part-time/Full-time 2026",
+   "reason": "keyword:cong tac vien"
+  },
+  {
+   "title": "[HCM] Hệ Thống Chuỗi Siêu Thị Bán Lẻ Con Cưng Tuyển Dụng Online Content Executive (SEO/Web Content) Full-time 2026",
+   "reason": "not_whitelisted"
+  },
+  {
+   "title": "[HN/HCM] Cửa Hàng Kính Mắt LILY Tuyển Dụng Nhân Viên Tư Vấn Bán Hàng Full-time 2026",
+   "reason": "not_whitelisted"
+  },
+  {
+   "title": "[HCM] Công Ty Mô Hình Quảng Cáo Hưng Phát Tuyển Dụng Nhân Viên Thi Công Mô Hình Trưng Bày Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Công Ty Tư Vấn Đầu Tư Phát Triển Và Xây Dựng VINCONS Tuyển Dụng Nhân Viên Hành Chính Nhân Sự Thời Vụ Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HN] Công Ty Hasu Stay Tuyển Dụng Nhân Viên Kinh Doanh/Sáng Tạo Nội Dung Part-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[Startup-HCM] Nền Tảng Ứng Dụng BTASKEE Tuyển Dụng Thực Tập Sinh Tuyển Dụng Full-time 2026",
+   "reason": "not_whitelisted"
+  },
+  {
+   "title": "[HCM] Công Ty Dịch Vụ Chuỗi Nhà Hàng QSR Việt Nam Tuyển Dụng Thực Tập Sinh Kế Toán Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HN] Công Ty Công Nghệ SAPO Tuyển Dụng Cộng Tác Viên Truyền Thông Thương Hiệu, Nhân Viên Business Analyst (AI Applications), Trợ Lý Tổng Giám Đốc (Chiến Lược Và",
+   "reason": "keyword:cong tac vien"
+  },
+  {
+   "title": "[HCM] Công Ty Sản Xuất Hàng Tiêu Dùng Bình Tiên Biti's Tuyển Dụng Nhân Viên Kế Toán Hàng Hóa Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Hệ Thống Hỗ Trợ Thanh Toán Hóa Đơn PAYOO Tuyển Dụng Nhân Viên Kế Toán – Ngân Quỹ Full-time 2026",
+   "reason": "not_whitelisted"
+  },
+  {
+   "title": "[HN] Công Ty Hoei VN Tuyển Dụng Thực Tập Sinh Nhân Sự/Kế Toán Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HN] Tổ Chức Phi Lợi Nhuận Keep Vietnam Clean Tuyển Dụng Thực Tập Sinh Truyền Thông Part-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HN] Công Ty Công Nghệ APPOTA Tuyển Dụng Cộng Tác Viên Tuyển Dụng Full-time 2026",
+   "reason": "keyword:cong tac vien"
+  },
+  {
+   "title": "[HCM] Thương Hiệu Chăm Sóc Sức Khỏe Healthy Care Tuyển Dụng Nhân Viên Host Livestream Part-time/Full-time 2026",
+   "reason": "not_whitelisted"
+  },
+  {
+   "title": "[HN] Ngân Hàng Việt Á Bank Tuyển Dụng Cộng Tác Viên Quản Lý Kinh Doanh Khách Hàng Cá Nhân/Marketing Và Truyền Thông Full-time 2026",
+   "reason": "keyword:cong tac vien"
+  },
+  {
+   "title": "[Online-Toàn Quốc] Công Ty Orange Tree VA Tuyển Dụng Thực Tập Sinh Trợ Lý Ảo Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Hệ Thống Hỗ Trợ Thanh Toán Hóa Đơn PAYOO Tuyển Dụng Thực Tập Sinh Thiết Kế Đồ Họa Full-time 2026",
+   "reason": "not_whitelisted"
+  },
+  {
+   "title": "[HN] Chuỗi Nhà Hàng Đồ Ăn Nhanh KFC (Chi Nhánh: KFC Trương Định Plaza) Tuyển Dụng Nhân Viên Nhà Hàng Part-time 2026",
+   "reason": "not_whitelisted"
+  },
+  {
+   "title": "[HN] Trung Tâm Tham Vấn Phát Triển Bền Vững CSDC Việt Nam Tuyển Dụng Thực Tập Sinh Trợ Lý/Quản Lý Dự Án/Truyền Thông Part-time/Full-time 2026",
+   "reason": "keyword:du an"
+  },
+  {
+   "title": "[HN] Công Ty Công Nghệ Giáo Dục MANABIE Tuyển Dụng Nhân Viên Marketing Associate Part-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Tập Đoàn Ô Tô Mercedes-Benz Việt Nam Tuyển Dụng Thực Tập Sinh Recruitment & Compliance Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HN] Công Ty AEON Việt Nam Tuyển Dụng Thực Tập Sinh HRBP Part-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Công Ty AEON Việt Nam Chi Nhánh Tân Phú Tuyển Dụng Thực Tập Sinh Admin Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Công Ty TMA Tech Group Tuyển Dụng Thực Tập Sinh Marketing/Fintech Part-time/Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HN] Tập Đoàn Kinh Doanh Đa Ngành Sun Group Tuyển Dụng Thực Tập Sinh Đào Tạo Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Tập Đoàn Kiểm Nghiệm, Giám Định Và Phân Tích Eurofins Scientific Tuyển Dụng Thực Tập Sinh Kế Toán Công Nợ Phải Thu Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Chuỗi Cửa Hàng Tiện Lợi 7-Eleven Tuyển Dụng Thực Tập Sinh Marketing (Social Media) Full-time 2026 (Thu Nhập: 3 - 4.000.000 VNĐ/ Tháng)",
+   "reason": "not_whitelisted"
+  },
+  {
+   "title": "[HCM] Bảo Tàng Thành Phố Hồ Chí Minh Tuyển Dụng Viên Chức Full-time 2026",
+   "reason": "not_whitelisted"
+  },
+  {
+   "title": "[HCM] Tập Đoàn Nông nghiệp TTC Agris Tuyển Dụng Thực Tập Sinh Chính Sách Và Quan Hệ Đối Ngoại Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HN] Công Ty Kiểm Toán Đa Quốc Gia PwC Tuyển Dụng Thực Tập Salesforce Consulting Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  }
+ ],
+ "alerts": []
+}

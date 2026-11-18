@@ -1,0 +1,480 @@
+{
+ "levels": {
+  "internship": {
+   "vi": "Thực tập",
+   "en": "Internship"
+  },
+  "graduate": {
+   "vi": "Mới tốt nghiệp",
+   "en": "Graduate"
+  },
+  "experienced": {
+   "vi": "Có kinh nghiệm",
+   "en": "Experienced"
+  },
+  "manager": {
+   "vi": "Quản lý",
+   "en": "Manager"
+  }
+ },
+ "functions": {
+  "supply_chain": {
+   "vi": "Chuỗi cung ứng",
+   "en": "Supply chain"
+  },
+  "operations": {
+   "vi": "Vận hành",
+   "en": "Operations"
+  },
+  "finance": {
+   "vi": "Tài chính – Kế toán",
+   "en": "Finance & accounting"
+  },
+  "sales": {
+   "vi": "Kinh doanh",
+   "en": "Sales & business development"
+  },
+  "engineering": {
+   "vi": "Kỹ thuật",
+   "en": "Engineering"
+  },
+  "it": {
+   "vi": "IT",
+   "en": "IT"
+  },
+  "hr": {
+   "vi": "Nhân sự",
+   "en": "HR"
+  },
+  "marketing": {
+   "vi": "Marketing",
+   "en": "Marketing"
+  },
+  "legal": {
+   "vi": "Pháp chế",
+   "en": "Legal"
+  },
+  "other": {
+   "vi": "Khác",
+   "en": "Other"
+  }
+ },
+ "industries": {
+  "industrial_automation": {
+   "vi": "Công nghiệp & tự động hóa",
+   "en": "Industrial & automation"
+  },
+  "automotive": {
+   "vi": "Ô tô & di chuyển",
+   "en": "Automotive & mobility"
+  },
+  "energy": {
+   "vi": "Năng lượng",
+   "en": "Energy"
+  },
+  "logistics": {
+   "vi": "Logistics",
+   "en": "Logistics"
+  },
+  "technology": {
+   "vi": "Công nghệ & phần mềm",
+   "en": "Technology & software"
+  },
+  "consulting_finance": {
+   "vi": "Tư vấn & tài chính",
+   "en": "Consulting & finance"
+  },
+  "pharma_medtech": {
+   "vi": "Dược & thiết bị y tế",
+   "en": "Pharma & medtech"
+  },
+  "nonfood_consumer": {
+   "vi": "Hàng tiêu dùng phi thực phẩm",
+   "en": "Non-food consumer goods"
+  },
+  "fashion_sports": {
+   "vi": "Thời trang & thể thao",
+   "en": "Fashion & sportswear"
+  },
+  "materials_chemicals": {
+   "vi": "Vật liệu & hóa chất",
+   "en": "Materials & chemicals"
+  },
+  "testing_inspection": {
+   "vi": "Kiểm định & chứng nhận",
+   "en": "Testing & inspection"
+  }
+ },
+ "cities": {
+  "hanoi": {
+   "vi": "Hà Nội",
+   "en": "Hanoi"
+  },
+  "hcmc": {
+   "vi": "TP. Hồ Chí Minh",
+   "en": "Ho Chi Minh City"
+  },
+  "binh_duong": {
+   "vi": "Bình Dương",
+   "en": "Binh Duong"
+  },
+  "dong_nai": {
+   "vi": "Đồng Nai",
+   "en": "Dong Nai"
+  },
+  "bac_ninh": {
+   "vi": "Bắc Ninh",
+   "en": "Bac Ninh"
+  },
+  "hai_phong": {
+   "vi": "Hải Phòng",
+   "en": "Hai Phong"
+  },
+  "da_nang": {
+   "vi": "Đà Nẵng",
+   "en": "Da Nang"
+  },
+  "other_vn": {
+   "vi": "Tỉnh khác",
+   "en": "Other provinces"
+  }
+ },
+ "regions": {
+  "europe": {
+   "vi": "Châu Âu",
+   "en": "Europe"
+  },
+  "americas": {
+   "vi": "Châu Mỹ",
+   "en": "Americas"
+  }
+ },
+ "work_modes": {
+  "onsite": {
+   "vi": "Tại văn phòng",
+   "en": "On-site"
+  },
+  "hybrid": {
+   "vi": "Kết hợp",
+   "en": "Hybrid"
+  },
+  "remote": {
+   "vi": "Từ xa",
+   "en": "Remote"
+  }
+ },
+ "sources": {
+  "workday": {
+   "vi": "Workday",
+   "en": "Workday"
+  },
+  "smartrecruiters": {
+   "vi": "SmartRecruiters",
+   "en": "SmartRecruiters"
+  },
+  "greenhouse": {
+   "vi": "Greenhouse",
+   "en": "Greenhouse"
+  },
+  "lever": {
+   "vi": "Lever",
+   "en": "Lever"
+  },
+  "ashby": {
+   "vi": "Ashby",
+   "en": "Ashby"
+  },
+  "custom": {
+   "vi": "Trang tuyển dụng công ty",
+   "en": "Company career site"
+  },
+  "ybox": {
+   "vi": "Ybox.vn",
+   "en": "Ybox.vn"
+  },
+  "vietnamworks": {
+   "vi": "VietnamWorks",
+   "en": "VietnamWorks"
+  },
+  "topcv": {
+   "vi": "TopCV",
+   "en": "TopCV"
+  }
+ },
+ "languages": {
+  "english": {
+   "vi": "Tiếng Anh",
+   "en": "English"
+  },
+  "german": {
+   "vi": "Tiếng Đức",
+   "en": "German"
+  },
+  "japanese": {
+   "vi": "Tiếng Nhật",
+   "en": "Japanese"
+  },
+  "french": {
+   "vi": "Tiếng Pháp",
+   "en": "French"
+  },
+  "chinese": {
+   "vi": "Tiếng Trung",
+   "en": "Chinese"
+  },
+  "korean": {
+   "vi": "Tiếng Hàn",
+   "en": "Korean"
+  },
+  "vietnamese": {
+   "vi": "Tiếng Việt",
+   "en": "Vietnamese"
+  }
+ },
+ "skills": {
+  "english": {
+   "vi": "Tiếng Anh",
+   "en": "English"
+  },
+  "german": {
+   "vi": "Tiếng Đức",
+   "en": "German"
+  },
+  "japanese": {
+   "vi": "Tiếng Nhật",
+   "en": "Japanese"
+  },
+  "chinese": {
+   "vi": "Tiếng Trung",
+   "en": "Chinese"
+  },
+  "excel": {
+   "vi": "Excel",
+   "en": "Excel"
+  },
+  "sap": {
+   "vi": "SAP",
+   "en": "SAP"
+  },
+  "erp": {
+   "vi": "ERP",
+   "en": "ERP"
+  },
+  "power_bi": {
+   "vi": "Power BI",
+   "en": "Power BI"
+  },
+  "tableau": {
+   "vi": "Tableau",
+   "en": "Tableau"
+  },
+  "sql": {
+   "vi": "SQL",
+   "en": "SQL"
+  },
+  "python": {
+   "vi": "Python",
+   "en": "Python"
+  },
+  "data_analysis": {
+   "vi": "Phân tích dữ liệu",
+   "en": "Data analysis"
+  },
+  "logistics": {
+   "vi": "Logistics",
+   "en": "Logistics"
+  },
+  "trade_documentation": {
+   "vi": "Chứng từ xuất nhập khẩu",
+   "en": "Trade documentation"
+  },
+  "procurement": {
+   "vi": "Mua hàng",
+   "en": "Procurement"
+  },
+  "negotiation": {
+   "vi": "Đàm phán",
+   "en": "Negotiation"
+  },
+  "presentation": {
+   "vi": "Thuyết trình",
+   "en": "Presentation"
+  },
+  "communication": {
+   "vi": "Giao tiếp",
+   "en": "Communication"
+  },
+  "project_management": {
+   "vi": "Quản lý dự án",
+   "en": "Project management"
+  },
+  "market_research": {
+   "vi": "Nghiên cứu thị trường",
+   "en": "Market research"
+  },
+  "ifrs_accounting": {
+   "vi": "Kế toán IFRS",
+   "en": "IFRS accounting"
+  },
+  "financial_analysis": {
+   "vi": "Phân tích tài chính",
+   "en": "Financial analysis"
+  },
+  "crm": {
+   "vi": "CRM",
+   "en": "CRM"
+  },
+  "recruitment": {
+   "vi": "Tuyển dụng",
+   "en": "Recruitment"
+  },
+  "digital_marketing": {
+   "vi": "Digital marketing",
+   "en": "Digital marketing"
+  },
+  "leadership": {
+   "vi": "Lãnh đạo",
+   "en": "Leadership"
+  },
+  "stakeholder_management": {
+   "vi": "Quản lý các bên liên quan",
+   "en": "Stakeholder management"
+  },
+  "problem_solving": {
+   "vi": "Giải quyết vấn đề",
+   "en": "Problem solving"
+  },
+  "digital_transformation": {
+   "vi": "Chuyển đổi số",
+   "en": "Digital transformation"
+  },
+  "lean_six_sigma": {
+   "vi": "Lean / Six Sigma",
+   "en": "Lean / Six Sigma"
+  },
+  "quality_management": {
+   "vi": "Quản lý chất lượng",
+   "en": "Quality management"
+  },
+  "autocad": {
+   "vi": "AutoCAD",
+   "en": "AutoCAD"
+  },
+  "plc": {
+   "vi": "PLC",
+   "en": "PLC"
+  },
+  "cloud": {
+   "vi": "Điện toán đám mây",
+   "en": "Cloud"
+  },
+  "java": {
+   "vi": "Java",
+   "en": "Java"
+  },
+  "javascript": {
+   "vi": "JavaScript",
+   "en": "JavaScript"
+  },
+  "machine_learning": {
+   "vi": "Học máy / AI",
+   "en": "Machine learning / AI"
+  },
+  "driving_license": {
+   "vi": "Bằng lái xe",
+   "en": "Driving license"
+  }
+ },
+ "countries": {
+  "US": {
+   "vi": "Hoa Kỳ",
+   "en": "United States"
+  },
+  "CA": {
+   "vi": "Canada",
+   "en": "Canada"
+  },
+  "DE": {
+   "vi": "Đức",
+   "en": "Germany"
+  },
+  "FR": {
+   "vi": "Pháp",
+   "en": "France"
+  },
+  "GB": {
+   "vi": "Anh",
+   "en": "United Kingdom"
+  },
+  "CH": {
+   "vi": "Thụy Sĩ",
+   "en": "Switzerland"
+  },
+  "NL": {
+   "vi": "Hà Lan",
+   "en": "Netherlands"
+  },
+  "DK": {
+   "vi": "Đan Mạch",
+   "en": "Denmark"
+  },
+  "SE": {
+   "vi": "Thụy Điển",
+   "en": "Sweden"
+  },
+  "FI": {
+   "vi": "Phần Lan",
+   "en": "Finland"
+  },
+  "IE": {
+   "vi": "Ireland",
+   "en": "Ireland"
+  },
+  "IT": {
+   "vi": "Ý",
+   "en": "Italy"
+  },
+  "ES": {
+   "vi": "Tây Ban Nha",
+   "en": "Spain"
+  },
+  "BE": {
+   "vi": "Bỉ",
+   "en": "Belgium"
+  },
+  "false": {
+   "vi": "Na Uy",
+   "en": "Norway"
+  },
+  "AT": {
+   "vi": "Áo",
+   "en": "Austria"
+  },
+  "LU": {
+   "vi": "Luxembourg",
+   "en": "Luxembourg"
+  }
+ },
+ "benefits_common": {
+  "insurance": {
+   "vi": "Bảo hiểm sức khỏe",
+   "en": "Health insurance"
+  },
+  "bonus": {
+   "vi": "Thưởng",
+   "en": "Bonus"
+  },
+  "training": {
+   "vi": "Đào tạo",
+   "en": "Training"
+  },
+  "hybrid": {
+   "vi": "Làm việc linh hoạt",
+   "en": "Flexible work"
+  },
+  "leave": {
+   "vi": "Nghỉ phép",
+   "en": "Paid leave"
+  }
+ }
+}

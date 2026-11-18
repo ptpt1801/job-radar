@@ -1,0 +1,40 @@
+# Loại khỏi Job Radar: FMCG thực phẩm / đồ uống / thuốc lá và công ty không có trụ sở châu Âu hoặc châu Mỹ.
+industries:
+  - food
+  - beverage
+  - alcohol
+  - dairy
+  - confectionery
+  - infant_nutrition
+  - tobacco
+  - agri_food
+
+companies:   # tên + alias, so khớp không phân biệt hoa thường
+  - [Nestlé, Nestle]
+  - [Unilever]            # vẫn còn mảng thực phẩm (Knorr...): loại
+  - [Danone]
+  - [Heineken]
+  - [Carlsberg]
+  - [AB InBev, Anheuser-Busch]
+  - [Coca-Cola, Coca Cola, Swire Coca-Cola]
+  - [PepsiCo, Suntory PepsiCo]
+  - [Mondelez, Mondelēz, Kinh Do Mondelez]
+  - [Mars, Mars Wrigley]
+  - [Kraft Heinz]
+  - [General Mills]
+  - [Kellanova, Kellogg]
+  - [FrieslandCampina, Dutch Lady]
+  - [Lactalis]
+  - [Ferrero]
+  - [Diageo]
+  - [Pernod Ricard]
+  - [Red Bull]
+  - [Cargill]
+  - [Perfetti Van Melle]
+  - [Philip Morris, PMI]
+  - [British American Tobacco, BAT]
+  - [Abbott Nutrition]    # chỉ mảng dinh dưỡng; Abbott thiết bị y tế thì giữ nếu xác minh được
+
+notes: >
+  Công ty đa ngành (vd P&G, Colgate) được giữ vì sản phẩm phi thực phẩm.
+  Khi chưa chắc một công ty có thuộc ngành thực phẩm không: đặt active: false và ghi lý do.

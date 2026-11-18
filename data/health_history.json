@@ -1,0 +1,23 @@
+[
+ {
+  "run_at": "2026-11-18T11:09:30Z",
+  "total_open": 984,
+  "sources": {
+   "smartrecruiters": 428,
+   "custom": 28,
+   "workday": 567,
+   "greenhouse": 24
+  }
+ },
+ {
+  "run_at": "2026-11-18T11:19:41Z",
+  "total_open": 984,
+  "sources": {
+   "smartrecruiters": 428,
+   "custom": 28,
+   "workday": 567,
+   "greenhouse": 24,
+   "ybox": 0
+  }
+ }
+]

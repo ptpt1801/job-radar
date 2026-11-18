@@ -1,0 +1,139 @@
+# Job Radar taxonomy. Neutral keys + VI/EN labels + detection keywords
+# (word-boundary match, case-insensitive, accents folded). Extended from taxonomy.seed.yaml.
+
+levels:
+  internship:  { vi: Thực tập, en: Internship, keywords: [intern, interns, internship, thực tập, thực tập sinh, trainee program, student job, working student] }
+  graduate:    { vi: Mới tốt nghiệp, en: Graduate, keywords: [graduate, fresher, fresh graduate, trainee, management trainee, mới tốt nghiệp, entry level, entry-level, entry professional, junior, early career] }
+  experienced: { vi: Có kinh nghiệm, en: Experienced, keywords: [] }
+  manager:     { vi: Quản lý, en: Manager, keywords: [manager, head of, director, team lead, team leader, vice president, vp, trưởng phòng, giám đốc, chief] }
+
+functions:
+  supply_chain: { vi: Chuỗi cung ứng, en: Supply chain, keywords: [supply chain, procurement, purchasing, buyer, logistics, sourcing, demand planning, supply planning, planner, warehouse, inventory, customs, import, export, chuỗi cung ứng, mua hàng, kho vận, xuất nhập khẩu] }
+  operations:   { vi: Vận hành, en: Operations, keywords: [operations, order management, general affairs, admin, administration, administrative, coordinator, hành chính, business operations, customer service, process excellence, vận hành] }
+  finance:      { vi: Tài chính – Kế toán, en: Finance & accounting, keywords: [finance, financial, accounting, accountant, fp&a, controlling, controller, audit, auditor, tax, treasury, actuarial, underwriting, risk, tài chính, kế toán, kiểm toán] }
+  sales:        { vi: Kinh doanh, en: Sales & business development, keywords: [sales, business development, product specialist, medical representative, health representative, field force, district representative, account manager, key account, account executive, commercial, channel, territory, kinh doanh, bán hàng] }
+  engineering:  { vi: Kỹ thuật, en: Engineering, keywords: [engineer, engineering, maintenance, quality, qa/qc, hse, ehs, technician, manufacturing, production, process engineer, r&d, mechanical, electrical, kỹ sư, kỹ thuật, sản xuất] }
+  it:           { vi: IT, en: IT, keywords: [software, developer, data analyst, ai research, research scientist, deep learning, computer vision, programmer, data engineer, data scientist, devops, information technology, it support, it infrastructure, cloud, cyber, cybersecurity, sap consultant, full stack, frontend, backend, machine learning, ai engineer, lập trình] }
+  hr:           { vi: Nhân sự, en: HR, keywords: [hr, human resources, talent acquisition, recruiter, recruitment, people partner, hrbp, payroll, c&b, nhân sự, tuyển dụng] }
+  marketing:    { vi: Marketing, en: Marketing, keywords: [marketing, marketer, brand, kol, communications, digital marketing, pr, content, e-commerce, ecommerce, trade marketing] }
+  legal:        { vi: Pháp chế, en: Legal, keywords: [legal, compliance, counsel, regulatory affairs, pháp chế] }
+  other:        { vi: Khác, en: Other, keywords: [] }
+
+industries:
+  industrial_automation: { vi: Công nghiệp & tự động hóa, en: Industrial & automation }
+  automotive:            { vi: Ô tô & di chuyển, en: Automotive & mobility }
+  energy:                { vi: Năng lượng, en: Energy }
+  logistics:             { vi: Logistics, en: Logistics }
+  technology:            { vi: Công nghệ & phần mềm, en: Technology & software }
+  consulting_finance:    { vi: Tư vấn & tài chính, en: Consulting & finance }
+  pharma_medtech:        { vi: Dược & thiết bị y tế, en: Pharma & medtech }
+  nonfood_consumer:      { vi: Hàng tiêu dùng phi thực phẩm, en: Non-food consumer goods }
+  fashion_sports:        { vi: Thời trang & thể thao, en: Fashion & sportswear }
+  materials_chemicals:   { vi: Vật liệu & hóa chất, en: Materials & chemicals }
+  testing_inspection:    { vi: Kiểm định & chứng nhận, en: Testing & inspection }
+
+# Order matters: the first city whose keyword matches wins; other_vn is the fallback.
+cities:
+  hanoi:      { vi: Hà Nội, en: Hanoi, keywords: [hanoi, ha noi, hà nội, hn, cau giay, cầu giấy, ba dinh, hoan kiem, dong da, nam tu liem, bac tu liem, long bien, thanh xuan, hoang mai] }
+  hcmc:       { vi: TP. Hồ Chí Minh, en: Ho Chi Minh City, keywords: [ho chi minh, hồ chí minh, ho chiminh, hochiminh, hcmc, hcm, saigon, sài gòn, thu duc, thủ đức, tan binh, tân bình, district 1, district 7, dist.7, quan 1, quan 7, binh thanh, phu nhuan, thu thiem] }
+  binh_duong: { vi: Bình Dương, en: Binh Duong, keywords: [binh duong, bình dương, thuan an, di an, ben cat, bến cát, thu dau mot, vsip, tan uyen] }
+  dong_nai:   { vi: Đồng Nai, en: Dong Nai, keywords: [dong nai, đồng nai, long thanh, bien hoa, biên hòa, nhon trach, loc an, amata] }
+  bac_ninh:   { vi: Bắc Ninh, en: Bac Ninh, keywords: [bac ninh, bắc ninh, yen phong, que vo, tien du, bac giang, bắc giang] }
+  hai_phong:  { vi: Hải Phòng, en: Hai Phong, keywords: [hai phong, hải phòng, dinh vu, đình vũ, deep c] }
+  da_nang:    { vi: Đà Nẵng, en: Da Nang, keywords: [da nang, đà nẵng, danang] }
+  other_vn:   { vi: Tỉnh khác, en: Other provinces, keywords: [vietnam, việt nam, viet nam] }
+
+regions:
+  europe:   { vi: Châu Âu, en: Europe }
+  americas: { vi: Châu Mỹ, en: Americas }
+
+work_modes:
+  onsite: { vi: Tại văn phòng, en: On-site }
+  hybrid: { vi: Kết hợp, en: Hybrid }
+  remote: { vi: Từ xa, en: Remote }
+
+sources:
+  workday:         { vi: Workday, en: Workday }
+  smartrecruiters: { vi: SmartRecruiters, en: SmartRecruiters }
+  greenhouse:      { vi: Greenhouse, en: Greenhouse }
+  lever:           { vi: Lever, en: Lever }
+  ashby:           { vi: Ashby, en: Ashby }
+  custom:          { vi: Trang tuyển dụng công ty, en: Company career site }
+  ybox:            { vi: Ybox.vn, en: Ybox.vn }
+  vietnamworks:    { vi: VietnamWorks, en: VietnamWorks }
+  topcv:           { vi: TopCV, en: TopCV }
+
+languages:
+  english:    { vi: Tiếng Anh, en: English, keywords: [english, tiếng anh, ielts, toeic, toefl] }
+  german:     { vi: Tiếng Đức, en: German, keywords: [german, deutsch, tiếng đức] }
+  japanese:   { vi: Tiếng Nhật, en: Japanese, keywords: [japanese, jlpt, tiếng nhật] }
+  french:     { vi: Tiếng Pháp, en: French, keywords: [french, tiếng pháp, delf] }
+  chinese:    { vi: Tiếng Trung, en: Chinese, keywords: [chinese, mandarin, tiếng trung, hsk] }
+  korean:     { vi: Tiếng Hàn, en: Korean, keywords: [korean, tiếng hàn, topik] }
+  vietnamese: { vi: Tiếng Việt, en: Vietnamese, keywords: [vietnamese, tiếng việt] }
+
+skills:
+  english:             { vi: Tiếng Anh, en: English, keywords: [english, tiếng anh, ielts, toeic] }
+  german:              { vi: Tiếng Đức, en: German, keywords: [german, deutsch, tiếng đức] }
+  japanese:            { vi: Tiếng Nhật, en: Japanese, keywords: [japanese, jlpt, tiếng nhật] }
+  chinese:             { vi: Tiếng Trung, en: Chinese, keywords: [chinese, mandarin, tiếng trung] }
+  excel:               { vi: Excel, en: Excel, keywords: [excel, microsoft office, ms office] }
+  sap:                 { vi: SAP, en: SAP, keywords: [sap, s/4hana, s4hana] }
+  erp:                 { vi: ERP, en: ERP, keywords: [erp, oracle ebs, dynamics 365] }
+  power_bi:            { vi: Power BI, en: Power BI, keywords: [power bi, powerbi] }
+  tableau:             { vi: Tableau, en: Tableau, keywords: [tableau] }
+  sql:                 { vi: SQL, en: SQL, keywords: [sql] }
+  python:              { vi: Python, en: Python, keywords: [python] }
+  data_analysis:       { vi: Phân tích dữ liệu, en: Data analysis, keywords: [data analysis, data analytics, analytical skills, analytical, phân tích dữ liệu] }
+  logistics:           { vi: Logistics, en: Logistics, keywords: [logistics, warehouse, warehousing, transportation, freight] }
+  trade_documentation: { vi: Chứng từ xuất nhập khẩu, en: Trade documentation, keywords: [customs, incoterms, bill of lading, hs code, letter of credit, hải quan, chứng từ] }
+  procurement:         { vi: Mua hàng, en: Procurement, keywords: [procurement, purchasing, sourcing, mua hàng] }
+  negotiation:         { vi: Đàm phán, en: Negotiation, keywords: [negotiation, negotiate, negotiating, đàm phán] }
+  presentation:        { vi: Thuyết trình, en: Presentation, keywords: [presentation skills, presentation, presenting, thuyết trình] }
+  communication:       { vi: Giao tiếp, en: Communication, keywords: [communication skills, kỹ năng giao tiếp] }
+  project_management:  { vi: Quản lý dự án, en: Project management, keywords: [project management, pmp, agile, scrum, quản lý dự án] }
+  market_research:     { vi: Nghiên cứu thị trường, en: Market research, keywords: [market research, market analysis, market intelligence, nghiên cứu thị trường] }
+  ifrs_accounting:     { vi: Kế toán IFRS, en: IFRS accounting, keywords: [ifrs, vas, gaap] }
+  financial_analysis:  { vi: Phân tích tài chính, en: Financial analysis, keywords: [financial analysis, financial modeling, financial modelling, budgeting, forecasting, fp&a] }
+  crm:                 { vi: CRM, en: CRM, keywords: [crm, salesforce] }
+  recruitment:         { vi: Tuyển dụng, en: Recruitment, keywords: [recruitment, recruiting, talent acquisition, tuyển dụng], only_functions: [hr] }
+  digital_marketing:   { vi: Digital marketing, en: Digital marketing, keywords: [digital marketing, seo, sem, social media] }
+  leadership:          { vi: Lãnh đạo, en: Leadership, keywords: [leadership, lead a team, people management, lãnh đạo] }
+  stakeholder_management: { vi: Quản lý các bên liên quan, en: Stakeholder management, keywords: [stakeholder management, managing stakeholders] }
+  problem_solving:     { vi: Giải quyết vấn đề, en: Problem solving, keywords: [problem solving, problem-solving, giải quyết vấn đề] }
+  digital_transformation: { vi: Chuyển đổi số, en: Digital transformation, keywords: [digital transformation, chuyển đổi số] }
+  lean_six_sigma:      { vi: Lean / Six Sigma, en: Lean / Six Sigma, keywords: [lean manufacturing, lean six sigma, six sigma, kaizen, 5s] }
+  quality_management:  { vi: Quản lý chất lượng, en: Quality management, keywords: [iso 9001, gmp, quality management, qms] }
+  autocad:             { vi: AutoCAD, en: AutoCAD, keywords: [autocad, solidworks, cad] }
+  plc:                 { vi: PLC, en: PLC, keywords: [plc, scada] }
+  cloud:               { vi: Điện toán đám mây, en: Cloud, keywords: [aws, azure, gcp, cloud computing] }
+  java:                { vi: Java, en: Java, keywords: [java, spring boot] }
+  javascript:          { vi: JavaScript, en: JavaScript, keywords: [javascript, typescript, react, node.js, nodejs] }
+  machine_learning:    { vi: Học máy / AI, en: Machine learning / AI, keywords: [machine learning, deep learning, artificial intelligence, llm] }
+  driving_license:     { vi: Bằng lái xe, en: Driving license, keywords: [driving license, driver license, bằng lái] }
+
+benefits_common:
+  insurance:  { vi: Bảo hiểm sức khỏe, en: Health insurance, keywords: [health insurance, medical insurance, healthcare, bảo hiểm] }
+  bonus:      { vi: Thưởng, en: Bonus, keywords: [bonus, 13th month, thưởng] }
+  training:   { vi: Đào tạo, en: Training, keywords: [training, learning, development program, đào tạo] }
+  hybrid:     { vi: Làm việc linh hoạt, en: Flexible work, keywords: [hybrid, flexible working, work from home, flexible hours, linh hoạt] }
+  leave:      { vi: Nghỉ phép, en: Paid leave, keywords: [annual leave, paid leave, vacation, nghỉ phép] }
+
+countries:
+  US: { vi: Hoa Kỳ, en: United States }
+  CA: { vi: Canada, en: Canada }
+  DE: { vi: Đức, en: Germany }
+  FR: { vi: Pháp, en: France }
+  GB: { vi: Anh, en: United Kingdom }
+  CH: { vi: Thụy Sĩ, en: Switzerland }
+  NL: { vi: Hà Lan, en: Netherlands }
+  DK: { vi: Đan Mạch, en: Denmark }
+  SE: { vi: Thụy Điển, en: Sweden }
+  FI: { vi: Phần Lan, en: Finland }
+  IE: { vi: Ireland, en: Ireland }
+  IT: { vi: Ý, en: Italy }
+  ES: { vi: Tây Ban Nha, en: Spain }
+  BE: { vi: Bỉ, en: Belgium }
+  NO: { vi: Na Uy, en: Norway }
+  AT: { vi: Áo, en: Austria }
+  LU: { vi: Luxembourg, en: Luxembourg }

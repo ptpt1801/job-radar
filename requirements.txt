@@ -1,0 +1,9 @@
+requests>=2.32
+PyYAML>=6.0
+jsonschema>=4.23
+rapidfuzz>=3.9
+beautifulsoup4>=4.12
+lxml>=5.0
+tzdata
+pytest>=8.0
+anthropic  # only used when EXTRACTOR: claude

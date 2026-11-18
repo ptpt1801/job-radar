@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Job Radar – Prototype</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --peach:#FCA47C; --cyan:#23CED9; --teal:#097C87; --yellow:#F9D779; --sage:#A1CCA6;
+  --bg:#F3FAF9; --surface:#FFFFFF; --ink:#0E3B40; --muted:#4A6A6D; --line:#D6E9E7;
+  --teal-dark:#06646D; --teal-soft:#E3F4F3; --sage-soft:#E6F2E7; --peach-soft:#FFEBE1; --yellow-soft:#FDF3D3; --warn:#B4532A;
+  --c1:#008A9E; --c2:#E07A4C;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Lexend',system-ui,sans-serif;font-size:15px;line-height:1.6;font-weight:300}
+/* Vietnamese stacks two marks on capitals (Ộ, Ữ): keep heading line-height at 1.2 or more so they are not clipped */
+h1,h2,h3,h4{font-family:'Quicksand',sans-serif;font-weight:700;line-height:1.22;margin:0}
+b,strong{font-weight:600}
+a{color:var(--teal-dark)} a:hover{color:var(--ink)}
+button,select,input,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.wrap{max-width:1360px;margin:0 auto;padding:0 28px}
+.top{background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.top .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;min-height:68px}
+.logo{font-family:'Quicksand',sans-serif;font-weight:700;font-size:26px;color:var(--teal);text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo i{width:14px;height:14px;border-radius:50%;background:var(--peach);box-shadow:10px 0 0 var(--yellow),20px 0 0 var(--cyan);margin-right:20px}
+nav.tabs{display:flex;gap:4px;flex-wrap:wrap}
+nav.tabs a{display:inline-flex;align-items:center;height:44px;padding:0 16px;border-radius:12px;text-decoration:none;color:var(--muted);font-weight:700}
+nav.tabs a[aria-current="page"]{background:var(--teal-soft);color:var(--teal-dark)}
+.topright{margin-left:auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.status{font-size:13px;color:var(--muted);display:flex;gap:12px;flex-wrap:wrap}
+.status b{color:var(--ink)}
+.mock{background:var(--yellow-soft);color:#6B5200;border-radius:999px;padding:2px 10px;font-weight:700;font-size:12px}
+.lang{order:10;display:inline-flex;border:1.5px solid var(--line);border-radius:12px;padding:3px;gap:2px;background:var(--bg)}
+.lang button{display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 10px;border:0;border-radius:9px;background:transparent;cursor:pointer;font-weight:700;font-size:13px;color:var(--muted)}
+.lang button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 0 0 1.5px var(--teal)}
+.lang svg{width:24px;height:16px;border-radius:3px;display:block}
+main{padding:24px 0 64px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;height:44px;padding:0 18px;border-radius:12px;border:0;background:var(--teal);color:#fff;font-weight:700;cursor:pointer;text-decoration:none}
+.btn:hover{background:var(--teal-dark);color:#fff}
+.btn.ghost{background:transparent;color:var(--teal-dark);border:1.5px solid var(--teal)}
+.btn.ghost:hover{background:var(--teal-soft)}
+.btn.small{height:36px;padding:0 12px;font-size:14px}
+.tag{display:inline-flex;align-items:center;border-radius:8px;padding:2px 8px;font-size:13px;font-weight:700;background:var(--teal-soft);color:var(--ink)}
+.tag.have{background:var(--sage-soft)} .tag.miss{background:var(--peach-soft);color:var(--warn)}
+.badge-new{background:var(--peach);color:var(--ink);border-radius:999px;padding:1px 9px;font-size:12px;font-weight:700}
+.muted{color:var(--muted)}
+.sr{position:absolute;left:-9999px}
+.mobile-only{display:none}
+/* Tab 1 */
+.jobs-layout{display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start}
+.filters{flex:1 1 280px;max-width:320px;padding:18px}
+.filters h2{font-size:22px;margin-bottom:6px}
+.filters details{border-top:1px solid var(--line);padding:10px 0}
+.filters summary{cursor:pointer;font-weight:700;min-height:28px;list-style:none;display:flex;justify-content:space-between}
+.filters summary::after{content:'+';color:var(--teal)} .filters details[open] summary::after{content:'–'}
+.filters .opts{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.filters label{display:flex;gap:10px;align-items:center;cursor:pointer;min-height:28px}
+.filters input[type=checkbox],.filters input[type=radio]{width:18px;height:18px;accent-color:var(--teal);margin:0}
+.filters input[type=range]{width:100%;accent-color:var(--teal)}
+.filters .row{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.results{flex:999 1 620px;min-width:0;display:flex;flex-direction:column;gap:20px}
+.searchbar input{width:100%;height:52px;border-radius:16px;border:1.5px solid var(--line);background:var(--surface);padding:0 18px;font-size:16px}
+.quick{display:flex;gap:8px;flex-wrap:wrap}
+.qchip{height:38px;padding:0 14px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);font-weight:700;cursor:pointer}
+.qchip[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
+.reco{padding:20px;border:2px solid var(--yellow)}
+.reco-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline;margin-bottom:14px}
+.reco-head h2{font-size:28px}
+.reco-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.rcard{border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:8px;cursor:pointer;background:var(--surface);text-align:left}
+.rcard:hover{border-color:var(--teal)}
+.score{font-family:'Quicksand',sans-serif;font-weight:700;font-size:40px;line-height:.9;color:var(--teal)}
+.meter{height:8px;border-radius:4px;background:var(--teal-soft);overflow:hidden}
+.meter span{display:block;height:100%;background:var(--teal);border-radius:4px}
+.list-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.list-head h2{font-size:24px}
+.list-head select{height:40px;border-radius:12px;border:1.5px solid var(--line);background:var(--surface);padding:0 10px}
+.job{padding:16px 18px;display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:16px;align-items:start}
+.job + .job{margin-top:10px}
+.job .ring{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-family:'Quicksand',sans-serif;font-weight:700;font-size:18px}
+.job h3{font-size:20px}
+.job .meta{display:flex;flex-wrap:wrap;gap:4px 14px;color:var(--muted);font-size:14px;margin:2px 0 8px}
+.job .tags{display:flex;flex-wrap:wrap;gap:6px}
+.job .side{display:flex;flex-direction:column;align-items:flex-end;gap:6px;text-align:right}
+.job .open{grid-column:1/-1;border-top:1px dashed var(--line);padding-top:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.job dl{margin:0;display:grid;grid-template-columns:110px 1fr;gap:6px 10px;font-size:14px}
+.job dt{color:var(--muted)} .job dd{margin:0}
+.job ul{margin:4px 0 0;padding-left:18px;font-size:14px}
+.job .actions{grid-column:1/-1;display:flex;gap:8px;flex-wrap:wrap}
+.toggle{background:none;border:0;padding:0;cursor:pointer;text-align:left}
+.toggle:hover h3{color:var(--teal-dark)}
+.empty{padding:32px;text-align:center}
+/* Tab 2 */
+.dfilters{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;padding:14px 16px;margin-bottom:18px}
+.dfilters label{display:flex;flex-direction:column;gap:2px;font-size:13px;font-weight:700;color:var(--muted)}
+.dfilters select{height:40px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);padding:0 10px;min-width:130px;font-size:14px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:18px}
+.kpi{padding:16px 18px}
+.kpi .v{font-family:'Quicksand',sans-serif;font-size:40px;font-weight:700;line-height:1.05}
+.kpi .l{color:var(--muted);font-weight:700}
+.dgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.chart{padding:18px 18px 12px;min-width:0}
+.chart.wide{grid-column:1/-1}
+.chart h3{font-size:20px}
+.chart .sub{color:var(--muted);font-size:13px;margin:2px 0 10px}
+.chart details{margin-top:6px;font-size:13px}
+.chart summary{cursor:pointer;color:var(--teal-dark);font-weight:700;min-height:28px}
+.chart table{border-collapse:collapse;width:100%;margin-top:6px}
+.chart td,.chart th{padding:4px 8px;border-top:1px solid var(--line);text-align:left}
+.chart td.n{text-align:right;font-variant-numeric:tabular-nums}
+svg text{font-family:'Lexend',sans-serif}
+.tip{position:fixed;pointer-events:none;background:var(--ink);color:#fff;border-radius:10px;padding:8px 10px;font-size:13px;line-height:1.35;opacity:0;z-index:20;max-width:260px}
+.tip b{font-family:'Quicksand',sans-serif;font-size:16px}
+@media (max-width:980px){.dgrid{grid-template-columns:1fr}}
+@media (max-width:720px){.wrap{padding:0 16px}.top{position:static}.lang{order:0;margin-left:auto}nav.tabs{width:100%}.topright{margin-left:0;width:100%}.filters{order:2;max-width:none}.mobile-only{display:inline-flex}
+ .job{grid-template-columns:48px minmax(0,1fr)}.job .side{grid-column:2;align-items:flex-start;text-align:left}.job .ring{width:46px;height:46px;font-size:15px}}
+</style>
+</head>
+<body>
+<header class="top">
+<div class="wrap">
+  <a class="logo" href="#viec-lam"><i aria-hidden="true"></i>Job Radar</a>
+<div class="lang" role="group" data-i18n-aria="langGroup">
+      <button data-lang="vi" aria-label="Tiếng Việt"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#DA251D"/><polygon fill="#FFFF00" points="15,4 16.2,8.3 20.7,8.3 17.1,10.9 18.4,15.2 15,12.6 11.6,15.2 12.9,10.9 9.3,8.3 13.8,8.3"/></svg>VI</button>
+      <button data-lang="en" aria-label="English"><svg viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="40" fill="#012169"/><path d="M0,0 60,40 M60,0 0,40" stroke="#fff" stroke-width="8"/><path d="M0,0 60,40 M60,0 0,40" stroke="#C8102E" stroke-width="3"/><path d="M30,0 V40 M0,20 H60" stroke="#fff" stroke-width="12"/><path d="M30,0 V40 M0,20 H60" stroke="#C8102E" stroke-width="7"/></svg>EN</button>
+    </div>
+  <nav class="tabs" data-i18n-aria="nav">
+    <a href="#viec-lam" data-tab="viec-lam" data-i18n="tab1"></a>
+    <a href="#thi-truong" data-tab="thi-truong" data-i18n="tab2"></a>
+  </nav>
+  <div class="topright">
+    <div class="status"><span id="st-upd"></span><span id="st-next"></span><span class="mock" data-i18n="mock"></span></div>
+
+  </div>
+</div>
+</header>
+
+<main class="wrap">
+<!-- TAB 1 -->
+<section class="view" id="view-viec-lam">
+<div class="jobs-layout">
+  <aside class="card filters">
+    <h2 data-i18n="filters"></h2>
+    <form id="jf" onsubmit="return false">
+    <details open><summary data-i18n="f_level"></summary><div class="opts" data-group="level"></div></details>
+    <details open><summary data-i18n="f_func"></summary><div class="opts" data-group="func"></div></details>
+    <details open><summary data-i18n="f_city"></summary><div class="opts" data-group="city"></div></details>
+    <details><summary data-i18n="f_industry"></summary><div class="opts" data-group="industry"></div></details>
+    <details><summary data-i18n="f_mode"></summary><div class="opts" data-group="mode"></div></details>
+    <details><summary data-i18n="f_region"></summary><div class="opts" data-group="region"></div></details>
+    <details open><summary data-i18n="f_match"></summary><div class="opts">
+      <label for="minmatch" style="justify-content:space-between"><span data-i18n="f_min"></span> <b id="minmatch-v">0%</b></label>
+      <input type="range" id="minmatch" name="minmatch" min="0" max="90" step="10" value="0">
+    </div></details>
+    <details><summary data-i18n="f_posted"></summary><div class="opts">
+      <label><input type="radio" name="posted" value="999" checked> <span data-i18n="any"></span></label>
+      <label><input type="radio" name="posted" value="1"> <span data-i18n="p1"></span></label>
+      <label><input type="radio" name="posted" value="3"> <span data-i18n="p3"></span></label>
+      <label><input type="radio" name="posted" value="7"> <span data-i18n="p7"></span></label>
+      <label><input type="radio" name="posted" value="30"> <span data-i18n="p30"></span></label>
+    </div></details>
+    <details><summary data-i18n="f_exp"></summary><div class="opts">
+      <label><input type="radio" name="exp" value="99" checked> <span data-i18n="any"></span></label>
+      <label><input type="radio" name="exp" value="0"> <span data-i18n="e0"></span></label>
+      <label><input type="radio" name="exp" value="1"> <span data-i18n="e1"></span></label>
+      <label><input type="radio" name="exp" value="3"> <span data-i18n="e3"></span></label>
+    </div></details>
+    <details><summary data-i18n="f_langs"></summary><div class="opts" data-group="langs"></div></details>
+    <details><summary data-i18n="f_salary"></summary><div class="opts">
+      <label><input type="checkbox" name="salaryOnly"> <span data-i18n="salaryOnly"></span></label>
+      <label><input type="checkbox" name="deadlineSoon"> <span data-i18n="deadlineSoon"></span></label>
+    </div></details>
+    <details><summary data-i18n="f_mine"></summary><div class="opts">
+      <label><input type="checkbox" name="hideHidden" checked> <span data-i18n="hideHidden"></span></label>
+      <label><input type="checkbox" name="savedOnly"> <span data-i18n="savedOnly"></span></label>
+      <label><input type="checkbox" name="hideApplied"> <span data-i18n="hideApplied"></span></label>
+    </div></details>
+    <details><summary data-i18n="f_source"></summary><div class="opts" data-group="source"></div></details>
+    <div class="row"><button type="button" class="btn small" id="jf-save" data-i18n="saveFilter"></button><button type="button" class="btn ghost small" id="jf-reset" data-i18n="reset"></button></div>
+    <p class="muted" id="jf-saved" style="font-size:13px;margin:6px 0 0"></p>
+    </form>
+  </aside>
+  <div class="results">
+    <div class="searchbar"><label for="q" class="sr" data-i18n="searchLabel"></label><input id="q" type="search" data-i18n-ph="searchPh"></div>
+    <div class="quick" id="quick"></div>
+    <a class="btn ghost small mobile-only" href="#jf" onclick="document.getElementById('jf').scrollIntoView();return false" data-i18n="openFilters"></a>
+    <section class="card reco"><div class="reco-head"><h2 data-i18n="reco"></h2><span class="muted" style="font-size:14px" data-i18n="recoLink"></span></div><div class="reco-grid" id="reco"></div></section>
+    <div class="list-head"><h2 id="count"></h2><label><span data-i18n="sort"></span> <select id="sort"><option value="match" data-i18n="s_match"></option><option value="new" data-i18n="s_new"></option><option value="deadline" data-i18n="s_deadline"></option></select></label></div>
+    <div id="list"></div>
+    <button class="btn ghost" id="more" data-i18n="more"></button>
+  </div>
+</div>
+</section>
+
+<!-- TAB 2 -->
+<section class="view" id="view-thi-truong" hidden>
+  <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:18px"><h1 style="font-size:40px;font-weight:700" data-i18n="tab2"></h1><p class="muted" style="margin:0" data-i18n="dashSub"></p></div>
+  <form class="card dfilters" id="fa" onsubmit="return false">
+    <label><span data-i18n="d_time"></span><select name="days"><option value="90" data-i18n="d90"></option><option value="30" data-i18n="d30"></option><option value="7" data-i18n="d7"></option></select></label>
+    <label><span data-i18n="f_city"></span><select name="city"></select></label>
+    <label><span data-i18n="f_industry"></span><select name="industry"></select></label>
+    <label><span data-i18n="f_func"></span><select name="func"></select></label>
+    <label><span data-i18n="f_level"></span><select name="level"></select></label>
+    <label><span data-i18n="f_region"></span><select name="region"></select></label>
+    <label><span data-i18n="f_match"></span><select name="match"><option value="" data-i18n="all"></option><option value="80" data-i18n="m80"></option><option value="60" data-i18n="m60"></option><option value="0" data-i18n="m0"></option></select></label>
+    <label><span data-i18n="d_salary"></span><select name="salary"><option value="" data-i18n="all"></option><option value="1" data-i18n="sal1"></option><option value="0" data-i18n="sal0"></option></select></label>
+    <label><span data-i18n="f_source"></span><select name="source"></select></label>
+    <button type="button" class="btn ghost" id="fa-reset" style="height:40px" data-i18n="reset"></button>
+  </form>
+  <div class="kpis" id="ka"></div>
+  <div class="dgrid">
+    <div class="card chart wide"><h3 data-i18n="c_trend"></h3><div class="sub" data-i18n="c_trendSub"></div><div id="a-trend"></div></div>
+    <div class="card chart"><h3 data-i18n="c_ind"></h3><div class="sub" data-i18n="c_open"></div><div id="a-ind"></div></div>
+    <div class="card chart"><h3 data-i18n="c_city"></h3><div class="sub" data-i18n="c_open"></div><div id="a-city"></div></div>
+    <div class="card chart"><h3 data-i18n="c_match"></h3><div class="sub" data-i18n="c_matchSub"></div><div id="a-match"></div></div>
+    <div class="card chart"><h3 data-i18n="c_heat"></h3><div class="sub" data-i18n="c_heatSub"></div><div id="a-heat"></div></div>
+    <div class="card chart"><h3 data-i18n="c_skill"></h3><div class="sub" data-i18n="c_skillSub"></div><div id="a-skill"></div></div>
+    <div class="card chart"><h3 data-i18n="c_hq"></h3><div class="sub" data-i18n="c_open"></div><div id="a-hq"></div></div>
+  </div>
+</section>
+
+</main>
+
+<div class="tip" id="tip" role="status" aria-live="polite"></div>
+
+<script>
+// ================= i18n =================
+const I18N = {
+vi:{ nav:'Các tab', tab1:'Việc đang tuyển', tab2:'Toàn cảnh thị trường', mock:'Dữ liệu giả lập', langGroup:'Chọn ngôn ngữ',
+ upd:'Cập nhật lúc <b>{t}</b>', next:'Lần tới <b>{t}</b>', filters:'Bộ lọc', f_level:'Cấp bậc', f_func:'Chức năng', f_city:'Địa điểm', f_industry:'Lĩnh vực', f_mode:'Hình thức làm việc', f_region:'Trụ sở công ty',
+ f_match:'Độ khớp với CV', f_min:'Tối thiểu', f_posted:'Ngày đăng', any:'Bất kỳ', p1:'24 giờ qua', p3:'3 ngày qua', p7:'7 ngày qua', p30:'30 ngày qua', f_exp:'Kinh nghiệm yêu cầu', e0:'Không yêu cầu', e1:'Tối đa 1 năm', e3:'Tối đa 3 năm',
+ f_langs:'Ngôn ngữ yêu cầu', f_salary:'Lương và hạn nộp', salaryOnly:'Chỉ tin có công bố lương', deadlineSoon:'Hết hạn trong 7 ngày tới', f_mine:'Trạng thái của tôi', hideHidden:'Không hiện tin đã ẩn', savedOnly:'Chỉ tin đã lưu', hideApplied:'Không hiện tin đã ứng tuyển',
+ f_source:'Nguồn', saveFilter:'Lưu bộ lọc này', reset:'Xóa bộ lọc', saved:'Đã lưu. Lần sau mở web, bộ lọc này được áp dụng sẵn.', searchLabel:'Tìm theo vị trí, công ty, kỹ năng', searchPh:'Tìm vị trí, công ty hoặc kỹ năng, ví dụ: supply chain, SAP',
+ openFilters:'Mở bộ lọc chi tiết', reco:'Đề xuất cho bạn', recoLink:'Độ khớp tính theo CV, cập nhật hằng tháng', sort:'Sắp xếp', s_match:'Khớp CV nhất', s_new:'Mới nhất', s_deadline:'Hạn nộp gần nhất', more:'Xem thêm 15 việc',
+ count:'{n} việc phù hợp bộ lọc', q_intern:'Thực tập', q_grad:'Mới tốt nghiệp', q_hn:'Hà Nội', q_70:'Khớp từ 70%', q_3d:'Đăng trong 3 ngày', pctMatch:'% khớp', youHave:'Bạn có:', noOverlap:'chưa có kỹ năng trùng', missing:'Còn thiếu:', miss:'Thiếu: ',
+ isNew:'Mới', daysLeft:'Còn {n} ngày', deadlineIn:'Hạn nộp còn {n} ngày', postedAgo:'Đăng {n} ngày trước', postedToday:'Đăng hôm nay', st_saved:'Đã lưu', st_applied:'Đã ứng tuyển', st_hidden:'Đã ẩn',
+ address:'Địa chỉ', hq:'Trụ sở', exp:'Kinh nghiệm', expN:'{n}+ năm', noExp:'Không yêu cầu', langs:'Ngôn ngữ', source:'Nguồn', reqSkills:'Kỹ năng yêu cầu', youHaveIt:' (bạn có)', benefits:'Phúc lợi', openSrc:'Mở tin gốc trên {s}',
+ save:'Lưu tin', unsave:'Bỏ lưu', apply:'Đánh dấu đã ứng tuyển', unapply:'Bỏ đánh dấu ứng tuyển', hide:'Ẩn tin này', emptyT:'Không có việc nào khớp bộ lọc', emptyS:'Bỏ bớt một vài lựa chọn bên trái, hoặc hạ độ khớp tối thiểu.',
+ notDisclosed:'Không công bố', perMonth:'{a}–{b} triệu/tháng', allowance:' (phụ cấp)',
+ dashSub:'Số tin của các tập đoàn châu Âu và châu Mỹ tại Việt Nam. Độ khớp tính theo CV cập nhật hằng tháng.', d_time:'Thời gian', d90:'90 ngày', d30:'30 ngày', d7:'7 ngày', all:'Tất cả', m80:'Từ 80%', m60:'60–79%', m0:'Dưới 60%', d_salary:'Lương', sal1:'Có công bố', sal0:'Không công bố',
+ k1:'tin trong khoảng đã chọn', k2:'tin mới trong 7 ngày', k3:'tin có công bố lương', k4:'tin khớp CV từ 70%', c_trend:'Tin mới theo tuần', c_trendSub:'Số tin được đăng mỗi tuần', c_ind:'Theo lĩnh vực', c_city:'Theo thành phố', c_open:'Số tin đang mở',
+ c_match:'Độ khớp với CV', c_matchSub:'Số tin theo từng khoảng 10%; vạch đứt là ngưỡng 70%', c_heat:'Chức năng và cấp bậc', c_heatSub:'Ô càng đậm càng nhiều tin', c_skill:'Kỹ năng được hỏi nhiều nhất', c_skillSub:'Số tin có yêu cầu kỹ năng', c_hq:'Quốc gia trụ sở',
+ thisWeek:'{n} tin tuần này', weekOf:'Tuần bắt đầu {d}', posts:'tin', postsNeed:'tin cần', threshold:'Khớp từ 70%', matchRange:'Khớp {a}–{b}%', table:'Xem bảng số liệu', group:'Nhóm', nPosts:'Số tin', week:'Tuần', matchCol:'Độ khớp',
+ },
+en:{ nav:'Tabs', tab1:'Open roles', tab2:'Market overview', mock:'Mock data', langGroup:'Choose language',
+ upd:'Updated <b>{t}</b>', next:'Next update <b>{t}</b>', filters:'Filters', f_level:'Level', f_func:'Function', f_city:'Location', f_industry:'Industry', f_mode:'Work mode', f_region:'Company headquarters',
+ f_match:'CV match', f_min:'Minimum', f_posted:'Date posted', any:'Any time', p1:'Past 24 hours', p3:'Past 3 days', p7:'Past 7 days', p30:'Past 30 days', f_exp:'Experience required', e0:'None', e1:'Up to 1 year', e3:'Up to 3 years',
+ f_langs:'Languages required', f_salary:'Salary and deadline', salaryOnly:'Only roles that show a salary', deadlineSoon:'Closing within 7 days', f_mine:'My status', hideHidden:'Hide roles I hid', savedOnly:'Only saved roles', hideApplied:'Hide roles I applied to',
+ f_source:'Source', saveFilter:'Save these filters', reset:'Clear filters', saved:'Saved. These filters will be applied next time you open the site.', searchLabel:'Search by role, company or skill', searchPh:'Search role, company or skill, e.g. supply chain, SAP',
+ openFilters:'Open all filters', reco:'Recommended for you', recoLink:'Match is scored against my CV, refreshed monthly', sort:'Sort by', s_match:'Best CV match', s_new:'Newest', s_deadline:'Closing soonest', more:'Show 15 more',
+ count:'{n} roles match your filters', q_intern:'Internship', q_grad:'Graduate', q_hn:'Hanoi', q_70:'70%+ match', q_3d:'Posted in 3 days', pctMatch:'% match', youHave:'You have:', noOverlap:'no matching skills yet', missing:'Missing:', miss:'Missing: ',
+ isNew:'New', daysLeft:'{n} days left', deadlineIn:'Closes in {n} days', postedAgo:'Posted {n} days ago', postedToday:'Posted today', st_saved:'Saved', st_applied:'Applied', st_hidden:'Hidden',
+ address:'Address', hq:'Headquarters', exp:'Experience', expN:'{n}+ years', noExp:'None required', langs:'Languages', source:'Source', reqSkills:'Skills required', youHaveIt:' (you have it)', benefits:'Benefits', openSrc:'Open the original on {s}',
+ save:'Save role', unsave:'Unsave', apply:'Mark as applied', unapply:'Unmark applied', hide:'Hide this role', emptyT:'No roles match your filters', emptyS:'Clear a few options on the left, or lower the minimum match.',
+ notDisclosed:'Not disclosed', perMonth:'{a}–{b}M VND/month', allowance:' (allowance)',
+ dashSub:'Openings at European and American corporations in Vietnam. Match is scored against my CV, refreshed monthly.', d_time:'Period', d90:'90 days', d30:'30 days', d7:'7 days', all:'All', m80:'80% and above', m60:'60–79%', m0:'Below 60%', d_salary:'Salary', sal1:'Disclosed', sal0:'Not disclosed',
+ k1:'roles in the selected period', k2:'new roles in 7 days', k3:'roles that show a salary', k4:'roles with 70%+ CV match', c_trend:'New roles per week', c_trendSub:'Roles posted each week', c_ind:'By industry', c_city:'By city', c_open:'Open roles',
+ c_match:'CV match', c_matchSub:'Roles per 10% band; the dashed line marks 70%', c_heat:'Function and level', c_heatSub:'Darker cells mean more roles', c_skill:'Most requested skills', c_skillSub:'Roles that ask for the skill', c_hq:'Headquarters country',
+ thisWeek:'{n} roles this week', weekOf:'Week of {d}', posts:'roles', postsNeed:'roles ask for', threshold:'70%+ match', matchRange:'{a}–{b}% match', table:'Show data table', group:'Group', nPosts:'Roles', week:'Week', matchCol:'Match',
+ } };
+const VAL_EN = {
+ 'Ô tô & di chuyển':'Automotive & mobility','Công nghiệp & tự động hóa':'Industrial & automation','Năng lượng':'Energy','Logistics':'Logistics','Công nghệ & phần mềm':'Technology & software','Tư vấn & tài chính':'Consulting & finance','Hàng tiêu dùng phi thực phẩm':'Non-food consumer goods','Dược & thiết bị y tế':'Pharma & medtech',
+ 'Chuỗi cung ứng':'Supply chain','Tài chính – Kế toán':'Finance & accounting','Kinh doanh':'Sales & business development','Kỹ thuật':'Engineering','IT':'IT','Nhân sự':'HR','Marketing':'Marketing',
+ 'Thực tập':'Internship','Mới tốt nghiệp':'Graduate','Có kinh nghiệm':'Experienced','Quản lý':'Manager',
+ 'TP. Hồ Chí Minh':'Ho Chi Minh City','Hà Nội':'Hanoi','Bình Dương':'Binh Duong','Đồng Nai':'Dong Nai','Bắc Ninh':'Bac Ninh','Hải Phòng':'Hai Phong','Đà Nẵng':'Da Nang',
+ 'Tại văn phòng':'On-site','Hybrid':'Hybrid','Từ xa':'Remote','Châu Âu':'Europe','Châu Mỹ':'Americas',
+ 'Đức':'Germany','Pháp':'France','Thụy Sĩ':'Switzerland','Đan Mạch':'Denmark','Mỹ':'United States','Thụy Điển':'Sweden','Anh':'United Kingdom','Ireland':'Ireland','Hà Lan':'Netherlands',
+ 'Tiếng Anh':'English','Tiếng Đức':'German','Tiếng Nhật':'Japanese','Tiếng Pháp':'French','Tiếng Trung':'Chinese','Site riêng':'Company site',
+ 'Đàm phán':'Negotiation','Thuyết trình':'Presentation','Quản lý dự án':'Project management','Chứng từ xuất nhập khẩu':'Trade documentation','Phân tích dữ liệu':'Data analysis','Kế toán IFRS':'IFRS accounting','Tuyển dụng':'Recruitment','Nghiên cứu thị trường':'Market research','Lãnh đạo':'Leadership','Chuyển đổi số':'Digital transformation',
+ 'Bảo hiểm sức khỏe cao cấp':'Premium health insurance','Lương tháng 13':'13th-month salary','Thưởng theo hiệu quả':'Performance bonus','Làm hybrid 2 ngày/tuần':'Hybrid 2 days a week','Ngân sách đào tạo':'Training budget','Nghỉ phép ngày sinh nhật':'Birthday leave','Hỗ trợ ăn trưa':'Lunch allowance','Lộ trình lên nhân viên chính thức':'Path to a permanent role',
+ 'Quận 1':'District 1','Quận 7':'District 7','Thủ Đức':'Thu Duc','Ba Đình':'Ba Dinh','Cầu Giấy':'Cau Giay','Hoàn Kiếm':'Hoan Kiem','Thuận An':'Thuan An','Dĩ An':'Di An','Long Thành':'Long Thanh','Biên Hòa':'Bien Hoa','KCN Yên Phong':'Yen Phong IZ','KCN Quế Võ':'Que Vo IZ','KCN Đình Vũ':'Dinh Vu IZ','Lê Chân':'Le Chan','Hải Châu':'Hai Chau','Sơn Trà':'Son Tra' };
+const store = { get(k,d){ try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch(e){ return d; } }, set(k,v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} } };
+let lang = store.get('jr-lang', 'vi');
+const T = (k, p) => { let s = (I18N[lang][k] ?? I18N.vi[k] ?? k); if (p) for (const x in p) s = s.replace('{'+x+'}', p[x]); return s; };
+const L = v => lang==='en' ? (VAL_EN[v] || v) : v;
+const fmt = n => n.toLocaleString(lang==='en' ? 'en-GB' : 'vi-VN');
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+// ================= mock data =================
+let seed = 11; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+const pick = (pairs) => { const t = pairs.reduce((s,p)=>s+p[1],0); let r = rnd()*t; for (const [v,w] of pairs){ if((r-=w)<=0) return v; } return pairs[0][0]; };
+const COMPANIES = [['Bosch','Đức','Châu Âu','Ô tô & di chuyển',9],['Siemens','Đức','Châu Âu','Công nghiệp & tự động hóa',7],['Schneider Electric','Pháp','Châu Âu','Năng lượng',7],['ABB','Thụy Sĩ','Châu Âu','Công nghiệp & tự động hóa',5],['DHL Supply Chain','Đức','Châu Âu','Logistics',7],['Maersk','Đan Mạch','Châu Âu','Logistics',6],['DB Schenker','Đức','Châu Âu','Logistics',4],['Intel','Mỹ','Châu Mỹ','Công nghệ & phần mềm',6],['Microsoft','Mỹ','Châu Mỹ','Công nghệ & phần mềm',4],['Ericsson','Thụy Điển','Châu Âu','Công nghệ & phần mềm',4],['Deloitte','Anh','Châu Âu','Tư vấn & tài chính',6],['HSBC','Anh','Châu Âu','Tư vấn & tài chính',6],['Accenture','Ireland','Châu Âu','Tư vấn & tài chính',5],["L'Oréal",'Pháp','Châu Âu','Hàng tiêu dùng phi thực phẩm',4],['Bayer','Đức','Châu Âu','Dược & thiết bị y tế',4],['Sanofi','Pháp','Châu Âu','Dược & thiết bị y tế',3],['Philips','Hà Lan','Châu Âu','Dược & thiết bị y tế',3]];
+const CITIES = [['TP. Hồ Chí Minh',38],['Hà Nội',34],['Bình Dương',7],['Đồng Nai',6],['Bắc Ninh',5],['Hải Phòng',5],['Đà Nẵng',5]];
+const ADDR = {'TP. Hồ Chí Minh':['Quận 1','Thủ Đức','Quận 7'],'Hà Nội':['Ba Đình','Cầu Giấy','Hoàn Kiếm'],'Bình Dương':['Thuận An','Dĩ An'],'Đồng Nai':['Long Thành','Biên Hòa'],'Bắc Ninh':['KCN Yên Phong','KCN Quế Võ'],'Hải Phòng':['KCN Đình Vũ','Lê Chân'],'Đà Nẵng':['Hải Châu','Sơn Trà']};
+const FUNCS = [['Chuỗi cung ứng',16],['Tài chính – Kế toán',14],['Kinh doanh',19],['Kỹ thuật',18],['IT',16],['Nhân sự',7],['Marketing',10]];
+const LEVELS = [['Thực tập',22],['Mới tốt nghiệp',20],['Có kinh nghiệm',43],['Quản lý',15]];
+const MODES = [['Tại văn phòng',55],['Hybrid',38],['Từ xa',7]];
+const SOURCES = [['Workday',34],['SmartRecruiters',28],['Site riêng',24],['Ybox',8],['VietnamWorks / TopCV',6]];
+const LANGS = ['Tiếng Anh','Tiếng Đức','Tiếng Nhật','Tiếng Pháp','Tiếng Trung'];
+const TITLES = {'Chuỗi cung ứng':['Supply Chain Intern','Procurement Graduate Trainee','Logistics Executive','Supply Chain Manager'],'Tài chính – Kế toán':['Finance Intern','Graduate Financial Analyst','FP&A Analyst','Finance Manager'],'Kinh doanh':['Business Development Intern','Sales Trainee','Key Account Executive','Sales Manager'],'Kỹ thuật':['Engineering Intern','Graduate Engineer','Application Engineer','Engineering Manager'],'IT':['IT Intern','Junior Software Engineer','Data Engineer','IT Project Manager'],'Nhân sự':['HR Intern','Talent Acquisition Trainee','HR Business Partner','HR Manager'],'Marketing':['Marketing Intern','Brand Trainee','Digital Marketing Executive','Marketing Manager']};
+const SKILLS = {'Chuỗi cung ứng':['Tiếng Anh','Excel','SAP','Logistics','Chứng từ xuất nhập khẩu','Đàm phán','Phân tích dữ liệu'],'Tài chính – Kế toán':['Tiếng Anh','Excel','Kế toán IFRS','Phân tích dữ liệu','SAP','Power BI'],'Kinh doanh':['Tiếng Anh','Đàm phán','Thuyết trình','Excel','CRM','Nghiên cứu thị trường'],'Kỹ thuật':['Tiếng Anh','AutoCAD','Quản lý dự án','Excel'],'IT':['Tiếng Anh','Python','SQL','Power BI','Quản lý dự án'],'Nhân sự':['Tiếng Anh','Thuyết trình','Excel','Tuyển dụng'],'Marketing':['Tiếng Anh','Phân tích dữ liệu','Thuyết trình','Digital marketing','Nghiên cứu thị trường']};
+const BENEFITS = ['Bảo hiểm sức khỏe cao cấp','Lương tháng 13','Thưởng theo hiệu quả','Làm hybrid 2 ngày/tuần','Ngân sách đào tạo','Nghỉ phép ngày sinh nhật','Hỗ trợ ăn trưa','Lộ trình lên nhân viên chính thức'];
+const END = new Date('2026-11-18T00:00:00');
+const jobs = [];
+for (let i=0;i<420;i++){
+  const co = pick(COMPANIES.map(c=>[c,c[4]])), func = pick(FUNCS), level = pick(LEVELS), li = LEVELS.findIndex(l=>l[0]===level), city = pick(CITIES), source = pick(SOURCES);
+  const req = SKILLS[func].filter((s,k)=> k===0 || rnd() < 0.55); if (co[1]==='Đức' && rnd()<0.12) req.push('Tiếng Đức'); if (rnd()<0.06) req.push('Tiếng Nhật');
+  const daysAgo = Math.floor(Math.pow(rnd(),1.15)*90), salary = rnd() < (source.startsWith('Vietnam')||source==='Ybox' ? 0.7 : 0.12);
+  jobs.push({ id:i, company:co[0], hq:co[1], region:co[2], industry:co[3], func, level, li, city, district: ADDR[city][Math.floor(rnd()*ADDR[city].length)],
+    title: TITLES[func][li], mode: pick(MODES), source, req:[...new Set(req)], langs:['Tiếng Anh', ...new Set(req.filter(s=>s==='Tiếng Đức'||s==='Tiếng Nhật'))],
+    expYears:[0,0,2+Math.floor(rnd()*3),5+Math.floor(rnd()*4)][li], salary, lo:[4,10,20,45][li], hi:[7,16,35,80][li],
+    benefits: BENEFITS.filter(()=>rnd()<0.35).slice(0,4), daysAgo, deadlineIn: Math.floor(rnd()*40)-5 });
+}
+jobs.forEach(j => { if (!j.benefits.length) j.benefits = ['Bảo hiểm sức khỏe cao cấp']; });
+const salaryText = j => !j.salary ? T('notDisclosed') : T('perMonth',{a:j.lo,b:j.hi}) + (j.li===0 ? T('allowance') : '');
+
+// ================= profile + matching =================
+const DICT = [['Tiếng Anh',['english','tiếng anh','ielts','toeic']],['Excel',['excel','microsoft office']],['SAP',['sap ']],['Power BI',['power bi','powerbi']],['SQL',['sql']],['Python',['python']],
+ ['Đàm phán',['negotiat','đàm phán']],['Thuyết trình',['presentation','thuyết trình','pitch deck','slides']],['Tiếng Đức',['german','tiếng đức','deutsch']],['Tiếng Nhật',['japanese','tiếng nhật','jlpt']],
+ ['Quản lý dự án',['project management','quản lý dự án']],['Logistics',['logistics','chuỗi cung ứng','supply chain','procurement']],['Chứng từ xuất nhập khẩu',['documentation','chứng từ','bills of lading','hs code','customs','hải quan']],
+ ['Phân tích dữ liệu',['data analys','data-driven','business analytics','market data','phân tích dữ liệu','econometric']],['Kế toán IFRS',['ifrs','kế toán','accounting']],['AutoCAD',['autocad']],['CRM',['crm','salesforce']],
+ ['Tuyển dụng',['recruit','tuyển dụng']],['Digital marketing',['digital marketing','social media','seo']],['Nghiên cứu thị trường',['market research','secondary research','nghiên cứu thị trường']],['Lãnh đạo',['leadership','lãnh đạo','leader']],['Chuyển đổi số',['digital transformation','chuyển đổi số']]];
+const ALLSKILLS = DICT.map(d=>d[0]);
+// Prototype only: a mock skill profile. On the live site the CV never reaches the browser;
+// the pipeline scores jobs with the CV stored as a GitHub Secret and writes match, have, miss into jobs.json.
+const profile = { skills:['Tiếng Anh','Excel','SQL','Python','Đàm phán','Logistics','Chứng từ xuất nhập khẩu','Phân tích dữ liệu','Nghiên cứu thị trường'], level:'Thực tập', func1:'Chuỗi cung ứng', func2:'Tài chính – Kế toán', city:'Hà Nội' };
+function scoreJob(j){
+  const have = j.req.filter(s => profile.skills.includes(s)), miss = j.req.filter(s => !profile.skills.includes(s));
+  const lv = LEVELS.map(l=>l[0]), d = Math.abs(lv.indexOf(j.level) - lv.indexOf(profile.level));
+  const s = 50*have.length/j.req.length + (d===0?22:d===1?12:0) + (j.func===profile.func1?18:j.func===profile.func2?12:0) + (!profile.city||j.city===profile.city?10:2);
+  return { match: Math.round(Math.min(99,s)), have, miss };
+}
+const rescore = () => jobs.forEach(j => Object.assign(j, scoreJob(j))); rescore();
+const tip = document.getElementById('tip');
+function showTip(html, ev){ tip.innerHTML = html; tip.style.opacity = 1; tip.style.left = Math.min(ev.clientX+14, innerWidth-270)+'px'; tip.style.top = (ev.clientY+14)+'px'; }
+function hideTip(){ tip.style.opacity = 0; }
+const ringStyle = m => m>=80 ? 'background:var(--yellow);color:var(--ink)' : m>=60 ? 'background:var(--teal-soft);color:var(--teal-dark)' : 'background:#EEF2F2;color:var(--muted)';
+
+// ================= TAB 1 =================
+const jf = document.getElementById('jf');
+let my = store.get('jr-status', {});
+const GROUPS = { level:LEVELS.map(l=>l[0]), func:FUNCS.map(f=>f[0]), city:CITIES.map(c=>c[0]), industry:[...new Set(COMPANIES.map(c=>c[3]))], mode:MODES.map(m=>m[0]), region:['Châu Âu','Châu Mỹ'], langs:LANGS, source:SOURCES.map(s=>s[0]) };
+function buildGroups(){
+  const keep = {}; document.querySelectorAll('[data-group] input').forEach(c => { if (c.checked) (keep[c.name] = keep[c.name]||[]).push(c.value); });
+  document.querySelectorAll('[data-group]').forEach(box => { const g = box.dataset.group;
+    box.innerHTML = GROUPS[g].map(v => '<label><input type="checkbox" name="'+g+'" value="'+esc(v)+'"'+((keep[g]||[]).includes(v)?' checked':'')+'> '+esc(L(v))+' <span class="muted" style="margin-left:auto;font-size:13px" data-c="'+esc(g+'|'+v)+'"></span></label>').join(''); });
+}
+const QUICK = [['q_intern', ()=>setCheck('level','Thực tập')],['q_grad', ()=>setCheck('level','Mới tốt nghiệp')],['q_hn', ()=>setCheck('city','Hà Nội')],['q_70', ()=>{ const r=jf.elements.minmatch; r.value = r.value==='70'?'0':'70'; }],['q_3d', ()=>{ const r=[...jf.elements.posted].find(x=>x.value==='3'); if (r.checked) jf.elements.posted[0].checked = true; else r.checked = true; }]];
+function setCheck(name, v){ const c = [...jf.elements[name]].find(x=>x.value===v); c.checked = !c.checked; }
+function buildQuick(){ document.getElementById('quick').innerHTML = QUICK.map((q,i)=>'<button class="qchip" data-q="'+i+'" aria-pressed="false">'+T(q[0])+'</button>').join('');
+  document.querySelectorAll('.qchip').forEach(b => b.onclick = () => { QUICK[+b.dataset.q][1](); renderJobs(true); }); }
+function readFilters(){
+  const f = {}; for (const g of Object.keys(GROUPS)) f[g] = [...jf.elements[g]].filter(c=>c.checked).map(c=>c.value);
+  f.minmatch = +jf.elements.minmatch.value; f.posted = +jf.querySelector('[name=posted]:checked').value; f.exp = +jf.querySelector('[name=exp]:checked').value;
+  ['salaryOnly','deadlineSoon','hideHidden','savedOnly','hideApplied'].forEach(k => f[k] = jf.elements[k].checked);
+  f.q = document.getElementById('q').value.trim().toLowerCase(); return f;
+}
+function passJob(j, f, skip){
+  for (const g of Object.keys(GROUPS)) { if (g===skip || !f[g].length) continue; if (g==='langs') { if (!f.langs.every(l => j.langs.includes(l))) return false; } else if (!f[g].includes(j[g])) return false; }
+  if (j.match < f.minmatch || j.daysAgo >= f.posted || j.expYears > f.exp || j.deadlineIn < 0) return false;
+  if (f.salaryOnly && !j.salary) return false; if (f.deadlineSoon && j.deadlineIn > 7) return false;
+  if (f.hideHidden && my[j.id]==='hidden') return false; if (f.savedOnly && my[j.id]!=='saved') return false; if (f.hideApplied && my[j.id]==='applied') return false;
+  if (f.q && !(j.title+' '+j.company+' '+j.req.map(L).join(' ')+' '+j.req.join(' ')+' '+L(j.industry)).toLowerCase().includes(f.q)) return false;
+  return true;
+}
+let shown = 15, openId = null;
+function jobCard(j){
+  const st = my[j.id], isOpen = openId===j.id;
+  const dl = j.deadlineIn <= 7 ? '<span style="color:var(--warn);font-weight:700">'+T('daysLeft',{n:j.deadlineIn})+'</span>' : T('deadlineIn',{n:j.deadlineIn});
+  return '<article class="card job" data-id="'+j.id+'"><div class="ring" style="'+ringStyle(j.match)+'">'+j.match+'%</div>'
+   + '<div><button class="toggle" aria-expanded="'+isOpen+'" data-open="'+j.id+'"><h3>'+esc(j.title)+'</h3></button>'
+   + '<div class="meta"><b style="color:var(--ink)">'+esc(j.company)+'</b><span>'+esc(L(j.city))+'</span><span>'+esc(L(j.industry))+'</span><span>'+esc(L(j.level))+'</span><span>'+esc(L(j.mode))+'</span></div>'
+   + '<div class="tags">'+j.have.map(s=>'<span class="tag have">'+esc(L(s))+'</span>').join('')+j.miss.map(s=>'<span class="tag miss">'+T('miss')+esc(L(s))+'</span>').join('')+'</div></div>'
+   + '<div class="side">'+(j.daysAgo<2?'<span class="badge-new">'+T('isNew')+'</span>':'')+'<b>'+esc(salaryText(j))+'</b><span class="muted" style="font-size:13px">'+(j.daysAgo?T('postedAgo',{n:j.daysAgo}):T('postedToday'))+'</span><span style="font-size:13px">'+dl+'</span>'+(st?'<span class="tag" style="background:var(--yellow-soft)">'+T('st_'+st)+'</span>':'')+'</div>'
+   + (isOpen ? '<div class="open"><dl><dt>'+T('address')+'</dt><dd>'+esc(L(j.district)+', '+L(j.city))+'</dd><dt>'+T('hq')+'</dt><dd>'+esc(L(j.hq))+'</dd><dt>'+T('exp')+'</dt><dd>'+(j.expYears?T('expN',{n:j.expYears}):T('noExp'))+'</dd><dt>'+T('langs')+'</dt><dd>'+esc(j.langs.map(L).join(', '))+'</dd><dt>'+T('source')+'</dt><dd>'+esc(L(j.source))+'</dd></dl>'
+      + '<div><b>'+T('reqSkills')+'</b><ul>'+j.req.map(s=>'<li>'+esc(L(s))+(j.have.includes(s)?T('youHaveIt'):'')+'</li>').join('')+'</ul></div>'
+      + '<div><b>'+T('benefits')+'</b><ul>'+j.benefits.map(b=>'<li>'+esc(L(b))+'</li>').join('')+'</ul></div>'
+      + '<div class="actions"><a class="btn" href="#viec-lam" onclick="return false">'+T('openSrc',{s:esc(L(j.source))})+'</a><button class="btn ghost" data-act="saved" data-id="'+j.id+'">'+(st==='saved'?T('unsave'):T('save'))+'</button><button class="btn ghost" data-act="applied" data-id="'+j.id+'">'+(st==='applied'?T('unapply'):T('apply'))+'</button><button class="btn ghost" data-act="hidden" data-id="'+j.id+'">'+T('hide')+'</button></div></div>' : '')
+   + '</article>';
+}
+function renderJobs(resetPage){
+  if (resetPage) shown = 15;
+  document.getElementById('minmatch-v').textContent = jf.elements.minmatch.value + '%';
+  const f = readFilters(), list = jobs.filter(j=>passJob(j,f)), sort = document.getElementById('sort').value;
+  list.sort(sort==='new' ? (a,b)=>a.daysAgo-b.daysAgo : sort==='deadline' ? (a,b)=>a.deadlineIn-b.deadlineIn : (a,b)=>b.match-a.match || a.daysAgo-b.daysAgo);
+  document.getElementById('count').textContent = T('count',{n:fmt(list.length)});
+  document.getElementById('list').innerHTML = list.length ? list.slice(0,shown).map(jobCard).join('') : '<div class="card empty"><h3>'+T('emptyT')+'</h3><p class="muted">'+T('emptyS')+'</p></div>';
+  document.getElementById('more').hidden = list.length <= shown;
+  for (const g of Object.keys(GROUPS)) { const base = jobs.filter(j=>passJob(j,f,g)); GROUPS[g].forEach(v => { const n = g==='langs' ? base.filter(j=>j.langs.includes(v)).length : base.filter(j=>j[g]===v).length; const s = document.querySelector('[data-c="'+CSS.escape(g+'|'+v)+'"]'); if (s) s.textContent = n; }); }
+  const qs = document.querySelectorAll('.qchip');
+  [f.level.includes('Thực tập'), f.level.includes('Mới tốt nghiệp'), f.city.includes('Hà Nội'), f.minmatch===70, f.posted===3].forEach((v,i) => qs[i] && qs[i].setAttribute('aria-pressed', v));
+  const reco = jobs.filter(j => j.deadlineIn>=0 && !my[j.id]).sort((a,b)=>b.match-a.match || a.daysAgo-b.daysAgo).slice(0,3);
+  document.getElementById('reco').innerHTML = reco.map(j => '<button class="rcard" data-goto="'+j.id+'"><div style="display:flex;align-items:baseline;gap:6px"><span class="score">'+j.match+'</span><span class="muted">'+T('pctMatch')+'</span></div><div class="meter" aria-hidden="true"><span style="width:'+j.match+'%"></span></div><h3 style="font-size:19px">'+esc(j.title)+'</h3><span class="muted">'+esc(j.company)+', '+esc(L(j.city))+'</span><span style="font-size:14px"><b>'+T('youHave')+'</b> '+esc(j.have.map(L).join(', ')||T('noOverlap'))+'</span>'+(j.miss.length?'<span style="font-size:14px;color:var(--warn)"><b>'+T('missing')+'</b> '+esc(j.miss.map(L).join(', '))+'</span>':'')+'</button>').join('');
+}
+jf.addEventListener('input', () => renderJobs(true)); document.getElementById('q').addEventListener('input', () => renderJobs(true));
+document.getElementById('sort').onchange = () => renderJobs(true);
+document.getElementById('more').onclick = () => { shown += 15; renderJobs(false); };
+document.getElementById('jf-reset').onclick = () => { jf.reset(); document.getElementById('q').value=''; renderJobs(true); };
+document.getElementById('jf-save').onclick = () => { store.set('jr-filter', readFilters()); document.getElementById('jf-saved').textContent = T('saved'); };
+document.getElementById('view-viec-lam').addEventListener('click', ev => {
+  const o = ev.target.closest('[data-open]'); if (o) { const id = +o.dataset.open; openId = openId===id ? null : id; renderJobs(false); return; }
+  const a = ev.target.closest('[data-act]'); if (a) { const id = +a.dataset.id, act = a.dataset.act; if (my[id]===act) delete my[id]; else my[id] = act; store.set('jr-status', my); renderJobs(false); return; }
+  const g = ev.target.closest('[data-goto]'); if (g) { openId = +g.dataset.goto; jf.reset(); document.getElementById('sort').value='match'; renderJobs(true); const e = document.querySelector('.job[data-id="'+openId+'"]'); if (e) e.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth', block:'center'}); }
+});
+
+// ================= TAB 2 =================
+const fa = document.getElementById('fa'), ns = 'http://www.w3.org/2000/svg';
+const el = (tag, attrs, parent) => { const e = document.createElementNS(ns, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+const count = (arr, key, order) => { const m = new Map((order||[]).map(k=>[k,0])); arr.forEach(d => m.set(d[key],(m.get(d[key])||0)+1)); return [...m]; };
+function fillSelects(){ ['city','industry','func','level','region','source'].forEach(n => { const s = fa.elements[n], v = s.value; s.innerHTML = '<option value="">'+T('all')+'</option>' + GROUPS[n].map(o=>'<option value="'+esc(o)+'"'+(o===v?' selected':'')+'>'+esc(L(o))+'</option>').join(''); }); }
+fa.addEventListener('change', renderA); document.getElementById('fa-reset').onclick = () => { fa.reset(); renderA(); };
+function filteredA(){ const f = Object.fromEntries(new FormData(fa));
+  return jobs.filter(d => d.daysAgo < +f.days && (!f.city||d.city===f.city) && (!f.industry||d.industry===f.industry) && (!f.func||d.func===f.func) && (!f.level||d.level===f.level) && (!f.region||d.region===f.region) && (!f.source||d.source===f.source)
+    && (f.salary===''||(f.salary==='1')===d.salary) && (f.match===''||(f.match==='80'?d.match>=80:f.match==='60'?d.match>=60&&d.match<80:d.match<60))); }
+const tableHTML = (pairs,h1,h2) => '<details><summary>'+T('table')+'</summary><table><thead><tr><th>'+h1+'</th><th>'+h2+'</th></tr></thead><tbody>'+pairs.map(p=>'<tr><td>'+esc(p[0])+'</td><td class="n">'+fmt(p[1])+'</td></tr>').join('')+'</tbody></table></details>';
+function hbar(id, pairs, unit){
+  const box = document.getElementById(id); box.innerHTML = '';
+  const W = box.clientWidth||520, rowH = 30, lw = Math.min(220, W*0.44), H = pairs.length*rowH+6, max = Math.max(1,...pairs.map(p=>p[1]));
+  const svg = el('svg',{width:W,height:H,role:'img','aria-label':pairs.map(p=>p[0]+': '+p[1]).join(', ')},box);
+  pairs.forEach((p,i) => { const y = i*rowH+4, bw = Math.max(p[1]?4:0,(W-lw-52)*p[1]/max);
+    el('text',{x:lw-10,y:y+16,'text-anchor':'end','font-size':13,fill:'#0E3B40'},svg).textContent = p[0];
+    const r = el('rect',{x:lw,y:y+4,width:bw,height:18,rx:4,fill:'var(--c1)'},svg);
+    el('text',{x:lw+bw+6,y:y+17,'font-size':13,'font-weight':700,fill:'#4A6A6D'},svg).textContent = fmt(p[1]);
+    const hit = el('rect',{x:0,y:y,width:W,height:rowH,fill:'transparent'},svg);
+    hit.addEventListener('mousemove', ev => { r.setAttribute('fill','#06646D'); showTip('<b>'+fmt(p[1])+'</b> '+unit+'<br>'+esc(p[0]), ev); });
+    hit.addEventListener('mouseleave', () => { r.setAttribute('fill','var(--c1)'); hideTip(); }); });
+  box.insertAdjacentHTML('beforeend', tableHTML(pairs,T('group'),T('nPosts')));
+}
+function trend(arr){
+  const box = document.getElementById('a-trend'); box.innerHTML = '';
+  const weeks = 13, c = Array(weeks).fill(0); arr.forEach(d => { const w = Math.floor(d.daysAgo/7); if (w<weeks) c[weeks-1-w]++; });
+  const labels = c.map((_,i) => { const dt = new Date(END.getTime()-(weeks-1-i)*7*864e5); return dt.getDate()+'/'+(dt.getMonth()+1); });
+  const W = box.clientWidth||1000, H = 220, m = {l:40,r:16,t:16,b:28}, max = Math.max(4,...c)*1.15;
+  const x = i => m.l+i*(W-m.l-m.r)/(weeks-1), y = v => H-m.b-v*(H-m.t-m.b)/max;
+  const svg = el('svg',{width:W,height:H,role:'img','aria-label':T('c_trend')},box);
+  [0,Math.round(max/2),Math.round(max)].forEach(t => { el('line',{x1:m.l,x2:W-m.r,y1:y(t),y2:y(t),stroke:'#D6E9E7'},svg); el('text',{x:m.l-8,y:y(t)+4,'text-anchor':'end','font-size':12,fill:'#4A6A6D'},svg).textContent=t; });
+  labels.forEach((l,i) => { if (i%2===0||i===weeks-1) el('text',{x:x(i),y:H-8,'text-anchor':'middle','font-size':12,fill:'#4A6A6D'},svg).textContent=l; });
+  el('path',{d:c.map((v,i)=>(i?'L':'M')+x(i)+','+y(v)).join(''),fill:'none',stroke:'var(--c1)','stroke-width':2},svg);
+  const last = weeks-1; el('circle',{cx:x(last),cy:y(c[last]),r:4,fill:'var(--c1)'},svg);
+  el('text',{x:x(last)-6,y:y(c[last])-10,'text-anchor':'end','font-size':13,'font-weight':700,fill:'#0E3B40'},svg).textContent = T('thisWeek',{n:c[last]});
+  const cross = el('line',{y1:m.t,y2:H-m.b,stroke:'#0E3B40','stroke-dasharray':'3 3',opacity:0},svg), dot = el('circle',{r:5,fill:'var(--c1)',stroke:'#fff','stroke-width':2,opacity:0},svg);
+  const hit = el('rect',{x:m.l,y:0,width:W-m.l-m.r,height:H,fill:'transparent'},svg);
+  hit.addEventListener('mousemove', ev => { const bx = svg.getBoundingClientRect(), i = Math.max(0,Math.min(last,Math.round((ev.clientX-bx.left-m.l)/((W-m.l-m.r)/(weeks-1)))));
+    cross.setAttribute('x1',x(i)); cross.setAttribute('x2',x(i)); cross.setAttribute('opacity',.5); dot.setAttribute('cx',x(i)); dot.setAttribute('cy',y(c[i])); dot.setAttribute('opacity',1); showTip('<b>'+c[i]+'</b> '+T('posts')+'<br>'+T('weekOf',{d:labels[i]}), ev); });
+  hit.addEventListener('mouseleave', () => { cross.setAttribute('opacity',0); dot.setAttribute('opacity',0); hideTip(); });
+  box.insertAdjacentHTML('beforeend', tableHTML(labels.map((l,i)=>[T('week')+' '+l,c[i]]),T('week'),T('nPosts')));
+}
+function hist(arr){
+  const box = document.getElementById('a-match'); box.innerHTML = '';
+  const bins = Array(10).fill(0); arr.forEach(d => bins[Math.min(9,Math.floor(d.match/10))]++);
+  const W = box.clientWidth||520, H = 220, m = {l:34,r:8,t:18,b:30}, max = Math.max(1,...bins)*1.1, bw = (W-m.l-m.r)/10;
+  const svg = el('svg',{width:W,height:H,role:'img','aria-label':T('c_match')},box);
+  el('line',{x1:m.l,x2:W-m.r,y1:H-m.b,y2:H-m.b,stroke:'#B9D3D0'},svg);
+  bins.forEach((v,i) => { const h = v*(H-m.t-m.b)/max, xx = m.l+i*bw+1;
+    el('rect',{x:xx,y:H-m.b-h,width:bw-2,height:h,rx:4,fill:i>=7?'var(--c2)':'var(--c1)'},svg);
+    el('text',{x:xx+(bw-2)/2,y:H-m.b-h-5,'text-anchor':'middle','font-size':11,'font-weight':700,fill:'#4A6A6D'},svg).textContent = v||'';
+    el('text',{x:xx+(bw-2)/2,y:H-10,'text-anchor':'middle','font-size':12,fill:'#4A6A6D'},svg).textContent = i*10;
+    const hit = el('rect',{x:xx,y:m.t,width:bw-2,height:H-m.t-m.b,fill:'transparent'},svg);
+    hit.addEventListener('mousemove', ev => showTip('<b>'+v+'</b> '+T('posts')+'<br>'+T('matchRange',{a:i*10,b:i*10+9}), ev)); hit.addEventListener('mouseleave', hideTip); });
+  const tx = m.l+7*bw; el('line',{x1:tx,x2:tx,y1:m.t-8,y2:H-m.b,stroke:'#0E3B40','stroke-dasharray':'4 3'},svg);
+  el('text',{x:tx+6,y:m.t,'font-size':12,'font-weight':700,fill:'#0E3B40'},svg).textContent = T('threshold');
+  box.insertAdjacentHTML('beforeend', tableHTML(bins.map((v,i)=>[(i*10)+'–'+(i*10+9)+'%',v]),T('matchCol'),T('nPosts')));
+}
+const RAMP = ['#F2FAFA','#CDEEF0','#9EDDE2','#6CC8CF','#3AAFB8','#14929E','#097C87','#05515A'];
+function heat(arr){
+  const box = document.getElementById('a-heat'); box.innerHTML = '';
+  const fs = GROUPS.func, ls = GROUPS.level, grid = fs.map(f => ls.map(l => arr.filter(d=>d.func===f&&d.level===l).length)), max = Math.max(1,...grid.flat());
+  const W = box.clientWidth||520, lw = 170, cw = (W-lw)/ls.length, ch = 30, H = 26+fs.length*ch;
+  const svg = el('svg',{width:W,height:H,role:'img','aria-label':T('c_heat')},box);
+  ls.forEach((l,j) => el('text',{x:lw+j*cw+cw/2,y:16,'text-anchor':'middle','font-size':12,'font-weight':700,fill:'#4A6A6D'},svg).textContent = L(l));
+  fs.forEach((f,i) => { el('text',{x:lw-8,y:26+i*ch+19,'text-anchor':'end','font-size':13,fill:'#0E3B40'},svg).textContent = L(f);
+    ls.forEach((l,j) => { const v = grid[i][j], k = v?1+Math.round(v/max*6):0;
+      const r = el('rect',{x:lw+j*cw+1,y:26+i*ch+1,width:cw-2,height:ch-2,rx:4,fill:RAMP[k]},svg);
+      el('text',{x:lw+j*cw+cw/2,y:26+i*ch+20,'text-anchor':'middle','font-size':12,'font-weight':700,fill:k>=5?'#fff':'#0E3B40'},svg).textContent = v;
+      r.addEventListener('mousemove', ev => showTip('<b>'+v+'</b> '+T('posts')+'<br>'+esc(L(f))+', '+esc(L(l)), ev)); r.addEventListener('mouseleave', hideTip); }); });
+  box.insertAdjacentHTML('beforeend', tableHTML(fs.flatMap((f,i)=>ls.map((l,j)=>[L(f)+' – '+L(l),grid[i][j]])),T('group'),T('nPosts')));
+}
+function renderA(){
+  const arr = filteredA(), n = arr.length;
+  document.getElementById('ka').innerHTML = [[fmt(n),T('k1')],[fmt(arr.filter(d=>d.daysAgo<7).length),T('k2')],[(n?Math.round(arr.filter(d=>d.salary).length/n*100):0)+'%',T('k3')],[fmt(arr.filter(d=>d.match>=70).length),T('k4')]].map(k=>'<div class="card kpi"><div class="v">'+k[0]+'</div><div class="l">'+k[1]+'</div></div>').join('');
+  trend(arr);
+  const tr = pairs => pairs.map(p => [L(p[0]), p[1]]);
+  hbar('a-ind', tr(count(arr,'industry',GROUPS.industry).sort((a,b)=>b[1]-a[1])), T('posts'));
+  hbar('a-city', tr(count(arr,'city',GROUPS.city).sort((a,b)=>b[1]-a[1])), T('posts'));
+  hist(arr); heat(arr);
+  const sk = new Map(); arr.forEach(d=>d.req.forEach(s=>sk.set(s,(sk.get(s)||0)+1)));
+  hbar('a-skill', tr([...sk].sort((a,b)=>b[1]-a[1]).slice(0,8)), T('postsNeed'));
+  hbar('a-hq', tr(count(arr,'hq').sort((a,b)=>b[1]-a[1])), T('posts'));
+}
+
+// ================= language + routing =================
+function applyLang(){
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(e => e.textContent = T(e.dataset.i18n));
+  document.querySelectorAll('[data-i18n-html]').forEach(e => e.innerHTML = T(e.dataset.i18nHtml));
+  document.querySelectorAll('[data-i18n-ph]').forEach(e => e.placeholder = T(e.dataset.i18nPh));
+  document.querySelectorAll('[data-i18n-aria]').forEach(e => e.setAttribute('aria-label', T(e.dataset.i18nAria)));
+  document.querySelectorAll('.lang button').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang===lang));
+  document.getElementById('st-upd').innerHTML = T('upd',{t:'02:00, 18/11'}); document.getElementById('st-next').innerHTML = T('next',{t:'02:00, 19/11'});
+  document.getElementById('jf-saved').textContent = '';
+  buildGroups(); buildQuick(); fillSelects(); route();
+}
+document.querySelectorAll('.lang button').forEach(b => b.onclick = () => { lang = b.dataset.lang; store.set('jr-lang', lang); applyLang(); });
+function route(){
+  const tab = ['viec-lam','thi-truong'].includes(location.hash.slice(1)) ? location.hash.slice(1) : 'viec-lam';
+  document.querySelectorAll('.view').forEach(v => v.hidden = v.id !== 'view-'+tab);
+  document.querySelectorAll('nav.tabs a').forEach(a => a.setAttribute('aria-current', a.dataset.tab===tab ? 'page' : 'false'));
+  if (tab==='viec-lam') renderJobs(false); else renderA();
+}
+addEventListener('hashchange', route);
+let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { if (location.hash==='#thi-truong') renderA(); }, 150); });
+(function restore(){ buildGroups(); const f = store.get('jr-filter', null); if (!f) return; for (const g of Object.keys(GROUPS)) [...jf.elements[g]].forEach(c => c.checked = (f[g]||[]).includes(c.value)); jf.elements.minmatch.value = f.minmatch||0; })();
+applyLang();
+</script>
+</body>
+</html>

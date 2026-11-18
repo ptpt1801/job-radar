@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Job Radar</title>
+<meta name="description" content="Việc làm còn hạn tại Việt Nam của các tập đoàn châu Âu và châu Mỹ, cập nhật mỗi ngày. Open roles in Vietnam at European and American corporations, updated daily.">
+<meta name="theme-color" content="#097C87">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Ccircle cx=%226%22 cy=%2216%22 r=%225%22 fill=%22%23FCA47C%22/%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%225%22 fill=%22%23F9D779%22/%3E%3Ccircle cx=%2226%22 cy=%2216%22 r=%225%22 fill=%22%2323CED9%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<header class="top">
+<div class="wrap">
+  <a class="logo" href="#viec-lam"><i aria-hidden="true"></i>Job Radar</a>
+<div class="lang" role="group" data-i18n-aria="langGroup">
+      <button data-lang="vi" aria-label="Tiếng Việt"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#DA251D"/><polygon fill="#FFFF00" points="15,4 16.2,8.3 20.7,8.3 17.1,10.9 18.4,15.2 15,12.6 11.6,15.2 12.9,10.9 9.3,8.3 13.8,8.3"/></svg>VI</button>
+      <button data-lang="en" aria-label="English"><svg viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="40" fill="#012169"/><path d="M0,0 60,40 M60,0 0,40" stroke="#fff" stroke-width="8"/><path d="M0,0 60,40 M60,0 0,40" stroke="#C8102E" stroke-width="3"/><path d="M30,0 V40 M0,20 H60" stroke="#fff" stroke-width="12"/><path d="M30,0 V40 M0,20 H60" stroke="#C8102E" stroke-width="7"/></svg>EN</button>
+    </div>
+  <nav class="tabs" data-i18n-aria="nav">
+    <a href="#viec-lam" data-tab="viec-lam" data-i18n="tab1"></a>
+    <a href="#thi-truong" data-tab="thi-truong" data-i18n="tab2"></a>
+  </nav>
+  <div class="topright">
+    <div class="status"><span id="st-upd"></span><span id="st-next"></span></div>
+
+  </div>
+</div>
+</header>
+
+<main class="wrap">
+<!-- TAB 1 -->
+<section class="view" id="view-viec-lam">
+<div class="jobs-layout">
+  <aside class="card filters">
+    <h2 data-i18n="filters"></h2>
+    <form id="jf" onsubmit="return false">
+    <details open><summary data-i18n="f_level"></summary><div class="opts" data-group="level"></div></details>
+    <details open><summary data-i18n="f_func"></summary><div class="opts" data-group="func"></div></details>
+    <details open><summary data-i18n="f_city"></summary><div class="opts" data-group="city"></div></details>
+    <details><summary data-i18n="f_industry"></summary><div class="opts" data-group="industry"></div></details>
+    <details><summary data-i18n="f_mode"></summary><div class="opts" data-group="mode"></div></details>
+    <details><summary data-i18n="f_region"></summary><div class="opts" data-group="region"></div></details>
+    <details open id="f-match-box"><summary data-i18n="f_match"></summary><div class="opts">
+      <label for="minmatch" style="justify-content:space-between"><span data-i18n="f_min"></span> <b id="minmatch-v">0%</b></label>
+      <input type="range" id="minmatch" name="minmatch" min="0" max="90" step="10" value="0">
+    </div></details>
+    <details><summary data-i18n="f_posted"></summary><div class="opts">
+      <label><input type="radio" name="posted" value="999" checked> <span data-i18n="any"></span></label>
+      <label><input type="radio" name="posted" value="1"> <span data-i18n="p1"></span></label>
+      <label><input type="radio" name="posted" value="3"> <span data-i18n="p3"></span></label>
+      <label><input type="radio" name="posted" value="7"> <span data-i18n="p7"></span></label>
+      <label><input type="radio" name="posted" value="30"> <span data-i18n="p30"></span></label>
+    </div></details>
+    <details><summary data-i18n="f_exp"></summary><div class="opts">
+      <label><input type="radio" name="exp" value="99" checked> <span data-i18n="any"></span></label>
+      <label><input type="radio" name="exp" value="0"> <span data-i18n="e0"></span></label>
+      <label><input type="radio" name="exp" value="1"> <span data-i18n="e1"></span></label>
+      <label><input type="radio" name="exp" value="3"> <span data-i18n="e3"></span></label>
+    </div></details>
+    <details><summary data-i18n="f_langs"></summary><div class="opts" data-group="langs"></div></details>
+    <details><summary data-i18n="f_salary"></summary><div class="opts">
+      <label><input type="checkbox" name="salaryOnly"> <span data-i18n="salaryOnly"></span></label>
+      <label><input type="checkbox" name="deadlineSoon"> <span data-i18n="deadlineSoon"></span></label>
+    </div></details>
+    <details><summary data-i18n="f_mine"></summary><div class="opts">
+      <label><input type="checkbox" name="hideHidden" checked> <span data-i18n="hideHidden"></span></label>
+      <label><input type="checkbox" name="savedOnly"> <span data-i18n="savedOnly"></span></label>
+      <label><input type="checkbox" name="hideApplied"> <span data-i18n="hideApplied"></span></label>
+    </div></details>
+    <details><summary data-i18n="f_source"></summary><div class="opts" data-group="source"></div></details>
+    <div class="row"><button type="button" class="btn small" id="jf-save" data-i18n="saveFilter"></button><button type="button" class="btn ghost small" id="jf-reset" data-i18n="reset"></button></div>
+    <p class="muted" id="jf-saved" style="font-size:13px;margin:6px 0 0"></p>
+    </form>
+  </aside>
+  <div class="results">
+    <div class="searchbar"><label for="q" class="sr" data-i18n="searchLabel"></label><input id="q" type="search" data-i18n-ph="searchPh"></div>
+    <div class="quick" id="quick"></div>
+    <a class="btn ghost small mobile-only" href="#jf" onclick="document.getElementById('jf').scrollIntoView();return false" data-i18n="openFilters"></a>
+    <section class="card reco" id="reco-box"><div class="reco-head"><h2 data-i18n="reco"></h2><span class="muted" style="font-size:14px" id="reco-note"></span></div><div class="reco-grid" id="reco"></div></section>
+    <div class="list-head"><h2 id="count"></h2><label><span data-i18n="sort"></span> <select id="sort"><option value="match" data-i18n="s_match" id="sort-match"></option><option value="new" data-i18n="s_new"></option><option value="deadline" data-i18n="s_deadline"></option></select></label></div>
+    <div id="list" aria-live="polite"></div>
+    <button class="btn ghost" id="more" data-i18n="more"></button>
+  </div>
+</div>
+</section>
+
+<!-- TAB 2 -->
+<section class="view" id="view-thi-truong" hidden>
+  <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:18px"><h1 style="font-size:40px;font-weight:700" data-i18n="tab2"></h1><p class="muted" style="margin:0" data-i18n="dashSub"></p></div>
+  <form class="card dfilters" id="fa" onsubmit="return false">
+    <label><span data-i18n="d_time"></span><select name="days"><option value="90" data-i18n="d90"></option><option value="30" data-i18n="d30"></option><option value="7" data-i18n="d7"></option></select></label>
+    <label><span data-i18n="f_city"></span><select name="city"></select></label>
+    <label><span data-i18n="f_industry"></span><select name="industry"></select></label>
+    <label><span data-i18n="f_func"></span><select name="func"></select></label>
+    <label><span data-i18n="f_level"></span><select name="level"></select></label>
+    <label><span data-i18n="f_region"></span><select name="region"></select></label>
+    <label id="fa-match"><span data-i18n="f_match"></span><select name="match"><option value="" data-i18n="all"></option><option value="80" data-i18n="m80"></option><option value="60" data-i18n="m60"></option><option value="0" data-i18n="m0"></option></select></label>
+    <label><span data-i18n="d_salary"></span><select name="salary"><option value="" data-i18n="all"></option><option value="1" data-i18n="sal1"></option><option value="0" data-i18n="sal0"></option></select></label>
+    <label><span data-i18n="f_source"></span><select name="source"></select></label>
+    <button type="button" class="btn ghost" id="fa-reset" style="height:40px" data-i18n="reset"></button>
+  </form>
+  <div class="kpis" id="ka"></div>
+  <div class="dgrid">
+    <div class="card chart wide"><h3 data-i18n="c_trend"></h3><div class="sub" data-i18n="c_trendSub"></div><div id="a-trend"></div></div>
+    <div class="card chart"><h3 data-i18n="c_ind"></h3><div class="sub" data-i18n="c_open"></div><div id="a-ind"></div></div>
+    <div class="card chart"><h3 data-i18n="c_city"></h3><div class="sub" data-i18n="c_open"></div><div id="a-city"></div></div>
+    <div class="card chart" id="c-match-box"><h3 data-i18n="c_match"></h3><div class="sub" data-i18n="c_matchSub"></div><div id="a-match"></div></div>
+    <div class="card chart"><h3 data-i18n="c_heat"></h3><div class="sub" data-i18n="c_heatSub"></div><div id="a-heat"></div></div>
+    <div class="card chart"><h3 data-i18n="c_skill"></h3><div class="sub" data-i18n="c_skillSub"></div><div id="a-skill"></div></div>
+    <div class="card chart"><h3 data-i18n="c_hq"></h3><div class="sub" data-i18n="c_open"></div><div id="a-hq"></div></div>
+  </div>
+</section>
+
+</main>
+<footer class="site"><div class="wrap"><span data-i18n="footer"></span><a href="https://github.com/ptpt1801/job-radar" rel="noopener" data-i18n="repo"></a></div></footer>
+
+<div class="tip" id="tip" role="status" aria-live="polite"></div>
+
+<script src="assets/charts.js" defer></script>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

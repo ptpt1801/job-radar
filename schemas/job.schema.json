@@ -1,0 +1,293 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ptpt1801.github.io/job-radar/schemas/job.schema.json",
+  "title": "Job Radar job posting",
+  "type": "object",
+  "required": [
+    "id",
+    "source",
+    "source_job_id",
+    "company_id",
+    "company",
+    "title",
+    "url",
+    "city",
+    "status",
+    "first_seen_at",
+    "last_seen_at"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{12}$"
+    },
+    "source": {
+      "enum": [
+        "workday",
+        "smartrecruiters",
+        "greenhouse",
+        "lever",
+        "ashby",
+        "custom",
+        "ybox",
+        "vietnamworks",
+        "topcv"
+      ]
+    },
+    "source_job_id": {
+      "type": "string"
+    },
+    "also_on": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "company_id": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "hq_country": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "region": {
+      "enum": [
+        "europe",
+        "americas"
+      ]
+    },
+    "industry": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 2
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "lang": {
+      "enum": [
+        "en",
+        "vi",
+        "other"
+      ]
+    },
+    "city": {
+      "enum": [
+        "hanoi",
+        "hcmc",
+        "binh_duong",
+        "dong_nai",
+        "bac_ninh",
+        "hai_phong",
+        "da_nang",
+        "other_vn"
+      ]
+    },
+    "address_raw": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "work_mode": {
+      "enum": [
+        "onsite",
+        "hybrid",
+        "remote",
+        null
+      ]
+    },
+    "employment_type": {
+      "enum": [
+        "full_time",
+        "part_time",
+        "internship",
+        "contract",
+        null
+      ]
+    },
+    "level": {
+      "enum": [
+        "internship",
+        "graduate",
+        "experienced",
+        "manager"
+      ]
+    },
+    "function": {
+      "enum": [
+        "supply_chain",
+        "finance",
+        "sales",
+        "engineering",
+        "it",
+        "hr",
+        "marketing",
+        "operations",
+        "legal",
+        "other"
+      ]
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "languages_required": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "english",
+          "german",
+          "japanese",
+          "french",
+          "chinese",
+          "korean",
+          "vietnamese"
+        ]
+      }
+    },
+    "experience_min_years": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 30
+    },
+    "salary": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "min": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "max": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "currency": {
+          "enum": [
+            "VND",
+            "USD",
+            "EUR"
+          ]
+        },
+        "period": {
+          "enum": [
+            "month",
+            "year",
+            "hour"
+          ]
+        },
+        "is_allowance": {
+          "type": "boolean"
+        },
+        "raw": {
+          "type": "string"
+        }
+      }
+    },
+    "benefits": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "string",
+        "maxLength": 120
+      }
+    },
+    "description_excerpt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 600
+    },
+    "posted_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "posted_text": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "deadline": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "first_seen_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_seen_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "closed_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "status": {
+      "enum": [
+        "open",
+        "closed"
+      ]
+    },
+    "match": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 100
+    },
+    "have": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "missing": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "content_hash": {
+      "type": "string"
+    },
+    "needs_review": {
+      "type": "boolean"
+    },
+    "has_details": {
+      "type": "boolean"
+    }
+  }
+}
