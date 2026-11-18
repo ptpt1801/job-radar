@@ -127,3 +127,11 @@ footer.site .wrap{display:flex;gap:8px 20px;flex-wrap:wrap;justify-content:space
 @media (max-width:720px){.job.noring{grid-template-columns:minmax(0,1fr)}.job.noring .side{grid-column:1}}
 @media (max-width:720px){#view-thi-truong h1{font-size:30px!important}}
 @media (max-width:400px){nav.tabs a{padding:0 9px;font-size:14.5px}nav.tabs{gap:2px}}
+/* reserve space so late-loading data does not shift the layout (CLS) */
+main{min-height:100vh}
+.quick{min-height:38px}
+.list-head{min-height:44px}
+#list{min-height:70vh}
+.filters{min-height:520px}
+.status{min-height:21px;min-width:300px}
+@media (max-width:720px){.status{min-width:0}.filters{min-height:0}}

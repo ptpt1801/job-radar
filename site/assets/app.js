@@ -247,13 +247,16 @@
     setRadio('posted', f.posted); setRadio('exp', f.exp);
     ['salaryOnly', 'deadlineSoon', 'hideHidden', 'savedOnly', 'hideApplied'].forEach(k => { if (k in f) jf.elements[k].checked = !!f[k]; }); }
 
-  const getJSON = async (u, opt) => { const r = await fetch(u, { cache: 'no-cache' }); if (!r.ok) { if (opt) return null; throw new Error(u + ' ' + r.status); } return r.json(); };
+  const getJSON = async (u, opt) => { const r = await fetch(u); if (!r.ok) { if (opt) return null; throw new Error(u + ' ' + r.status); } return r.json(); };
   (async function boot() {
+    // start every request at once; render the shell as soon as the strings arrive
+    const pData = Promise.all([getJSON('i18n/taxonomy.json'), getJSON('data/meta.json', true), getJSON('data/jobs.json'), getJSON('data/archive.json', true)]);
+    pData.catch(() => {});
     try { [I18N.vi, I18N.en] = await Promise.all([getJSON('i18n/vi.json'), getJSON('i18n/en.json')]); }
     catch (e) { document.body.insertAdjacentHTML('afterbegin', '<p role="alert" style="padding:16px">Không tải được giao diện / The page failed to load. Please reload.</p>'); return; }
     applyLang();
     try {
-      const [tax, meta, data, arch] = await Promise.all([getJSON('i18n/taxonomy.json'), getJSON('data/meta.json', true), getJSON('data/jobs.json'), getJSON('data/archive.json', true)]);
+      const [tax, meta, data, arch] = await pData;
       TAX = tax || {}; META = meta || {}; TAX.skills = TAX.skills || {};
       TODAY = dayNum(vnDate(new Date()));
       jobs = (data.jobs || []).map(prep);

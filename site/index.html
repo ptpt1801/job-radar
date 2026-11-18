@@ -11,14 +11,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/app.css">
+<link rel="preload" href="data/jobs.json" as="fetch" crossorigin>
+<link rel="preload" href="i18n/vi.json" as="fetch" crossorigin>
+<link rel="preload" href="i18n/taxonomy.json" as="fetch" crossorigin>
 </head>
 <body>
 <header class="top">
 <div class="wrap">
   <a class="logo" href="#viec-lam"><i aria-hidden="true"></i>Job Radar</a>
 <div class="lang" role="group" data-i18n-aria="langGroup">
-      <button data-lang="vi" aria-label="Tiếng Việt"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#DA251D"/><polygon fill="#FFFF00" points="15,4 16.2,8.3 20.7,8.3 17.1,10.9 18.4,15.2 15,12.6 11.6,15.2 12.9,10.9 9.3,8.3 13.8,8.3"/></svg>VI</button>
-      <button data-lang="en" aria-label="English"><svg viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="40" fill="#012169"/><path d="M0,0 60,40 M60,0 0,40" stroke="#fff" stroke-width="8"/><path d="M0,0 60,40 M60,0 0,40" stroke="#C8102E" stroke-width="3"/><path d="M30,0 V40 M0,20 H60" stroke="#fff" stroke-width="12"/><path d="M30,0 V40 M0,20 H60" stroke="#C8102E" stroke-width="7"/></svg>EN</button>
+      <button data-lang="vi" aria-label="VI – Tiếng Việt"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#DA251D"/><polygon fill="#FFFF00" points="15,4 16.2,8.3 20.7,8.3 17.1,10.9 18.4,15.2 15,12.6 11.6,15.2 12.9,10.9 9.3,8.3 13.8,8.3"/></svg>VI</button>
+      <button data-lang="en" aria-label="EN – English"><svg viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="40" fill="#012169"/><path d="M0,0 60,40 M60,0 0,40" stroke="#fff" stroke-width="8"/><path d="M0,0 60,40 M60,0 0,40" stroke="#C8102E" stroke-width="3"/><path d="M30,0 V40 M0,20 H60" stroke="#fff" stroke-width="12"/><path d="M30,0 V40 M0,20 H60" stroke="#C8102E" stroke-width="7"/></svg>EN</button>
     </div>
   <nav class="tabs" data-i18n-aria="nav">
     <a href="#viec-lam" data-tab="viec-lam" data-i18n="tab1"></a>
