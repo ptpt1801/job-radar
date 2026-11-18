@@ -1,5 +1,5 @@
 {
- "last_run_at": "2026-11-18T11:19:41Z",
+ "last_run_at": "2026-11-18T11:33:52Z",
  "next_run_at": "2026-11-18T19:00:00Z",
  "cv_version": null,
  "has_profile": false,
@@ -12,5 +12,5 @@
   "new": 0,
   "closed": 0
  },
- "rules_hash": "b1bcd40aa5c6"
+ "rules_hash": "34e570003b54"
 }

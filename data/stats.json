@@ -1,7 +1,7 @@
 {
- "generated_at": "2026-11-18T11:19:41Z",
+ "generated_at": "2026-11-18T11:33:52Z",
  "total_open": 984,
- "new_7d": 98,
+ "new_7d": 97,
  "with_salary_pct": 0.0,
  "match_ge70": null,
  "companies": 47,
@@ -73,43 +73,43 @@
   "Abbott": 35,
   "NVIDIA": 27,
   "PwC Vietnam": 20,
+  "ABB": 17,
   "AstraZeneca": 17,
   "Medtronic": 17,
-  "ABB": 17,
   "Schneider Electric": 16,
-  "Manulife": 16,
   "Axon": 16,
-  "Cisco": 14,
+  "Manulife": 16,
   "Procter & Gamble": 14,
+  "Cisco": 14,
   "Siemens": 12,
   "Baker Hughes": 12,
   "Thermo Fisher Scientific": 12,
   "3M": 9,
-  "GSK": 9,
-  "LEGO Group": 9,
-  "Visa": 9,
   "Expeditors": 9,
+  "Visa": 9,
+  "LEGO Group": 9,
+  "GSK": 9,
+  "Flexport": 8,
   "Nike": 8,
   "Pfizer": 8,
-  "Flexport": 8,
   "GE Vernova": 7,
   "Accenture": 7,
+  "Endava": 6,
   "Intel": 6,
   "Novartis": 6,
-  "Endava": 6,
-  "Mastercard": 5,
   "MSD": 5,
-  "Dow": 4,
+  "Mastercard": 5,
   "Johnson & Johnson": 4,
+  "Dow": 4,
   "Workday": 4,
   "Kimberly-Clark": 3,
   "Marvell": 3,
   "PVH": 2,
-  "Sanofi": 1,
-  "Philips": 1,
+  "Baxter": 1,
   "HP Inc.": 1,
   "Citi": 1,
-  "Baxter": 1,
+  "Sanofi": 1,
+  "Philips": 1,
   "Ecolab": 1
  },
  "top_skills": {
@@ -300,36 +300,6 @@
    "n": 15
   },
   {
-   "function": "sales",
-   "level": "graduate",
-   "n": 3
-  },
-  {
-   "function": "legal",
-   "level": "manager",
-   "n": 7
-  },
-  {
-   "function": "finance",
-   "level": "manager",
-   "n": 14
-  },
-  {
-   "function": "hr",
-   "level": "experienced",
-   "n": 10
-  },
-  {
-   "function": "hr",
-   "level": "manager",
-   "n": 3
-  },
-  {
-   "function": "legal",
-   "level": "graduate",
-   "n": 2
-  },
-  {
    "function": "other",
    "level": "graduate",
    "n": 2
@@ -340,9 +310,39 @@
    "n": 4
   },
   {
+   "function": "hr",
+   "level": "manager",
+   "n": 3
+  },
+  {
+   "function": "legal",
+   "level": "manager",
+   "n": 7
+  },
+  {
+   "function": "legal",
+   "level": "graduate",
+   "n": 2
+  },
+  {
+   "function": "sales",
+   "level": "graduate",
+   "n": 3
+  },
+  {
    "function": "supply_chain",
    "level": "graduate",
    "n": 3
+  },
+  {
+   "function": "finance",
+   "level": "manager",
+   "n": 14
+  },
+  {
+   "function": "hr",
+   "level": "experienced",
+   "n": 10
   }
  ]
 }

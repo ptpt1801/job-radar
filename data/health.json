@@ -1,13 +1,11 @@
 {
- "run_at": "2026-11-18T11:19:41Z",
+ "run_at": "2026-11-18T11:33:52Z",
  "total_open": 984,
  "new": 0,
  "closed": 0,
  "pending_missing": 0,
  "merged_duplicates": 0,
- "dropped": {
-  "excluded_keyword": 63
- },
+ "dropped": {},
  "schema_errors_pct": 0.0,
  "llm_tokens": {
   "input": 0,
@@ -21,7 +19,7 @@
    "jobs_found": 428,
    "jobs_kept": 428,
    "http_errors": 0,
-   "duration_s": 869.7,
+   "duration_s": 9.3,
    "companies": 5
   },
   "custom": {
@@ -29,15 +27,15 @@
    "jobs_found": 28,
    "jobs_kept": 28,
    "http_errors": 0,
-   "duration_s": 57.1,
+   "duration_s": 21.0,
    "companies": 2
   },
   "workday": {
-   "ok": true,
-   "jobs_found": 567,
-   "jobs_kept": 504,
+   "ok": false,
+   "jobs_found": 63,
+   "jobs_kept": 63,
    "http_errors": 0,
-   "duration_s": 722.4,
+   "duration_s": 1083.5,
    "companies": 38
   },
   "greenhouse": {
@@ -45,7 +43,7 @@
    "jobs_found": 24,
    "jobs_kept": 24,
    "http_errors": 0,
-   "duration_s": 4.4,
+   "duration_s": 2.4,
    "companies": 2
   },
   "ybox": {
@@ -53,7 +51,7 @@
    "jobs_found": 0,
    "jobs_kept": 0,
    "http_errors": 0,
-   "duration_s": 3.7,
+   "duration_s": 1.6,
    "companies": 1
   }
  },
@@ -63,7 +61,7 @@
    "adapter": "smartrecruiters",
    "jobs_found": 219,
    "jobs_kept": 219,
-   "duration_s": 356.1,
+   "duration_s": 2.4,
    "error": null
   },
   "schneider_electric": {
@@ -71,7 +69,7 @@
    "adapter": "jibe",
    "jobs_found": 16,
    "jobs_kept": 16,
-   "duration_s": 5.5,
+   "duration_s": 5.3,
    "error": null
   },
   "siemens": {
@@ -79,55 +77,55 @@
    "adapter": "avature",
    "jobs_found": 12,
    "jobs_kept": 12,
-   "duration_s": 51.6,
+   "duration_s": 15.7,
    "error": null
   },
   "nike": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 8,
-   "jobs_kept": 8,
-   "duration_s": 11.3,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 31.3,
+   "error": "HTTPError: 429 for https://nike.wd1.myworkdayjobs.com/wday/cxs/nike/nke/jobs"
   },
   "intel": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 6,
-   "jobs_kept": 6,
-   "duration_s": 9.5,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 31.3,
+   "error": "HTTPError: 429 for https://intel.wd1.myworkdayjobs.com/wday/cxs/intel/External/jobs"
   },
   "cisco": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 14,
-   "jobs_kept": 14,
-   "duration_s": 17.1,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 31.3,
+   "error": "HTTPError: 429 for https://cisco.wd5.myworkdayjobs.com/wday/cxs/cisco/Cisco_Careers/jobs"
   },
   "ge_vernova": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 7,
-   "jobs_kept": 7,
-   "duration_s": 9.5,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 31.3,
+   "error": "HTTPError: 429 for https://gevernova.wd5.myworkdayjobs.com/wday/cxs/gevernova/Vernova_ExternalSite/jobs"
   },
   "baker_hughes": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 12,
-   "jobs_kept": 12,
-   "duration_s": 14.9,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 31.2,
+   "error": "HTTPError: 429 for https://bakerhughes.wd5.myworkdayjobs.com/wday/cxs/bakerhughes/BakerHughes/jobs"
   },
   "kimberly_clark": {
    "ok": true,
    "adapter": "workday",
    "jobs_found": 3,
    "jobs_kept": 3,
-   "duration_s": 6.4,
+   "duration_s": 8.9,
    "error": null
   },
   "three_m": {
@@ -135,223 +133,223 @@
    "adapter": "workday",
    "jobs_found": 9,
    "jobs_kept": 9,
-   "duration_s": 12.8,
+   "duration_s": 9.2,
    "error": null
   },
   "dow": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 4,
-   "jobs_kept": 4,
-   "duration_s": 7.0,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 32.6,
+   "error": "HTTPError: 429 for https://dow.wd1.myworkdayjobs.com/wday/cxs/dow/ExternalCareers/jobs"
   },
   "sanofi": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 1,
-   "jobs_kept": 1,
-   "duration_s": 4.1,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 32.9,
+   "error": "HTTPError: 429 for https://sanofi.wd3.myworkdayjobs.com/wday/cxs/sanofi/SanofiCareers/jobs"
   },
   "novartis": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 6,
-   "jobs_kept": 6,
-   "duration_s": 9.3,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 32.8,
+   "error": "HTTPError: 429 for https://novartis.wd3.myworkdayjobs.com/wday/cxs/novartis/Novartis_Careers/jobs"
   },
   "gsk": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 9,
-   "jobs_kept": 9,
-   "duration_s": 13.2,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 31.2,
+   "error": "HTTPError: 429 for https://gsk.wd5.myworkdayjobs.com/wday/cxs/gsk/GSKCareers/jobs"
   },
   "astrazeneca": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 17,
-   "jobs_kept": 17,
-   "duration_s": 25.4,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 32.8,
+   "error": "HTTPError: 429 for https://astrazeneca.wd3.myworkdayjobs.com/wday/cxs/astrazeneca/Careers/jobs"
   },
   "philips": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 1,
-   "jobs_kept": 1,
-   "duration_s": 5.4,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 32.9,
+   "error": "HTTPError: 429 for https://philips.wd3.myworkdayjobs.com/wday/cxs/philips/jobs-and-careers/jobs"
   },
   "maersk": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 59,
-   "jobs_kept": 59,
-   "duration_s": 64.2,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 32.9,
+   "error": "HTTPError: 429 for https://maersk.wd3.myworkdayjobs.com/wday/cxs/maersk/Maersk_Careers/jobs"
   },
   "mastercard": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 5,
-   "jobs_kept": 5,
-   "duration_s": 8.4,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 31.3,
+   "error": "HTTPError: 429 for https://mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs"
   },
   "medtronic": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 17,
-   "jobs_kept": 17,
-   "duration_s": 21.6,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 31.4,
+   "error": "HTTPError: 429 for https://medtronic.wd1.myworkdayjobs.com/wday/cxs/medtronic/MedtronicCareers/jobs"
   },
   "pfizer": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 8,
-   "jobs_kept": 8,
-   "duration_s": 11.6,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 31.3,
+   "error": "HTTPError: 429 for https://pfizer.wd1.myworkdayjobs.com/wday/cxs/pfizer/PfizerCareers/jobs"
   },
   "abbott": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 98,
-   "jobs_kept": 35,
-   "duration_s": 106.5,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 31.2,
+   "error": "HTTPError: 429 for https://abbott.wd5.myworkdayjobs.com/wday/cxs/abbott/abbottcareers/jobs"
   },
   "hp": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 1,
-   "jobs_kept": 1,
-   "duration_s": 3.7,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 31.3,
+   "error": "HTTPError: 429 for https://hp.wd5.myworkdayjobs.com/wday/cxs/hp/ExternalCareerSite/jobs"
   },
   "marvell": {
    "ok": true,
    "adapter": "workday",
    "jobs_found": 3,
    "jobs_kept": 3,
-   "duration_s": 5.5,
+   "duration_s": 2.4,
    "error": null
   },
   "nvidia": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 27,
-   "jobs_kept": 27,
-   "duration_s": 31.0,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 32.5,
+   "error": "HTTPError: 429 for https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs"
   },
   "jabil": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 84,
-   "jobs_kept": 84,
-   "duration_s": 90.9,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 32.2,
+   "error": "HTTPError: 429 for https://jabil.wd5.myworkdayjobs.com/wday/cxs/jabil/Jabil_Careers/jobs"
   },
   "lego": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 9,
-   "jobs_kept": 9,
-   "duration_s": 11.7,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 32.9,
+   "error": "HTTPError: 429 for https://lego.wd103.myworkdayjobs.com/wday/cxs/lego/LEGO_External/jobs"
   },
   "pwc": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 20,
-   "jobs_kept": 20,
-   "duration_s": 29.4,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 32.9,
+   "error": "HTTPError: 429 for https://pwc.wd3.myworkdayjobs.com/wday/cxs/pwc/Global_Experienced_Careers/jobs"
   },
   "pg": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 14,
-   "jobs_kept": 14,
-   "duration_s": 17.2,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 31.3,
+   "error": "HTTPError: 429 for https://pg.wd5.myworkdayjobs.com/wday/cxs/pg/1000/jobs"
   },
   "jnj": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 4,
-   "jobs_kept": 4,
-   "duration_s": 6.7,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 31.3,
+   "error": "HTTPError: 429 for https://jj.wd5.myworkdayjobs.com/wday/cxs/jj/JJ/jobs"
   },
   "abb": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 17,
-   "jobs_kept": 17,
-   "duration_s": 21.5,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 32.9,
+   "error": "HTTPError: 429 for https://abb.wd3.myworkdayjobs.com/wday/cxs/abb/external_career_page/jobs"
   },
   "accenture": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 7,
-   "jobs_kept": 7,
-   "duration_s": 12.7,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 32.9,
+   "error": "HTTPError: 429 for https://accenture.wd103.myworkdayjobs.com/wday/cxs/accenture/AccentureCareers/jobs"
   },
   "manulife": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 16,
-   "jobs_kept": 16,
-   "duration_s": 19.1,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 32.8,
+   "error": "HTTPError: 429 for https://manulife.wd3.myworkdayjobs.com/wday/cxs/manulife/MFCJH_Jobs/jobs"
   },
   "citi": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 1,
-   "jobs_kept": 1,
-   "duration_s": 5.1,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 31.2,
+   "error": "HTTPError: 429 for https://citi.wd5.myworkdayjobs.com/wday/cxs/citi/2/jobs"
   },
   "msd": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 5,
-   "jobs_kept": 5,
-   "duration_s": 7.9,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 31.2,
+   "error": "HTTPError: 429 for https://msd.wd5.myworkdayjobs.com/wday/cxs/msd/SearchJobs/jobs"
   },
   "baxter": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 1,
-   "jobs_kept": 1,
-   "duration_s": 3.6,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 31.2,
+   "error": "HTTPError: 429 for https://baxter.wd1.myworkdayjobs.com/wday/cxs/baxter/baxter/jobs"
   },
   "thermo_fisher": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 12,
-   "jobs_kept": 12,
-   "duration_s": 14.8,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 31.3,
+   "error": "HTTPError: 429 for https://thermofisher.wd5.myworkdayjobs.com/wday/cxs/thermofisher/ThermoFisherCareers/jobs"
   },
   "vf": {
    "ok": true,
    "adapter": "workday",
    "jobs_found": 46,
    "jobs_kept": 46,
-   "duration_s": 52.7,
+   "duration_s": 6.6,
    "error": null
   },
   "pvh": {
@@ -359,39 +357,39 @@
    "adapter": "workday",
    "jobs_found": 2,
    "jobs_kept": 2,
-   "duration_s": 5.7,
+   "duration_s": 5.1,
    "error": null
   },
   "ecolab": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 1,
-   "jobs_kept": 1,
-   "duration_s": 4.2,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 31.2,
+   "error": "HTTPError: 429 for https://ecolab.wd1.myworkdayjobs.com/wday/cxs/ecolab/Ecolab_External/jobs"
   },
   "visa": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 9,
-   "jobs_kept": 9,
-   "duration_s": 11.7,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 31.2,
+   "error": "HTTPError: 429 for https://visa.wd5.myworkdayjobs.com/wday/cxs/visa/Visa/jobs"
   },
   "workday": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 4,
-   "jobs_kept": 4,
-   "duration_s": 9.1,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 31.3,
+   "error": "HTTPError: 429 for https://workday.wd5.myworkdayjobs.com/wday/cxs/workday/Workday/jobs"
   },
   "sgs": {
    "ok": true,
    "adapter": "smartrecruiters",
    "jobs_found": 153,
    "jobs_kept": 153,
-   "duration_s": 289.6,
+   "duration_s": 1.5,
    "error": null
   },
   "avery_dennison": {
@@ -399,7 +397,7 @@
    "adapter": "smartrecruiters",
    "jobs_found": 41,
    "jobs_kept": 41,
-   "duration_s": 142.9,
+   "duration_s": 1.4,
    "error": null
   },
   "expeditors": {
@@ -407,7 +405,7 @@
    "adapter": "smartrecruiters",
    "jobs_found": 9,
    "jobs_kept": 9,
-   "duration_s": 46.4,
+   "duration_s": 2.0,
    "error": null
   },
   "endava": {
@@ -415,7 +413,7 @@
    "adapter": "smartrecruiters",
    "jobs_found": 6,
    "jobs_kept": 6,
-   "duration_s": 34.7,
+   "duration_s": 2.0,
    "error": null
   },
   "axon": {
@@ -423,7 +421,7 @@
    "adapter": "greenhouse",
    "jobs_found": 16,
    "jobs_kept": 16,
-   "duration_s": 3.2,
+   "duration_s": 1.3,
    "error": null
   },
   "flexport": {
@@ -431,7 +429,7 @@
    "adapter": "greenhouse",
    "jobs_found": 8,
    "jobs_kept": 8,
-   "duration_s": 1.2,
+   "duration_s": 1.1,
    "error": null
   },
   "ybox": {
@@ -439,181 +437,181 @@
    "adapter": "ybox",
    "jobs_found": 0,
    "jobs_kept": 0,
-   "duration_s": 3.7,
+   "duration_s": 1.6,
    "error": null
   }
  },
  "hosts": {
   "api.smartrecruiters.com": {
-   "requests": 436,
+   "requests": 8,
    "errors": 0
+  },
+  "nike.wd1.myworkdayjobs.com": {
+   "requests": 5,
+   "errors": 4
+  },
+  "intel.wd1.myworkdayjobs.com": {
+   "requests": 5,
+   "errors": 4
+  },
+  "cisco.wd5.myworkdayjobs.com": {
+   "requests": 5,
+   "errors": 4
   },
   "careers.se.com": {
    "requests": 2,
    "errors": 0
   },
-  "nike.wd1.myworkdayjobs.com": {
-   "requests": 11,
-   "errors": 0
-  },
-  "intel.wd1.myworkdayjobs.com": {
-   "requests": 9,
-   "errors": 0
-  },
-  "cisco.wd5.myworkdayjobs.com": {
-   "requests": 17,
-   "errors": 0
-  },
   "jobs.siemens.com": {
-   "requests": 22,
+   "requests": 10,
    "errors": 0
   },
   "gevernova.wd5.myworkdayjobs.com": {
-   "requests": 10,
-   "errors": 0
+   "requests": 5,
+   "errors": 4
   },
   "bakerhughes.wd5.myworkdayjobs.com": {
-   "requests": 15,
-   "errors": 0
+   "requests": 5,
+   "errors": 4
   },
   "kimberlyclark.wd1.myworkdayjobs.com": {
-   "requests": 6,
-   "errors": 0
+   "requests": 5,
+   "errors": 2
   },
   "3m.wd1.myworkdayjobs.com": {
-   "requests": 12,
-   "errors": 0
+   "requests": 5,
+   "errors": 2
   },
   "dow.wd1.myworkdayjobs.com": {
-   "requests": 7,
-   "errors": 0
+   "requests": 6,
+   "errors": 4
   },
   "sanofi.wd3.myworkdayjobs.com": {
-   "requests": 4,
-   "errors": 0
+   "requests": 5,
+   "errors": 4
   },
   "novartis.wd3.myworkdayjobs.com": {
-   "requests": 9,
-   "errors": 0
+   "requests": 5,
+   "errors": 4
   },
   "gsk.wd5.myworkdayjobs.com": {
-   "requests": 12,
-   "errors": 0
+   "requests": 5,
+   "errors": 4
   },
   "astrazeneca.wd3.myworkdayjobs.com": {
-   "requests": 20,
-   "errors": 0
+   "requests": 5,
+   "errors": 4
   },
   "philips.wd3.myworkdayjobs.com": {
-   "requests": 4,
-   "errors": 0
-  },
-  "maersk.wd3.myworkdayjobs.com": {
-   "requests": 64,
-   "errors": 0
-  },
-  "mastercard.wd1.myworkdayjobs.com": {
-   "requests": 8,
-   "errors": 0
+   "requests": 5,
+   "errors": 4
   },
   "medtronic.wd1.myworkdayjobs.com": {
-   "requests": 20,
-   "errors": 0
+   "requests": 5,
+   "errors": 4
+  },
+  "mastercard.wd1.myworkdayjobs.com": {
+   "requests": 5,
+   "errors": 4
+  },
+  "maersk.wd3.myworkdayjobs.com": {
+   "requests": 5,
+   "errors": 4
   },
   "pfizer.wd1.myworkdayjobs.com": {
-   "requests": 11,
-   "errors": 0
+   "requests": 5,
+   "errors": 4
   },
   "abbott.wd5.myworkdayjobs.com": {
-   "requests": 105,
-   "errors": 0
+   "requests": 5,
+   "errors": 4
   },
   "hp.wd5.myworkdayjobs.com": {
-   "requests": 4,
-   "errors": 0
+   "requests": 5,
+   "errors": 4
   },
   "marvell.wd1.myworkdayjobs.com": {
-   "requests": 6,
+   "requests": 3,
    "errors": 0
   },
   "nvidia.wd5.myworkdayjobs.com": {
-   "requests": 31,
-   "errors": 0
+   "requests": 6,
+   "errors": 4
   },
   "jabil.wd5.myworkdayjobs.com": {
-   "requests": 91,
-   "errors": 0
+   "requests": 6,
+   "errors": 4
   },
   "lego.wd103.myworkdayjobs.com": {
-   "requests": 12,
-   "errors": 0
-  },
-  "pwc.wd3.myworkdayjobs.com": {
-   "requests": 23,
-   "errors": 0
+   "requests": 5,
+   "errors": 4
   },
   "pg.wd5.myworkdayjobs.com": {
-   "requests": 17,
-   "errors": 0
+   "requests": 5,
+   "errors": 4
+  },
+  "pwc.wd3.myworkdayjobs.com": {
+   "requests": 5,
+   "errors": 4
   },
   "jj.wd5.myworkdayjobs.com": {
-   "requests": 7,
-   "errors": 0
+   "requests": 5,
+   "errors": 4
   },
   "abb.wd3.myworkdayjobs.com": {
-   "requests": 20,
-   "errors": 0
+   "requests": 5,
+   "errors": 4
   },
   "accenture.wd103.myworkdayjobs.com": {
-   "requests": 10,
-   "errors": 0
+   "requests": 5,
+   "errors": 4
   },
   "manulife.wd3.myworkdayjobs.com": {
-   "requests": 19,
-   "errors": 0
+   "requests": 5,
+   "errors": 4
   },
   "citi.wd5.myworkdayjobs.com": {
-   "requests": 4,
-   "errors": 0
+   "requests": 5,
+   "errors": 4
   },
   "msd.wd5.myworkdayjobs.com": {
-   "requests": 8,
-   "errors": 0
+   "requests": 5,
+   "errors": 4
   },
   "baxter.wd1.myworkdayjobs.com": {
-   "requests": 4,
-   "errors": 0
+   "requests": 5,
+   "errors": 4
   },
   "thermofisher.wd5.myworkdayjobs.com": {
-   "requests": 15,
-   "errors": 0
+   "requests": 5,
+   "errors": 4
   },
   "vfc.wd5.myworkdayjobs.com": {
-   "requests": 51,
-   "errors": 0
+   "requests": 6,
+   "errors": 1
   },
   "pvh.wd1.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 0
-  },
-  "ecolab.wd1.myworkdayjobs.com": {
    "requests": 4,
-   "errors": 0
+   "errors": 1
   },
   "visa.wd5.myworkdayjobs.com": {
-   "requests": 12,
-   "errors": 0
+   "requests": 5,
+   "errors": 4
+  },
+  "ecolab.wd1.myworkdayjobs.com": {
+   "requests": 5,
+   "errors": 4
   },
   "workday.wd5.myworkdayjobs.com": {
-   "requests": 7,
-   "errors": 0
+   "requests": 5,
+   "errors": 4
   },
   "boards-api.greenhouse.io": {
    "requests": 3,
    "errors": 0
   },
   "ybox.vn": {
-   "requests": 3,
+   "requests": 2,
    "errors": 0
   }
  },
@@ -624,7 +622,7 @@
   },
   {
    "title": "[HCM] Công Ty Citi Complex Hospitality Tuyển Dụng Thực Tập Sinh Thu Mua Full-time 2026",
-   "reason": "keyword:mua"
+   "reason": "ambiguous_legal_entity_no_llm"
   },
   {
    "title": "[HN] Công Ty Truyền Thông & Quảng Cáo MCBIZ Tuyển Dụng Thực Tập Sinh Content Media Part-time 2026",
@@ -696,7 +694,7 @@
   },
   {
    "title": "[Online-HN] Hệ Thống Gia Sư Edlixir Education Tuyển Dụng Cộng Tác Viên Sales - Chăm Sóc Khách Hàng, Gia Sư Tiếng Anh Đa Cấp Độ 1-1 Part-time/Full-time 2026",
-   "reason": "keyword:cong tac vien"
+   "reason": "keyword:cộng tác viên"
   },
   {
    "title": "[HCM] Hệ Thống Chuỗi Siêu Thị Bán Lẻ Con Cưng Tuyển Dụng Online Content Executive (SEO/Web Content) Full-time 2026",
@@ -728,7 +726,7 @@
   },
   {
    "title": "[HN] Công Ty Công Nghệ SAPO Tuyển Dụng Cộng Tác Viên Truyền Thông Thương Hiệu, Nhân Viên Business Analyst (AI Applications), Trợ Lý Tổng Giám Đốc (Chiến Lược Và",
-   "reason": "keyword:cong tac vien"
+   "reason": "keyword:cộng tác viên"
   },
   {
    "title": "[HCM] Công Ty Sản Xuất Hàng Tiêu Dùng Bình Tiên Biti's Tuyển Dụng Nhân Viên Kế Toán Hàng Hóa Full-time 2026",
@@ -748,7 +746,7 @@
   },
   {
    "title": "[HN] Công Ty Công Nghệ APPOTA Tuyển Dụng Cộng Tác Viên Tuyển Dụng Full-time 2026",
-   "reason": "keyword:cong tac vien"
+   "reason": "keyword:cộng tác viên"
   },
   {
    "title": "[HCM] Thương Hiệu Chăm Sóc Sức Khỏe Healthy Care Tuyển Dụng Nhân Viên Host Livestream Part-time/Full-time 2026",
@@ -756,7 +754,7 @@
   },
   {
    "title": "[HN] Ngân Hàng Việt Á Bank Tuyển Dụng Cộng Tác Viên Quản Lý Kinh Doanh Khách Hàng Cá Nhân/Marketing Và Truyền Thông Full-time 2026",
-   "reason": "keyword:cong tac vien"
+   "reason": "keyword:cộng tác viên"
   },
   {
    "title": "[Online-Toàn Quốc] Công Ty Orange Tree VA Tuyển Dụng Thực Tập Sinh Trợ Lý Ảo Full-time 2026",
@@ -772,7 +770,7 @@
   },
   {
    "title": "[HN] Trung Tâm Tham Vấn Phát Triển Bền Vững CSDC Việt Nam Tuyển Dụng Thực Tập Sinh Trợ Lý/Quản Lý Dự Án/Truyền Thông Part-time/Full-time 2026",
-   "reason": "keyword:du an"
+   "reason": "keyword:dự án"
   },
   {
    "title": "[HN] Công Ty Công Nghệ Giáo Dục MANABIE Tuyển Dụng Nhân Viên Marketing Associate Part-time 2026",
