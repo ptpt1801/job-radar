@@ -201,3 +201,14 @@ def test_ybox_mua_is_not_mua():
     d, reason, _ = ybox.classify("[HCM] Công Ty TNHH Bosch Việt Nam Tuyển Dụng Thực Tập Sinh Thu Mua Full-time 2026", WL)
     assert d == "keep", reason
     assert ybox.classify("[HN] Bosch Tuyển Dụng Thực Tập Sinh Mùa Hè 2026", WL)[0] == "reject"
+
+
+def test_details_split_roundtrip(tmp_path, monkeypatch):
+    from pipeline import store
+    monkeypatch.setattr(store, "DATA", tmp_path)
+    jobs = [{"id": "a" * 12, "posted_at": "2026-11-01T00:00:00Z", "description_excerpt": "x" * 500, "benefits": ["Bonus"]}]
+    store.write_jobs(jobs, "2026-11-18T00:00:00Z", split_mb=0.0001)
+    slim = store._read("jobs.json", {})
+    assert slim["details_split"] and "description_excerpt" not in slim["jobs"][0]
+    back = store.load()["jobs"][0]
+    assert back["description_excerpt"] == "x" * 500 and back["benefits"] == ["Bonus"] and "has_details" not in back

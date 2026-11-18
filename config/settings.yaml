@@ -29,7 +29,7 @@ health:
   schema_errors_pct_alert: 5
   stale_hours_alert: 30
 
-details_split_mb: 2
+details_split_mb: 0.5          # move excerpt + benefits to data/details/{id}.json above this size (keeps first paint fast)
 timezone: Asia/Ho_Chi_Minh
 
 ybox:

@@ -28,9 +28,21 @@ def _write(name: str, obj, compact: bool = False):
     return p
 
 
+def _merge_details(jobs: list[dict]) -> list[dict]:
+    for j in jobs:
+        if j.pop("has_details", False):
+            p = DATA / "details" / f"{j['id']}.json"
+            if p.exists():
+                try:
+                    j.update(json.loads(p.read_text(encoding="utf-8")))
+                except json.JSONDecodeError:
+                    pass
+    return jobs
+
+
 def load():
     return {
-        "jobs": _read("jobs.json", {}).get("jobs", []),
+        "jobs": _merge_details(_read("jobs.json", {}).get("jobs", [])),
         "archive": _read("archive.json", {}).get("jobs", []),
         "meta": _read("meta.json", {}),
         "state": _read("state.json", {"pending": {}}),
@@ -57,6 +69,9 @@ def write_jobs(jobs: list[dict], generated_at: str, split_mb: float = 2.0):
     payload = {"generated_at": generated_at, "count": len(jobs), "jobs": jobs}
     size = len(json.dumps(payload, ensure_ascii=False).encode())
     details_dir = DATA / "details"
+    if details_dir.exists():
+        for f in details_dir.glob("*.json"):
+            f.unlink()  # rewritten below; drops files of closed jobs
     if size > split_mb * 1024 * 1024:
         details_dir.mkdir(exist_ok=True)
         slim = []
