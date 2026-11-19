@@ -3,7 +3,7 @@ name: workday
 # Workday rate-limits shared GitHub runner IPs, so its ~40 tenants are spread over
 # 8 small runs a day (every 3 hours, ~5 companies each). Each company refreshes daily.
 on:
-  schedule: [{ cron: "20 */3 * * *" }]
+  schedule: [{ cron: "20 23 * * *" }]   # daily fallback (06:20 VN); main Workday refresh runs on the owner PC (scripts/run_workday_local.ps1)
   workflow_dispatch:
     inputs:
       slot: { description: "slot k (0-7); empty = by hour", required: false, default: "" }
