@@ -1,9 +1,9 @@
 {
- "run_at": "2026-11-19T04:39:09Z",
+ "run_at": "2026-11-19T04:48:59Z",
  "total_open": 1133,
  "new": 0,
  "closed": 0,
- "pending_missing": 7,
+ "pending_missing": 0,
  "merged_duplicates": 0,
  "dropped": {},
  "schema_errors_pct": 0.0,
@@ -14,57 +14,94 @@
   "mode": "rules"
  },
  "sources": {
-  "custom": {
-   "ok": true,
+  "workday": {
+   "ok": false,
    "jobs_found": 0,
    "jobs_kept": 0,
    "http_errors": 0,
-   "duration_s": 14.3,
-   "companies": 3
+   "duration_s": 66.3,
+   "companies": 6
   }
  },
  "companies": {
-  "bureau_veritas": {
-   "ok": true,
-   "adapter": "successfactors",
+  "nike": {
+   "ok": false,
+   "adapter": "workday",
    "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 3.9,
-   "error": null
+   "jobs_kept": null,
+   "duration_s": 10.1,
+   "error": "HTTPError: 429 for https://nike.wd1.myworkdayjobs.com/wday/cxs/nike/nke/jobs"
   },
-  "danfoss": {
-   "ok": true,
-   "adapter": "successfactors",
+  "sanofi": {
+   "ok": false,
+   "adapter": "workday",
    "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 4.6,
-   "error": null
+   "jobs_kept": null,
+   "duration_s": 11.6,
+   "error": "HTTPError: 429 for https://sanofi.wd3.myworkdayjobs.com/wday/cxs/sanofi/SanofiCareers/jobs"
   },
-  "tetra_pak": {
-   "ok": true,
-   "adapter": "successfactors",
+  "pfizer": {
+   "ok": false,
+   "adapter": "workday",
    "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 5.8,
-   "error": null
+   "jobs_kept": null,
+   "duration_s": 10.8,
+   "error": "HTTPError: 429 for https://pfizer.wd1.myworkdayjobs.com/wday/cxs/pfizer/PfizerCareers/jobs"
+  },
+  "pg": {
+   "ok": false,
+   "adapter": "workday",
+   "jobs_found": 0,
+   "jobs_kept": null,
+   "duration_s": 11.1,
+   "error": "HTTPError: 429 for https://pg.wd5.myworkdayjobs.com/wday/cxs/pg/1000/jobs"
+  },
+  "thermo_fisher": {
+   "ok": false,
+   "adapter": "workday",
+   "jobs_found": 0,
+   "jobs_kept": null,
+   "duration_s": 11.0,
+   "error": "HTTPError: 429 for https://thermofisher.wd5.myworkdayjobs.com/wday/cxs/thermofisher/ThermoFisherCareers/jobs"
+  },
+  "roche": {
+   "ok": false,
+   "adapter": "workday",
+   "jobs_found": 0,
+   "jobs_kept": null,
+   "duration_s": 11.7,
+   "error": "HTTPError: 429 for https://roche.wd3.myworkdayjobs.com/wday/cxs/roche/roche-ext/jobs"
   }
  },
  "hosts": {
-  "jobs.danfoss.com": {
-   "requests": 2,
-   "errors": 0
+  "nike.wd1.myworkdayjobs.com": {
+   "requests": 7,
+   "errors": 6
   },
-  "careers.bureauveritas.com": {
-   "requests": 2,
-   "errors": 0
+  "sanofi.wd3.myworkdayjobs.com": {
+   "requests": 9,
+   "errors": 7
   },
-  "jobs.tetrapak.com": {
-   "requests": 2,
-   "errors": 0
+  "pfizer.wd1.myworkdayjobs.com": {
+   "requests": 7,
+   "errors": 6
+  },
+  "pg.wd5.myworkdayjobs.com": {
+   "requests": 7,
+   "errors": 6
+  },
+  "thermofisher.wd5.myworkdayjobs.com": {
+   "requests": 7,
+   "errors": 6
+  },
+  "roche.wd3.myworkdayjobs.com": {
+   "requests": 7,
+   "errors": 6
   }
  },
  "ybox_rejected": [],
  "alerts": [
-  "Source `custom` returned 0 jobs (7-run average 19.6)."
+  "Source `workday` returned 0 jobs (7-run average 22.9).",
+  "6/6 companies failed to fetch (e.g. nike, sanofi, pfizer, pg, thermo_fisher)."
  ]
 }
