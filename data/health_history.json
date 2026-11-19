@@ -130,5 +130,12 @@
   "sources": {
    "workday": 59
   }
+ },
+ {
+  "run_at": "2026-11-19T18:43:34Z",
+  "total_open": 1275,
+  "sources": {
+   "workday": 715
+  }
  }
 ]
