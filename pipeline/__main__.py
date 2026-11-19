@@ -188,6 +188,44 @@ def main(argv=None):
             rep["jobs_kept"] = kept
             print(f"  {c['id']:<22} {rep['adapter']:<16} {'ok ' if rep['ok'] else 'ERR'} found={rep['jobs_found']:<4} kept={kept:<4} {rep['duration_s']}s {rep['error'] or ''}", flush=True)
 
+    # Shared-IP rate limiting (GitHub runners): retry rate-limited companies, one at a time, after a pause.
+    for attempt in range(2):
+        retry = [cid for cid, r in reports.items() if not r["ok"] and "429" in (r.get("error") or "")]
+        if not retry:
+            break
+        print(f"retry pass {attempt + 1}: {len(retry)} rate-limited companies", flush=True)
+        time.sleep(90)
+        for cid in retry:
+            c, raws, rep = fetch_company(by_company[cid], prev_by_raw)
+            if not rep["ok"]:
+                reports[cid] = rep
+                continue
+            reports[cid] = rep
+            kept = 0
+            for raw in raws[: cfg["limits"]["max_jobs_per_company"]]:
+                if "first_seen_at" in raw:
+                    j = {k: v for k, v in raw.items() if k != "is_open"}
+                    j["last_seen_at"] = iso(now)
+                    if raw.get("is_open") is False or (j.get("deadline") and j["deadline"] < jfilter.today_vn(now).isoformat()):
+                        continue
+                    j["_reused"] = True
+                else:
+                    j = normalize(raw, c, now)
+                    why = jfilter.reason_to_drop(j, c, now)
+                    if why:
+                        drops[why] += 1
+                        continue
+                    enrich_rules.enrich(j)
+                    desc_cache[j["id"]] = {"d": (scrub(j["_desc"]) or "")[:8000], "lv": j.get("_level_raw"),
+                                           "fn": j.get("_function_raw"), "sal": j.get("_salary")}
+                    old = prev_all.get(j["id"])
+                    if old:
+                        j["first_seen_at"] = old["first_seen_at"]
+                kept += 1
+                collected.append(j)
+            rep["jobs_kept"] = kept
+            print(f"  {cid:<22} retry ok found={rep['jobs_found']} kept={kept}", flush=True)
+
     if cfg.get("EXTRACTOR") == "claude" and os.environ.get("ANTHROPIC_API_KEY"):
         from . import enrich_claude
         llm = enrich_claude.run([j for j in collected if not j.get("_reused")], cfg)

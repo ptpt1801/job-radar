@@ -118,7 +118,9 @@ class PoliteClient:
                 if retry_after and retry_after.isdigit():
                     wait = float(retry_after)
                 elif r.status_code == 429:
-                    wait = 20.0 * (attempt + 1)      # back off hard on rate limiting
+                    if attempt >= 1:                 # give up fast; the caller retries the company later
+                        break
+                    wait = 10.0
                 else:
                     wait = 2 ** (attempt + 1)
                 time.sleep(min(wait, 120))
