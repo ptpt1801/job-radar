@@ -1,9 +1,9 @@
 {
- "run_at": "2026-11-19T13:38:09Z",
- "total_open": 1278,
- "new": 0,
+ "run_at": "2026-11-19T16:21:08Z",
+ "total_open": 1275,
+ "new": 3,
  "closed": 0,
- "pending_missing": 0,
+ "pending_missing": 6,
  "merged_duplicates": 0,
  "dropped": {},
  "schema_errors_pct": 0.0,
@@ -16,92 +16,79 @@
  "sources": {
   "workday": {
    "ok": false,
-   "jobs_found": 0,
-   "jobs_kept": 0,
+   "jobs_found": 59,
+   "jobs_kept": 59,
    "http_errors": 0,
-   "duration_s": 67.3,
-   "companies": 6
+   "duration_s": 81.7,
+   "companies": 5
   }
  },
  "companies": {
-  "baker_hughes": {
-   "ok": false,
+  "kimberly_clark": {
+   "ok": true,
    "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": null,
-   "duration_s": 10.1,
-   "error": "HTTPError: 429 for https://bakerhughes.wd5.myworkdayjobs.com/wday/cxs/bakerhughes/BakerHughes/jobs"
+   "jobs_found": 4,
+   "jobs_kept": 4,
+   "duration_s": 12.1,
+   "error": null
   },
-  "philips": {
-   "ok": false,
+  "maersk": {
+   "ok": true,
    "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": null,
-   "duration_s": 12.0,
-   "error": "HTTPError: 429 for https://philips.wd3.myworkdayjobs.com/wday/cxs/philips/jobs-and-careers/jobs"
+   "jobs_found": 55,
+   "jobs_kept": 55,
+   "duration_s": 36.4,
+   "error": null
   },
-  "nvidia": {
+  "jabil": {
    "ok": false,
    "adapter": "workday",
    "jobs_found": 0,
    "jobs_kept": null,
-   "duration_s": 10.6,
-   "error": "HTTPError: 429 for https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs"
+   "duration_s": 11.1,
+   "error": "HTTPError: 429 for https://jabil.wd5.myworkdayjobs.com/wday/cxs/jabil/Jabil_Careers/jobs"
   },
-  "manulife": {
+  "citi": {
    "ok": false,
    "adapter": "workday",
    "jobs_found": 0,
    "jobs_kept": null,
-   "duration_s": 12.0,
-   "error": "HTTPError: 429 for https://manulife.wd3.myworkdayjobs.com/wday/cxs/manulife/MFCJH_Jobs/jobs"
+   "duration_s": 11.1,
+   "error": "HTTPError: 429 for https://citi.wd5.myworkdayjobs.com/wday/cxs/citi/2/jobs"
   },
-  "visa": {
+  "workday": {
    "ok": false,
    "adapter": "workday",
    "jobs_found": 0,
    "jobs_kept": null,
-   "duration_s": 10.6,
-   "error": "HTTPError: 429 for https://visa.wd5.myworkdayjobs.com/wday/cxs/visa/Visa/jobs"
-  },
-  "aurecon": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": null,
-   "duration_s": 12.0,
-   "error": "HTTPError: 429 for https://aurecongroup.wd3.myworkdayjobs.com/wday/cxs/aurecongroup/aurecon/jobs"
+   "duration_s": 11.0,
+   "error": "HTTPError: 429 for https://workday.wd5.myworkdayjobs.com/wday/cxs/workday/Workday/jobs"
   }
  },
  "hosts": {
-  "bakerhughes.wd5.myworkdayjobs.com": {
-   "requests": 7,
-   "errors": 6
+  "kimberlyclark.wd1.myworkdayjobs.com": {
+   "requests": 11,
+   "errors": 7
   },
-  "philips.wd3.myworkdayjobs.com": {
-   "requests": 7,
-   "errors": 6
-  },
-  "nvidia.wd5.myworkdayjobs.com": {
+  "maersk.wd3.myworkdayjobs.com": {
    "requests": 9,
-   "errors": 6
+   "errors": 3
   },
-  "manulife.wd3.myworkdayjobs.com": {
-   "requests": 7,
-   "errors": 6
-  },
-  "visa.wd5.myworkdayjobs.com": {
+  "jabil.wd5.myworkdayjobs.com": {
    "requests": 8,
    "errors": 6
   },
-  "aurecongroup.wd3.myworkdayjobs.com": {
+  "citi.wd5.myworkdayjobs.com": {
+   "requests": 7,
+   "errors": 6
+  },
+  "workday.wd5.myworkdayjobs.com": {
    "requests": 7,
    "errors": 6
   }
  },
  "ybox_rejected": [],
  "alerts": [
-  "Source `workday` returned 0 jobs (7-run average 19.7).",
-  "6/6 companies failed to fetch (e.g. baker_hughes, philips, nvidia, manulife, visa)."
+  "3/5 companies failed to fetch (e.g. jabil, citi, workday)."
  ]
 }
