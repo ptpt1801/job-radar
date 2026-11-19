@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-11-19T04:39:09Z",
+ "generated_at": "2026-11-19T04:47:33Z",
  "total_open": 1133,
  "new_7d": 107,
  "with_salary_pct": 0.0,
- "match_ge70": null,
+ "match_ge70": 239,
  "companies": 56,
  "by_source": {
   "workday": 517,
@@ -29,14 +29,15 @@
   "graduate": 54
  },
  "by_function": {
-  "engineering": 393,
-  "it": 171,
-  "sales": 163,
-  "supply_chain": 99,
-  "finance": 87,
-  "operations": 82,
-  "other": 58,
-  "marketing": 32,
+  "engineering": 386,
+  "it": 163,
+  "sales": 158,
+  "supply_chain": 96,
+  "operations": 81,
+  "finance": 75,
+  "business": 56,
+  "other": 39,
+  "marketing": 31,
   "legal": 28,
   "hr": 20
  },
@@ -120,22 +121,23 @@
   "HP Inc.": 1,
   "Citi": 1,
   "Sanofi": 1,
-  "Philips": 1
+  "Philips": 1,
+  "Ecolab": 1
  },
  "top_skills": {
   "english": 1100,
   "data_analysis": 382,
   "communication": 361,
-  "excel": 327,
+  "excel": 325,
   "leadership": 316,
   "problem_solving": 304,
-  "logistics": 202,
+  "logistics": 201,
   "project_management": 197,
   "procurement": 179,
-  "presentation": 167,
+  "presentation": 165,
   "negotiation": 162,
   "python": 133,
-  "chinese": 107,
+  "chinese": 106,
   "stakeholder_management": 93,
   "sap": 86
  },
@@ -167,17 +169,28 @@
   "2026-11-09": 145,
   "2026-11-16": 81
  },
- "match_hist": {},
+ "match_hist": {
+  "0": 1,
+  "10": 6,
+  "20": 14,
+  "30": 91,
+  "40": 172,
+  "50": 266,
+  "60": 344,
+  "70": 197,
+  "80": 34,
+  "90": 8
+ },
  "heatmap": [
   {
-   "function": "marketing",
+   "function": "business",
    "level": "experienced",
-   "n": 10
+   "n": 41
   },
   {
    "function": "finance",
    "level": "experienced",
-   "n": 60
+   "n": 52
   },
   {
    "function": "hr",
@@ -187,7 +200,7 @@
   {
    "function": "engineering",
    "level": "experienced",
-   "n": 304
+   "n": 297
   },
   {
    "function": "finance",
@@ -215,19 +228,24 @@
    "n": 10
   },
   {
+   "function": "marketing",
+   "level": "experienced",
+   "n": 9
+  },
+  {
    "function": "supply_chain",
    "level": "experienced",
-   "n": 66
+   "n": 63
   },
   {
    "function": "it",
    "level": "experienced",
-   "n": 138
+   "n": 131
   },
   {
    "function": "sales",
    "level": "experienced",
-   "n": 104
+   "n": 101
   },
   {
    "function": "supply_chain",
@@ -235,14 +253,14 @@
    "n": 22
   },
   {
-   "function": "finance",
+   "function": "business",
    "level": "graduate",
-   "n": 3
+   "n": 1
   },
   {
    "function": "finance",
    "level": "manager",
-   "n": 19
+   "n": 16
   },
   {
    "function": "marketing",
@@ -262,7 +280,12 @@
   {
    "function": "sales",
    "level": "manager",
-   "n": 53
+   "n": 51
+  },
+  {
+   "function": "business",
+   "level": "manager",
+   "n": 12
   },
   {
    "function": "operations",
@@ -277,17 +300,7 @@
   {
    "function": "other",
    "level": "internship",
-   "n": 7
-  },
-  {
-   "function": "other",
-   "level": "manager",
-   "n": 17
-  },
-  {
-   "function": "other",
-   "level": "experienced",
-   "n": 32
+   "n": 6
   },
   {
    "function": "supply_chain",
@@ -295,9 +308,29 @@
    "n": 3
   },
   {
+   "function": "other",
+   "level": "experienced",
+   "n": 20
+  },
+  {
    "function": "operations",
    "level": "manager",
-   "n": 10
+   "n": 9
+  },
+  {
+   "function": "finance",
+   "level": "graduate",
+   "n": 2
+  },
+  {
+   "function": "other",
+   "level": "manager",
+   "n": 11
+  },
+  {
+   "function": "business",
+   "level": "internship",
+   "n": 2
   },
   {
    "function": "it",
@@ -322,7 +355,7 @@
   {
    "function": "it",
    "level": "internship",
-   "n": 14
+   "n": 13
   },
   {
    "function": "hr",

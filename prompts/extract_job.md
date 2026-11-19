@@ -8,7 +8,7 @@ You extract structured facts from one job posting for a job board. Use only what
 
 Return one JSON object with exactly these keys:
 - "level": one of internship | graduate | experienced | manager
-- "function": one of supply_chain | finance | sales | engineering | it | hr | marketing | operations | legal | other
+- "function": one of supply_chain | finance | sales | engineering | it | hr | marketing | operations | business | legal | other
 - "skills": array of keys from ALLOWED_SKILLS that the posting explicitly asks for (max 10)
 - "languages_required": array from english | german | japanese | french | chinese | korean | vietnamese
 - "experience_min_years": integer or null

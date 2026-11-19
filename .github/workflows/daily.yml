@@ -28,7 +28,7 @@ jobs:
           CV_PROFILE_JSON: ${{ secrets.CV_PROFILE_JSON }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python -m pipeline --only-new
+        run: python -m pipeline --only-new --skip-ats workday   # Workday runs in workday.yml (rate limits)
 
       - name: Tests
         run: pytest -q pipeline/tests

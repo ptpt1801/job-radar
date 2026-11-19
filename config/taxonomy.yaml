@@ -9,13 +9,14 @@ levels:
 
 functions:
   supply_chain: { vi: Chuỗi cung ứng, en: Supply chain, keywords: [supply chain, procurement, purchasing, buyer, logistics, sourcing, demand planning, supply planning, planner, warehouse, inventory, customs, import, export, chuỗi cung ứng, mua hàng, kho vận, xuất nhập khẩu] }
-  operations:   { vi: Vận hành, en: Operations, keywords: [operations, order management, general affairs, admin, administration, administrative, coordinator, hành chính, business operations, customer service, process excellence, vận hành] }
+  operations:   { vi: Vận hành, en: Operations, keywords: [operations, order management, general affairs, admin, administration, administrative, coordinator, hành chính, customer service, process excellence, vận hành] }
   finance:      { vi: Tài chính – Kế toán, en: Finance & accounting, keywords: [finance, financial, accounting, accountant, fp&a, controlling, controller, audit, auditor, tax, treasury, actuarial, underwriting, risk, tài chính, kế toán, kiểm toán] }
   sales:        { vi: Kinh doanh, en: Sales & business development, keywords: [sales, business development, product specialist, medical representative, health representative, field force, district representative, account manager, key account, account executive, commercial, channel, territory, kinh doanh, bán hàng] }
   engineering:  { vi: Kỹ thuật, en: Engineering, keywords: [engineer, engineering, maintenance, quality, qa/qc, hse, ehs, technician, manufacturing, production, process engineer, r&d, mechanical, electrical, kỹ sư, kỹ thuật, sản xuất] }
   it:           { vi: IT, en: IT, keywords: [software, developer, data analyst, ai research, research scientist, deep learning, computer vision, programmer, data engineer, data scientist, devops, information technology, it support, it infrastructure, cloud, cyber, cybersecurity, sap consultant, full stack, frontend, backend, machine learning, ai engineer, lập trình] }
   hr:           { vi: Nhân sự, en: HR, keywords: [hr, human resources, talent acquisition, recruiter, recruitment, people partner, hrbp, payroll, c&b, nhân sự, tuyển dụng] }
   marketing:    { vi: Marketing, en: Marketing, keywords: [marketing, marketer, brand, kol, communications, digital marketing, pr, content, e-commerce, ecommerce, trade marketing] }
+  business:     { vi: Kinh doanh & chiến lược, en: Business & strategy, keywords: [business analyst, business analysis, strategy, strategic planning, consultant, consulting, advisory, partnership, partnerships, partner manager, customer success, product operations, product owner, business operations, management trainee, project coordinator, program coordinator, phân tích kinh doanh, chiến lược, tư vấn] }
   legal:        { vi: Pháp chế, en: Legal, keywords: [legal, compliance, counsel, regulatory affairs, pháp chế] }
   other:        { vi: Khác, en: Other, keywords: [] }
 

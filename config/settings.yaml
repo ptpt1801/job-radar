@@ -1,6 +1,6 @@
 # Job Radar pipeline settings
 EXTRACTOR: rules            # rules | claude  (claude needs ANTHROPIC_API_KEY; ask the owner first)
-SHOW_SKILL_TAGS: true       # false = do not publish have[]/missing[] in jobs.json
+SHOW_SKILL_TAGS: false      # have/missing are NOT published; the owner sees them via a private #me= link (stored only in her browser)
 MAX_LLM_JOBS_PER_RUN: 150
 LLM_MODEL: claude-haiku-5-5
 

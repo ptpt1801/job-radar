@@ -16,7 +16,7 @@ from .config import ROOT, taxonomy
 # Haiku 5.5 list price per 1M tokens (prompts <= 100K), halved for batches.
 PRICE_IN, PRICE_OUT = 0.10 * 0.5, 0.50 * 0.5
 LEVELS = {"internship", "graduate", "experienced", "manager"}
-FUNCS = {"supply_chain", "finance", "sales", "engineering", "it", "hr", "marketing", "operations", "legal", "other"}
+FUNCS = {"supply_chain", "finance", "sales", "engineering", "it", "hr", "marketing", "operations", "legal", "business", "other"}
 LANGS = {"english", "german", "japanese", "french", "chinese", "korean", "vietnamese"}
 
 

@@ -34,7 +34,7 @@ def detect_level(title: str, desc: str, level_raw: str | None, employment_type: 
     return "experienced"
 
 
-FUNC_PRIORITY = ["it", "supply_chain", "finance", "hr", "legal", "marketing", "sales", "engineering", "operations"]
+FUNC_PRIORITY = ["it", "supply_chain", "finance", "hr", "legal", "marketing", "business", "sales", "engineering", "operations"]
 
 
 def detect_function(title: str, function_raw: str | None, desc: str) -> str:

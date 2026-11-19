@@ -1,0 +1,45 @@
+name: workday
+
+# Workday rate-limits shared GitHub runner IPs, so its ~40 tenants are spread over
+# 8 small runs a day (every 3 hours, ~5 companies each). Each company refreshes daily.
+on:
+  schedule: [{ cron: "20 */3 * * *" }]
+  workflow_dispatch:
+    inputs:
+      slot: { description: "slot k (0-7); empty = by hour", required: false, default: "" }
+
+permissions: { contents: write, issues: write }
+concurrency: { group: pipeline, cancel-in-progress: false }
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Pipeline (one Workday slot)
+        env:
+          CV_PROFILE_JSON: ${{ secrets.CV_PROFILE_JSON }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SLOT_INPUT: ${{ github.event.inputs.slot }}
+        run: |
+          SLOT="${SLOT_INPUT:-$(( 10#$(date -u +%H) / 3 ))}"
+          echo "slot $SLOT/8"
+          python -m pipeline --only-new --only-ats workday --slot "$SLOT/8"
+      - run: pytest -q pipeline/tests
+      - run: python scripts/privacy_guard.py
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data site/i18n/taxonomy.json
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          NEW=$(python -c "import json;print(json.load(open('data/meta.json'))['last_run']['new'])")
+          git commit -m "data: workday slot update $(TZ=Asia/Ho_Chi_Minh date '+%F %H:%M') (+${NEW} new)"
+          git pull --rebase -X ours -q || true
+          git push

@@ -24,10 +24,23 @@
   const dayNum = s => Math.floor(Date.parse(s.slice(0, 10) + 'T00:00:00Z') / DAY);
   let TODAY = dayNum(vnDate(new Date()));
 
+  // Private skill tags: the public data has no have/missing lists. The owner opens a private link
+  // (#me=<base64url JSON array of skill keys>) once; the list lives only in her browser's localStorage.
+  (function readPrivateLink() {
+    const m = location.hash.match(/^#me=(.*)$/);
+    if (!m) return;
+    if (m[1] === 'clear') store.set('jr-my-skills', null);
+    else { try { const arr = JSON.parse(decodeURIComponent(escape(atob(m[1].replace(/-/g, '+').replace(/_/g, '/'))))); if (Array.isArray(arr)) store.set('jr-my-skills', arr); } catch (e) {} }
+    history.replaceState(null, '', location.pathname + location.search + '#viec-lam');
+  })();
+  const MY_SKILLS = new Set(store.get('jr-my-skills', null) || []);
   function prep(j) {
     j.daysAgo = Math.max(0, TODAY - dayNum(j.posted_at || j.first_seen_at));
     j.deadlineIn = j.deadline ? dayNum(j.deadline) - TODAY : null;
     j.skills = j.skills || []; j.languages_required = j.languages_required || []; j.benefits = j.benefits || [];
+    if (!Array.isArray(j.have) && MY_SKILLS.size && j.skills) {
+      j.have = j.skills.filter(x => MY_SKILLS.has(x)); j.missing = j.skills.filter(x => !MY_SKILLS.has(x));
+    }
     j.hasTags = Array.isArray(j.have);
     j._search = [j.title, j.company, L('industry', j.industry), ...j.skills, ...j.skills.map(s => (TAX.skills[s] || {}).vi || ''), ...j.skills.map(s => (TAX.skills[s] || {}).en || '')].join(' ').toLowerCase();
     return j;

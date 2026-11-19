@@ -102,6 +102,9 @@ def main(argv=None):
     ap.add_argument("--dry-run", action="store_true", help="fetch + process, print stats, write nothing")
     ap.add_argument("--limit-companies", type=int)
     ap.add_argument("--companies", help="comma-separated company ids")
+    ap.add_argument("--skip-ats", help="comma-separated ATS to skip (their stored jobs are kept as-is)")
+    ap.add_argument("--only-ats", help="only companies on this ATS")
+    ap.add_argument("--slot", help="k/N: take every N-th company starting at k (spreads load over several runs)")
     ap.add_argument("--check-urls", action="store_true", help="force the weekly URL check")
     ap.add_argument("--reenrich", action="store_true", help="re-apply extraction rules to stored jobs from the cache")
     a = ap.parse_args(argv)
@@ -117,13 +120,23 @@ def main(argv=None):
 
     if a.rescore_all:
         jobs = db["jobs"]
+        if a.reenrich:  # re-apply extraction rules to every stored job from the description cache
+            cache = store.load_desc()
+            for j in jobs:
+                hint = cache.get(j["id"])
+                if hint:
+                    j.update(_desc=hint.get("d") or "", _level_raw=hint.get("lv"), _function_raw=hint.get("fn"), _salary=hint.get("sal"))
+                    enrich_rules.enrich(j)
+            jobs = [store.clean(j) for j in jobs]
+            db["meta"]["rules_hash"] = rules_hash()
         score.apply(jobs, profile, show_tags)
-        meta = dict(db["meta"], cv_version=(profile or {}).get("cv_version"), rescored_at=iso(now),
+        meta = dict(db["meta"], cv_version=(profile or {}).get("cv_version"), rescored_at=iso(now), show_skill_tags=show_tags,
                     has_profile=bool(profile))
         if not a.dry_run:
             store.write_jobs(jobs, iso(now), cfg["details_split_mb"])
             store.write("meta.json", meta)
             store.write("stats.json", stats.build(jobs, db["archive"], now))
+            export_taxonomy()
         print(f"rescored {len(jobs)} jobs; profile={'yes' if profile else 'no'}")
         return 0
 
@@ -133,7 +146,16 @@ def main(argv=None):
         cos = [c for c in cos if c["id"] in want]
     if a.limit_companies:
         cos = cos[: a.limit_companies]
-    if cfg.get("ybox", {}).get("enabled") and not (a.companies and "ybox" not in a.companies.split(",")) and not a.limit_companies:
+    if a.skip_ats:
+        skip = set(a.skip_ats.split(","))
+        cos = [c for c in cos if c.get("ats") not in skip]
+    if a.only_ats:
+        cos = [c for c in cos if c.get("ats") == a.only_ats]
+    if a.slot:
+        k, n = map(int, a.slot.split("/"))
+        cos = [c for i, c in enumerate(cos) if i % n == k % n]
+    partial = bool(a.companies or a.limit_companies or a.skip_ats or a.only_ats or a.slot)
+    if cfg.get("ybox", {}).get("enabled") and not (a.companies and "ybox" not in a.companies.split(",")) and not a.limit_companies and not a.only_ats and not a.slot:
         cos.append({"id": "ybox", "name": "Ybox.vn", "ats": "ybox", "active": True, "pages": cfg["ybox"].get("pages", 8)})
     all_cos = {c["id"]: c for c in companies()}
 
@@ -253,7 +275,7 @@ def main(argv=None):
             if jid in pending:
                 new_pending[jid] = pending[jid]
             continue
-        if (a.companies or a.limit_companies) and sk(j) not in by_company:
+        if partial and sk(j) not in by_company:
             if jid in prev_open:
                 jobs.append(j); seen.add(jid)
             elif jid in pending:
