@@ -156,5 +156,7 @@
  "unknownMode": "Không công bố",
  "newTab": "(mở trong tab mới)",
  "footer": "Job Radar tổng hợp tin công khai từ trang tuyển dụng của các công ty. Luôn kiểm tra tin gốc trước khi nộp hồ sơ.",
- "repo": "Mã nguồn trên GitHub"
+ "repo": "Mã nguồn trên GitHub",
+ "lastVerified": "Xác minh lần cuối",
+ "lastVerifiedNote": "Thời điểm Job Radar thấy tin này còn trên trang tuyển dụng gốc"
 }

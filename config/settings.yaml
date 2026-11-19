@@ -21,6 +21,7 @@ limits:
 
 closing:
   missing_runs_to_close: 2  # disappears from source N runs in a row -> archive
+  stale_days: 7             # not re-verified for this long (source blocked) -> hidden, not closed
   archive_days: 180
   weekly_url_check_weekday: 6   # 0=Mon ... 6=Sun (Vietnam time)
 

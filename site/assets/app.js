@@ -137,6 +137,7 @@
           + '<dt>' + T('exp') + '</dt><dd>' + (j.experience_min_years ? T('expN', { n: j.experience_min_years }) : j.experience_min_years === 0 ? T('noExp') : T('notDisclosed')) + '</dd>'
           + '<dt>' + T('langs') + '</dt><dd>' + esc(j.languages_required.map(x => L('langs', x)).join(', ') || T('notDisclosed')) + '</dd>'
           + (j.employment_type ? '<dt>' + T('empType') + '</dt><dd>' + esc(T('emp_' + j.employment_type)) + '</dd>' : '')
+          + '<dt>' + T('lastVerified') + '</dt><dd title="' + esc(T('lastVerifiedNote')) + '">' + esc(fmtTime(j.last_seen_at)) + '</dd>'
           + '<dt>' + T('source') + '</dt><dd>' + esc(srcLabel) + (j.also_on && j.also_on.length ? '<br><span class="muted">' + T('alsoOn') + ' ' + j.also_on.length + '</span>' : '') + '</dd></dl>'
           + '<div><b>' + T('reqSkills') + '</b>' + (j.skills.length ? '<ul>' + j.skills.map(s => '<li>' + esc(L('skill', s)) + (j.hasTags && j.have.includes(s) ? T('youHaveIt') : '') + '</li>').join('') + '</ul>' : '<p class="muted" style="margin:4px 0 0;font-size:14px">' + T('notDisclosed') + '</p>')
           + (det.description_excerpt ? '<p class="excerpt"><b>' + T('summary') + ':</b> ' + esc(det.description_excerpt) + '</p>' : '') + '</div>'

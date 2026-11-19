@@ -8,7 +8,7 @@ import json
 import os
 import sys
 import time
-from collections import defaultdict
+from collections import Counter, defaultdict
 from urllib.parse import urlparse
 
 from . import dedupe, enrich_rules, filter as jfilter, health, score, stats, store
@@ -261,12 +261,25 @@ def main(argv=None):
     failed = {cid for cid, r in reports.items() if not r["ok"]}
     scanned_ok = {cid for cid, r in reports.items() if r["ok"]}
     sk = lambda j: "ybox" if j.get("source") == "ybox" else j["company_id"]
+    # Jobs we could not re-verify for STALE_DAYS are hidden (kept in state, not closed):
+    # they come back automatically on the next successful scan if still listed.
+    stale_cut = iso(now - dt.timedelta(days=cfg["closing"].get("stale_days", 7)))
+    is_stale = lambda j: (j.get("last_seen_at") or "") < stale_cut
+    held = {}
+
+    def carry(j):
+        if is_stale(j):
+            held[j["id"]] = {"job": j, "missing_runs": pending.get(j["id"], {}).get("missing_runs", 0), "stale": True}
+        else:
+            jobs.append(j)
+        seen.add(j["id"])
+
     for j in prev_open.values():
         if sk(j) in failed and j["id"] not in seen:
-            jobs.append(j); seen.add(j["id"])
+            carry(j)
 
     # closing logic
-    new_pending, closed_now = {}, []
+    new_pending, closed_now = dict(held), []
     miss_limit = cfg["closing"]["missing_runs_to_close"]
     for jid, j in prev_all.items():
         if jid in seen:
@@ -277,7 +290,9 @@ def main(argv=None):
             continue
         if partial and sk(j) not in by_company:
             if jid in prev_open:
-                jobs.append(j); seen.add(jid)
+                carry(j)
+                if jid in held:
+                    new_pending[jid] = held[jid]
             elif jid in pending:
                 new_pending[jid] = pending[jid]
             continue
@@ -334,7 +349,9 @@ def main(argv=None):
         "total_open": len(published),
         "new": len(new_ids),
         "closed": len(closed_now),
-        "pending_missing": len(new_pending),
+        "pending_missing": sum(1 for v in new_pending.values() if not v.get("stale")),
+        "stale_hidden": sum(1 for v in new_pending.values() if v.get("stale")),
+        "stale_hidden_by_company": dict(sorted(Counter(v["job"]["company_id"] for v in new_pending.values() if v.get("stale")).items())),
         "merged_duplicates": merged,
         "dropped": dict(drops),
         "schema_errors_pct": round(100 * bad / max(1, len(jobs)), 2),

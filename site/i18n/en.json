@@ -156,5 +156,7 @@
  "unknownMode": "Not disclosed",
  "newTab": "(opens in a new tab)",
  "footer": "Job Radar collects public postings from company career sites. Always check the original posting before you apply.",
- "repo": "Source code on GitHub"
+ "repo": "Source code on GitHub",
+ "lastVerified": "Last verified",
+ "lastVerifiedNote": "When Job Radar last saw this posting on the original career site"
 }
