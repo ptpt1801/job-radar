@@ -1,5 +1,5 @@
 {
- "run_at": "2026-11-19T07:42:01Z",
+ "run_at": "2026-11-19T10:24:32Z",
  "total_open": 1278,
  "new": 0,
  "closed": 0,
@@ -19,89 +19,89 @@
    "jobs_found": 0,
    "jobs_kept": 0,
    "http_errors": 0,
-   "duration_s": 66.2,
+   "duration_s": 66.5,
    "companies": 6
   }
  },
  "companies": {
-  "cisco": {
+  "ge_vernova": {
    "ok": false,
    "adapter": "workday",
    "jobs_found": 0,
    "jobs_kept": null,
    "duration_s": 10.1,
-   "error": "HTTPError: 429 for https://cisco.wd5.myworkdayjobs.com/wday/cxs/cisco/Cisco_Careers/jobs"
+   "error": "HTTPError: 429 for https://gevernova.wd5.myworkdayjobs.com/wday/cxs/gevernova/Vernova_ExternalSite/jobs"
   },
-  "gsk": {
+  "astrazeneca": {
+   "ok": false,
+   "adapter": "workday",
+   "jobs_found": 0,
+   "jobs_kept": null,
+   "duration_s": 11.8,
+   "error": "HTTPError: 429 for https://astrazeneca.wd3.myworkdayjobs.com/wday/cxs/astrazeneca/Careers/jobs"
+  },
+  "marvell": {
    "ok": false,
    "adapter": "workday",
    "jobs_found": 0,
    "jobs_kept": null,
    "duration_s": 11.0,
-   "error": "HTTPError: 429 for https://gsk.wd5.myworkdayjobs.com/wday/cxs/gsk/GSKCareers/jobs"
+   "error": "HTTPError: 429 for https://marvell.wd1.myworkdayjobs.com/wday/cxs/marvell/MarvellCareers/jobs"
   },
-  "hp": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": null,
-   "duration_s": 11.1,
-   "error": "HTTPError: 429 for https://hp.wd5.myworkdayjobs.com/wday/cxs/hp/ExternalCareerSite/jobs"
-  },
-  "abb": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": null,
-   "duration_s": 11.6,
-   "error": "HTTPError: 429 for https://abb.wd3.myworkdayjobs.com/wday/cxs/abb/external_career_page/jobs"
-  },
-  "pvh": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": null,
-   "duration_s": 10.7,
-   "error": "HTTPError: 429 for https://pvh.wd1.myworkdayjobs.com/wday/cxs/pvh/PVH_Careers/jobs"
-  },
-  "fwd": {
+  "accenture": {
    "ok": false,
    "adapter": "workday",
    "jobs_found": 0,
    "jobs_kept": null,
    "duration_s": 11.7,
-   "error": "HTTPError: 429 for https://fwd.wd3.myworkdayjobs.com/wday/cxs/fwd/FWDcareersite/jobs"
+   "error": "HTTPError: 429 for https://accenture.wd103.myworkdayjobs.com/wday/cxs/accenture/AccentureCareers/jobs"
+  },
+  "ecolab": {
+   "ok": false,
+   "adapter": "workday",
+   "jobs_found": 0,
+   "jobs_kept": null,
+   "duration_s": 11.0,
+   "error": "HTTPError: 429 for https://ecolab.wd1.myworkdayjobs.com/wday/cxs/ecolab/Ecolab_External/jobs"
+  },
+  "toll": {
+   "ok": false,
+   "adapter": "workday",
+   "jobs_found": 0,
+   "jobs_kept": null,
+   "duration_s": 10.9,
+   "error": "HTTPError: 429 for https://tollgroup.wd5.myworkdayjobs.com/wday/cxs/tollgroup/TollGroup/jobs"
   }
  },
  "hosts": {
-  "cisco.wd5.myworkdayjobs.com": {
+  "gevernova.wd5.myworkdayjobs.com": {
    "requests": 7,
    "errors": 6
   },
-  "gsk.wd5.myworkdayjobs.com": {
+  "astrazeneca.wd3.myworkdayjobs.com": {
    "requests": 7,
    "errors": 6
   },
-  "hp.wd5.myworkdayjobs.com": {
+  "marvell.wd1.myworkdayjobs.com": {
    "requests": 7,
    "errors": 6
   },
-  "abb.wd3.myworkdayjobs.com": {
+  "accenture.wd103.myworkdayjobs.com": {
    "requests": 7,
    "errors": 6
   },
-  "pvh.wd1.myworkdayjobs.com": {
+  "ecolab.wd1.myworkdayjobs.com": {
    "requests": 7,
    "errors": 6
   },
-  "fwd.wd3.myworkdayjobs.com": {
-   "requests": 8,
+  "tollgroup.wd5.myworkdayjobs.com": {
+   "requests": 7,
    "errors": 6
   }
  },
  "ybox_rejected": [],
  "alerts": [
   "Source `workday` returned 0 jobs (7-run average 19.7).",
-  "6/6 companies failed to fetch (e.g. cisco, gsk, hp, abb, pvh)."
+  "6/6 companies failed to fetch (e.g. ge_vernova, astrazeneca, marvell, accenture, ecolab)."
  ]
 }
