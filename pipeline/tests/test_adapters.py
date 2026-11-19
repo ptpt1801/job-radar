@@ -136,3 +136,28 @@ def test_successfactors_table_and_tile_layouts():
     d = parse_detail('<meta itemprop="datePosted" content="Fri Oct 30 02:00:00 UTC 2026"><span class="jobGeoLocation">Bien Hoa, VN, 810000</span>'
                      '<span itemprop="description"><p>Quality role</p></span>')
     assert d["location"].startswith("Bien Hoa") and "Quality" in d["description"] and d["posted"]
+
+
+def test_radancy_jsonld_and_vn_slug():
+    from pipeline.adapters.custom.radancy import VN_SLUG, _loc, job_ld
+    html = ('<script type="application/ld+json">{"@type":"JobPosting","title":"Medical Rep","datePosted":"2026-11-03",'
+            '"jobLocation":[{"address":{"addressLocality":"Hanoi","addressCountry":"VN"}}],"description":"<p>Visit doctors</p>"}</script>')
+    ld = job_ld(html)
+    assert ld["title"] == "Medical Rep" and _loc(ld) == ("Hanoi, VN", "VN")
+    assert VN_SLUG.search("https://jobs.example.com/job/ho-chi-minh-city/x/1113/1")
+    assert not VN_SLUG.search("https://jobs.example.com/job/tianjin/x/1113/2")
+
+
+def test_oracle_uses_vietnam_location_facet():
+    from pipeline.adapters.custom.oracle import OracleAdapter
+    first = {"items": [{"locationsFacet": [{"Id": 42, "Name": "Viet Nam"}], "requisitionList": []}]}
+    lst = {"items": [{"TotalJobsCount": 2, "requisitionList": [
+        {"Id": 1, "Title": "Quality Manager", "PrimaryLocation": "Viet Nam", "PrimaryLocationCountry": "VN", "PostedDate": "2026-08-20"},
+        {"Id": 2, "Title": "Engineer", "PrimaryLocation": "Kuala Lumpur", "PrimaryLocationCountry": "MY"}]}]}
+    det = {"items": [{"ExternalDescriptionStr": "<p>Own quality</p>"}]}
+    http = FakeHttp([(("GET", lambda u, kw: "Requisitions" in u and "keyword" in kw["params"]["finder"]), first),
+                     (("GET", lambda u, kw: "Requisitions" in u and "selectedLocationsFacet=42" in kw["params"]["finder"]), lst),
+                     (("GET", lambda u, kw: "RequisitionDetails" in u), det)])
+    jobs = OracleAdapter(http).fetch({"id": "nokia", "oracle": {"host": "x.oraclecloud.com", "site": "CX_1"}})
+    assert [j["source_job_id"] for j in jobs] == ["1"] and "Own quality" in jobs[0]["description"]
+    assert jobs[0]["url"] == "https://x.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/1"

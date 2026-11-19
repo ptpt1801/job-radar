@@ -750,10 +750,15 @@ companies:
   hq_country: FI
   region: europe
   industry: technology
-  ats: unknown
-  active: false
-  verified: false
-  notes: Not resolved.
+  ats: custom
+  active: true
+  verified: true
+  notes: Oracle Recruiting Cloud; Vietnam via location facet.
+  adapter: oracle
+  oracle:
+    host: fa-evmr-saasfaprod1.fa.ocs.oraclecloud.com
+    site: CX_1
+  verified_at: '2026-11-19'
 - id: sap
   name: SAP
   hq_country: DE
@@ -1033,3 +1038,186 @@ companies:
   verified: false
   verified_at: '2026-11-19'
   notes: SuccessFactors CSB whose search results render with JavaScript; needs a browser-based adapter.
+- id: hitachi
+  name: Hitachi
+  hq_country: JP
+  region: asia
+  industry: industrial_automation
+  ats: workday
+  workday:
+    tenant: hitachi
+    wd: wd1
+    site: hitachi
+  active: true
+  verified: true
+  verified_at: '2026-11-19'
+- id: fwd
+  name: FWD Insurance
+  hq_country: HK
+  region: asia
+  industry: consulting_finance
+  ats: workday
+  workday:
+    tenant: fwd
+    wd: wd3
+    site: FWDcareersite
+  active: true
+  verified: true
+  verified_at: '2026-11-19'
+- id: toll
+  name: Toll Group
+  hq_country: AU
+  region: oceania
+  industry: logistics
+  ats: workday
+  workday:
+    tenant: tollgroup
+    wd: wd5
+    site: TollGroup
+  active: true
+  verified: true
+  verified_at: '2026-11-19'
+- id: aurecon
+  name: Aurecon
+  hq_country: AU
+  region: oceania
+  industry: consulting_finance
+  ats: workday
+  workday:
+    tenant: aurecongroup
+    wd: wd3
+    site: aurecon
+  active: true
+  verified: true
+  verified_at: '2026-11-19'
+- id: nec
+  name: NEC
+  hq_country: JP
+  region: asia
+  industry: technology
+  ats: custom
+  adapter: successfactors
+  career_url: https://careers.nec.com
+  active: false
+  verified: true
+  verified_at: '2026-11-19'
+  notes: Adapter works, but 0 Vietnam openings on 2026-11-19; re-check monthly.
+- id: daiichi_sankyo
+  name: Daiichi Sankyo
+  hq_country: JP
+  region: asia
+  industry: pharma_medtech
+  ats: custom
+  adapter: successfactors
+  career_url: https://careers.daiichisankyo.com
+  active: false
+  verified: true
+  verified_at: '2026-11-19'
+  notes: Adapter works, but 0 Vietnam openings on 2026-11-19; re-check monthly.
+- id: murata
+  name: Murata
+  hq_country: JP
+  region: asia
+  industry: technology
+  ats: custom
+  adapter: successfactors
+  career_url: https://jobs.murata.com
+  active: false
+  verified: true
+  verified_at: '2026-11-19'
+  notes: Adapter works, but 0 Vietnam openings on 2026-11-19; re-check monthly.
+- id: epson
+  name: Epson
+  hq_country: JP
+  region: asia
+  industry: technology
+  ats: custom
+  adapter: successfactors
+  career_url: https://jobs.epson.com
+  active: false
+  verified: true
+  verified_at: '2026-11-19'
+  notes: Adapter works, but 0 Vietnam openings on 2026-11-19; re-check monthly.
+- id: shiseido
+  name: Shiseido
+  hq_country: JP
+  region: asia
+  industry: nonfood_consumer
+  ats: custom
+  adapter: successfactors
+  career_url: https://careers.shiseido.com
+  active: false
+  verified: true
+  verified_at: '2026-11-19'
+  notes: Adapter works, but 0 Vietnam openings on 2026-11-19; re-check monthly.
+- id: acer
+  name: Acer
+  hq_country: TW
+  region: asia
+  industry: technology
+  ats: custom
+  adapter: successfactors
+  career_url: https://careers.acer.com
+  active: false
+  verified: true
+  verified_at: '2026-11-19'
+  notes: Adapter works, but 0 Vietnam openings on 2026-11-19; re-check monthly.
+- id: crystal
+  name: Crystal International
+  hq_country: HK
+  region: asia
+  industry: fashion_sports
+  ats: custom
+  adapter: successfactors
+  career_url: https://careers.crystalgroup.com
+  active: false
+  verified: true
+  verified_at: '2026-11-19'
+  notes: Adapter works, but 0 Vietnam openings on 2026-11-19; re-check monthly.
+- id: anz
+  name: ANZ
+  hq_country: AU
+  region: oceania
+  industry: consulting_finance
+  ats: custom
+  adapter: successfactors
+  career_url: https://careers.anz.com
+  active: true
+  verified: true
+  verified_at: '2026-11-19'
+- id: orica
+  name: Orica
+  hq_country: AU
+  region: oceania
+  industry: materials_chemicals
+  ats: custom
+  adapter: successfactors
+  career_url: https://careers.orica.com
+  active: false
+  verified: true
+  verified_at: '2026-11-19'
+  notes: Adapter works, but 0 Vietnam openings on 2026-11-19; re-check monthly.
+- id: lenovo
+  name: Lenovo
+  hq_country: HK
+  region: asia
+  industry: technology
+  ats: custom
+  adapter: avature
+  career_url: https://jobs.lenovo.com/en_US/careers
+  active: false
+  verified: true
+  verified_at: '2026-11-19'
+  notes: Adapter works, but 0 Vietnam openings on 2026-11-19; re-check monthly.
+- id: takeda
+  name: Takeda
+  hq_country: JP
+  region: asia
+  industry: pharma_medtech
+  ats: custom
+  adapter: radancy
+  career_url: https://jobs.takeda.com
+  notes: 'Radancy: robots.txt disallows /search-jobs/, so jobs are read from the sitemap.'
+  active: true
+  verified: true
+  verified_at: '2026-11-19'

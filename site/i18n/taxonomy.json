@@ -153,8 +153,12 @@
    "en": "Americas"
   },
   "asia": {
-   "vi": "Châu Á (Singapore)",
-   "en": "Asia (Singapore)"
+   "vi": "Châu Á",
+   "en": "Asia"
+  },
+  "oceania": {
+   "vi": "Châu Úc",
+   "en": "Australia & NZ"
   }
  },
  "work_modes": {
@@ -465,6 +469,26 @@
   "SG": {
    "vi": "Singapore",
    "en": "Singapore"
+  },
+  "HK": {
+   "vi": "Hồng Kông",
+   "en": "Hong Kong"
+  },
+  "TW": {
+   "vi": "Đài Loan",
+   "en": "Taiwan"
+  },
+  "JP": {
+   "vi": "Nhật Bản",
+   "en": "Japan"
+  },
+  "AU": {
+   "vi": "Úc",
+   "en": "Australia"
+  },
+  "NZ": {
+   "vi": "New Zealand",
+   "en": "New Zealand"
   }
  },
  "benefits_common": {

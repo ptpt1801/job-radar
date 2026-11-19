@@ -2,7 +2,7 @@
 
 **Live site:** https://ptpt1801.github.io/job-radar/
 
-Job Radar is a daily-updated board of **open roles in Vietnam at European, American and Singaporean corporations**. It covers supply chain, industrial, tech, pharma, consulting and non-food consumer companies, and leaves out food and beverage FMCG. Each role gets a **match score** against a private skill profile. The site is static, free to run, and refreshed by GitHub Actions every night.
+Job Radar is a daily-updated board of **open roles in Vietnam at European, American and Asia-Pacific corporations**. It covers supply chain, industrial, tech, pharma, consulting and non-food consumer companies, and leaves out food and beverage FMCG. Each role gets a **match score** against a private skill profile. The site is static, free to run, and refreshed by GitHub Actions every night.
 
 ### The problem
 
@@ -10,7 +10,7 @@ Multinationals post Vietnam openings on their own career sites, not on one board
 
 - located in Vietnam,
 - still open (a deadline in the past or a role gone from the source means it is removed),
-- at a company headquartered in Europe, the Americas or Singapore,
+- at a company headquartered in Europe, the Americas, Singapore, Hong Kong, Taiwan, Japan, Australia or New Zealand,
 - outside food and beverage FMCG.
 
 | Open roles | Market overview |
@@ -33,7 +33,7 @@ flowchart LR
 
 | Stage | What it does |
 |---|---|
-| **fetch** | One adapter per platform: Workday (public CXS JSON, VN location facet), SmartRecruiters (official Posting API), Greenhouse, Lever, Ashby, plus custom adapters for Jibe/iCIMS (Schneider Electric) and Avature (Siemens). Ybox.vn is read with strict rules (see below). |
+| **fetch** | One adapter per platform: Workday (public CXS JSON, VN location facet), SmartRecruiters (official Posting API), Greenhouse, Lever, Ashby, plus custom adapters for Jibe/iCIMS (Schneider Electric), Avature (Siemens, Lenovo), SAP SuccessFactors Career Site Builder, Oracle Recruiting Cloud and Radancy/TalentBrew (sitemap-based, since its search path is disallowed in robots.txt). Ybox.vn is read with strict rules (see below). |
 | **normalize** | Maps every posting to one schema ([`schemas/job.schema.json`](schemas/job.schema.json)) with language-neutral keys (`level`, `function`, `city`…); the UI translates them. |
 | **filter** | Vietnam only, deadline not passed (Vietnam time), source status open, no excluded company or industry ([`config/exclusions.yaml`](config/exclusions.yaml)). |
 | **dedupe** | Same company + normalized title + city within 14 days counts as one role. The higher-priority source wins; a lower-priority source only fills empty fields such as salary. |

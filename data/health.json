@@ -1,7 +1,7 @@
 {
- "run_at": "2026-11-19T04:48:59Z",
- "total_open": 1133,
- "new": 0,
+ "run_at": "2026-11-19T05:17:30Z",
+ "total_open": 1278,
+ "new": 145,
  "closed": 0,
  "pending_missing": 0,
  "merged_duplicates": 0,
@@ -14,94 +14,219 @@
   "mode": "rules"
  },
  "sources": {
-  "workday": {
-   "ok": false,
-   "jobs_found": 0,
-   "jobs_kept": 0,
+  "custom": {
+   "ok": true,
+   "jobs_found": 7,
+   "jobs_kept": 7,
    "http_errors": 0,
-   "duration_s": 66.3,
-   "companies": 6
+   "duration_s": 453.5,
+   "companies": 12
+  },
+  "workday": {
+   "ok": true,
+   "jobs_found": 138,
+   "jobs_kept": 138,
+   "http_errors": 0,
+   "duration_s": 356.2,
+   "companies": 4
   }
  },
  "companies": {
-  "nike": {
-   "ok": false,
-   "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": null,
-   "duration_s": 10.1,
-   "error": "HTTPError: 429 for https://nike.wd1.myworkdayjobs.com/wday/cxs/nike/nke/jobs"
+  "nokia": {
+   "ok": true,
+   "adapter": "oracle",
+   "jobs_found": 2,
+   "jobs_kept": 2,
+   "duration_s": 12.0,
+   "error": null
   },
-  "sanofi": {
-   "ok": false,
+  "hitachi": {
+   "ok": true,
    "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": null,
-   "duration_s": 11.6,
-   "error": "HTTPError: 429 for https://sanofi.wd3.myworkdayjobs.com/wday/cxs/sanofi/SanofiCareers/jobs"
+   "jobs_found": 94,
+   "jobs_kept": 94,
+   "duration_s": 192.0,
+   "error": null
   },
-  "pfizer": {
-   "ok": false,
+  "fwd": {
+   "ok": true,
    "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": null,
-   "duration_s": 10.8,
-   "error": "HTTPError: 429 for https://pfizer.wd1.myworkdayjobs.com/wday/cxs/pfizer/PfizerCareers/jobs"
+   "jobs_found": 3,
+   "jobs_kept": 3,
+   "duration_s": 23.4,
+   "error": null
   },
-  "pg": {
-   "ok": false,
+  "toll": {
+   "ok": true,
    "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": null,
-   "duration_s": 11.1,
-   "error": "HTTPError: 429 for https://pg.wd5.myworkdayjobs.com/wday/cxs/pg/1000/jobs"
+   "jobs_found": 16,
+   "jobs_kept": 16,
+   "duration_s": 60.3,
+   "error": null
   },
-  "thermo_fisher": {
-   "ok": false,
+  "aurecon": {
+   "ok": true,
    "adapter": "workday",
-   "jobs_found": 0,
-   "jobs_kept": null,
-   "duration_s": 11.0,
-   "error": "HTTPError: 429 for https://thermofisher.wd5.myworkdayjobs.com/wday/cxs/thermofisher/ThermoFisherCareers/jobs"
+   "jobs_found": 25,
+   "jobs_kept": 25,
+   "duration_s": 80.5,
+   "error": null
   },
-  "roche": {
-   "ok": false,
-   "adapter": "workday",
+  "nec": {
+   "ok": true,
+   "adapter": "successfactors",
    "jobs_found": 0,
-   "jobs_kept": null,
-   "duration_s": 11.7,
-   "error": "HTTPError: 429 for https://roche.wd3.myworkdayjobs.com/wday/cxs/roche/roche-ext/jobs"
+   "jobs_kept": 0,
+   "duration_s": 175.5,
+   "error": null
+  },
+  "daiichi_sankyo": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 11.2,
+   "error": null
+  },
+  "murata": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 58.2,
+   "error": null
+  },
+  "epson": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 50.5,
+   "error": null
+  },
+  "shiseido": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 26.5,
+   "error": null
+  },
+  "acer": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 49.2,
+   "error": null
+  },
+  "crystal": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 22.1,
+   "error": null
+  },
+  "anz": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 2,
+   "jobs_kept": 2,
+   "duration_s": 4.1,
+   "error": null
+  },
+  "orica": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 22.4,
+   "error": null
+  },
+  "lenovo": {
+   "ok": true,
+   "adapter": "avature",
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 9.3,
+   "error": null
+  },
+  "takeda": {
+   "ok": true,
+   "adapter": "radancy",
+   "jobs_found": 3,
+   "jobs_kept": 3,
+   "duration_s": 12.5,
+   "error": null
   }
  },
  "hosts": {
-  "nike.wd1.myworkdayjobs.com": {
-   "requests": 7,
-   "errors": 6
+  "hitachi.wd1.myworkdayjobs.com": {
+   "requests": 101,
+   "errors": 0
   },
-  "sanofi.wd3.myworkdayjobs.com": {
-   "requests": 9,
-   "errors": 7
+  "careers.nec.com": {
+   "requests": 16,
+   "errors": 4
   },
-  "pfizer.wd1.myworkdayjobs.com": {
-   "requests": 7,
-   "errors": 6
+  "fwd.wd3.myworkdayjobs.com": {
+   "requests": 6,
+   "errors": 0
   },
-  "pg.wd5.myworkdayjobs.com": {
-   "requests": 7,
-   "errors": 6
+  "fa-evmr-saasfaprod1.fa.ocs.oraclecloud.com": {
+   "requests": 5,
+   "errors": 0
   },
-  "thermofisher.wd5.myworkdayjobs.com": {
-   "requests": 7,
-   "errors": 6
+  "tollgroup.wd5.myworkdayjobs.com": {
+   "requests": 19,
+   "errors": 0
   },
-  "roche.wd3.myworkdayjobs.com": {
+  "aurecongroup.wd3.myworkdayjobs.com": {
+   "requests": 29,
+   "errors": 0
+  },
+  "careers.daiichisankyo.com": {
+   "requests": 2,
+   "errors": 0
+  },
+  "jobs.epson.com": {
+   "requests": 12,
+   "errors": 0
+  },
+  "jobs.murata.com": {
    "requests": 7,
-   "errors": 6
+   "errors": 0
+  },
+  "careers.shiseido.com": {
+   "requests": 17,
+   "errors": 0
+  },
+  "careers.acer.com": {
+   "requests": 12,
+   "errors": 1
+  },
+  "careers.anz.com": {
+   "requests": 4,
+   "errors": 0
+  },
+  "careers.orica.com": {
+   "requests": 12,
+   "errors": 0
+  },
+  "careers.crystalgroup.com": {
+   "requests": 2,
+   "errors": 0
+  },
+  "jobs.lenovo.com": {
+   "requests": 6,
+   "errors": 0
+  },
+  "jobs.takeda.com": {
+   "requests": 5,
+   "errors": 0
   }
  },
  "ybox_rejected": [],
- "alerts": [
-  "Source `workday` returned 0 jobs (7-run average 22.9).",
-  "6/6 companies failed to fetch (e.g. nike, sanofi, pfizer, pg, thermo_fisher)."
- ]
+ "alerts": []
 }

@@ -20,12 +20,16 @@ def _walk(facets, param=None):
 
 def vn_facets(facets) -> dict:
     """Prefer a country facet with the VN id; otherwise collect VN-looking location values."""
-    country, locs = {}, {}
+    country, locs, other = {}, {}, {}
     for p, v in _walk(facets):
         if v.get("id") == VN_COUNTRY_ID:
             country.setdefault(p, []).append(v["id"])
         elif looks_vn(v.get("descriptor")) and p and "location" in p.lower():
             locs.setdefault(p, []).append(v["id"])
+        elif looks_vn(v.get("descriptor")) and p:
+            other.setdefault(p, []).append(v["id"])   # e.g. hiringCompany "FWD Vietnam Life Insurance"
+    if not country and not locs and other:
+        locs = other
     if country:
         k = next(iter(country))
         return {k: country[k]}

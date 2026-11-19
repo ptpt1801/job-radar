@@ -88,6 +88,8 @@ class SuccessFactorsAdapter(Adapter):
         out = []
         for jid, b in rows.items():
             slug_vn = looks_vn(b["location"], b["url"].replace("-", " "))
+            if b["location"] and not (slug_vn or re.search(r"VN", b["location"])):
+                continue  # row already shows a non-Vietnam location; skip the detail request
             if known_ids and jid in known_ids and reuse and slug_vn:
                 prev = reuse(jid)
                 if prev:
