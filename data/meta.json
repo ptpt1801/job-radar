@@ -1,15 +1,15 @@
 {
- "last_run_at": "2026-11-18T19:45:37Z",
+ "last_run_at": "2026-11-19T03:29:28Z",
  "next_run_at": "2026-11-19T19:00:00Z",
  "cv_version": null,
  "has_profile": false,
  "extractor": "rules",
  "show_skill_tags": true,
- "total_open": 1055,
+ "total_open": 1053,
  "companies_active": 53,
  "companies_with_jobs": 52,
  "last_run": {
-  "new": 0,
+  "new": 5,
   "closed": 0
  },
  "rules_hash": "87828ba1e89c"
