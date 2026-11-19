@@ -1,5 +1,5 @@
 {
- "run_at": "2026-11-19T10:24:32Z",
+ "run_at": "2026-11-19T13:38:09Z",
  "total_open": 1278,
  "new": 0,
  "closed": 0,
@@ -19,82 +19,82 @@
    "jobs_found": 0,
    "jobs_kept": 0,
    "http_errors": 0,
-   "duration_s": 66.5,
+   "duration_s": 67.3,
    "companies": 6
   }
  },
  "companies": {
-  "ge_vernova": {
+  "baker_hughes": {
    "ok": false,
    "adapter": "workday",
    "jobs_found": 0,
    "jobs_kept": null,
    "duration_s": 10.1,
-   "error": "HTTPError: 429 for https://gevernova.wd5.myworkdayjobs.com/wday/cxs/gevernova/Vernova_ExternalSite/jobs"
+   "error": "HTTPError: 429 for https://bakerhughes.wd5.myworkdayjobs.com/wday/cxs/bakerhughes/BakerHughes/jobs"
   },
-  "astrazeneca": {
+  "philips": {
    "ok": false,
    "adapter": "workday",
    "jobs_found": 0,
    "jobs_kept": null,
-   "duration_s": 11.8,
-   "error": "HTTPError: 429 for https://astrazeneca.wd3.myworkdayjobs.com/wday/cxs/astrazeneca/Careers/jobs"
+   "duration_s": 12.0,
+   "error": "HTTPError: 429 for https://philips.wd3.myworkdayjobs.com/wday/cxs/philips/jobs-and-careers/jobs"
   },
-  "marvell": {
+  "nvidia": {
    "ok": false,
    "adapter": "workday",
    "jobs_found": 0,
    "jobs_kept": null,
-   "duration_s": 11.0,
-   "error": "HTTPError: 429 for https://marvell.wd1.myworkdayjobs.com/wday/cxs/marvell/MarvellCareers/jobs"
+   "duration_s": 10.6,
+   "error": "HTTPError: 429 for https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs"
   },
-  "accenture": {
+  "manulife": {
    "ok": false,
    "adapter": "workday",
    "jobs_found": 0,
    "jobs_kept": null,
-   "duration_s": 11.7,
-   "error": "HTTPError: 429 for https://accenture.wd103.myworkdayjobs.com/wday/cxs/accenture/AccentureCareers/jobs"
+   "duration_s": 12.0,
+   "error": "HTTPError: 429 for https://manulife.wd3.myworkdayjobs.com/wday/cxs/manulife/MFCJH_Jobs/jobs"
   },
-  "ecolab": {
+  "visa": {
    "ok": false,
    "adapter": "workday",
    "jobs_found": 0,
    "jobs_kept": null,
-   "duration_s": 11.0,
-   "error": "HTTPError: 429 for https://ecolab.wd1.myworkdayjobs.com/wday/cxs/ecolab/Ecolab_External/jobs"
+   "duration_s": 10.6,
+   "error": "HTTPError: 429 for https://visa.wd5.myworkdayjobs.com/wday/cxs/visa/Visa/jobs"
   },
-  "toll": {
+  "aurecon": {
    "ok": false,
    "adapter": "workday",
    "jobs_found": 0,
    "jobs_kept": null,
-   "duration_s": 10.9,
-   "error": "HTTPError: 429 for https://tollgroup.wd5.myworkdayjobs.com/wday/cxs/tollgroup/TollGroup/jobs"
+   "duration_s": 12.0,
+   "error": "HTTPError: 429 for https://aurecongroup.wd3.myworkdayjobs.com/wday/cxs/aurecongroup/aurecon/jobs"
   }
  },
  "hosts": {
-  "gevernova.wd5.myworkdayjobs.com": {
+  "bakerhughes.wd5.myworkdayjobs.com": {
    "requests": 7,
    "errors": 6
   },
-  "astrazeneca.wd3.myworkdayjobs.com": {
+  "philips.wd3.myworkdayjobs.com": {
    "requests": 7,
    "errors": 6
   },
-  "marvell.wd1.myworkdayjobs.com": {
+  "nvidia.wd5.myworkdayjobs.com": {
+   "requests": 9,
+   "errors": 6
+  },
+  "manulife.wd3.myworkdayjobs.com": {
    "requests": 7,
    "errors": 6
   },
-  "accenture.wd103.myworkdayjobs.com": {
-   "requests": 7,
+  "visa.wd5.myworkdayjobs.com": {
+   "requests": 8,
    "errors": 6
   },
-  "ecolab.wd1.myworkdayjobs.com": {
-   "requests": 7,
-   "errors": 6
-  },
-  "tollgroup.wd5.myworkdayjobs.com": {
+  "aurecongroup.wd3.myworkdayjobs.com": {
    "requests": 7,
    "errors": 6
   }
@@ -102,6 +102,6 @@
  "ybox_rejected": [],
  "alerts": [
   "Source `workday` returned 0 jobs (7-run average 19.7).",
-  "6/6 companies failed to fetch (e.g. ge_vernova, astrazeneca, marvell, accenture, ecolab)."
+  "6/6 companies failed to fetch (e.g. baker_hughes, philips, nvidia, manulife, visa)."
  ]
 }
