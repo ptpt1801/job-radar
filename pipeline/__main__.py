@@ -358,7 +358,7 @@ def main(argv=None):
         "extractor": llm["mode"],
         "show_skill_tags": show_tags,
         "total_open": len(published),
-        "companies_active": len(cos),
+        "companies_active": sum(1 for c in companies() if c.get("active")),
         "companies_with_jobs": len({j["company_id"] for j in published}),
         "last_run": {"new": len(new_ids), "closed": len(closed_now)},
         "rules_hash": rh,
