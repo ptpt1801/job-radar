@@ -772,15 +772,6 @@ companies:
   active: false
   verified: false
   notes: Not resolved.
-- id: ey
-  name: EY Vietnam
-  hq_country: GB
-  region: europe
-  industry: consulting_finance
-  ats: unknown
-  active: false
-  verified: false
-  notes: Not resolved.
 - id: kpmg
   name: KPMG Vietnam
   hq_country: NL
@@ -946,3 +937,99 @@ companies:
   verified_at: '2026-11-18'
   vn_jobs_seen: 2
   notes: Singapore HQ.
+- id: schaeffler
+  name: Schaeffler
+  hq_country: DE
+  region: europe
+  industry: automotive
+  ats: custom
+  adapter: successfactors
+  career_url: https://jobs.schaeffler.com
+  active: true
+  verified: true
+  verified_at: '2026-11-19'
+  notes: SuccessFactors Career Site Builder; plant in Bien Hoa (Dong Nai).
+- id: dksh
+  name: DKSH
+  hq_country: CH
+  region: europe
+  industry: pharma_medtech
+  ats: custom
+  adapter: successfactors
+  career_url: https://jobs.dksh.com
+  active: true
+  verified: true
+  verified_at: '2026-11-19'
+  notes: SuccessFactors CSB. Market-expansion services; mostly healthcare and non-food roles in VN.
+- id: ey
+  name: EY Vietnam
+  hq_country: GB
+  region: europe
+  industry: consulting_finance
+  ats: custom
+  adapter: successfactors
+  career_url: https://careers.ey.com
+  active: true
+  verified: true
+  verified_at: '2026-11-19'
+  notes: SuccessFactors CSB.
+- id: schindler
+  name: Schindler
+  hq_country: CH
+  region: europe
+  industry: industrial_automation
+  ats: custom
+  adapter: successfactors
+  career_url: https://job.schindler.com
+  active: true
+  verified: true
+  verified_at: '2026-11-19'
+  notes: SuccessFactors CSB.
+- id: zuellig_pharma
+  name: Zuellig Pharma
+  hq_country: SG
+  region: asia
+  industry: pharma_medtech
+  ats: custom
+  adapter: successfactors
+  career_url: https://careers.zuelligpharma.com
+  active: true
+  verified: true
+  verified_at: '2026-11-19'
+  notes: SuccessFactors CSB; Singapore HQ. 0 Vietnam openings on 2026-11-19 (results were Philippines).
+- id: bureau_veritas
+  name: Bureau Veritas
+  hq_country: FR
+  region: europe
+  industry: testing_inspection
+  ats: custom
+  adapter: successfactors
+  career_url: https://careers.bureauveritas.com
+  active: false
+  verified: false
+  verified_at: '2026-11-19'
+  notes: SuccessFactors CSB whose search results render with JavaScript; needs a browser-based adapter.
+- id: danfoss
+  name: Danfoss
+  hq_country: DK
+  region: europe
+  industry: industrial_automation
+  ats: custom
+  adapter: successfactors
+  career_url: https://jobs.danfoss.com
+  active: false
+  verified: false
+  verified_at: '2026-11-19'
+  notes: SuccessFactors CSB whose search results render with JavaScript; needs a browser-based adapter.
+- id: tetra_pak
+  name: Tetra Pak
+  hq_country: CH
+  region: europe
+  industry: materials_chemicals
+  ats: custom
+  adapter: successfactors
+  career_url: https://jobs.tetrapak.com
+  active: false
+  verified: false
+  verified_at: '2026-11-19'
+  notes: SuccessFactors CSB whose search results render with JavaScript; needs a browser-based adapter.

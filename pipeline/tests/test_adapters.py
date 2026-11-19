@@ -120,3 +120,19 @@ def test_ybox_listing_and_detail_parse():
     assert ld.get("@type") == "JobPosting" and ld.get("validThrough")
     p = ybox.parse_title(items[0]["title"])
     assert p["employer"] and p["role"]
+
+
+def test_successfactors_table_and_tile_layouts():
+    from pipeline.adapters.custom.successfactors import parse_detail, parse_list
+    table = ('<span class="paginationLabel">Showing 1 to 1 of 1 Jobs</span><table><tr class="data-row">'
+             '<td><a class="jobTitle-link" href="/job/Ha-Noi-Auditor/111/">Auditor</a></td>'
+             '<td><span class="jobLocation">Ha Noi, VN</span></td></tr></table>')
+    rows, total = parse_list(table, "https://careers.example.com")
+    assert total == 1 and rows[0]["id"] == "111" and rows[0]["title"] == "Auditor" and "VN" in rows[0]["location"]
+    tile = ('<ul><li class="job-tile" data-url="/job/Bien-Hoa-Engineer-810000/222/"><div class="tiletitle">'
+            '<span class="sr-only">Title</span><a href="/job/Bien-Hoa-Engineer-810000/222/">Engineer</a></div></li></ul>')
+    rows, _ = parse_list(tile, "https://jobs.example.com")
+    assert rows[0]["id"] == "222" and rows[0]["title"] == "Engineer" and rows[0]["url"].startswith("https://jobs.example.com/job/")
+    d = parse_detail('<meta itemprop="datePosted" content="Fri Oct 30 02:00:00 UTC 2026"><span class="jobGeoLocation">Bien Hoa, VN, 810000</span>'
+                     '<span itemprop="description"><p>Quality role</p></span>')
+    assert d["location"].startswith("Bien Hoa") and "Quality" in d["description"] and d["posted"]
