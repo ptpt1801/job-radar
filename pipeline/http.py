@@ -16,6 +16,17 @@ class RobotsDisallowed(Exception):
     pass
 
 
+# Hosts that are subdomains of one shared platform share a single rate limit.
+SHARED_PLATFORMS = ("myworkdayjobs.com",)
+
+
+def rate_key(host: str) -> str:
+    for d in SHARED_PLATFORMS:
+        if host == d or host.endswith("." + d):
+            return d
+    return host
+
+
 class PoliteClient:
     def __init__(self, cfg: dict | None = None):
         cfg = cfg or settings()["http"]
@@ -75,12 +86,13 @@ class PoliteClient:
     # ---- rate limit -----------------------------------------------------
     def _wait(self, host: str):
         interval = self._delay.get(host, self.min_interval)
-        with self._host_locks[host]:
-            last = self._last.get(host, 0.0)
+        key = rate_key(host)
+        with self._host_locks[key]:
+            last = self._last.get(key, 0.0)
             now = time.monotonic()
             if now - last < interval:
                 time.sleep(interval - (now - last))
-            self._last[host] = time.monotonic()
+            self._last[key] = time.monotonic()
 
     # ---- request --------------------------------------------------------
     def request(self, method: str, url: str, **kw) -> requests.Response:
@@ -103,7 +115,13 @@ class PoliteClient:
                 self.stats[host]["errors"] += 1
                 last_exc = requests.HTTPError(f"{r.status_code} for {url}")
                 retry_after = r.headers.get("Retry-After")
-                time.sleep(float(retry_after) if retry_after and retry_after.isdigit() else 2 ** (attempt + 1))
+                if retry_after and retry_after.isdigit():
+                    wait = float(retry_after)
+                elif r.status_code == 429:
+                    wait = 20.0 * (attempt + 1)      # back off hard on rate limiting
+                else:
+                    wait = 2 ** (attempt + 1)
+                time.sleep(min(wait, 120))
                 continue
             if r.status_code >= 400:
                 self.stats[host]["errors"] += 1

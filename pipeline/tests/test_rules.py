@@ -212,3 +212,9 @@ def test_details_split_roundtrip(tmp_path, monkeypatch):
     assert slim["details_split"] and "description_excerpt" not in slim["jobs"][0]
     back = store.load()["jobs"][0]
     assert back["description_excerpt"] == "x" * 500 and back["benefits"] == ["Bonus"] and "has_details" not in back
+
+
+def test_workday_tenants_share_one_rate_limit():
+    from pipeline.http import rate_key
+    assert rate_key("abbott.wd5.myworkdayjobs.com") == rate_key("nike.wd1.myworkdayjobs.com") == "myworkdayjobs.com"
+    assert rate_key("api.smartrecruiters.com") == "api.smartrecruiters.com"

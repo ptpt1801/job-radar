@@ -32,6 +32,10 @@ def alerts(health: dict, history: list[dict], cfg: dict) -> list[str]:
         avg_total = sum(r.get("total_open", 0) for r in recent) / len(recent)
         if avg_total and health["total_open"] < avg_total * (1 - cfg["drop_pct_alert"] / 100):
             out.append(f"Open jobs dropped to {health['total_open']} (7-run average {avg_total:.0f}).")
+    comps = health.get("companies", {})
+    failed = [c for c, v in comps.items() if not v.get("ok")]
+    if comps and len(failed) / len(comps) > 0.2:
+        out.append(f"{len(failed)}/{len(comps)} companies failed to fetch (e.g. {', '.join(failed[:5])}).")
     if health["schema_errors_pct"] > cfg["schema_errors_pct_alert"]:
         out.append(f"Schema errors at {health['schema_errors_pct']}% of jobs.")
     return out
