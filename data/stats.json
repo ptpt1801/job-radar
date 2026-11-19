@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-19T03:29:28Z",
+ "generated_at": "2026-11-19T03:52:49Z",
  "total_open": 1053,
  "new_7d": 90,
  "with_salary_pct": 0.0,
@@ -87,37 +87,37 @@
   "Siemens": 13,
   "Baker Hughes": 12,
   "Thermo Fisher Scientific": 12,
+  "3M": 9,
+  "GSK": 9,
   "Expeditors": 9,
   "Visa": 9,
   "LEGO Group": 9,
-  "3M": 9,
-  "GSK": 9,
-  "Pfizer": 8,
   "Flexport": 8,
   "Nike": 8,
-  "Accenture": 7,
-  "Carrier": 7,
+  "Pfizer": 8,
   "GE Vernova": 7,
+  "Carrier": 7,
   "Roche": 7,
+  "Accenture": 7,
   "Endava": 6,
   "Intel": 6,
   "Novartis": 6,
   "MSD": 5,
   "Mastercard": 5,
-  "Dow": 4,
   "Johnson & Johnson": 4,
+  "Dow": 4,
   "Air Liquide": 4,
   "Workday": 4,
   "Marvell": 3,
   "Kimberly-Clark": 3,
   "Ninja Van": 2,
   "PVH": 2,
-  "HP Inc.": 1,
+  "Ecolab": 1,
   "Citi": 1,
   "Baxter": 1,
+  "HP Inc.": 1,
   "Sanofi": 1,
-  "Philips": 1,
-  "Ecolab": 1
+  "Philips": 1
  },
  "top_skills": {
   "english": 1021,
@@ -160,8 +160,8 @@
   "2026-10-12": 54,
   "2026-10-19": 57,
   "2026-10-26": 67,
-  "2026-11-02": 117,
-  "2026-11-09": 126,
+  "2026-11-02": 121,
+  "2026-11-09": 129,
   "2026-11-16": 72
  },
  "match_hist": {},
@@ -302,24 +302,9 @@
    "n": 21
   },
   {
-   "function": "hr",
-   "level": "experienced",
-   "n": 12
-  },
-  {
-   "function": "hr",
-   "level": "manager",
-   "n": 3
-  },
-  {
    "function": "other",
    "level": "manager",
    "n": 16
-  },
-  {
-   "function": "legal",
-   "level": "manager",
-   "n": 8
   },
   {
    "function": "other",
@@ -330,6 +315,16 @@
    "function": "operations",
    "level": "graduate",
    "n": 4
+  },
+  {
+   "function": "hr",
+   "level": "manager",
+   "n": 3
+  },
+  {
+   "function": "legal",
+   "level": "manager",
+   "n": 8
   },
   {
    "function": "legal",
@@ -350,6 +345,11 @@
    "function": "finance",
    "level": "manager",
    "n": 15
+  },
+  {
+   "function": "hr",
+   "level": "experienced",
+   "n": 12
   }
  ]
 }
