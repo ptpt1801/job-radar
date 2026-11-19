@@ -1,7 +1,7 @@
 {
- "run_at": "2026-11-19T05:17:30Z",
+ "run_at": "2026-11-19T07:42:01Z",
  "total_open": 1278,
- "new": 145,
+ "new": 0,
  "closed": 0,
  "pending_missing": 0,
  "merged_duplicates": 0,
@@ -14,219 +14,94 @@
   "mode": "rules"
  },
  "sources": {
-  "custom": {
-   "ok": true,
-   "jobs_found": 7,
-   "jobs_kept": 7,
-   "http_errors": 0,
-   "duration_s": 453.5,
-   "companies": 12
-  },
   "workday": {
-   "ok": true,
-   "jobs_found": 138,
-   "jobs_kept": 138,
+   "ok": false,
+   "jobs_found": 0,
+   "jobs_kept": 0,
    "http_errors": 0,
-   "duration_s": 356.2,
-   "companies": 4
+   "duration_s": 66.2,
+   "companies": 6
   }
  },
  "companies": {
-  "nokia": {
-   "ok": true,
-   "adapter": "oracle",
-   "jobs_found": 2,
-   "jobs_kept": 2,
-   "duration_s": 12.0,
-   "error": null
-  },
-  "hitachi": {
-   "ok": true,
+  "cisco": {
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 94,
-   "jobs_kept": 94,
-   "duration_s": 192.0,
-   "error": null
+   "jobs_found": 0,
+   "jobs_kept": null,
+   "duration_s": 10.1,
+   "error": "HTTPError: 429 for https://cisco.wd5.myworkdayjobs.com/wday/cxs/cisco/Cisco_Careers/jobs"
+  },
+  "gsk": {
+   "ok": false,
+   "adapter": "workday",
+   "jobs_found": 0,
+   "jobs_kept": null,
+   "duration_s": 11.0,
+   "error": "HTTPError: 429 for https://gsk.wd5.myworkdayjobs.com/wday/cxs/gsk/GSKCareers/jobs"
+  },
+  "hp": {
+   "ok": false,
+   "adapter": "workday",
+   "jobs_found": 0,
+   "jobs_kept": null,
+   "duration_s": 11.1,
+   "error": "HTTPError: 429 for https://hp.wd5.myworkdayjobs.com/wday/cxs/hp/ExternalCareerSite/jobs"
+  },
+  "abb": {
+   "ok": false,
+   "adapter": "workday",
+   "jobs_found": 0,
+   "jobs_kept": null,
+   "duration_s": 11.6,
+   "error": "HTTPError: 429 for https://abb.wd3.myworkdayjobs.com/wday/cxs/abb/external_career_page/jobs"
+  },
+  "pvh": {
+   "ok": false,
+   "adapter": "workday",
+   "jobs_found": 0,
+   "jobs_kept": null,
+   "duration_s": 10.7,
+   "error": "HTTPError: 429 for https://pvh.wd1.myworkdayjobs.com/wday/cxs/pvh/PVH_Careers/jobs"
   },
   "fwd": {
-   "ok": true,
+   "ok": false,
    "adapter": "workday",
-   "jobs_found": 3,
-   "jobs_kept": 3,
-   "duration_s": 23.4,
-   "error": null
-  },
-  "toll": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 16,
-   "jobs_kept": 16,
-   "duration_s": 60.3,
-   "error": null
-  },
-  "aurecon": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 25,
-   "jobs_kept": 25,
-   "duration_s": 80.5,
-   "error": null
-  },
-  "nec": {
-   "ok": true,
-   "adapter": "successfactors",
    "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 175.5,
-   "error": null
-  },
-  "daiichi_sankyo": {
-   "ok": true,
-   "adapter": "successfactors",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 11.2,
-   "error": null
-  },
-  "murata": {
-   "ok": true,
-   "adapter": "successfactors",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 58.2,
-   "error": null
-  },
-  "epson": {
-   "ok": true,
-   "adapter": "successfactors",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 50.5,
-   "error": null
-  },
-  "shiseido": {
-   "ok": true,
-   "adapter": "successfactors",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 26.5,
-   "error": null
-  },
-  "acer": {
-   "ok": true,
-   "adapter": "successfactors",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 49.2,
-   "error": null
-  },
-  "crystal": {
-   "ok": true,
-   "adapter": "successfactors",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 22.1,
-   "error": null
-  },
-  "anz": {
-   "ok": true,
-   "adapter": "successfactors",
-   "jobs_found": 2,
-   "jobs_kept": 2,
-   "duration_s": 4.1,
-   "error": null
-  },
-  "orica": {
-   "ok": true,
-   "adapter": "successfactors",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 22.4,
-   "error": null
-  },
-  "lenovo": {
-   "ok": true,
-   "adapter": "avature",
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 9.3,
-   "error": null
-  },
-  "takeda": {
-   "ok": true,
-   "adapter": "radancy",
-   "jobs_found": 3,
-   "jobs_kept": 3,
-   "duration_s": 12.5,
-   "error": null
+   "jobs_kept": null,
+   "duration_s": 11.7,
+   "error": "HTTPError: 429 for https://fwd.wd3.myworkdayjobs.com/wday/cxs/fwd/FWDcareersite/jobs"
   }
  },
  "hosts": {
-  "hitachi.wd1.myworkdayjobs.com": {
-   "requests": 101,
-   "errors": 0
+  "cisco.wd5.myworkdayjobs.com": {
+   "requests": 7,
+   "errors": 6
   },
-  "careers.nec.com": {
-   "requests": 16,
-   "errors": 4
+  "gsk.wd5.myworkdayjobs.com": {
+   "requests": 7,
+   "errors": 6
+  },
+  "hp.wd5.myworkdayjobs.com": {
+   "requests": 7,
+   "errors": 6
+  },
+  "abb.wd3.myworkdayjobs.com": {
+   "requests": 7,
+   "errors": 6
+  },
+  "pvh.wd1.myworkdayjobs.com": {
+   "requests": 7,
+   "errors": 6
   },
   "fwd.wd3.myworkdayjobs.com": {
-   "requests": 6,
-   "errors": 0
-  },
-  "fa-evmr-saasfaprod1.fa.ocs.oraclecloud.com": {
-   "requests": 5,
-   "errors": 0
-  },
-  "tollgroup.wd5.myworkdayjobs.com": {
-   "requests": 19,
-   "errors": 0
-  },
-  "aurecongroup.wd3.myworkdayjobs.com": {
-   "requests": 29,
-   "errors": 0
-  },
-  "careers.daiichisankyo.com": {
-   "requests": 2,
-   "errors": 0
-  },
-  "jobs.epson.com": {
-   "requests": 12,
-   "errors": 0
-  },
-  "jobs.murata.com": {
-   "requests": 7,
-   "errors": 0
-  },
-  "careers.shiseido.com": {
-   "requests": 17,
-   "errors": 0
-  },
-  "careers.acer.com": {
-   "requests": 12,
-   "errors": 1
-  },
-  "careers.anz.com": {
-   "requests": 4,
-   "errors": 0
-  },
-  "careers.orica.com": {
-   "requests": 12,
-   "errors": 0
-  },
-  "careers.crystalgroup.com": {
-   "requests": 2,
-   "errors": 0
-  },
-  "jobs.lenovo.com": {
-   "requests": 6,
-   "errors": 0
-  },
-  "jobs.takeda.com": {
-   "requests": 5,
-   "errors": 0
+   "requests": 8,
+   "errors": 6
   }
  },
  "ybox_rejected": [],
- "alerts": []
+ "alerts": [
+  "Source `workday` returned 0 jobs (7-run average 19.7).",
+  "6/6 companies failed to fetch (e.g. cisco, gsk, hp, abb, pvh)."
+ ]
 }
