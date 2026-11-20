@@ -1,7 +1,7 @@
 {
- "run_at": "2026-11-19T19:52:25Z",
+ "run_at": "2026-11-19T23:59:55Z",
  "total_open": 1277,
- "new": 11,
+ "new": 0,
  "closed": 0,
  "pending_missing": 24,
  "stale_hidden": 0,
@@ -16,468 +16,81 @@
   "mode": "rules"
  },
  "sources": {
-  "smartrecruiters": {
-   "ok": true,
-   "jobs_found": 486,
-   "jobs_kept": 486,
+  "workday": {
+   "ok": false,
+   "jobs_found": 18,
+   "jobs_kept": 18,
    "http_errors": 0,
-   "duration_s": 43.5,
-   "companies": 6
-  },
-  "custom": {
-   "ok": true,
-   "jobs_found": 114,
-   "jobs_kept": 114,
-   "http_errors": 0,
-   "duration_s": 42.6,
-   "companies": 10
-  },
-  "greenhouse": {
-   "ok": true,
-   "jobs_found": 23,
-   "jobs_kept": 23,
-   "http_errors": 0,
-   "duration_s": 2.1,
-   "companies": 2
-  },
-  "lever": {
-   "ok": true,
-   "jobs_found": 2,
-   "jobs_kept": 2,
-   "http_errors": 0,
-   "duration_s": 1.9,
-   "companies": 1
-  },
-  "ybox": {
-   "ok": true,
-   "jobs_found": 0,
-   "jobs_kept": 0,
-   "http_errors": 0,
-   "duration_s": 2.1,
-   "companies": 1
+   "duration_s": 49.7,
+   "companies": 5
   }
  },
  "companies": {
-  "bosch": {
-   "ok": true,
-   "adapter": "smartrecruiters",
-   "jobs_found": 219,
-   "jobs_kept": 219,
-   "duration_s": 7.4,
-   "error": null
-  },
-  "schneider_electric": {
-   "ok": true,
-   "adapter": "jibe",
-   "jobs_found": 16,
-   "jobs_kept": 16,
-   "duration_s": 5.4,
-   "error": null
-  },
-  "siemens": {
-   "ok": true,
-   "adapter": "avature",
-   "jobs_found": 13,
-   "jobs_kept": 13,
-   "duration_s": 12.8,
-   "error": null
-  },
-  "sgs": {
-   "ok": true,
-   "adapter": "smartrecruiters",
-   "jobs_found": 157,
-   "jobs_kept": 157,
-   "duration_s": 14.4,
-   "error": null
-  },
-  "avery_dennison": {
-   "ok": true,
-   "adapter": "smartrecruiters",
-   "jobs_found": 42,
-   "jobs_kept": 42,
-   "duration_s": 2.5,
-   "error": null
-  },
-  "expeditors": {
-   "ok": true,
-   "adapter": "smartrecruiters",
-   "jobs_found": 9,
-   "jobs_kept": 9,
-   "duration_s": 3.4,
-   "error": null
-  },
-  "endava": {
-   "ok": true,
-   "adapter": "smartrecruiters",
-   "jobs_found": 6,
-   "jobs_kept": 6,
-   "duration_s": 3.9,
-   "error": null
-  },
-  "axon": {
-   "ok": true,
-   "adapter": "greenhouse",
-   "jobs_found": 15,
-   "jobs_kept": 15,
-   "duration_s": 1.5,
-   "error": null
-  },
-  "flexport": {
-   "ok": true,
-   "adapter": "greenhouse",
-   "jobs_found": 8,
-   "jobs_kept": 8,
-   "duration_s": 0.6,
-   "error": null
-  },
-  "nokia": {
-   "ok": true,
-   "adapter": "oracle",
-   "jobs_found": 2,
-   "jobs_kept": 2,
-   "duration_s": 2.4,
-   "error": null
-  },
-  "grab": {
-   "ok": true,
-   "adapter": "smartrecruiters",
-   "jobs_found": 53,
-   "jobs_kept": 53,
-   "duration_s": 11.9,
-   "error": null
-  },
-  "ninja_van": {
-   "ok": true,
-   "adapter": "lever",
-   "jobs_found": 2,
-   "jobs_kept": 2,
-   "duration_s": 1.9,
-   "error": null
-  },
-  "schaeffler": {
-   "ok": true,
-   "adapter": "successfactors",
-   "jobs_found": 11,
-   "jobs_kept": 11,
-   "duration_s": 11.3,
-   "error": null
-  },
-  "dksh": {
-   "ok": true,
-   "adapter": "successfactors",
-   "jobs_found": 15,
-   "jobs_kept": 15,
-   "duration_s": 2.6,
-   "error": null
-  },
-  "ey": {
-   "ok": true,
-   "adapter": "successfactors",
-   "jobs_found": 48,
-   "jobs_kept": 48,
-   "duration_s": 2.5,
-   "error": null
-  },
-  "schindler": {
-   "ok": true,
-   "adapter": "successfactors",
-   "jobs_found": 4,
-   "jobs_kept": 4,
-   "duration_s": 1.7,
-   "error": null
-  },
-  "zuellig_pharma": {
-   "ok": true,
-   "adapter": "successfactors",
+  "dow": {
+   "ok": false,
+   "adapter": "workday",
    "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 1.7,
+   "jobs_kept": null,
+   "duration_s": 10.4,
+   "error": "HTTPError: 429 for https://dow.wd1.myworkdayjobs.com/wday/cxs/dow/ExternalCareers/jobs"
+  },
+  "medtronic": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 17,
+   "jobs_kept": 17,
+   "duration_s": 14.0,
    "error": null
   },
-  "anz": {
-   "ok": true,
-   "adapter": "successfactors",
-   "jobs_found": 2,
-   "jobs_kept": 2,
-   "duration_s": 1.2,
-   "error": null
-  },
-  "takeda": {
-   "ok": true,
-   "adapter": "radancy",
-   "jobs_found": 3,
-   "jobs_kept": 3,
-   "duration_s": 1.0,
-   "error": null
-  },
-  "ybox": {
-   "ok": true,
-   "adapter": "ybox",
+  "pwc": {
+   "ok": false,
+   "adapter": "workday",
    "jobs_found": 0,
-   "jobs_kept": 0,
-   "duration_s": 2.1,
+   "jobs_kept": null,
+   "duration_s": 11.6,
+   "error": "HTTPError: 429 for https://pwc.wd3.myworkdayjobs.com/wday/cxs/pwc/Global_Experienced_Careers/jobs"
+  },
+  "baxter": {
+   "ok": true,
+   "adapter": "workday",
+   "jobs_found": 1,
+   "jobs_kept": 1,
+   "duration_s": 2.3,
    "error": null
+  },
+  "air_liquide": {
+   "ok": false,
+   "adapter": "workday",
+   "jobs_found": 0,
+   "jobs_kept": null,
+   "duration_s": 11.4,
+   "error": "HTTPError: 429 for https://airliquidehr.wd3.myworkdayjobs.com/wday/cxs/airliquidehr/AirLiquideExternalCareer/jobs"
   }
  },
  "hosts": {
-  "api.smartrecruiters.com": {
-   "requests": 18,
-   "errors": 0
+  "dow.wd1.myworkdayjobs.com": {
+   "requests": 8,
+   "errors": 6
   },
-  "careers.se.com": {
-   "requests": 2,
-   "errors": 0
+  "medtronic.wd1.myworkdayjobs.com": {
+   "requests": 7,
+   "errors": 3
   },
-  "jobs.siemens.com": {
-   "requests": 10,
-   "errors": 0
+  "pwc.wd3.myworkdayjobs.com": {
+   "requests": 7,
+   "errors": 6
   },
-  "boards-api.greenhouse.io": {
-   "requests": 3,
-   "errors": 0
+  "baxter.wd1.myworkdayjobs.com": {
+   "requests": 6,
+   "errors": 2
   },
-  "fa-evmr-saasfaprod1.fa.ocs.oraclecloud.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "api.lever.co": {
-   "requests": 2,
-   "errors": 0
-  },
-  "jobs.schaeffler.com": {
-   "requests": 12,
-   "errors": 0
-  },
-  "jobs.dksh.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "careers.ey.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "job.schindler.com": {
-   "requests": 2,
-   "errors": 0
-  },
-  "careers.zuelligpharma.com": {
-   "requests": 2,
-   "errors": 0
-  },
-  "jobs.takeda.com": {
-   "requests": 2,
-   "errors": 0
-  },
-  "careers.anz.com": {
-   "requests": 2,
-   "errors": 0
-  },
-  "ybox.vn": {
-   "requests": 2,
-   "errors": 0
+  "airliquidehr.wd3.myworkdayjobs.com": {
+   "requests": 7,
+   "errors": 6
   }
  },
- "ybox_rejected": [
-  {
-   "title": "[HCM] Công Ty Công Nghệ RIO (RIO Technology) Tuyển Dụng Thực Tập Sinh Nhân Sự Full-time 2026 (Phụ Cấp: 4.000.000 VNĐ/ Tháng)",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Công Ty Map Active Tuyển Dụng Cộng Tác Viên Marketing Full-time 2026",
-   "reason": "keyword:cộng tác viên"
-  },
-  {
-   "title": "[HCM] Công Ty My Call Tuyển Dụng Trợ Lý Pháp Chế Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HN] Siêu Thị Hải Sản Hùng Trường Sa Tuyển Dụng Thực Tập Sinh Hành Chính Nhân Sự/Content Creator Part-time/Full-tiime 2026",
-   "reason": "not_whitelisted"
-  },
-  {
-   "title": "[HCM]  Công Ty Bất Động Sản Bầu Trời Việt Nam Tuyển Dụng Chuyên Viên Digital Marketing Full-time 2026",
-   "reason": "excluded_company"
-  },
-  {
-   "title": "[HCM] Thương Hiệu IBACSIC Tuyển Dụng Nhân Viên Bán Hàng Full-time 2026",
-   "reason": "not_whitelisted"
-  },
-  {
-   "title": "[HCM] Công Ty Phân Bón Thụy Sỹ Tuyển Dụng Nhân Viên Kế Toán Doanh Thu Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Công Ty PCA Company Services Tuyển Dụng Chuyên Viên Pháp Chế Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Tiệm Bánh Cheese With Us Tuyển Dụng Nhân Viên Phụ Bếp Bánh Full-time 2026",
-   "reason": "not_whitelisted"
-  },
-  {
-   "title": "[HCM] Công Ty Tư Vấn Phạm & Các Cộng Sự Tuyển Dụng Nhân Viên Dịch Vụ Kế Toán Thuế/Kiếm Toán (Junior/Senior) Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Công Ty Nhà Thiên An Tuyển Dụng Nhân Viên Kế Toán Nội Bộ Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HN] Hệ Sinh Thái Giáo Dục HBR Holdings Tuyển Dụng Nhân Viên Kinh Doanh Full-time 2026",
-   "reason": "not_whitelisted"
-  },
-  {
-   "title": "[HCM] Công Ty Kiến Trẻ Tuyển Dụng Thực Tập Sinh Hành Chính Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HN/HCM] Công Ty Giáo Dục German Link Tuyển Dụng Nhân Viên Hành Chính Tổng Hợp (Admin)/Truyền Thông, Chuyên Viên Tư Vấn Tuyển Sinh, Quản Lý Cơ Sở/Trung Tâm, Trư",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HN] Công Ty Tài Chính Tổng Hợp Điện Lực Tuyển Dụng Nhân Viên IT Infrastructure Operations (Fresher)/IT Application Operations (Fresher) Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HN] Nhà Hàng Thịt Nướng Hàn Quốc Joseon Ok Tuyển Dụng Nhân Viên Bếp Thịt/Phụ Bếp Hàn/Thu Ngân, Phó Quản Lý, Quản Lý Tổng Part-time/Full-time 2026",
-   "reason": "not_whitelisted"
-  },
-  {
-   "title": "[HCM] Công Ty Tổng Đại Lý Kim Nhật Tuyển Dụng Thực Tập Sinh Nhân Sự Part-time/Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HN] Công Ty SIMPACE Việt Nam Tuyển Dụng Chuyên Viên Marketing Giáo Dục Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HN] Công Ty Thiết Kế Xây Dựng Giải Pháp Xanh IVILA Tuyển Dụng Nhân Viên Kinh Doanh - Tư Vấn Bán Hàng Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Công Ty PCA Company Services Tuyển Dụng Thực Tập Sinh Nhân Sự Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HN] Công Ty Giáo Dục Và Đào Tạo IMAP Việt Nam Tuyển Dụng Nhân Viên Telesales Part-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[Online-HN/HCM] Trung Tâm Pat Pat IELTS Tuyển Dụng Cộng Tác Viên Sales Part-time 2026",
-   "reason": "keyword:cộng tác viên"
-  },
-  {
-   "title": "[HN/Hải Phòng] Công Ty 3A International Logistics Tuyển Dụng Nhân Viên Dịch Vụ Khách Hàng (Hàng Không)/Dịch Vụ Khách Hàng Và Vận Chuyển Tùy Chỉnh Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HN] Công Ty Tư Vấn Và Kết Nối KDT Tuyển Dụng Thực Tập Sinh Kế Toán Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Tập Đoàn Nhân Sự Persolkelly Vietnam Tuyển Dụng Nhân Viên Lập Trình Power Platform (Fresher) Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Công Ty TRIUMPH Tuyển Dụng Thực Tập Sinh Nhân Sự (HRBP & Learning & Development) Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HN] Cửa Hàng Gây Quỹ Green Gem Shop Tuyển Dụng Thực Tập Sinh Content/Graphic Design Part-time 2026",
-   "reason": "not_whitelisted"
-  },
-  {
-   "title": "[Thanh Hoá] Công Ty AEON Delight Việt Nam Tuyển Dụng Nhân Viên Dịch Vụ Quầy Thông Tin Part-time 2026 (Ưu Tiên Sinh Viên, Không Yêu Cầu Kinh Nghiệm)",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[Long Biên - Hà Nội] Công Ty AEON Delight Việt Nam Tuyển Dụng Nhân Viên Chăm Sóc Khách Hàng Part-time 2026 (Xoay Ca Linh Hoạt Theo Lịch Học Sinh Viên, Không Yêu",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[AEON MALL LONG BIÊN] Công Ty AEON Delight Việt Nam Tuyển Dụng Nhân Viên Kỹ Thuật Tòa Nhà Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[AEON MALL LONG BIÊN] Công Ty AEON Delight Việt Nam Tuyển Dụng Nhân Viên Kinh Doanh Full-time 2026 (Không Yêu Cầu Kinh Nghiệm)",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[AEON MALL HÀ ĐÔNG] Công Ty AEON Delight Việt Nam Tuyển Dụng Nhân Viên Chăm Sóc Khách Hàng Part-time/Full-time 2026 ( Xoay Ca Linh Hoạt Theo Lịch Học Sinh Viên,",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Công Ty Giao Hàng Nhanh Tuyển Dụng Thực Tập Sinh Tuyển Dụng Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HN] Học Viện Đào Tạo Tài Chính SAPP Tuyển Dụng Treasury Accountant Associate Full-time 2026 (Thu Nhập: 10 - 13.000.000 VNĐ/ Tháng)",
-   "reason": "not_whitelisted"
-  },
-  {
-   "title": "[HN] Tập Đoàn Công Nghệ Novaon Tuyển Dụng Thực Tập Sinh Kế Toán Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HN] Ngân Hàng Lộc Phát Việt Nam LPBank Tuyển Dụng Cộng Tác Viên Bộ Phận Tiền Lương Và Chế Độ Đãi Ngộ Full-time 2026 (Thu Nhập: 2 - 5.000.000 VNĐ/ Tháng)",
-   "reason": "keyword:cộng tác viên"
-  },
-  {
-   "title": "[HCM] Công Ty Urbox.vn - Digital Gifting Solution Tuyển Dụng Thực Tập Tiền Lương Và Phúc Lợi Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Công Ty Panasonic Electric Works Vietnam Tuyển Dụng Nhân Viên General Affairs Staff Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM/Tây Ninh] Công Ty Đồng Tâm Group Tuyển Dụng Nhân Viên Cơ Điện/Chứng Từ Giao Nhận Xuất Nhập Khẩu (Ngành Cảng)/Kỹ Sư Cơ Điện/Kinh Doanh Cảng/Kỹ Sư Công Nghệ/",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HN] Trường THCS - THPT Tạ Quang Bửu Tuyển Dụng Cộng Tác Viên Truyền Thông Full-time 2026",
-   "reason": "keyword:cộng tác viên"
-  },
-  {
-   "title": "[HN] Tập Đoàn Bán Lẻ Central Retail Vietnam Tuyển Dụng Thực Tập Sinh Legal Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Tập Đoàn Dịch Vụ Bất Động Sản Savills Vietnam Tuyển Dụng Thực Tập Sinh Talent Acquisition Full-time 2026",
-   "reason": "excluded_company"
-  },
-  {
-   "title": "[HCM] Tập Đoàn Bán Lẻ Central Retail Vietnam Tuyển Dụng Thực Tập Sinh Project Management Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Tập Đoàn Kiểm Toán Đa Quốc Gia Grant Thornton Tuyển Dụng Thực Tập Sinh Kế Toán Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[Hà Nội/Hải Phòng/Hạ Long/Thanh Hoá] Công Ty Đa Quốc Gia AEON Delight Tuyển Dụng Nhân Viên Full-time: Chăm Sóc Khách Hàng, Kinh Doanh, Dịch Vụ Quầy Thông Tin, K",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[Hà Nội] Công Ty AEON Delight Việt Nam Tuyển Dụng Giám Sát Kỹ Thuật (Khối Vận Hành) Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[Hà Nội] Công Ty AEON Delight Việt Nam Tuyển Dụng Chuyên Viên Hành Chính Biết Tiếng Nhật Full-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HN] Công Ty AEON Việt Nam Tuyển Dụng Thực Tập Sinh Truyền Thông/Tuyển Dụng Part-time 2026",
-   "reason": "ambiguous_legal_entity_no_llm"
-  },
-  {
-   "title": "[HCM] Chương Trình Commerce Internship Program 2027 (Mảng Marketing/Trade Marketing/Route to Consumer) Tại Công Ty Bia Heineken Việt Nam",
-   "reason": "keyword:chương trình"
-  },
-  {
-   "title": "[HCM] Hội Trường Thống Nhất Tuyển Dụng Cộng Tác Viên Hướng Dẫn Tham Quan Di Tích Quốc Gia Đặc Biệt Dinh Độc Lập Part-time 2026",
-   "reason": "keyword:cộng tác viên"
-  }
- ],
- "alerts": []
+ "ybox_rejected": [],
+ "alerts": [
+  "3/5 companies failed to fetch (e.g. dow, pwc, air_liquide)."
+ ]
 }
