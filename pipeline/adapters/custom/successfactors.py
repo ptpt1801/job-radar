@@ -6,12 +6,16 @@ from __future__ import annotations
 
 import datetime as dt
 import re
-from urllib.parse import urljoin
+from urllib.parse import unquote, urljoin
 
 from bs4 import BeautifulSoup
 
 from ...text import html_to_text, looks_vn
+from ...http import RobotsDisallowed
 from ..base import Adapter, register
+from .radancy import VN_SLUG
+
+VN_CITY_PREFIX = re.compile(r"^(?:Ho-Chi-Minh(?:-City)?|HCMC|Hanoi|Ha-Noi|Viet-?Nam|Da-Nang|Hai-Phong|Binh-Duong|Dong-Nai|Bac-Ninh)-", re.I)
 
 
 def parse_list(html: str, base: str) -> tuple[list[dict], int | None]:
@@ -59,14 +63,42 @@ def parse_detail(html: str) -> dict:
     dp = soup.select_one('[itemprop="datePosted"]')
     desc = soup.select_one('[itemprop="description"]') or soup.select_one(".jobdescription")
     locs = [x.get_text(" ", strip=True) for x in soup.select(".jobGeoLocation, [data-careersite-propertyid=location]")]
+    tt = soup.select_one('[itemprop="title"]') or soup.select_one("h1")
     return {"posted": (dp.get("content") or dp.get_text(strip=True)) if dp else None,
+            "title": tt.get_text(" ", strip=True) if tt else "",
             "description": html_to_text(str(desc)) if desc else "",
             "location": locs[0] if locs else ""}
+
+
+def _slug_title(url: str) -> str:
+    """https://x/job/Ho-Chi-Minh-City-Air-Logistics-Specialist-70100/137/ -> 'Air Logistics Specialist'."""
+    slug = unquote(url.rstrip("/").split("/")[-2]).replace("&amp;", "&")
+    slug = VN_CITY_PREFIX.sub("", slug)
+    slug = re.sub(r"-(?:[A-Z]{2}-)?\d{4,6}$", "", slug)
+    return slug.replace("-", " ").strip()
 
 
 @register("successfactors")
 class SuccessFactorsAdapter(Adapter):
     source = "custom"
+
+    def _sitemap_vn(self, base: str) -> list[str]:
+        urls, queue, seen = [], [base + "/sitemap.xml"], set()
+        while queue and len(seen) < 20:
+            sm = queue.pop(0)
+            if sm in seen:
+                continue
+            seen.add(sm)
+            r = self.http.get(sm)
+            if r.status_code != 200:
+                continue
+            for loc in re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", r.text):
+                loc = loc.replace("&amp;", "&")
+                if loc.endswith(".xml"):
+                    queue.append(loc)
+                elif "/job/" in loc and VN_SLUG.search(loc.lower()):
+                    urls.append(loc)
+        return urls
 
     def fetch(self, company, known_ids=None, reuse=None):
         base = company["career_url"].rstrip("/")
@@ -75,7 +107,10 @@ class SuccessFactorsAdapter(Adapter):
             params = {"q": "", "locationsearch": "Vietnam"}
             if start:
                 params["startrow"] = start  # some sites return nothing for startrow=0
-            r = self.http.get(f"{base}/search/", params=params)
+            try:
+                r = self.http.get(f"{base}/search/", params=params)
+            except RobotsDisallowed:
+                break  # search page disallowed: use the sitemap below
             if r.status_code != 200:
                 break
             batch, total = parse_list(r.text, base)
@@ -85,6 +120,14 @@ class SuccessFactorsAdapter(Adapter):
             start += len(batch) or 25
             if not new or total is None or start >= total:
                 break
+        if not any(looks_vn(b["location"], b["url"].replace("-", " ")) for b in rows.values()):
+            # Newer CSB sites render search results with JS (/services/ is robots-disallowed) and ignore
+            # locationsearch. Their sitemap.xml lists every posting with the city in the URL slug.
+            rows = {}
+            for u in self._sitemap_vn(base):
+                m = re.search(r"/(\d+)/?$", u)
+                if m:
+                    rows[m.group(1)] = {"id": m.group(1), "url": u, "title": _slug_title(u), "location": "", "date": ""}
         out = []
         for jid, b in rows.items():
             slug_vn = looks_vn(b["location"], b["url"].replace("-", " "))
@@ -100,12 +143,15 @@ class SuccessFactorsAdapter(Adapter):
                 continue
             d = parse_detail(r.text)
             loc = d["location"] or b["location"]
+            if not loc and VN_SLUG.search(b["url"].lower()):   # sitemap row: city only in the URL slug
+                m = VN_CITY_PREFIX.match(unquote(b["url"].split("/job/", 1)[-1]))
+                loc = (m.group(0).strip("-").replace("-", " ") + ", " if m else "") + "Vietnam"
             if not (looks_vn(loc) or re.search(r"\bVN\b", loc)):
                 continue
             out.append({
                 "source": "custom",
                 "source_job_id": jid,
-                "title": b["title"],
+                "title": d.get("title") or b["title"],
                 "url": b["url"],
                 "location_raw": loc + " Vietnam",
                 "address_raw": loc,

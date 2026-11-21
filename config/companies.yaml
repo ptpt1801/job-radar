@@ -687,28 +687,37 @@ companies:
   hq_country: DE
   region: europe
   industry: logistics
-  ats: unknown
-  active: false
-  verified: false
-  notes: careers.dhl.com custom portal not resolved.
+  ats: custom
+  adapter: phenom
+  career_url: https://careers.dhl.com/global/en
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Phenom (widgets API). Express, Global Forwarding, Supply Chain in VN.
 - id: dsv
   name: DSV (incl. DB Schenker)
   hq_country: DK
   region: europe
   industry: logistics
-  ats: unknown
+  ats: custom
+  adapter: successfactors
+  career_url: https://jobs.dsv.com
   active: false
-  verified: false
-  notes: Custom portal not resolved.
+  verified: true
+  verified_at: '2026-11-21'
+  notes: SuccessFactors works, but 0 Vietnam openings in search or sitemap on 2026-11-21.
 - id: kuehne_nagel
   name: Kuehne+Nagel
   hq_country: CH
   region: europe
   industry: logistics
-  ats: unknown
-  active: false
-  verified: false
-  notes: SuccessFactors-like portal; not resolved.
+  ats: custom
+  adapter: successfactors
+  career_url: https://careers.kuehne-nagel.com
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Supply-chain / northern-IZ expansion (2026-11-21). successfactors site.
 - id: ceva
   name: CEVA Logistics
   hq_country: FR
@@ -723,10 +732,16 @@ companies:
   hq_country: US
   region: americas
   industry: technology
-  ats: unknown
-  active: false
-  verified: false
-  notes: Custom portal; not resolved.
+  ats: custom
+  adapter: eightfold
+  eightfold:
+    host: apply.careers.microsoft.com
+    domain: microsoft.com
+  career_url: https://apply.careers.microsoft.com/careers
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Eightfold PCS (/api/pcsx allowed by robots.txt).
 - id: ibm
   name: IBM
   hq_country: US
@@ -741,10 +756,13 @@ companies:
   hq_country: SE
   region: europe
   industry: technology
-  ats: unknown
+  ats: custom
+  adapter: successfactors
+  career_url: https://jobs.ericsson.com
   active: false
-  verified: false
-  notes: Not resolved.
+  verified: true
+  verified_at: '2026-11-21'
+  notes: robots.txt disallows /search/; sitemap not checked yet.
 - id: nokia
   name: Nokia
   hq_country: FI
@@ -764,10 +782,13 @@ companies:
   hq_country: DE
   region: europe
   industry: technology
-  ats: unknown
+  ats: custom
+  adapter: successfactors
+  career_url: https://jobs.sap.com
   active: false
-  verified: false
-  notes: SuccessFactors portal; not resolved.
+  verified: true
+  verified_at: '2026-11-21'
+  notes: jobs.sap.com returns 403 to bots.
 - id: deloitte
   name: Deloitte Vietnam
   hq_country: GB
@@ -794,28 +815,39 @@ companies:
   hq_country: GB
   region: europe
   industry: consulting_finance
-  ats: unknown
+  ats: custom
+  adapter: avature
+  career_url: https://mycareer.hsbc.com/en_GB/external
   active: false
-  verified: false
-  notes: Workday tenant not found.
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Avature portal returned 0 Vietnam rows on 2026-11-21.
 - id: standard_chartered
   name: Standard Chartered
   hq_country: GB
   region: europe
   industry: consulting_finance
-  ats: unknown
-  active: false
-  verified: false
-  notes: Not resolved.
+  ats: custom
+  adapter: successfactors
+  career_url: https://jobs.standardchartered.com
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Supply-chain / northern-IZ expansion (2026-11-21). successfactors site.
 - id: bayer
   name: Bayer
   hq_country: DE
   region: europe
   industry: pharma_medtech
-  ats: unknown
-  active: false
-  verified: false
-  notes: Workday tenant not found.
+  ats: workday
+  workday:
+    tenant: bayer
+    wd: wd103
+    site: Bayer_External_Career_Site
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Supply-chain / northern-IZ expansion (2026-11-21).
 - id: loreal
   name: L'Oréal
   hq_country: FR
@@ -1016,10 +1048,10 @@ companies:
   ats: custom
   adapter: successfactors
   career_url: https://careers.bureauveritas.com
-  active: false
+  active: true
   verified: false
   verified_at: '2026-11-19'
-  notes: SuccessFactors CSB whose search results render with JavaScript; needs a browser-based adapter.
+  notes: SuccessFactors CSB (JS search); read via sitemap.xml fallback.
 - id: danfoss
   name: Danfoss
   hq_country: DK
@@ -1028,10 +1060,10 @@ companies:
   ats: custom
   adapter: successfactors
   career_url: https://jobs.danfoss.com
-  active: false
+  active: true
   verified: false
   verified_at: '2026-11-19'
-  notes: SuccessFactors CSB whose search results render with JavaScript; needs a browser-based adapter.
+  notes: SuccessFactors CSB (JS search); read via sitemap.xml fallback.
 - id: tetra_pak
   name: Tetra Pak
   hq_country: CH
@@ -1043,7 +1075,7 @@ companies:
   active: false
   verified: false
   verified_at: '2026-11-19'
-  notes: SuccessFactors CSB whose search results render with JavaScript; needs a browser-based adapter.
+  notes: Sitemap works, but 0 Vietnam openings on 2026-11-21.
 - id: hitachi
   name: Hitachi
   hq_country: JP
@@ -1664,3 +1696,340 @@ companies:
   verified: true
   verified_at: '2026-11-21'
   notes: Found via AmCham member directory (2026-11-21).
+- id: qualcomm
+  name: Qualcomm
+  hq_country: US
+  region: americas
+  industry: technology
+  ats: custom
+  adapter: eightfold
+  eightfold:
+    host: careers.qualcomm.com
+    domain: qualcomm.com
+  career_url: https://careers.qualcomm.com/careers
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via AmCham/EuroCham directory; Eightfold career site.
+- id: corning
+  name: Corning
+  hq_country: US
+  region: americas
+  industry: materials_chemicals
+  ats: custom
+  adapter: phenom
+  career_url: https://careers.corning.com/us/en
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via AmCham/EuroCham directory; Phenom career site.
+- id: merck_kgaa
+  name: Merck KGaA (Merck Healthcare)
+  hq_country: DE
+  region: europe
+  industry: pharma_medtech
+  ats: custom
+  adapter: phenom
+  career_url: https://careers.merckgroup.com/global/en
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via AmCham/EuroCham directory; Phenom career site.
+- id: ge_healthcare
+  name: GE HealthCare
+  hq_country: US
+  region: americas
+  industry: pharma_medtech
+  ats: custom
+  adapter: phenom
+  career_url: https://careers.gehealthcare.com/global/en
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via AmCham/EuroCham directory; Phenom career site.
+- id: danaher
+  name: Danaher
+  hq_country: US
+  region: americas
+  industry: pharma_medtech
+  ats: custom
+  adapter: phenom
+  career_url: https://jobs.danaher.com/global/en
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via AmCham/EuroCham directory; Phenom career site.
+- id: thornton_tomasetti
+  name: Thornton Tomasetti
+  hq_country: US
+  region: americas
+  industry: consulting_finance
+  ats: custom
+  adapter: phenom
+  career_url: https://careers.thorntontomasetti.com/gb/en
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via AmCham/EuroCham directory; Phenom career site.
+- id: lineage
+  name: Lineage (cold-chain logistics)
+  hq_country: US
+  region: americas
+  industry: logistics
+  ats: custom
+  adapter: phenom
+  career_url: https://careers.onelineage.com/us/en
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via AmCham/EuroCham directory; Phenom career site.
+- id: brooks
+  name: Brooks Running
+  hq_country: US
+  region: americas
+  industry: fashion_sports
+  ats: custom
+  adapter: phenom
+  career_url: https://careers.brooksrunning.com/us/en
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via AmCham/EuroCham directory; Phenom career site.
+- id: hellmann
+  name: Hellmann Worldwide Logistics
+  hq_country: DE
+  region: europe
+  industry: logistics
+  ats: workday
+  workday:
+    tenant: hellmann
+    wd: wd103
+    site: hellmannexternaljobs
+  active: false
+  verified: true
+  verified_at: '2026-11-21'
+  notes: 0 Vietnam openings on 2026-11-21.
+- id: ch_robinson
+  name: C.H. Robinson
+  hq_country: US
+  region: americas
+  industry: logistics
+  ats: workday
+  workday:
+    tenant: chrobinson
+    wd: wd5
+    site: CHRobinson
+  active: false
+  verified: true
+  verified_at: '2026-11-21'
+  notes: 0 Vietnam openings on 2026-11-21.
+- id: rhenus
+  name: Rhenus Logistics
+  hq_country: DE
+  region: europe
+  industry: logistics
+  ats: workday
+  workday:
+    tenant: rhe
+    wd: wd3
+    site: R1111
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Supply-chain / northern-IZ expansion (2026-11-21).
+- id: fedex
+  name: FedEx
+  hq_country: US
+  region: americas
+  industry: logistics
+  ats: workday
+  workday:
+    tenant: fedex
+    wd: wd1
+    site: FXE-AP_External
+  active: false
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Workday site for APAC not found (FXE-AP_External 404).
+- id: nxp
+  name: NXP Semiconductors
+  hq_country: NL
+  region: europe
+  industry: technology
+  ats: workday
+  workday:
+    tenant: nxp
+    wd: wd3
+    site: careers
+  active: false
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Workday CXS returns 422 for site 'careers'.
+- id: hayward
+  name: Hayward
+  hq_country: US
+  region: americas
+  industry: industrial_automation
+  ats: workday
+  workday:
+    tenant: hayward
+    wd: wd1
+    site: External
+  active: false
+  verified: true
+  verified_at: '2026-11-21'
+  notes: 0 Vietnam openings on 2026-11-21.
+- id: valeo
+  name: Valeo
+  hq_country: FR
+  region: europe
+  industry: automotive
+  ats: workday
+  workday:
+    tenant: valeo
+    wd: wd3
+    site: valeo_jobs
+  active: false
+  verified: true
+  verified_at: '2026-11-21'
+  notes: 0 Vietnam openings on 2026-11-21.
+- id: michelin
+  name: Michelin
+  hq_country: FR
+  region: europe
+  industry: automotive
+  ats: workday
+  workday:
+    tenant: michelinhr
+    wd: wd3
+    site: Michelin
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Supply-chain / northern-IZ expansion (2026-11-21).
+- id: ups
+  name: UPS
+  hq_country: US
+  region: americas
+  industry: logistics
+  ats: custom
+  adapter: phenom
+  career_url: https://www.jobs-ups.com/global/en
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Supply-chain / northern-IZ expansion (2026-11-21). phenom site.
+- id: honda
+  name: Honda
+  hq_country: JP
+  region: asia
+  industry: automotive
+  ats: custom
+  adapter: phenom
+  career_url: https://careers.honda.com/us/en
+  active: false
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Phenom US site only; 0 Vietnam openings.
+- id: dupont
+  name: DuPont
+  hq_country: US
+  region: americas
+  industry: materials_chemicals
+  ats: custom
+  adapter: phenom
+  career_url: https://careers.dupont.com/us/en
+  active: false
+  verified: true
+  verified_at: '2026-11-21'
+  notes: 0 Vietnam openings on 2026-11-21.
+- id: gxo
+  name: GXO Logistics
+  hq_country: US
+  region: americas
+  industry: logistics
+  ats: custom
+  adapter: successfactors
+  career_url: https://jobs.gxo.com
+  active: false
+  verified: true
+  verified_at: '2026-11-21'
+  notes: 0 Vietnam openings on 2026-11-21.
+- id: dachser
+  name: Dachser
+  hq_country: DE
+  region: europe
+  industry: logistics
+  ats: custom
+  adapter: successfactors
+  career_url: https://careers.dachser.com
+  active: false
+  verified: true
+  verified_at: '2026-11-21'
+  notes: 0 Vietnam openings on 2026-11-21.
+- id: zf
+  name: ZF Group
+  hq_country: DE
+  region: europe
+  industry: automotive
+  ats: custom
+  adapter: successfactors
+  career_url: https://jobs.zf.com
+  active: false
+  verified: true
+  verified_at: '2026-11-21'
+  notes: 0 Vietnam openings on 2026-11-21.
+- id: ford
+  name: Ford Motor
+  hq_country: US
+  region: americas
+  industry: automotive
+  ats: custom
+  adapter: radancy
+  career_url: https://www.careers.ford.com
+  active: false
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Radancy sitemap has 0 Vietnam URLs on 2026-11-21.
+- id: synopsys
+  name: Synopsys
+  hq_country: US
+  region: americas
+  industry: technology
+  ats: custom
+  adapter: radancy
+  career_url: https://careers.synopsys.com
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Supply-chain / northern-IZ expansion (2026-11-21). radancy site.
+- id: first_solar
+  name: First Solar
+  hq_country: US
+  region: americas
+  industry: energy
+  ats: custom
+  adapter: oracle
+  oracle:
+    host: fa-esbv-saasfaprod1.fa.ocs.oraclecloud.com
+    site: CX_1
+  career_url: https://www.firstsolar.com/careers
+  active: false
+  verified: true
+  verified_at: '2026-11-21'
+  notes: 0 Vietnam openings on 2026-11-21.
+- id: infineon
+  name: Infineon
+  hq_country: DE
+  region: europe
+  industry: technology
+  ats: custom
+  adapter: eightfold
+  eightfold:
+    host: jobs.infineon.com
+    domain: infineon.com
+  career_url: https://jobs.infineon.com/careers
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Supply-chain / northern-IZ expansion (2026-11-21). eightfold site.

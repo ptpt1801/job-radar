@@ -1,6 +1,6 @@
 from .base import REGISTRY, Adapter  # noqa: F401
 from . import workday, smartrecruiters, greenhouse, lever, ashby, ybox, vn_boards  # noqa: F401
-from .custom import jibe, avature, successfactors, oracle, radancy  # noqa: F401
+from .custom import jibe, avature, successfactors, oracle, radancy, phenom, eightfold  # noqa: F401
 
 
 def adapter_for(company: dict) -> str:

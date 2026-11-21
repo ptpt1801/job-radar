@@ -33,7 +33,7 @@ flowchart LR
 
 | Stage | What it does |
 |---|---|
-| **fetch** | One adapter per platform: Workday (public CXS JSON, VN location facet), SmartRecruiters (official Posting API), Greenhouse, Lever, Ashby, plus custom adapters for Jibe/iCIMS (Schneider Electric), Avature (Siemens, Lenovo), SAP SuccessFactors Career Site Builder, Oracle Recruiting Cloud and Radancy/TalentBrew (sitemap-based, since its search path is disallowed in robots.txt). Ybox.vn is read with strict rules (see below). |
+| **fetch** | One adapter per platform: Workday (public CXS JSON, VN location facet), SmartRecruiters (official Posting API), Greenhouse, Lever, Ashby, plus custom adapters for Jibe/iCIMS (Schneider Electric), Avature (Siemens, Lenovo), SAP SuccessFactors Career Site Builder (search page, or sitemap.xml when search is rendered by JS), Oracle Recruiting Cloud, Radancy/TalentBrew (sitemap-based, since its search path is disallowed in robots.txt), Phenom (widgets JSON) and Eightfold (`/api/pcsx`). robots.txt is matched per RFC 9309 (longest rule wins). Ybox.vn is read with strict rules (see below). |
 | **normalize** | Maps every posting to one schema ([`schemas/job.schema.json`](schemas/job.schema.json)) with language-neutral keys (`level`, `function`, `city`…); the UI translates them. |
 | **filter** | Vietnam only, deadline not passed (Vietnam time), source status open, no excluded company or industry ([`config/exclusions.yaml`](config/exclusions.yaml)). |
 | **dedupe** | Same company + normalized title + city within 14 days counts as one role. The higher-priority source wins; a lower-priority source only fills empty fields such as salary. |

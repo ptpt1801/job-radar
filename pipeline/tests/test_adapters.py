@@ -161,3 +161,22 @@ def test_oracle_uses_vietnam_location_facet():
     jobs = OracleAdapter(http).fetch({"id": "nokia", "oracle": {"host": "x.oraclecloud.com", "site": "CX_1"}})
     assert [j["source_job_id"] for j in jobs] == ["1"] and "Own quality" in jobs[0]["description"]
     assert jobs[0]["url"] == "https://x.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/1"
+
+
+def test_phenom_helpers():
+    from pipeline.adapters.custom import phenom as P
+    assert P.site_parts("https://careers.dhl.com/global/en") == ("https://careers.dhl.com/global/en", "en_global", "global")
+    assert P.site_parts("https://careers.corning.com/us/en/")[1] == "en_us"
+    html = '<script>phApp.ddo = {"jobDetail":{"data":{"job":{"description":"<p>Hi</p>"}}}}; phApp.x = 1;</script>'
+    assert P.ddo(html)["jobDetail"]["data"]["job"]["description"] == "<p>Hi</p>"
+    assert P._is_vn({"country": "Vietnam"})
+    assert P._is_vn({"multi_location": [{"cityState": "Hà Nội"}]})
+    assert not P._is_vn({"country": "Malaysia", "cityStateCountry": "Kuala Lumpur, Malaysia"})
+
+
+def test_eightfold_vn_locations():
+    from pipeline.adapters.custom.eightfold import _vn_locs, _ts
+    assert _vn_locs({"locations": ["Vietnam, Haiphong City", "Singapore, Singapore"]}) == ["Vietnam, Haiphong City"]
+    assert _vn_locs({"locations": ["Multiple"], "standardizedLocations": ["VN"]}) == ["VN"]
+    assert _vn_locs({"locations": ["Singapore"], "standardizedLocations": ["SG"]}) == []
+    assert _ts(0) == "1970-01-01T00:00:00Z"

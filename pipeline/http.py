@@ -3,13 +3,13 @@ from __future__ import annotations
 
 import threading
 import time
-import urllib.robotparser
 from collections import defaultdict
 from urllib.parse import urlparse
 
 import requests
 
 from .config import settings
+from .robots import Robots
 
 
 class RobotsDisallowed(Exception):
@@ -39,7 +39,7 @@ class PoliteClient:
         self.session.headers.update({"User-Agent": self.ua, "Accept-Language": "en-US,en;q=0.8,vi;q=0.6"})
         self._host_locks: dict[str, threading.Lock] = defaultdict(threading.Lock)
         self._last: dict[str, float] = {}
-        self._robots: dict[str, urllib.robotparser.RobotFileParser | None] = {}
+        self._robots: dict[str, Robots | None] = {}
         self._delay: dict[str, float] = {}
         self._glock = threading.Lock()
         self.stats = defaultdict(lambda: {"requests": 0, "errors": 0})
@@ -49,7 +49,7 @@ class PoliteClient:
         with self._glock:
             if host in self._robots:
                 return self._robots[host]
-        rp = urllib.robotparser.RobotFileParser()
+        rp: Robots | None
         url = f"{scheme}://{host}/robots.txt"
         try:
             self._wait(host)
@@ -57,9 +57,9 @@ class PoliteClient:
             self.stats[host]["requests"] += 1
             ctype = r.headers.get("content-type", "")
             if r.status_code == 200 and "html" not in ctype.lower():
-                rp.parse(r.text.splitlines())
+                rp = Robots(r.text)
             elif r.status_code in (401, 403):
-                rp.disallow_all = True
+                rp = Robots(disallow_all=True)
             else:
                 rp = None  # no robots.txt -> everything allowed
         except requests.RequestException:
