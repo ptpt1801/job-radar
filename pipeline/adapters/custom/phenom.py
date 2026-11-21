@@ -56,7 +56,15 @@ class PhenomAdapter(Adapter):
                 "ddoKey": "refineSearch", "from": start, "size": PAGE, "jobs": True, "counts": True,
                 "clearAll": False, "jdsource": "facets", "siteType": "external", "keywords": "", "global": True,
                 "selected_fields": {"country": [cname]}}
-        j = self.http.post_json(host_root + "/widgets", json=body)
+        r = self.http.post(host_root + "/widgets", json=body, allow_redirects=False)
+        if r.status_code in (301, 302, 303, 307, 308) and r.headers.get("location"):
+            # geo-redirect (e.g. careers.merckgroup.com -> careers.emdgroup.com from US IPs); a followed
+            # redirect turns the POST into a GET, so re-POST to the new host instead.
+            loc = urlparse(r.headers["location"])
+            if loc.netloc:
+                r = self.http.post(f"{loc.scheme or 'https'}://{loc.netloc}/widgets", json=body, allow_redirects=False)
+        r.raise_for_status()
+        j = r.json()
         rs = j.get("refineSearch") or {}
         return (rs.get("data") or {}).get("jobs") or [], rs.get("totalHits") or 0
 
