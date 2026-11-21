@@ -1,3 +1,180 @@
 {
- "pending": {}
+ "pending": {
+  "e7e852bf20c4": {
+   "job": {
+    "id": "e7e852bf20c4",
+    "source": "custom",
+    "source_job_id": "coats:1447190633",
+    "company_id": "coats",
+    "company": "Coats",
+    "hq_country": "GB",
+    "region": "europe",
+    "industry": "fashion_sports",
+    "title": "Winding Operator - Bonding (2)",
+    "url": "https://careers.coats.com/job/Winding-Operator-Bonding-%282%29/1447190633/",
+    "lang": "en",
+    "city": "other_vn",
+    "address_raw": "Vietnam",
+    "work_mode": null,
+    "employment_type": null,
+    "posted_at": "2026-11-11T00:00:00Z",
+    "posted_text": null,
+    "deadline": null,
+    "first_seen_at": "2026-11-21T10:46:55Z",
+    "last_seen_at": "2026-11-21T13:11:26Z",
+    "closed_at": null,
+    "status": "open",
+    "content_hash": "13de0699c10479c5",
+    "level": "experienced",
+    "function": "engineering",
+    "skills": [
+     "english"
+    ],
+    "languages_required": [
+     "english"
+    ],
+    "experience_min_years": null,
+    "salary": null,
+    "match": 64,
+    "description_excerpt": "Role Purpose Winding cones, cops of dye-yarn as production requirement Principal Accountabilities and Key Activities Follow procedures, work instructions for operating winding machine Ensure productivity, quality of winding meet company requirements. Operate winding machines following defined instructions, monitor winding process to adjust tension and layer Check the quality of pre and post winding WIP so that only qualified WIP are transferred to the next step Keep machines, controlling box and surrounding areas clean and tidy Education, Qualifications and Experience Essential Desirable •…"
+   },
+   "missing_runs": 1
+  },
+  "fb43be14c32d": {
+   "job": {
+    "id": "fb43be14c32d",
+    "source": "smartrecruiters",
+    "source_job_id": "avery_dennison:744000157391969",
+    "company_id": "avery_dennison",
+    "company": "Avery Dennison",
+    "hq_country": "US",
+    "region": "americas",
+    "industry": "materials_chemicals",
+    "title": "Raw Material/Production Planer",
+    "url": "https://jobs.smartrecruiters.com/AveryDennison/744000157391969-raw-material-production-planer",
+    "lang": "en",
+    "city": "hcmc",
+    "address_raw": "Long Hậu, Hiệp Phước",
+    "work_mode": "onsite",
+    "employment_type": "full_time",
+    "posted_at": "2026-10-23T06:36:40Z",
+    "posted_text": null,
+    "deadline": null,
+    "first_seen_at": "2026-11-18T11:09:30Z",
+    "last_seen_at": "2026-11-21T13:11:26Z",
+    "closed_at": null,
+    "status": "open",
+    "content_hash": "94aaac00982dafdc",
+    "level": "experienced",
+    "function": "engineering",
+    "skills": [
+     "english",
+     "excel",
+     "data_analysis",
+     "procurement",
+     "communication"
+    ],
+    "languages_required": [
+     "english"
+    ],
+    "experience_min_years": 1,
+    "salary": null,
+    "match": 54,
+    "description_excerpt": "Job Description ABOUT YOUR ROLE: The Outsource/Production Planner acts as a vital operational bridge between internal manufacturing demands and external supply partners (subcontractors/OS suppliers). This role is responsible for optimizing volume allocation, monitoring execution to ensure on-time delivery, expanding supplier capabilities and capacity, and driving cross-functional alignment. By leveraging analytical performance tracking, the Outsource/Production Planner ensures cost-effective, resilient, and seamless production operations. YOUR RESPONSIBILITIES WILL INCLUDE • Allocate and…"
+   },
+   "missing_runs": 1
+  },
+  "a0ce0318c12b": {
+   "job": {
+    "id": "a0ce0318c12b",
+    "source": "custom",
+    "source_job_id": "loreal:44773510336",
+    "company_id": "loreal",
+    "company": "L'Oréal",
+    "hq_country": "FR",
+    "region": "europe",
+    "industry": "nonfood_consumer",
+    "title": "Head of Channel - D2C, Consumer Products Division",
+    "url": "https://careers.loreal.com/en/job/ho-chi-minh-city/head-of-channel-d2c-consumer-products-division/3456/44773510336",
+    "lang": "en",
+    "city": "hcmc",
+    "address_raw": "Ho Chi Minh City, Ho Chi Minh City, Vietnam",
+    "work_mode": null,
+    "employment_type": "full_time",
+    "posted_at": "2026-10-22T00:00:00Z",
+    "posted_text": null,
+    "deadline": null,
+    "first_seen_at": "2026-11-21T10:46:55Z",
+    "last_seen_at": "2026-11-21T13:11:26Z",
+    "closed_at": null,
+    "status": "open",
+    "content_hash": "716e6637751e5f2f",
+    "level": "manager",
+    "function": "sales",
+    "skills": [
+     "english",
+     "communication",
+     "crm",
+     "leadership"
+    ],
+    "languages_required": [
+     "english"
+    ],
+    "experience_min_years": null,
+    "salary": null,
+    "match": 40,
+    "description_excerpt": "Head of Channel - D2C A Day in the Life You lead the commercial acceleration of our Direct-to-Consumer (D2C) ecosystem and brand flagships, reporting to Online Commercial Director. You partner closely with our global network to deliver seamless consumer experiences, higher retention, and sustainable P&L growth. • D2C Strategy & Growth: Own end-to-end Direct-to-Consumer roadmaps across brand websites, driving customer lifetime value, repeat purchases, and gross margin targets. • Consumer Journey & Augmented Beauty: Deploy hyper-personalised consumer journeys, integrating diagnostic tools and…",
+    "benefits": [
+     "A place for you to leave your comfort zone and grow beyond your potential (here, you'll be encouraged to try new thin…",
+     "Real responsibility from day 1, there's no sitting on the sidelines at L'Oréal",
+     "An environment where people of every ethnicity, social background, age, religion, gender and sexual orientation as we…"
+    ]
+   },
+   "missing_runs": 1
+  },
+  "3ef3482c83ae": {
+   "job": {
+    "id": "3ef3482c83ae",
+    "source": "custom",
+    "source_job_id": "loreal:46239208448",
+    "company_id": "loreal",
+    "company": "L'Oréal",
+    "hq_country": "FR",
+    "region": "europe",
+    "industry": "nonfood_consumer",
+    "title": "Assistant External Workforce and Analytics Manager",
+    "url": "https://careers.loreal.com/en/job/ho-chi-minh-city/assistant-external-workforce-and-analytics-manager/3456/46239208448",
+    "lang": "en",
+    "city": "hcmc",
+    "address_raw": "Ho Chi Minh City, Ho Chi Minh City, Vietnam",
+    "work_mode": null,
+    "employment_type": "full_time",
+    "posted_at": "2026-10-22T00:00:00Z",
+    "posted_text": null,
+    "deadline": null,
+    "first_seen_at": "2026-11-21T10:46:55Z",
+    "last_seen_at": "2026-11-21T13:11:26Z",
+    "closed_at": null,
+    "status": "open",
+    "content_hash": "9c045edc71210ddd",
+    "level": "manager",
+    "function": "hr",
+    "skills": [
+     "english",
+     "excel",
+     "data_analysis",
+     "project_management",
+     "recruitment"
+    ],
+    "languages_required": [
+     "english"
+    ],
+    "experience_min_years": 5,
+    "salary": null,
+    "match": 52,
+    "description_excerpt": "Position: Assistant External Workforce & Analytics Manager Department: Human Relations - Function: Total Rewards Hello, we’re L’Oréal. We're not just building brands; we're shaping how the world experiences beauty (and it takes a lot of cool jobs to do it). Intrigued? Keep reading—this might be the opportunity you’ve been searching for. A Day in the Life Reporting to the Head of Rewards, you will be the heartbeat of ensuring our external partners, thrive our local onsite employee experience in Ho Chi Minh City and driving the activation of our global 'Share & Care' program and. • External…"
+   },
+   "missing_runs": 1
+  }
+ }
 }
