@@ -1,5 +1,5 @@
 {
- "last_run_at": "2026-11-20T19:48:07Z",
+ "last_run_at": "2026-11-21T00:04:46Z",
  "next_run_at": "2026-11-21T19:00:00Z",
  "cv_version": "2026-11",
  "has_profile": true,
@@ -9,8 +9,8 @@
  "companies_active": 64,
  "companies_with_jobs": 63,
  "last_run": {
-  "new": 15,
-  "closed": 9
+  "new": 0,
+  "closed": 0
  },
  "rules_hash": "59047342e713"
 }
