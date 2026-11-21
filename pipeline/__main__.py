@@ -33,6 +33,17 @@ CLOSED_PHRASES = ("no longer available", "no longer accepting", "position has be
                   "không còn nhận hồ sơ", "đã hết hạn", "this job has expired")
 
 
+def safe_enrich(j: dict) -> None:
+    """Rule extraction must never stop the run: on an unexpected error keep the job with empty extras."""
+    try:
+        enrich_rules.enrich(j)
+    except Exception as e:  # noqa: BLE001
+        print(f"  enrich error {j.get('id')}: {type(e).__name__}: {e}", file=sys.stderr)
+        for k, v in (("level", "experienced"), ("function", "other"), ("skills", []), ("languages_required", []),
+                     ("experience_min_years", None), ("salary", None), ("benefits", []), ("description_excerpt", None)):
+            j.setdefault(k, v)
+
+
 def iso(d: dt.datetime) -> str:
     return d.strftime("%Y-%m-%dT%H:%M:%SZ")
 
@@ -126,7 +137,7 @@ def main(argv=None):
                 hint = cache.get(j["id"])
                 if hint:
                     j.update(_desc=hint.get("d") or "", _level_raw=hint.get("lv"), _function_raw=hint.get("fn"), _salary=hint.get("sal"))
-                    enrich_rules.enrich(j)
+                    safe_enrich(j)
             jobs = [store.clean(j) for j in jobs]
             db["meta"]["rules_hash"] = rules_hash()
         score.apply(jobs, profile, show_tags)
@@ -191,7 +202,7 @@ def main(argv=None):
                     hint = desc_cache.get(j["id"])
                     if reenrich and hint:
                         j.update(_desc=hint.get("d") or "", _level_raw=hint.get("lv"), _function_raw=hint.get("fn"), _salary=hint.get("sal"))
-                        enrich_rules.enrich(j)
+                        safe_enrich(j)
                 else:
                     cc = all_cos.get(raw.get("company_id_override"), c)
                     j = normalize(raw, cc, now)
@@ -199,7 +210,7 @@ def main(argv=None):
                     if why:
                         drops[why] += 1
                         continue
-                    enrich_rules.enrich(j)
+                    safe_enrich(j)
                     desc_cache[j["id"]] = {"d": (scrub(j["_desc"]) or "")[:8000], "lv": j.get("_level_raw"),
                                            "fn": j.get("_function_raw"), "sal": j.get("_salary")}
                     old = prev_all.get(j["id"])
@@ -237,7 +248,7 @@ def main(argv=None):
                     if why:
                         drops[why] += 1
                         continue
-                    enrich_rules.enrich(j)
+                    safe_enrich(j)
                     desc_cache[j["id"]] = {"d": (scrub(j["_desc"]) or "")[:8000], "lv": j.get("_level_raw"),
                                            "fn": j.get("_function_raw"), "sal": j.get("_salary")}
                     old = prev_all.get(j["id"])

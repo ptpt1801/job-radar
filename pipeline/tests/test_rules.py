@@ -218,3 +218,8 @@ def test_workday_tenants_share_one_rate_limit():
     from pipeline.http import rate_key
     assert rate_key("abbott.wd5.myworkdayjobs.com") == rate_key("nike.wd1.myworkdayjobs.com") == "myworkdayjobs.com"
     assert rate_key("api.smartrecruiters.com") == "api.smartrecruiters.com"
+
+
+def test_salary_unit_without_currency_word_does_not_crash():
+    s = er.detect_salary("Mức lương: 15 - 20 tr")
+    assert s is None or s["currency"] == "VND"

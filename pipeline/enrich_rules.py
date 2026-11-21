@@ -122,7 +122,8 @@ def detect_salary(desc: str) -> dict | None:
         lo, hi = _num(m.group(1)), _num(m.group(3))
         mult = 1_000_000 if unit in ("triệu", "trieu", "tr", "million", "mil", "m") else (1000 if unit == "k" else 1)
         lo, hi = lo * mult, hi * mult
-        cl = (cur or CUR_NEAR.search(window).group(1)).lower()
+        near = CUR_NEAR.search(window)
+        cl = (cur or (near.group(1) if near else "vnd")).lower()   # "15-20 tr" with no currency word = VND
         currency = "USD" if cl in ("usd", "$") else ("EUR" if cl in ("eur", "€") else "VND")
         if currency == "VND" and hi < 100_000:
             continue  # implausible
