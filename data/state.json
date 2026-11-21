@@ -1,132 +1,39 @@
 {
  "pending": {
-  "0de48d74a3f4": {
+  "5aa47f92ee3e": {
    "job": {
-    "id": "0de48d74a3f4",
-    "source": "smartrecruiters",
-    "source_job_id": "bosch:744000162237385",
-    "company_id": "bosch",
-    "company": "Bosch",
-    "hq_country": "DE",
-    "region": "europe",
-    "industry": "automotive",
-    "title": "[Bosch HcP - Internship] Spare Part Management Intern",
-    "url": "https://jobs.smartrecruiters.com/BoschGroup/744000162237385--bosch-hcp-internship-spare-part-management-intern",
-    "lang": "en",
-    "city": "dong_nai",
-    "address_raw": "Long Thanh Industrial Zone, An Phuoc Commune",
-    "work_mode": "onsite",
-    "employment_type": "internship",
-    "posted_at": "2026-11-18T08:21:18Z",
-    "posted_text": null,
-    "deadline": null,
-    "first_seen_at": "2026-11-18T11:09:30Z",
-    "last_seen_at": "2026-11-19T19:52:25Z",
-    "closed_at": null,
-    "status": "open",
-    "content_hash": "1a0fefc7ef399f01",
-    "level": "internship",
-    "function": "supply_chain",
-    "skills": [
-     "english",
-     "excel",
-     "power_bi",
-     "logistics",
-     "procurement"
-    ],
-    "languages_required": [
-     "english"
-    ],
-    "experience_min_years": null,
-    "salary": null,
-    "match": 72,
-    "description_excerpt": "Job Description • Tracking purchase order, delivery date, spare part demand, price fluctuation... • Build database platform for spare part supply chain, using software, such as Excel, Assess, Power BI... • Assist engineers, purchasing team, Logistic team on in-putting and using spare part data to improve spare part management system • Assist planner and engineer on tracking repairable spare part • Make report/instruction with guidelines from planner or engineer • Other admin tasks will also be assigned. Qualifications • Education: student major in Industrial Management, Industrial…"
-   },
-   "missing_runs": 1
-  },
-  "b111dcecb5b0": {
-   "job": {
-    "id": "b111dcecb5b0",
-    "source": "smartrecruiters",
-    "source_job_id": "bosch:744000161212569",
-    "company_id": "bosch",
-    "company": "Bosch",
-    "hq_country": "DE",
-    "region": "europe",
-    "industry": "automotive",
-    "title": "[ICS] Internal Audit Lead (Internal Control/Risk Management)",
-    "url": "https://jobs.smartrecruiters.com/BoschGroup/744000161212569--ics-internal-audit-lead-internal-control-risk-management-",
-    "lang": "en",
-    "city": "hcmc",
-    "address_raw": "Etown Building, 364 Cong Hoa street, ward 13, Tan Binh district, Hồ Chí Minh",
-    "work_mode": "onsite",
-    "employment_type": "full_time",
-    "posted_at": "2026-11-12T02:54:58Z",
-    "posted_text": null,
-    "deadline": null,
-    "first_seen_at": "2026-11-18T11:09:30Z",
-    "last_seen_at": "2026-11-19T19:52:25Z",
-    "closed_at": null,
-    "status": "open",
-    "content_hash": "145af476e8b38df9",
-    "level": "experienced",
-    "function": "finance",
-    "skills": [
-     "english",
-     "erp",
-     "leadership"
-    ],
-    "languages_required": [
-     "english"
-    ],
-    "experience_min_years": 5,
-    "salary": null,
-    "match": 47,
-    "description_excerpt": "Job Description Internal Control • Plan and execute internal audit projects, including financial, operational, and compliance audits, based on the annual audit plan. • Assess the design and effectiveness of internal controls to ensure compliance with company policies, procedures, and regulatory requirements. • Identify control deficiencies, process weaknesses, and business risks, documenting findings in comprehensive audit reports. • Utilize established audit methodologies and risk assessment frameworks to evaluate the adequacy of risk management processes. • Analyze business processes and…",
-    "benefits": [
-     "Working in one of the Best Places to Work in Vietnam and Top 30 of the Most Innovative Companies all over the world",
-     "Join a dynamic and fast-growing global company (English-speaking environment)",
-     "Engage in our diverse training programs which surely help strengthen both your personal and professionalism",
-     "13th-month salary bonus + attractive performance bonus (you'll love it!) + annual performance appraisal",
-     "100% monthly salary and mandatory social insurances in 2-month probation",
-     "Meal, Commuting and Parking allowance"
-    ]
-   },
-   "missing_runs": 1
-  },
-  "e4fb03bcadf9": {
-   "job": {
-    "id": "e4fb03bcadf9",
+    "id": "5aa47f92ee3e",
     "source": "custom",
-    "source_job_id": "dksh:55327744",
+    "source_job_id": "dksh:61510644",
     "company_id": "dksh",
     "company": "DKSH",
     "hq_country": "CH",
     "region": "europe",
     "industry": "pharma_medtech",
-    "title": "* Product Executive (Marketing)",
-    "url": "https://jobs.dksh.com/job/Ho-Chi-Minh-Product-Executive-%28Marketing%29-VN/55327744/",
+    "title": "*Executive Sales Force Effectiveness",
+    "url": "https://jobs.dksh.com/job/Ho-Chi-Minh-Executive-Sales-Force-Effectiveness-VN/61510644/",
     "lang": "en",
     "city": "hcmc",
     "address_raw": "Ho Chi Minh, VN, VN",
     "work_mode": null,
     "employment_type": null,
-    "posted_at": "2026-11-11T00:00:00Z",
+    "posted_at": "2026-11-13T00:00:00Z",
     "posted_text": null,
     "deadline": null,
     "first_seen_at": "2026-11-19T04:38:14Z",
-    "last_seen_at": "2026-11-19T19:52:25Z",
+    "last_seen_at": "2026-11-20T19:48:07Z",
     "closed_at": null,
     "status": "open",
-    "content_hash": "c3b02798ba7ca7fc",
+    "content_hash": "529a5571cae12238",
     "level": "experienced",
-    "function": "marketing",
+    "function": "sales",
     "skills": [
      "english",
      "excel",
+     "sql",
      "data_analysis",
-     "presentation",
-     "digital_marketing"
+     "communication",
+     "problem_solving"
     ],
     "languages_required": [
      "english"
@@ -134,87 +41,40 @@
     "experience_min_years": 2,
     "salary": null,
     "match": 64,
-    "description_excerpt": "About The Role • The Product Executive drives the execution of integrated marketing activities across assigned Over-the-Counter (OTC) and consumer health products, with a primary focus on Customer Marketing, supported by Healthcare Professional (HCP) and Consumer Marketing initiatives. This role contributes to DKSH's business growth by enhancing product visibility, strengthening trade execution, and deepening brand engagement across pharmacy channels What You Will Deliver • Plan and execute trade promotions and in-store merchandising at pharmacies to meet sales targets • Develop and gain…"
+    "description_excerpt": "About the Role The Sales Force Effectiveness (SFE) Executive strengthens sales performance across the business line by implementing and improving key processes, tools, and data insights.Partnering closely with the Business team, this role transforms data into actionable decisions that drive commercial excellence and meaningful business impact. What You Will Deliver Lead and manage overall Sales Force Effectiveness (SFE) initiatives to optimize sales force performance and execution quality across the business line. Drive target setting, territory alignment, segmentation, incentive…"
    },
    "missing_runs": 1
   },
-  "9f5ee6f733f5": {
+  "079cac7c2028": {
    "job": {
-    "id": "9f5ee6f733f5",
+    "id": "079cac7c2028",
     "source": "custom",
-    "source_job_id": "ey:1119583101",
-    "company_id": "ey",
-    "company": "EY Vietnam",
-    "hq_country": "GB",
-    "region": "europe",
-    "industry": "consulting_finance",
-    "title": "Administrative Intern | HCMC Office",
-    "url": "https://careers.ey.com/ey/job/Ho-Chi-Minh-City-Administrative-Intern-HCMC-Office/1119583101/",
-    "lang": "en",
-    "city": "hcmc",
-    "address_raw": "Ho Chi Minh City, VN",
-    "work_mode": null,
-    "employment_type": "internship",
-    "posted_at": "2026-11-08T00:00:00Z",
-    "posted_text": null,
-    "deadline": null,
-    "first_seen_at": "2026-11-19T04:31:23Z",
-    "last_seen_at": "2026-11-19T19:52:25Z",
-    "closed_at": null,
-    "status": "open",
-    "content_hash": "ebb08abd72cef46b",
-    "level": "internship",
-    "function": "operations",
-    "skills": [
-     "english",
-     "excel"
-    ],
-    "languages_required": [
-     "english"
-    ],
-    "experience_min_years": null,
-    "salary": null,
-    "match": 86,
-    "description_excerpt": "About EY As a global leader in assurance, tax, consulting, strategy and transactions services, we hire and develop the most passionate people in their field to help build a better working world. This starts with a culture that believes in giving you the training, opportunities and creative freedom to make things better. So that whenever you join, however long you stay, the exceptional EY experience lasts a lifetime Key responsibilities: • Assist with administrative tasks, • Taking meeting minutes, • Coordinate the efficiency of team deliveries, • Assist manage project timelines, update…",
-    "benefits": [
-     "Support, coaching and feedback from some of the most engaging colleagues around the world",
-     "Opportunities to develop new skills and progress your career",
-     "The freedom and flexibility to handle your role in a way that’s right for you",
-     "If you can confidently demonstrate that you meet the criteria above, please contact us as soon as possible.",
-     "Make your mark. Apply now."
-    ]
-   },
-   "missing_runs": 1
-  },
-  "1df2af8a56b1": {
-   "job": {
-    "id": "1df2af8a56b1",
-    "source": "custom",
-    "source_job_id": "dksh:60308644",
+    "source_job_id": "dksh:60035844",
     "company_id": "dksh",
     "company": "DKSH",
     "hq_country": "CH",
     "region": "europe",
     "industry": "pharma_medtech",
-    "title": "*Manager, Technical Sales (Polymer)",
-    "url": "https://jobs.dksh.com/job/Ho-Chi-Minh-Manager%2C-Technical-Sales-%28Polymer%29-VN/60308644/",
+    "title": "*Senior Executive, Technical Sales (Chinese Speaking)",
+    "url": "https://jobs.dksh.com/job/Ho-Chi-Minh-Senior-Executive%2C-Technical-Sales-%28Chinese-Speaking%29-VN/60035844/",
     "lang": "en",
     "city": "hcmc",
     "address_raw": "Ho Chi Minh, VN, VN",
     "work_mode": null,
     "employment_type": null,
-    "posted_at": "2026-11-05T00:00:00Z",
+    "posted_at": "2026-10-22T00:00:00Z",
     "posted_text": null,
     "deadline": null,
     "first_seen_at": "2026-11-19T04:38:14Z",
-    "last_seen_at": "2026-11-19T19:52:25Z",
+    "last_seen_at": "2026-11-20T19:48:07Z",
     "closed_at": null,
     "status": "open",
-    "content_hash": "af269ff550d63c37",
-    "level": "manager",
+    "content_hash": "36f89d9745b41bbc",
+    "level": "experienced",
     "function": "sales",
     "skills": [
      "english",
+     "chinese",
      "data_analysis",
      "logistics",
      "negotiation",
@@ -222,358 +82,13 @@
      "problem_solving"
     ],
     "languages_required": [
-     "english"
-    ],
-    "experience_min_years": 5,
-    "salary": null,
-    "match": 52,
-    "description_excerpt": "About the Role The Manager, Technical Sales is a commercially focused role that drives sustainable sales growth and deepens strategic customer partnerships within DKSH's Performance Materials business, specifically in the plastic and rubber segment. This role plays a key part in expanding market presence across Vietnam by managing key accounts, unlocking new business opportunities, and delivering tailored solutions that create lasting value for customers. What You Will Deliver • Build and sustain strong relationships with key accounts in the plastic and rubber market, engaging customers with…"
-   },
-   "missing_runs": 1
-  },
-  "24d516911ce2": {
-   "job": {
-    "id": "24d516911ce2",
-    "source": "custom",
-    "source_job_id": "dksh:61272944",
-    "company_id": "dksh",
-    "company": "DKSH",
-    "hq_country": "CH",
-    "region": "europe",
-    "industry": "pharma_medtech",
-    "title": "*Senior Executive, Compliance",
-    "url": "https://jobs.dksh.com/job/Ho-Chi-Minh-Senior-Executive%2C-Compliance-VN/61272944/",
-    "lang": "en",
-    "city": "hcmc",
-    "address_raw": "Ho Chi Minh, VN, VN",
-    "work_mode": null,
-    "employment_type": null,
-    "posted_at": "2026-11-04T00:00:00Z",
-    "posted_text": null,
-    "deadline": null,
-    "first_seen_at": "2026-11-19T04:38:14Z",
-    "last_seen_at": "2026-11-19T19:52:25Z",
-    "closed_at": null,
-    "status": "open",
-    "content_hash": "0fec7a32b6149c0c",
-    "level": "experienced",
-    "function": "legal",
-    "skills": [
      "english",
-     "data_analysis",
-     "problem_solving"
+     "chinese"
     ],
-    "languages_required": [
-     "english"
-    ],
-    "experience_min_years": 3,
-    "salary": null,
-    "match": 64,
-    "description_excerpt": "About The Role The Senior Compliance Executive plays a vital role in upholding company's governance standards by supporting the implementation and ongoing management of the organization's Compliance Program. Working closely with the Compliance Manager, this role contributes to a culture of integrity by ensuring business operations align with regulatory requirements, internal policies, and industry best practices. What You Will Deliver • Support the implementation and maintenance of the Compliance Program, ensuring robust governance frameworks are consistently applied across the organization.…"
-   },
-   "missing_runs": 1
-  },
-  "86922ca4821f": {
-   "job": {
-    "id": "86922ca4821f",
-    "source": "custom",
-    "source_job_id": "schaeffler:1453626633",
-    "company_id": "schaeffler",
-    "company": "Schaeffler",
-    "hq_country": "DE",
-    "region": "europe",
-    "industry": "automotive",
-    "title": "Marketing Intern",
-    "url": "https://jobs.schaeffler.com/job/Ho-Chi-Minh-City-Marketing-Intern-700000/1453626633/",
-    "lang": "en",
-    "city": "hcmc",
-    "address_raw": "Ho Chi Minh City, VN, 700000",
-    "work_mode": null,
-    "employment_type": "internship",
-    "posted_at": "2026-11-03T00:00:00Z",
-    "posted_text": null,
-    "deadline": null,
-    "first_seen_at": "2026-11-19T04:38:14Z",
-    "last_seen_at": "2026-11-19T19:52:25Z",
-    "closed_at": null,
-    "status": "open",
-    "content_hash": "6dfaee0add5ac8ed",
-    "level": "internship",
-    "function": "marketing",
-    "skills": [
-     "english",
-     "excel"
-    ],
-    "languages_required": [
-     "english",
-     "vietnamese"
-    ],
-    "experience_min_years": null,
-    "salary": null,
-    "match": 74,
-    "description_excerpt": "Schaeffler is a dynamic global technology company and its success has been a result of its entrepreneurial spirit and long history of private ownership. Does that sound interesting to you? As a partner to all of the major automobile manufacturers, as well as key players in the aerospace and industrial sectors, we offer you many development opportunities. Your Key Responsibilities • Support marketing nad Sales team in set up exhibition corner • Support in Sales Admins tasks, collect sales documents, process invitation letters for sales events/ activity • Translating (English – Vietnamese)…"
-   },
-   "missing_runs": 1
-  },
-  "3b0c7be7e6d1": {
-   "job": {
-    "id": "3b0c7be7e6d1",
-    "source": "smartrecruiters",
-    "source_job_id": "bosch:744000159047439",
-    "company_id": "bosch",
-    "company": "Bosch",
-    "hq_country": "DE",
-    "region": "europe",
-    "industry": "automotive",
-    "title": "[SX/EIT-MM] Embedded Test Engineer (1-year contract)",
-    "url": "https://jobs.smartrecruiters.com/BoschGroup/744000159047439--sx-eit-mm-embedded-test-engineer-1-year-contract-",
-    "lang": "en",
-    "city": "hcmc",
-    "address_raw": "Đường Cộng Hòa 364, Tân Bình",
-    "work_mode": "onsite",
-    "employment_type": "full_time",
-    "posted_at": "2026-11-02T04:36:59Z",
-    "posted_text": null,
-    "deadline": null,
-    "first_seen_at": "2026-11-18T11:09:30Z",
-    "last_seen_at": "2026-11-19T19:52:25Z",
-    "closed_at": null,
-    "status": "open",
-    "content_hash": "d8ee36db9545c495",
-    "level": "experienced",
-    "function": "engineering",
-    "skills": [
-     "english",
-     "python"
-    ],
-    "languages_required": [
-     "english"
-    ],
-    "experience_min_years": 1,
-    "salary": null,
-    "match": 64,
-    "description_excerpt": "Job Description Take the role of a Component & System Test Engineer and the required competences for operating Test Automation projects. Tasks • Analyze specified requirements • Design and implementation of test cases • Execution of tests, retests and regression tests • Evaluation of results • Documentation and archiving of work products • Creation of bug tickets Rights • Approval of component & system requirements specifications • Review test designs & implementations • Veto regarding local deviations from company standards regarding architecture • Identification and application of suitable…"
-   },
-   "missing_runs": 1
-  },
-  "bf33cfe066a6": {
-   "job": {
-    "id": "bf33cfe066a6",
-    "source": "smartrecruiters",
-    "source_job_id": "bosch:744000156728490",
-    "company_id": "bosch",
-    "company": "Bosch",
-    "hq_country": "DE",
-    "region": "europe",
-    "industry": "automotive",
-    "title": "[GS] HR Intern (C&B) - Long Thanh (Shuttle Bus)",
-    "url": "https://jobs.smartrecruiters.com/BoschGroup/744000156728490--gs-hr-intern-c-b-long-thanh-shuttle-bus-",
-    "lang": "en",
-    "city": "dong_nai",
-    "address_raw": "KCN Long Thanh, Dong Nai",
-    "work_mode": "onsite",
-    "employment_type": "internship",
-    "posted_at": "2026-10-21T07:43:06Z",
-    "posted_text": null,
-    "deadline": null,
-    "first_seen_at": "2026-11-18T11:09:30Z",
-    "last_seen_at": "2026-11-19T19:52:25Z",
-    "closed_at": null,
-    "status": "open",
-    "content_hash": "10350e688901d4f6",
-    "level": "internship",
-    "function": "hr",
-    "skills": [
-     "english",
-     "excel",
-     "presentation"
-    ],
-    "languages_required": [
-     "english",
-     "vietnamese"
-    ],
-    "experience_min_years": null,
-    "salary": null,
-    "match": 74,
-    "description_excerpt": "Job Description • Assist in delivery and receiving insurance related documents (PVI Insurance, Social/ Health/ Unemployment insurances). • Assist in process tax documents • Check and prepare HR-related documents • Consult associates for HR topic at the HRS counter and by email (such as welfare, dependent, social insurance, payslip...) • Support to collect and input data for monthly salary period. • Pfile and e-file: Be responsible for filling both hard and soft copies. • Support on-boarding process: manage deliveries and receiving of documents, arrange and restore documents... • Other ad hoc…",
-    "benefits": [
-     "Monthly Internship allowance + Meal & Parking allowance",
-     "1 day of paid leave per month",
-     "Good benefits of Trade Union activities",
-     "Opportunity to work in global projects of fast developing company and being a part of innovation team contributing in…",
-     "Engage in our diverse training programs which surely help strengthen both your personal and professional skills"
-    ]
-   },
-   "missing_runs": 1
-  },
-  "64f6bfe25d5d": {
-   "job": {
-    "id": "64f6bfe25d5d",
-    "source": "smartrecruiters",
-    "source_job_id": "bosch:744000154575475",
-    "company_id": "bosch",
-    "company": "Bosch",
-    "hq_country": "DE",
-    "region": "europe",
-    "industry": "automotive",
-    "title": "[EAB] Automation & AI Tooling Intern (Python/ML/Simulink)",
-    "url": "https://jobs.smartrecruiters.com/BoschGroup/744000154575475--eab-automation-ai-tooling-intern-python-ml-simulink-",
-    "lang": "en",
-    "city": "hcmc",
-    "address_raw": "OfficeHaus Building, 32 Tan Thang street, Son Ky ward, Tan Phu district, Ho Chi Minh",
-    "work_mode": "onsite",
-    "employment_type": "internship",
-    "posted_at": "2026-10-09T02:47:22Z",
-    "posted_text": null,
-    "deadline": null,
-    "first_seen_at": "2026-11-18T11:09:30Z",
-    "last_seen_at": "2026-11-19T19:52:25Z",
-    "closed_at": null,
-    "status": "open",
-    "content_hash": "56eb6eb5aaf5d109",
-    "level": "internship",
-    "function": "it",
-    "skills": [
-     "english",
-     "python",
-     "machine_learning"
-    ],
-    "languages_required": [
-     "english"
-    ],
-    "experience_min_years": null,
+    "experience_min_years": 2,
     "salary": null,
     "match": 57,
-    "description_excerpt": "Job Description The Occupant Safety Systems (OSS) team at Bosch is responsible for developing and producing Airbag ECUs used in millions of vehicles worldwide. We combine engineering excellence and automation expertise to improve safety and efficiency in airbag development. We are looking for a passionate intern to support our Calibration Automation and AI Tool Calibration Tool. You will work at the intersection of software automation engineering, AI/ML, and calibration engineering. Key Responsibilities 1. Automation Tool Development Develop and enhance Python-based tools to support…"
-   },
-   "missing_runs": 1
-  },
-  "a46f6406e512": {
-   "job": {
-    "id": "a46f6406e512",
-    "source": "custom",
-    "source_job_id": "takeda:101567129280",
-    "company_id": "takeda",
-    "company": "Takeda",
-    "hq_country": "JP",
-    "region": "asia",
-    "industry": "pharma_medtech",
-    "title": "Community Activator",
-    "url": "https://jobs.takeda.com/job/hanoi/community-activator/1113/101567129280",
-    "lang": "en",
-    "city": "hanoi",
-    "address_raw": "Hanoi, Hà Nội, Vietnam",
-    "work_mode": null,
-    "employment_type": "full_time",
-    "posted_at": "2026-10-05T00:00:00Z",
-    "posted_text": null,
-    "deadline": null,
-    "first_seen_at": "2026-11-19T05:17:30Z",
-    "last_seen_at": "2026-11-19T19:52:25Z",
-    "closed_at": null,
-    "status": "open",
-    "content_hash": "a66a2beedace7fc6",
-    "level": "experienced",
-    "function": "other",
-    "skills": [
-     "english"
-    ],
-    "languages_required": [
-     "english"
-    ],
-    "experience_min_years": null,
-    "salary": null,
-    "match": 72,
-    "description_excerpt": "By clicking the “Apply” button, I understand that my employment application process with Takeda will commence and that the information I provide in my application will be processed in line with Takeda’s Privacy Notice and Terms of Use. I further attest that all information I submit in my employment application is true to the best of my knowledge. Job Description OBJECTIVES / PURPOSE The Community Activator is responsible for planning and coordinating disease awareness campaign (on field) and post campagin activities (if any), in partnership with authorized external stakeholders at assigned…"
-   },
-   "missing_runs": 1
-  },
-  "4434bc85613b": {
-   "job": {
-    "id": "4434bc85613b",
-    "source": "smartrecruiters",
-    "source_job_id": "bosch:744000139076169",
-    "company_id": "bosch",
-    "company": "Bosch",
-    "hq_country": "DE",
-    "region": "europe",
-    "industry": "automotive",
-    "title": "Hanoi - Embedded Intern",
-    "url": "https://jobs.smartrecruiters.com/BoschGroup/744000139076169-hanoi-embedded-intern",
-    "lang": "en",
-    "city": "hanoi",
-    "address_raw": "Capital Place Building, 29 Lieu Giai street, Ngoc Khanh ward, Ba Dinh district, Hanoi",
-    "work_mode": "onsite",
-    "employment_type": "internship",
-    "posted_at": "2026-07-22T13:10:46Z",
-    "posted_text": null,
-    "deadline": null,
-    "first_seen_at": "2026-11-18T11:09:30Z",
-    "last_seen_at": "2026-11-19T19:52:25Z",
-    "closed_at": null,
-    "status": "open",
-    "content_hash": "30f142baaf4d4e50",
-    "level": "internship",
-    "function": "engineering",
-    "skills": [
-     "english",
-     "communication"
-    ],
-    "languages_required": [
-     "english"
-    ],
-    "experience_min_years": null,
-    "salary": null,
-    "match": 82,
-    "description_excerpt": "Job Description • Work side by side with specialists and be entrusted with your own area of responsibility within the scope of your projects or day-to-day business. • Clarify and Analyze software requirement • Be responsible for software development, integration and test execution based on requirements • Support in low and high level design for software modules • Document results, report problems and debug if required Qualifications • Can work fulltime (Monday - Friday) • Can submit recommendation letter from your university • Good C or C++ programming skills and solid background in…"
-   },
-   "missing_runs": 1
-  },
-  "b2a634dfffb4": {
-   "job": {
-    "id": "b2a634dfffb4",
-    "source": "greenhouse",
-    "source_job_id": "axon:6608719003",
-    "company_id": "axon",
-    "company": "Axon",
-    "hq_country": "US",
-    "region": "americas",
-    "industry": "technology",
-    "title": "Senior Mobile iOS Engineer",
-    "url": "https://job-boards.greenhouse.io/axon/jobs/6608719003",
-    "lang": "en",
-    "city": "hcmc",
-    "address_raw": "Ho Chi Minh City, Ho Chi Minh City, Vietnam",
-    "work_mode": null,
-    "employment_type": null,
-    "posted_at": "2025-06-13T08:53:45Z",
-    "posted_text": null,
-    "deadline": null,
-    "first_seen_at": "2026-11-18T11:09:30Z",
-    "last_seen_at": "2026-11-19T19:52:25Z",
-    "closed_at": null,
-    "status": "open",
-    "content_hash": "0bcdcfaa3a8afdc1",
-    "level": "experienced",
-    "function": "engineering",
-    "skills": [
-     "english"
-    ],
-    "languages_required": [
-     "english"
-    ],
-    "experience_min_years": 6,
-    "salary": null,
-    "match": 64,
-    "description_excerpt": "Join Axon and be a Force for Good. At Axon, we’re on a mission to Protect Life. We’re explorers, pursuing society’s most critical safety and justice issues with our ecosystem of devices and cloud software. Like our products, we work better together. We connect with candor and care, seeking out diverse perspectives from our customers, communities and each other. Life at Axon is fast-paced, challenging and meaningful. Here, you’ll take ownership and drive real change. Constantly grow as you work hard for a mission that matters at a company where you matter. Your Impact Digital Evidence…",
-    "benefits": [
-     "Medical and Dental Insurance",
-     "Vision Insurance",
-     "Robust Paid Time Off policy",
-     "Bonuses",
-     "Lunch allowance",
-     "Cell phone stipend"
-    ]
+    "description_excerpt": "About the Role The Senior Executive, Technical Sales is a results-driven commercial role that contributes to DKSH's growth in Vietnam by expanding customer relationships and driving sales performance in the chemical distribution sector, with a focus on coating & painting applications. This role is central to identifying new business opportunities, deepening key account engagement, and delivering sustainable revenue growth within the Performance Materials business. What You Will Deliver • Build and grow strong relationships with key accounts in the plastic and rubber market, delivering…"
    },
    "missing_runs": 1
   },
