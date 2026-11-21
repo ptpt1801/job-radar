@@ -782,10 +782,13 @@ companies:
   hq_country: NL
   region: europe
   industry: consulting_finance
-  ats: unknown
-  active: false
-  verified: false
-  notes: Not resolved.
+  ats: custom
+  adapter: successfactors
+  career_url: https://careers.kpmg.com.vn
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
 - id: hsbc
   name: HSBC
   hq_country: GB
@@ -818,10 +821,13 @@ companies:
   hq_country: FR
   region: europe
   industry: nonfood_consumer
-  ats: unknown
-  active: false
-  verified: false
-  notes: Not resolved.
+  ats: custom
+  adapter: radancy
+  career_url: https://careers.loreal.com
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham+AmCham member directory (2026-11-21).
 - id: colgate
   name: Colgate-Palmolive
   hq_country: US
@@ -1221,3 +1227,440 @@ companies:
   active: true
   verified: true
   verified_at: '2026-11-19'
+- id: uob
+  name: UOB
+  hq_country: SG
+  region: asia
+  industry: consulting_finance
+  ats: workday
+  workday:
+    tenant: uobgroup
+    wd: wd3
+    site: UOBExternal
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
+- id: damen
+  name: Damen Shipyards
+  hq_country: NL
+  region: europe
+  industry: industrial_automation
+  ats: workday
+  workday:
+    tenant: damen
+    wd: wd3
+    site: Damen_Careers
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
+- id: jll
+  name: JLL
+  hq_country: US
+  region: americas
+  industry: consulting_finance
+  ats: workday
+  workday:
+    tenant: jll
+    wd: wd1
+    site: jllcareers
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
+- id: concentrix
+  name: Concentrix
+  hq_country: US
+  region: americas
+  industry: technology
+  ats: workday
+  workday:
+    tenant: cnx
+    wd: wd1
+    site: external_global
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
+- id: boehringer
+  name: Boehringer Ingelheim
+  hq_country: DE
+  region: europe
+  industry: pharma_medtech
+  ats: custom
+  adapter: successfactors
+  career_url: https://jobs.boehringer-ingelheim.com
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
+- id: gameloft
+  name: Gameloft
+  hq_country: FR
+  region: europe
+  industry: technology
+  ats: smartrecruiters
+  ats_id: Gameloft
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
+- id: elca
+  name: ELCA
+  hq_country: CH
+  region: europe
+  industry: technology
+  ats: custom
+  adapter: oracle
+  oracle:
+    host: iaaras.fa.ocs.oraclecloud.com
+    site: CX_3
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
+- id: servier
+  name: Servier
+  hq_country: FR
+  region: europe
+  industry: pharma_medtech
+  ats: custom
+  adapter: successfactors
+  career_url: https://jobs.servier.com
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
+- id: novo_nordisk
+  name: Novo Nordisk
+  hq_country: DK
+  region: europe
+  industry: pharma_medtech
+  ats: custom
+  adapter: successfactors
+  career_url: https://careers.novonordisk.com
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
+- id: busch_pfeiffer
+  name: Busch Group (Pfeiffer Vacuum)
+  hq_country: DE
+  region: europe
+  industry: industrial_automation
+  ats: custom
+  adapter: successfactors
+  career_url: https://jobs.buschvacuum.com
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
+- id: dekra
+  name: DEKRA
+  hq_country: DE
+  region: europe
+  industry: testing_inspection
+  ats: custom
+  adapter: successfactors
+  career_url: https://careers.dekra.com
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
+- id: ajax_systems
+  name: Ajax Systems
+  hq_country: UA
+  region: europe
+  industry: technology
+  ats: lever
+  ats_id: ajax
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
+- id: gradion
+  name: Gradion
+  hq_country: DE
+  region: europe
+  industry: technology
+  ats: lever
+  ats_id: gradion
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
+- id: vialto
+  name: Vialto Partners
+  hq_country: GB
+  region: europe
+  industry: consulting_finance
+  ats: workday
+  workday:
+    tenant: vialto
+    wd: wd107
+    site: VialtoExternalCareers
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
+- id: knight_frank
+  name: Knight Frank
+  hq_country: GB
+  region: europe
+  industry: consulting_finance
+  ats: workday
+  workday:
+    tenant: knightfrank
+    wd: wd103
+    site: KF
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
+- id: vantive
+  name: Vantive
+  hq_country: US
+  region: americas
+  industry: pharma_medtech
+  ats: custom
+  adapter: radancy
+  career_url: https://jobs.vantive.com
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
+- id: rkw
+  name: RKW Group
+  hq_country: DE
+  region: europe
+  industry: materials_chemicals
+  ats: custom
+  adapter: successfactors
+  career_url: https://jobs.rkw-group.com
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
+- id: pierre_fabre
+  name: Pierre Fabre
+  hq_country: FR
+  region: europe
+  industry: pharma_medtech
+  ats: workday
+  workday:
+    tenant: pierrefabre
+    wd: wd3
+    site: External_Career_Site
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
+- id: kuka
+  name: KUKA
+  hq_country: DE
+  region: europe
+  industry: industrial_automation
+  ats: custom
+  adapter: successfactors
+  career_url: https://jobs.kuka.com
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
+- id: festo
+  name: Festo
+  hq_country: DE
+  region: europe
+  industry: industrial_automation
+  ats: custom
+  adapter: successfactors
+  career_url: https://jobs.festo.com
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
+- id: dnv
+  name: DNV
+  hq_country: 'NO'
+  region: europe
+  industry: testing_inspection
+  ats: custom
+  adapter: oracle
+  oracle:
+    host: ecyq.fa.em2.oraclecloud.com
+    site: CX_1
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
+- id: astellas
+  name: Astellas
+  hq_country: JP
+  region: asia
+  industry: pharma_medtech
+  ats: custom
+  adapter: successfactors
+  career_url: https://careers.astellas.com
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
+- id: airbus
+  name: Airbus
+  hq_country: FR
+  region: europe
+  industry: industrial_automation
+  ats: workday
+  workday:
+    tenant: ag
+    wd: wd3
+    site: Airbus
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
+- id: jas
+  name: JAS Worldwide
+  hq_country: US
+  region: americas
+  industry: logistics
+  ats: workday
+  workday:
+    tenant: jas
+    wd: wd1
+    site: jascareers
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
+- id: galderma
+  name: Galderma
+  hq_country: CH
+  region: europe
+  industry: pharma_medtech
+  ats: workday
+  workday:
+    tenant: galderma
+    wd: wd3
+    site: External
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
+- id: endress_hauser
+  name: Endress+Hauser
+  hq_country: CH
+  region: europe
+  industry: industrial_automation
+  ats: custom
+  adapter: successfactors
+  career_url: https://careers.endress.com
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via EuroCham member directory (2026-11-21).
+- id: coats
+  name: Coats
+  hq_country: GB
+  region: europe
+  industry: fashion_sports
+  ats: custom
+  adapter: successfactors
+  career_url: https://careers.coats.com
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via AmCham member directory (2026-11-21).
+- id: lrqa
+  name: LRQA
+  hq_country: GB
+  region: europe
+  industry: testing_inspection
+  ats: custom
+  adapter: successfactors
+  career_url: https://jobs.lrqa.com
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via AmCham member directory (2026-11-21).
+- id: cushman_wakefield
+  name: Cushman & Wakefield
+  hq_country: US
+  region: americas
+  industry: consulting_finance
+  ats: workday
+  workday:
+    tenant: cw
+    wd: wd1
+    site: External
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via AmCham member directory (2026-11-21).
+- id: erm
+  name: ERM
+  hq_country: GB
+  region: europe
+  industry: consulting_finance
+  ats: workday
+  workday:
+    tenant: erm
+    wd: wd3
+    site: ERM_Careers
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via AmCham member directory (2026-11-21).
+- id: sherwin_williams
+  name: Sherwin-Williams
+  hq_country: US
+  region: americas
+  industry: materials_chemicals
+  ats: custom
+  adapter: oracle
+  oracle:
+    host: ejhp.fa.us6.oraclecloud.com
+    site: CX_2
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via AmCham member directory (2026-11-21).
+- id: haleon
+  name: Haleon
+  hq_country: GB
+  region: europe
+  industry: nonfood_consumer
+  ats: workday
+  workday:
+    tenant: gsknch
+    wd: wd3
+    site: GSKCareers
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via AmCham member directory (2026-11-21).
+- id: boston_scientific
+  name: Boston Scientific
+  hq_country: US
+  region: americas
+  industry: pharma_medtech
+  ats: custom
+  adapter: successfactors
+  career_url: https://jobs.bostonscientific.com
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via AmCham member directory (2026-11-21).
+- id: ao_shearman
+  name: A&O Shearman
+  hq_country: GB
+  region: europe
+  industry: consulting_finance
+  ats: custom
+  adapter: radancy
+  career_url: https://careers.aoshearman.com
+  active: true
+  verified: true
+  verified_at: '2026-11-21'
+  notes: Found via AmCham member directory (2026-11-21).
