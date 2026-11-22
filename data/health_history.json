@@ -227,5 +227,12 @@
    "lever": 11,
    "ybox": 0
   }
+ },
+ {
+  "run_at": "2026-11-21T23:55:53Z",
+  "total_open": 1741,
+  "sources": {
+   "workday": 0
+  }
  }
 ]
