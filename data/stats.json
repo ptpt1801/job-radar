@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-11-24T00:07:10Z",
- "total_open": 1768,
- "new_7d": 206,
+ "generated_at": "2026-11-24T14:56:31Z",
+ "total_open": 1764,
+ "new_7d": 213,
  "with_salary_pct": 0.1,
- "match_ge70": 376,
+ "match_ge70": 373,
  "companies": 116,
  "by_source": {
-  "workday": 832,
+  "workday": 828,
   "smartrecruiters": 500,
   "custom": 404,
   "greenhouse": 21,
@@ -14,199 +14,199 @@
   "ybox": 1
  },
  "by_city": {
-  "hcmc": 1101,
+  "hcmc": 1096,
   "hanoi": 299,
   "other_vn": 105,
-  "dong_nai": 79,
+  "dong_nai": 80,
   "hai_phong": 76,
-  "bac_ninh": 49,
-  "binh_duong": 37,
+  "bac_ninh": 50,
+  "binh_duong": 36,
   "da_nang": 22
  },
  "by_level": {
-  "experienced": 1224,
-  "manager": 364,
+  "experienced": 1223,
+  "manager": 361,
   "internship": 120,
   "graduate": 60
  },
  "by_function": {
-  "engineering": 599,
-  "sales": 260,
+  "engineering": 600,
+  "sales": 261,
   "it": 194,
-  "supply_chain": 145,
-  "finance": 141,
-  "operations": 140,
-  "other": 94,
+  "supply_chain": 141,
+  "finance": 140,
+  "operations": 139,
+  "other": 95,
   "business": 88,
   "marketing": 48,
-  "legal": 33,
-  "hr": 26
+  "legal": 31,
+  "hr": 27
  },
  "by_industry": {
-  "technology": 343,
+  "technology": 344,
   "consulting_finance": 279,
   "automotive": 240,
   "testing_inspection": 192,
-  "industrial_automation": 178,
-  "pharma_medtech": 171,
-  "logistics": 171,
-  "fashion_sports": 64,
-  "materials_chemicals": 58,
-  "nonfood_consumer": 38,
+  "industrial_automation": 179,
+  "pharma_medtech": 169,
+  "logistics": 168,
+  "fashion_sports": 63,
+  "materials_chemicals": 60,
+  "nonfood_consumer": 36,
   "energy": 34
  },
  "by_hq_country": {
-  "US": 536,
+  "US": 537,
   "DE": 335,
   "CH": 237,
-  "GB": 147,
+  "GB": 145,
   "SG": 118,
-  "JP": 94,
-  "FR": 82,
-  "DK": 73,
+  "JP": 95,
+  "FR": 84,
+  "DK": 69,
   "NL": 47,
   "AU": 45,
-  "IE": 25,
+  "IE": 22,
   "CA": 17,
+  "HK": 5,
   "UA": 4,
-  "HK": 4,
   "NO": 2,
   "FI": 2
  },
  "by_company": {
   "Bosch": 220,
   "SGS": 158,
-  "Hitachi": 91,
-  "Jabil": 77,
+  "Hitachi": 92,
+  "Jabil": 79,
   "UOB": 61,
-  "Maersk": 57,
   "Grab": 55,
+  "Maersk": 54,
   "EY Vietnam": 50,
-  "VF Corporation": 49,
+  "VF Corporation": 48,
   "Synopsys": 45,
   "DHL Group": 43,
   "Avery Dennison": 42,
-  "Abbott": 35,
+  "Abbott": 34,
   "Damen Shipyards": 32,
-  "NVIDIA": 29,
+  "NVIDIA": 28,
   "Aurecon": 26,
   "Standard Chartered": 25,
   "Bureau Veritas": 25,
   "Qualcomm": 24,
   "AstraZeneca": 21,
-  "PwC Vietnam": 20,
   "Kuehne+Nagel": 20,
-  "JLL": 19,
+  "PwC Vietnam": 19,
   "Concentrix": 19,
   "ABB": 18,
+  "JLL": 18,
   "Manulife": 17,
   "Toll Group": 17,
-  "Medtronic": 17,
   "Schneider Electric": 16,
   "Cisco": 15,
   "DKSH": 15,
+  "Medtronic": 14,
   "Procter & Gamble": 14,
   "Siemens": 14,
   "KPMG Vietnam": 14,
   "Axon": 13,
   "Boehringer Ingelheim": 12,
+  "Baker Hughes": 11,
   "GSK": 11,
+  "Pfizer": 11,
+  "Rhenus Logistics": 11,
   "Schaeffler": 11,
   "Gameloft": 11,
-  "Baker Hughes": 11,
-  "Rhenus Logistics": 11,
   "Infineon": 11,
-  "Pfizer": 9,
   "Nike": 9,
-  "LEGO Group": 9,
+  "Michelin": 9,
   "L'Oréal": 9,
   "Expeditors": 9,
   "ELCA": 9,
-  "Michelin": 9,
+  "3M": 8,
+  "LEGO Group": 8,
   "Accenture": 8,
   "Visa": 8,
-  "3M": 8,
   "Flexport": 8,
   "GE Vernova": 7,
-  "Roche": 6,
-  "Marvell": 6,
-  "Novo Nordisk": 6,
-  "Carrier": 6,
   "Intel": 6,
-  "Thermo Fisher Scientific": 5,
-  "Endava": 5,
-  "Kimberly-Clark": 5,
-  "Mastercard": 5,
-  "DEKRA": 5,
+  "Marvell": 6,
+  "Carrier": 6,
+  "Air Liquide": 6,
+  "Roche": 6,
+  "Cushman & Wakefield": 6,
+  "Novo Nordisk": 6,
   "Novartis": 5,
+  "Mastercard": 5,
+  "Thermo Fisher Scientific": 5,
+  "FWD Insurance": 5,
+  "Endava": 5,
+  "DEKRA": 5,
   "Corning": 5,
-  "Cushman & Wakefield": 4,
-  "Air Liquide": 4,
-  "Ajax Systems": 4,
-  "Johnson & Johnson": 4,
-  "FWD Insurance": 4,
-  "Vialto Partners": 4,
+  "Kimberly-Clark": 4,
   "Dow": 4,
-  "Gradion": 4,
+  "Johnson & Johnson": 4,
   "MSD": 4,
-  "Schindler": 4,
   "Workday": 4,
+  "Ajax Systems": 4,
+  "Gradion": 4,
+  "Schindler": 4,
   "Thornton Tomasetti": 4,
+  "Vialto Partners": 3,
+  "Knight Frank": 3,
+  "ERM": 3,
   "Servier": 3,
   "Brooks Running": 3,
   "Microsoft": 3,
-  "ERM": 3,
-  "Knight Frank": 3,
-  "GE HealthCare": 2,
+  "PVH": 2,
   "Ecolab": 2,
+  "Pierre Fabre": 2,
+  "Airbus": 2,
+  "GE HealthCare": 2,
   "ANZ": 2,
   "DNV": 2,
   "LRQA": 2,
   "Merck KGaA (Merck Healthcare)": 2,
-  "Airbus": 2,
   "Takeda": 2,
   "UPS": 2,
-  "PVH": 2,
   "Vantive": 2,
   "Nokia": 2,
   "Ninja Van": 2,
-  "Pierre Fabre": 2,
   "Sanofi": 1,
-  "Bayer": 1,
-  "Haleon": 1,
-  "Baxter": 1,
+  "Philips": 1,
   "HP Inc.": 1,
-  "Galderma": 1,
   "Citi": 1,
+  "Baxter": 1,
+  "Bayer": 1,
+  "JAS Worldwide": 1,
+  "Galderma": 1,
+  "Haleon": 1,
   "Astellas": 1,
   "Endress+Hauser": 1,
   "KUKA": 1,
   "Coats": 1,
   "Boston Scientific": 1,
-  "Philips": 1,
   "Lineage (cold-chain logistics)": 1,
   "Sherwin-Williams": 1,
-  "JAS Worldwide": 1,
   "Danaher": 1,
   "A&O Shearman": 1,
   "Danfoss": 1
  },
  "top_skills": {
-  "english": 1719,
-  "communication": 567,
-  "data_analysis": 548,
-  "problem_solving": 500,
-  "leadership": 460,
-  "excel": 458,
-  "logistics": 333,
+  "english": 1715,
+  "communication": 565,
+  "data_analysis": 547,
+  "problem_solving": 495,
+  "excel": 455,
+  "leadership": 455,
+  "logistics": 330,
   "project_management": 290,
-  "presentation": 254,
-  "negotiation": 250,
+  "presentation": 253,
+  "negotiation": 249,
   "procurement": 228,
   "python": 203,
   "stakeholder_management": 162,
-  "chinese": 132,
-  "sap": 132
+  "sap": 133,
+  "chinese": 132
  },
  "weekly_new": {
   "2026-06-01": 13,
@@ -216,59 +216,39 @@
   "2026-06-29": 19,
   "2026-07-06": 21,
   "2026-07-13": 17,
-  "2026-07-20": 21,
+  "2026-07-20": 20,
   "2026-07-27": 14,
   "2026-08-03": 18,
   "2026-08-10": 27,
   "2026-08-17": 39,
-  "2026-08-24": 36,
+  "2026-08-24": 35,
   "2026-08-31": 23,
   "2026-09-07": 48,
-  "2026-09-14": 60,
-  "2026-09-21": 67,
-  "2026-09-28": 61,
-  "2026-10-05": 82,
-  "2026-10-12": 85,
-  "2026-10-19": 111,
-  "2026-10-26": 130,
+  "2026-09-14": 58,
+  "2026-09-21": 66,
+  "2026-09-28": 60,
+  "2026-10-05": 81,
+  "2026-10-12": 84,
+  "2026-10-19": 110,
+  "2026-10-26": 129,
   "2026-11-02": 184,
   "2026-11-09": 210,
-  "2026-11-16": 206,
-  "2026-11-23": 12
+  "2026-11-16": 202,
+  "2026-11-23": 23
  },
  "match_hist": {
   "0": 1,
   "10": 7,
   "20": 23,
   "30": 146,
-  "40": 264,
-  "50": 427,
-  "60": 524,
-  "70": 291,
+  "40": 263,
+  "50": 432,
+  "60": 519,
+  "70": 289,
   "80": 70,
-  "90": 15
+  "90": 14
  },
  "heatmap": [
-  {
-   "function": "sales",
-   "level": "experienced",
-   "n": 154
-  },
-  {
-   "function": "marketing",
-   "level": "experienced",
-   "n": 16
-  },
-  {
-   "function": "operations",
-   "level": "experienced",
-   "n": 95
-  },
-  {
-   "function": "engineering",
-   "level": "manager",
-   "n": 67
-  },
   {
    "function": "it",
    "level": "experienced",
@@ -276,33 +256,33 @@
   },
   {
    "function": "engineering",
+   "level": "manager",
+   "n": 67
+  },
+  {
+   "function": "engineering",
    "level": "experienced",
-   "n": 467
+   "n": 468
   },
   {
    "function": "supply_chain",
    "level": "experienced",
-   "n": 94
+   "n": 92
   },
   {
-   "function": "other",
+   "function": "finance",
+   "level": "experienced",
+   "n": 87
+  },
+  {
+   "function": "supply_chain",
    "level": "manager",
-   "n": 28
+   "n": 38
   },
   {
    "function": "operations",
    "level": "manager",
-   "n": 24
-  },
-  {
-   "function": "legal",
-   "level": "manager",
-   "n": 8
-  },
-  {
-   "function": "marketing",
-   "level": "manager",
-   "n": 26
+   "n": 23
   },
   {
    "function": "engineering",
@@ -310,9 +290,79 @@
    "n": 36
   },
   {
-   "function": "operations",
-   "level": "internship",
+   "function": "legal",
+   "level": "experienced",
+   "n": 19
+  },
+  {
+   "function": "sales",
+   "level": "experienced",
+   "n": 154
+  },
+  {
+   "function": "sales",
+   "level": "manager",
+   "n": 95
+  },
+  {
+   "function": "marketing",
+   "level": "experienced",
    "n": 16
+  },
+  {
+   "function": "other",
+   "level": "experienced",
+   "n": 54
+  },
+  {
+   "function": "marketing",
+   "level": "manager",
+   "n": 26
+  },
+  {
+   "function": "other",
+   "level": "manager",
+   "n": 29
+  },
+  {
+   "function": "sales",
+   "level": "graduate",
+   "n": 4
+  },
+  {
+   "function": "operations",
+   "level": "experienced",
+   "n": 95
+  },
+  {
+   "function": "business",
+   "level": "experienced",
+   "n": 65
+  },
+  {
+   "function": "business",
+   "level": "manager",
+   "n": 17
+  },
+  {
+   "function": "hr",
+   "level": "experienced",
+   "n": 20
+  },
+  {
+   "function": "legal",
+   "level": "manager",
+   "n": 7
+  },
+  {
+   "function": "it",
+   "level": "internship",
+   "n": 19
+  },
+  {
+   "function": "it",
+   "level": "manager",
+   "n": 13
   },
   {
    "function": "hr",
@@ -321,8 +371,18 @@
   },
   {
    "function": "supply_chain",
+   "level": "internship",
+   "n": 8
+  },
+  {
+   "function": "finance",
    "level": "manager",
-   "n": 39
+   "n": 42
+  },
+  {
+   "function": "other",
+   "level": "internship",
+   "n": 9
   },
   {
    "function": "marketing",
@@ -332,27 +392,32 @@
   {
    "function": "sales",
    "level": "internship",
-   "n": 7
+   "n": 8
   },
   {
-   "function": "other",
+   "function": "operations",
    "level": "internship",
-   "n": 9
+   "n": 16
   },
   {
-   "function": "sales",
-   "level": "manager",
-   "n": 95
+   "function": "legal",
+   "level": "graduate",
+   "n": 3
+  },
+  {
+   "function": "engineering",
+   "level": "graduate",
+   "n": 29
+  },
+  {
+   "function": "hr",
+   "level": "internship",
+   "n": 3
   },
   {
    "function": "finance",
-   "level": "experienced",
-   "n": 87
-  },
-  {
-   "function": "business",
-   "level": "manager",
-   "n": 17
+   "level": "internship",
+   "n": 8
   },
   {
    "function": "business",
@@ -365,39 +430,9 @@
    "n": 2
   },
   {
-   "function": "business",
-   "level": "experienced",
-   "n": 65
-  },
-  {
-   "function": "it",
-   "level": "internship",
-   "n": 19
-  },
-  {
-   "function": "supply_chain",
-   "level": "internship",
-   "n": 9
-  },
-  {
-   "function": "hr",
-   "level": "experienced",
-   "n": 19
-  },
-  {
-   "function": "other",
-   "level": "experienced",
-   "n": 54
-  },
-  {
    "function": "finance",
    "level": "graduate",
    "n": 3
-  },
-  {
-   "function": "finance",
-   "level": "internship",
-   "n": 8
   },
   {
    "function": "business",
@@ -405,29 +440,9 @@
    "n": 1
   },
   {
-   "function": "finance",
-   "level": "manager",
-   "n": 43
-  },
-  {
    "function": "it",
    "level": "graduate",
    "n": 9
-  },
-  {
-   "function": "it",
-   "level": "manager",
-   "n": 13
-  },
-  {
-   "function": "engineering",
-   "level": "graduate",
-   "n": 29
-  },
-  {
-   "function": "legal",
-   "level": "experienced",
-   "n": 20
   },
   {
    "function": "supply_chain",
@@ -443,21 +458,6 @@
    "function": "other",
    "level": "graduate",
    "n": 3
-  },
-  {
-   "function": "legal",
-   "level": "graduate",
-   "n": 3
-  },
-  {
-   "function": "hr",
-   "level": "internship",
-   "n": 3
-  },
-  {
-   "function": "sales",
-   "level": "graduate",
-   "n": 4
   }
  ]
 }
