@@ -1,16 +1,16 @@
 {
- "last_run_at": "2026-11-24T16:41:35Z",
- "next_run_at": "2026-11-24T19:00:00Z",
+ "last_run_at": "2026-11-24T19:49:59Z",
+ "next_run_at": "2026-11-25T19:00:00Z",
  "cv_version": "2026-11",
  "has_profile": true,
  "extractor": "rules",
  "show_skill_tags": false,
- "total_open": 1731,
+ "total_open": 1730,
  "companies_active": 120,
  "companies_with_jobs": 116,
  "last_run": {
-  "new": 1,
-  "closed": 12
+  "new": 0,
+  "closed": 3
  },
  "rules_hash": "3b87c1d34ffb"
 }

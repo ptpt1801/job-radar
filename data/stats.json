@@ -1,20 +1,20 @@
 {
- "generated_at": "2026-11-24T16:41:35Z",
- "total_open": 1731,
+ "generated_at": "2026-11-24T19:49:59Z",
+ "total_open": 1730,
  "new_7d": 212,
  "with_salary_pct": 0.1,
  "match_ge70": 362,
  "companies": 116,
  "by_source": {
   "workday": 828,
-  "smartrecruiters": 484,
+  "smartrecruiters": 483,
   "custom": 387,
   "greenhouse": 21,
   "lever": 10,
   "ybox": 1
  },
  "by_city": {
-  "hcmc": 1071,
+  "hcmc": 1070,
   "hanoi": 293,
   "other_vn": 104,
   "dong_nai": 79,
@@ -24,7 +24,7 @@
   "da_nang": 22
  },
  "by_level": {
-  "experienced": 1204,
+  "experienced": 1203,
   "manager": 356,
   "internship": 119,
   "graduate": 52
@@ -34,7 +34,7 @@
   "sales": 253,
   "it": 193,
   "supply_chain": 140,
-  "finance": 139,
+  "finance": 138,
   "operations": 137,
   "other": 95,
   "business": 88,
@@ -48,7 +48,7 @@
   "automotive": 238,
   "testing_inspection": 180,
   "industrial_automation": 178,
-  "logistics": 167,
+  "logistics": 166,
   "pharma_medtech": 165,
   "fashion_sports": 63,
   "materials_chemicals": 58,
@@ -56,7 +56,7 @@
   "energy": 34
  },
  "by_hq_country": {
-  "US": 531,
+  "US": 530,
   "DE": 327,
   "CH": 225,
   "GB": 140,
@@ -116,11 +116,11 @@
   "Baker Hughes": 11,
   "Rhenus Logistics": 11,
   "Schaeffler": 10,
-  "Expeditors": 9,
   "L'Oréal": 9,
   "ELCA": 9,
   "Nike": 9,
   "Michelin": 9,
+  "Expeditors": 8,
   "Flexport": 8,
   "Boehringer Ingelheim": 8,
   "Accenture": 8,
@@ -192,19 +192,19 @@
   "JAS Worldwide": 1
  },
  "top_skills": {
-  "english": 1683,
+  "english": 1682,
   "communication": 550,
-  "data_analysis": 544,
-  "problem_solving": 491,
-  "leadership": 452,
-  "excel": 450,
-  "logistics": 324,
+  "data_analysis": 543,
+  "problem_solving": 490,
+  "leadership": 451,
+  "excel": 449,
+  "logistics": 323,
   "project_management": 288,
   "negotiation": 249,
   "presentation": 248,
   "procurement": 226,
   "python": 203,
-  "stakeholder_management": 161,
+  "stakeholder_management": 160,
   "sap": 130,
   "chinese": 127
  },
@@ -229,11 +229,11 @@
   "2026-09-28": 60,
   "2026-10-05": 80,
   "2026-10-12": 86,
-  "2026-10-19": 107,
+  "2026-10-19": 106,
   "2026-10-26": 126,
-  "2026-11-02": 186,
+  "2026-11-02": 187,
   "2026-11-09": 207,
-  "2026-11-16": 199,
+  "2026-11-16": 200,
   "2026-11-23": 29
  },
  "match_hist": {
@@ -242,7 +242,7 @@
   "20": 20,
   "30": 141,
   "40": 260,
-  "50": 427,
+  "50": 426,
   "60": 513,
   "70": 280,
   "80": 68,
@@ -267,7 +267,7 @@
   {
    "function": "finance",
    "level": "experienced",
-   "n": 87
+   "n": 86
   },
   {
    "function": "engineering",
