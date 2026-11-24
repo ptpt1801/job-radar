@@ -33,9 +33,13 @@ def alerts(health: dict, history: list[dict], cfg: dict) -> list[str]:
         if avg_total and health["total_open"] < avg_total * (1 - cfg["drop_pct_alert"] / 100):
             out.append(f"Open jobs dropped to {health['total_open']} (7-run average {avg_total:.0f}).")
     comps = health.get("companies", {})
-    failed = [c for c, v in comps.items() if not v.get("ok")]
-    if comps and len(failed) / len(comps) > 0.2:
-        out.append(f"{len(failed)}/{len(comps)} companies failed to fetch (e.g. {', '.join(failed[:5])}).")
+    # HTTP 429 = rate limit (Workday blocks GitHub runner IPs); expected and covered by the owner-PC
+    # run + stale hiding, so it does not count as a broken source.
+    limited = {c for c, v in comps.items() if not v.get("ok") and "429" in str(v.get("error") or "")}
+    failed = [c for c, v in comps.items() if not v.get("ok") and c not in limited]
+    base = len(comps) - len(limited)
+    if base and len(failed) / base > 0.2:
+        out.append(f"{len(failed)}/{base} companies failed to fetch (e.g. {', '.join(failed[:5])}).")
     if health["schema_errors_pct"] > cfg["schema_errors_pct_alert"]:
         out.append(f"Schema errors at {health['schema_errors_pct']}% of jobs.")
     return out
@@ -62,3 +66,22 @@ def open_or_update_issue(problems: list[str], run_url: str | None = None) -> str
         return f"opened #{r.json().get('number')}" if r.ok else f"issue create failed {r.status_code}"
     except requests.RequestException as e:
         return f"issue error {e}"
+
+
+def close_issue_if_healthy() -> str | None:
+    """Close the open health issue after a full run with no problems."""
+    token, repo = os.environ.get("GITHUB_TOKEN"), os.environ.get("GITHUB_REPOSITORY")
+    if not (token and repo):
+        return None
+    h = {"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"}
+    api = f"https://api.github.com/repos/{repo}"
+    try:
+        r = requests.get(f"{api}/issues", params={"state": "open", "labels": ISSUE_LABEL}, headers=h, timeout=20)
+        for i in (r.json() if r.ok else []):
+            if i.get("title") == "Job Radar health alert":
+                requests.post(f"{api}/issues/{i['number']}/comments", json={"body": "Full run healthy again; closing automatically."}, headers=h, timeout=20)
+                requests.patch(f"{api}/issues/{i['number']}", json={"state": "closed"}, headers=h, timeout=20)
+                return f"closed #{i['number']}"
+    except requests.RequestException as e:
+        return f"issue error {e}"
+    return None

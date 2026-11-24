@@ -18,10 +18,18 @@ function Invoke-Retry([scriptblock]$block, [int]$tries = 4) {
     return $false
 }
 
+# Logon trigger catches up on runs missed while the PC was off; skip if a run succeeded recently.
+$okFile = Join-Path $repo "logs\last_ok.txt"
+if ($args -contains "-IfStale" -and (Test-Path $okFile) -and ((Get-Date) - (Get-Item $okFile).LastWriteTime).TotalHours -lt 8) { exit 0 }
+
+# Keep the PC awake while this runs (idle sleep killed a run on 2026-11-22).
+Add-Type -Namespace JR -Name Power -MemberDefinition '[DllImport("kernel32.dll")] public static extern uint SetThreadExecutionState(uint f);'
+[JR.Power]::SetThreadExecutionState([uint32]"0x80000001") | Out-Null   # ES_CONTINUOUS | ES_SYSTEM_REQUIRED
+
 Write-Log "start"
 # The GitHub bot owns data/: drop any leftover local data changes before syncing.
 git restore --staged --worktree data site/i18n/taxonomy.json 2>$null
-if (-not (Invoke-Retry { git pull --rebase -q origin main 2>&1 | Out-File $log -Append -Encoding utf8 })) { Write-Log "git pull failed; stop"; exit 1 }
+if (-not (Invoke-Retry { git pull --rebase --autostash -q origin main 2>&1 | Out-File $log -Append -Encoding utf8 })) { Write-Log "git pull failed; stop"; exit 1 }
 
 $py = Join-Path $repo ".venv\Scripts\python.exe"
 $env:PYTHONIOENCODING = "utf-8"
@@ -37,12 +45,13 @@ if ($LASTEXITCODE -ne 0) { Write-Log "privacy guard FAILED; data not pushed"; gi
 
 git add data site/i18n/taxonomy.json
 git diff --cached --quiet
-if ($LASTEXITCODE -eq 0) { Write-Log "no data changes"; exit 0 }
+if ($LASTEXITCODE -eq 0) { Write-Log "no data changes"; Set-Content -Path $okFile -Value (Get-Date -Format s); exit 0 }
 $new = & $py -c "import json;print(json.load(open('data/meta.json'))['last_run']['new'])"
 git commit -q -m "data: workday local update $(Get-Date -Format 'yyyy-MM-dd HH:mm') (+$new new)"
 # If the bot pushed meanwhile, keep this run's fresh data on conflicts.
-$ok = Invoke-Retry { git pull --rebase -X theirs -q origin main 2>&1 | Out-File $log -Append -Encoding utf8; if ($LASTEXITCODE -eq 0) { git push -q origin main 2>&1 | Out-File $log -Append -Encoding utf8 } }
+$ok = Invoke-Retry { git pull --rebase --autostash -X theirs -q origin main 2>&1 | Out-File $log -Append -Encoding utf8; if ($LASTEXITCODE -eq 0) { git push -q origin main 2>&1 | Out-File $log -Append -Encoding utf8 } }
 if (-not $ok) { Write-Log "push failed; will retry next run" ; exit 1 }
 Write-Log "done (+$new new)"
+Set-Content -Path $okFile -Value (Get-Date -Format s)
 Get-ChildItem (Join-Path $repo "logs") -Filter "workday-local-*.log" | Sort-Object LastWriteTime -Descending | Select-Object -Skip 30 | Remove-Item -Force
 exit 0

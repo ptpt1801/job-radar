@@ -415,6 +415,8 @@ def main(argv=None):
     if problems and os.environ.get("GITHUB_ACTIONS"):
         run_url = f"{os.environ.get('GITHUB_SERVER_URL')}/{os.environ.get('GITHUB_REPOSITORY')}/actions/runs/{os.environ.get('GITHUB_RUN_ID')}"
         print("issue:", health.open_or_update_issue(problems, run_url))
+    elif not problems and not (a.companies or a.limit_companies or a.only_ats or a.slot) and os.environ.get("GITHUB_ACTIONS"):
+        print("issue:", health.close_issue_if_healthy())
     return 0
 
 
