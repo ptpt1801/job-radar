@@ -1,17 +1,5 @@
 [
  {
-  "run_at": "2026-11-18T19:45:37Z",
-  "total_open": 1055,
-  "sources": {
-   "smartrecruiters": 479,
-   "custom": 28,
-   "workday": 71,
-   "greenhouse": 24,
-   "lever": 2,
-   "ybox": 0
-  }
- },
- {
   "run_at": "2026-11-19T03:29:28Z",
   "total_open": 1053,
   "sources": {
@@ -246,6 +234,17 @@
   "total_open": 1764,
   "sources": {
    "workday": 884
+  }
+ },
+ {
+  "run_at": "2026-11-24T16:41:35Z",
+  "total_open": 1731,
+  "sources": {
+   "smartrecruiters": 500,
+   "custom": 404,
+   "greenhouse": 21,
+   "lever": 10,
+   "ybox": 1
   }
  }
 ]
