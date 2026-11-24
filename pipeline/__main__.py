@@ -174,12 +174,13 @@ def main(argv=None):
     pending = db["state"].get("pending", {})
     prev_all = dict(prev_open)
     prev_all.update({k: v["job"] for k, v in pending.items()})
+    desc_cache = store.load_desc()
     prev_by_raw: dict[str, dict] = defaultdict(dict)
     if a.only_new:
         for j in prev_all.values():
-            prev_by_raw[j["company_id"]][j["source_job_id"].split(":", 1)[1]] = j
-
-    desc_cache = store.load_desc()
+            # jobs missing from the description cache are fetched again once, so the cache heals itself
+            if j["id"] in desc_cache:
+                prev_by_raw[j["company_id"]][j["source_job_id"].split(":", 1)[1]] = j
     rh = rules_hash()
     reenrich = a.reenrich or db["meta"].get("rules_hash") != rh
     reports, collected, drops = {}, [], defaultdict(int)
@@ -200,8 +201,10 @@ def main(argv=None):
                         continue
                     j["_reused"] = True
                     hint = desc_cache.get(j["id"])
+                    if hint:
+                        j["_desc"] = hint.get("d") or ""   # dedupe compares descriptions
                     if reenrich and hint:
-                        j.update(_desc=hint.get("d") or "", _level_raw=hint.get("lv"), _function_raw=hint.get("fn"), _salary=hint.get("sal"))
+                        j.update(_level_raw=hint.get("lv"), _function_raw=hint.get("fn"), _salary=hint.get("sal"))
                         safe_enrich(j)
                 else:
                     cc = all_cos.get(raw.get("company_id_override"), c)
@@ -242,6 +245,8 @@ def main(argv=None):
                     if raw.get("is_open") is False or (j.get("deadline") and j["deadline"] < jfilter.today_vn(now).isoformat()):
                         continue
                     j["_reused"] = True
+                    if desc_cache.get(j["id"]):
+                        j["_desc"] = desc_cache[j["id"]].get("d") or ""
                 else:
                     j = normalize(raw, c, now)
                     why = jfilter.reason_to_drop(j, c, now)
@@ -266,7 +271,8 @@ def main(argv=None):
         llm = {"mode": "rules", "jobs": 0, "input_tokens": 0, "output_tokens": 0, "est_cost_usd": 0}
 
     jobs, merged = dedupe.dedupe(collected)
-    seen = {j["id"] for j in jobs}
+    # postings merged into another card are still listed at the source: not missing, not closed
+    seen = {j["id"] for j in jobs} | {m for j in jobs for m in j.get("_merged_ids", [])}
 
     # carry over jobs of companies whose fetch failed (do not count them as missing)
     failed = {cid for cid, r in reports.items() if not r["ok"]}

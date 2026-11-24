@@ -38,6 +38,10 @@
     "source_job_id": {
       "type": "string"
     },
+    "openings": {
+      "type": ["integer", "null"],
+      "minimum": 2
+    },
     "also_on": {
       "type": "array",
       "items": {

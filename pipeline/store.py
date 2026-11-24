@@ -99,20 +99,23 @@ def write_site_json(rel: str, obj):
 # ---- description cache (scrubbed text + raw hints) so rules can be re-applied without refetching ----
 import gzip  # noqa: E402
 
-CACHE = DATA / "cache" / "descriptions.json.gz"
+def cache_path():
+    # resolved on each call so a patched DATA (tests) never touches the real cache
+    return DATA / "cache" / "descriptions.json.gz"
 
 
 def load_desc() -> dict:
-    if not CACHE.exists():
+    if not cache_path().exists():
         return {}
     try:
-        with gzip.open(CACHE, "rt", encoding="utf-8") as f:
+        with gzip.open(cache_path(), "rt", encoding="utf-8") as f:
             return json.load(f)
     except (OSError, json.JSONDecodeError):
         return {}
 
 
 def save_desc(cache: dict):
-    CACHE.parent.mkdir(parents=True, exist_ok=True)
-    with gzip.GzipFile(CACHE, "wb", mtime=0) as g:
+    path = cache_path()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with gzip.GzipFile(path, "wb", mtime=0) as g:
         g.write(json.dumps(cache, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8"))

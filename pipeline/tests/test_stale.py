@@ -33,3 +33,11 @@ def test_failed_source_hides_only_stale_jobs(tmp_path, monkeypatch):
     assert shown == {"a" * 12}                       # fresh job still shown
     assert state["b" * 12]["stale"] is True           # stale job hidden but kept
     assert not json.loads((tmp_path / "archive.json").read_text(encoding="utf-8"))["jobs"]  # nothing closed
+
+
+def test_run_with_patched_data_does_not_touch_real_cache(tmp_path, monkeypatch):
+    real = store.cache_path()
+    before = real.read_bytes() if real.exists() else None
+    test_failed_source_hides_only_stale_jobs(tmp_path, monkeypatch)
+    assert (tmp_path / "cache" / "descriptions.json.gz").exists()
+    assert (real.read_bytes() if real.exists() else None) == before

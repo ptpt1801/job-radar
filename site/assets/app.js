@@ -130,7 +130,7 @@
     return '<article class="card job' + (showM ? '' : ' noring') + '" data-id="' + esc(j.id) + '">'
       + (showM ? '<div class="ring" style="' + ringStyle(j.match) + '">' + j.match + '%</div>' : '')
       + '<div><button class="toggle" aria-expanded="' + isOpen + '" data-open="' + esc(j.id) + '"><h3>' + esc(j.title) + '</h3></button>'
-      + '<div class="meta"><b style="color:var(--ink)">' + esc(j.company) + '</b><span>' + esc(L('city', j.city)) + '</span><span>' + esc(L('industry', j.industry)) + '</span><span>' + esc(L('level', j.level)) + '</span>' + (j.work_mode ? '<span>' + esc(L('mode', j.work_mode)) + '</span>' : '') + '</div>'
+      + '<div class="meta"><b style="color:var(--ink)">' + esc(j.company) + '</b><span>' + esc(L('city', j.city)) + '</span><span>' + esc(L('industry', j.industry)) + '</span><span>' + esc(L('level', j.level)) + '</span>' + (j.openings > 1 ? '<span>' + T('openings', { n: j.openings }) + '</span>' : '') + (j.work_mode ? '<span>' + esc(L('mode', j.work_mode)) + '</span>' : '') + '</div>'
       + '<div class="tags">' + tags + '</div></div>'
       + '<div class="side">' + (j.daysAgo < 2 ? '<span class="badge-new">' + T('isNew') + '</span>' : '') + '<b>' + esc(salaryText(j.salary)) + '</b><span class="muted" style="font-size:13px">' + (j.daysAgo ? T('postedAgo', { n: j.daysAgo }) : T('postedToday')) + '</span><span style="font-size:13px">' + dl + '</span>' + (st ? '<span class="tag" style="background:var(--yellow-soft)">' + T('st_' + st) + '</span>' : '') + '</div>'
       + (isOpen ? '<div class="open"><dl><dt>' + T('address') + '</dt><dd>' + esc(addr.join(' · ') || T('notDisclosed')) + '</dd><dt>' + T('hq') + '</dt><dd>' + esc(L('hq', j.hq_country)) + ' (' + esc(L('region', j.region)) + ')</dd>'

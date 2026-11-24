@@ -147,6 +147,7 @@
  "u_EUR_year": "EUR/year",
  "u_EUR_hour": "EUR/hour",
  "summary": "Summary",
+ "openings": "{n} openings",
  "alsoOn": "Also posted on",
  "emp_internship": "Internship",
  "emp_full_time": "Full-time",

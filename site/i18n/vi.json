@@ -147,6 +147,7 @@
  "u_EUR_year": "EUR/năm",
  "u_EUR_hour": "EUR/giờ",
  "summary": "Mô tả ngắn",
+ "openings": "Tuyển {n} vị trí",
  "alsoOn": "Cũng đăng trên",
  "emp_internship": "Thực tập",
  "emp_full_time": "Toàn thời gian",
