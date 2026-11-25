@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-11-25T00:34:07Z",
- "total_open": 1687,
+ "generated_at": "2026-11-25T01:01:06Z",
+ "total_open": 1689,
  "new_7d": 189,
  "with_salary_pct": 0.1,
  "match_ge70": 354,
  "companies": 116,
  "by_source": {
-  "workday": 785,
+  "workday": 787,
   "smartrecruiters": 483,
   "custom": 387,
   "greenhouse": 21,
@@ -17,25 +17,25 @@
   "hcmc": 1047,
   "hanoi": 286,
   "other_vn": 99,
-  "dong_nai": 76,
+  "dong_nai": 77,
   "hai_phong": 76,
   "bac_ninh": 49,
-  "binh_duong": 32,
+  "binh_duong": 33,
   "da_nang": 22
  },
  "by_level": {
-  "experienced": 1165,
+  "experienced": 1167,
   "manager": 351,
   "internship": 119,
   "graduate": 52
  },
  "by_function": {
-  "engineering": 557,
+  "engineering": 558,
   "sales": 251,
   "it": 193,
   "finance": 136,
   "operations": 134,
-  "supply_chain": 131,
+  "supply_chain": 132,
   "other": 94,
   "business": 86,
   "marketing": 48,
@@ -43,27 +43,27 @@
   "hr": 26
  },
  "by_industry": {
-  "technology": 326,
+  "technology": 327,
   "consulting_finance": 264,
   "automotive": 238,
   "testing_inspection": 180,
   "industrial_automation": 173,
+  "logistics": 162,
   "pharma_medtech": 161,
-  "logistics": 161,
   "fashion_sports": 57,
   "materials_chemicals": 57,
   "nonfood_consumer": 36,
   "energy": 34
  },
  "by_hq_country": {
-  "US": 510,
+  "US": 511,
   "DE": 327,
   "CH": 225,
   "GB": 137,
   "SG": 116,
   "JP": 90,
   "FR": 83,
-  "DK": 66,
+  "DK": 67,
   "NL": 47,
   "AU": 35,
   "IE": 21,
@@ -77,10 +77,10 @@
   "Bosch": 219,
   "SGS": 146,
   "Hitachi": 87,
-  "Jabil": 76,
+  "Jabil": 77,
   "UOB": 61,
   "Grab": 53,
-  "Maersk": 51,
+  "Maersk": 52,
   "EY Vietnam": 50,
   "VF Corporation": 42,
   "DHL Group": 42,
@@ -192,13 +192,13 @@
   "Danfoss": 1
  },
  "top_skills": {
-  "english": 1640,
+  "english": 1642,
   "communication": 534,
-  "data_analysis": 528,
+  "data_analysis": 529,
   "problem_solving": 480,
-  "leadership": 442,
+  "leadership": 443,
   "excel": 432,
-  "logistics": 314,
+  "logistics": 315,
   "project_management": 277,
   "presentation": 245,
   "negotiation": 244,
@@ -226,14 +226,14 @@
   "2026-09-07": 46,
   "2026-09-14": 58,
   "2026-09-21": 61,
-  "2026-09-28": 60,
+  "2026-09-28": 61,
   "2026-10-05": 79,
   "2026-10-12": 87,
   "2026-10-19": 102,
   "2026-10-26": 130,
   "2026-11-02": 186,
   "2026-11-09": 202,
-  "2026-11-16": 196,
+  "2026-11-16": 197,
   "2026-11-23": 29
  },
  "match_hist": {
@@ -242,8 +242,8 @@
   "20": 20,
   "30": 138,
   "40": 251,
-  "50": 415,
-  "60": 501,
+  "50": 416,
+  "60": 502,
   "70": 275,
   "80": 66,
   "90": 13
@@ -262,12 +262,12 @@
   {
    "function": "engineering",
    "level": "experienced",
-   "n": 434
+   "n": 435
   },
   {
    "function": "supply_chain",
    "level": "experienced",
-   "n": 85
+   "n": 86
   },
   {
    "function": "finance",

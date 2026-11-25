@@ -1,12 +1,12 @@
 {
- "run_at": "2026-11-25T00:34:07Z",
- "total_open": 1687,
- "new": 1,
- "closed": 18,
+ "run_at": "2026-11-25T01:01:06Z",
+ "total_open": 1689,
+ "new": 2,
+ "closed": 0,
  "pending_missing": 1,
  "stale_hidden": 0,
  "stale_hidden_by_company": {},
- "merged_duplicates": 44,
+ "merged_duplicates": 42,
  "dropped": {
   "excluded_keyword": 56
  },
@@ -23,7 +23,7 @@
    "jobs_found": 885,
    "jobs_kept": 829,
    "http_errors": 0,
-   "duration_s": 2731.2,
+   "duration_s": 1921.6,
    "companies": 61
   }
  },
@@ -33,7 +33,7 @@
    "adapter": "workday",
    "jobs_found": 9,
    "jobs_kept": 9,
-   "duration_s": 18.6,
+   "duration_s": 12.6,
    "error": null
   },
   "intel": {
@@ -41,7 +41,7 @@
    "adapter": "workday",
    "jobs_found": 6,
    "jobs_kept": 6,
-   "duration_s": 14.0,
+   "duration_s": 13.9,
    "error": null
   },
   "cisco": {
@@ -49,7 +49,7 @@
    "adapter": "workday",
    "jobs_found": 15,
    "jobs_kept": 15,
-   "duration_s": 25.5,
+   "duration_s": 32.5,
    "error": null
   },
   "ge_vernova": {
@@ -57,7 +57,7 @@
    "adapter": "workday",
    "jobs_found": 7,
    "jobs_kept": 7,
-   "duration_s": 15.6,
+   "duration_s": 15.4,
    "error": null
   },
   "baker_hughes": {
@@ -65,7 +65,7 @@
    "adapter": "workday",
    "jobs_found": 11,
    "jobs_kept": 11,
-   "duration_s": 16.8,
+   "duration_s": 16.9,
    "error": null
   },
   "kimberly_clark": {
@@ -73,7 +73,7 @@
    "adapter": "workday",
    "jobs_found": 4,
    "jobs_kept": 4,
-   "duration_s": 23.8,
+   "duration_s": 18.2,
    "error": null
   },
   "three_m": {
@@ -81,7 +81,7 @@
    "adapter": "workday",
    "jobs_found": 8,
    "jobs_kept": 8,
-   "duration_s": 18.9,
+   "duration_s": 18.3,
    "error": null
   },
   "dow": {
@@ -89,7 +89,7 @@
    "adapter": "workday",
    "jobs_found": 4,
    "jobs_kept": 4,
-   "duration_s": 18.7,
+   "duration_s": 18.0,
    "error": null
   },
   "sanofi": {
@@ -97,7 +97,7 @@
    "adapter": "workday",
    "jobs_found": 1,
    "jobs_kept": 1,
-   "duration_s": 18.3,
+   "duration_s": 18.6,
    "error": null
   },
   "novartis": {
@@ -105,7 +105,7 @@
    "adapter": "workday",
    "jobs_found": 5,
    "jobs_kept": 5,
-   "duration_s": 19.4,
+   "duration_s": 18.0,
    "error": null
   },
   "gsk": {
@@ -113,7 +113,7 @@
    "adapter": "workday",
    "jobs_found": 11,
    "jobs_kept": 11,
-   "duration_s": 30.2,
+   "duration_s": 23.4,
    "error": null
   },
   "astrazeneca": {
@@ -121,7 +121,7 @@
    "adapter": "workday",
    "jobs_found": 21,
    "jobs_kept": 21,
-   "duration_s": 46.5,
+   "duration_s": 29.8,
    "error": null
   },
   "philips": {
@@ -129,7 +129,7 @@
    "adapter": "workday",
    "jobs_found": 1,
    "jobs_kept": 1,
-   "duration_s": 20.3,
+   "duration_s": 19.8,
    "error": null
   },
   "maersk": {
@@ -137,7 +137,7 @@
    "adapter": "workday",
    "jobs_found": 54,
    "jobs_kept": 54,
-   "duration_s": 39.6,
+   "duration_s": 47.1,
    "error": null
   },
   "mastercard": {
@@ -145,7 +145,7 @@
    "adapter": "workday",
    "jobs_found": 5,
    "jobs_kept": 5,
-   "duration_s": 23.2,
+   "duration_s": 18.0,
    "error": null
   },
   "medtronic": {
@@ -153,7 +153,7 @@
    "adapter": "workday",
    "jobs_found": 14,
    "jobs_kept": 14,
-   "duration_s": 19.5,
+   "duration_s": 23.9,
    "error": null
   },
   "pfizer": {
@@ -161,7 +161,7 @@
    "adapter": "workday",
    "jobs_found": 11,
    "jobs_kept": 11,
-   "duration_s": 39.6,
+   "duration_s": 18.8,
    "error": null
   },
   "abbott": {
@@ -169,7 +169,7 @@
    "adapter": "workday",
    "jobs_found": 90,
    "jobs_kept": 34,
-   "duration_s": 385.3,
+   "duration_s": 294.2,
    "error": null
   },
   "hp": {
@@ -177,7 +177,7 @@
    "adapter": "workday",
    "jobs_found": 1,
    "jobs_kept": 1,
-   "duration_s": 13.7,
+   "duration_s": 17.2,
    "error": null
   },
   "marvell": {
@@ -185,7 +185,7 @@
    "adapter": "workday",
    "jobs_found": 6,
    "jobs_kept": 6,
-   "duration_s": 35.5,
+   "duration_s": 24.0,
    "error": null
   },
   "nvidia": {
@@ -193,7 +193,7 @@
    "adapter": "workday",
    "jobs_found": 28,
    "jobs_kept": 28,
-   "duration_s": 40.6,
+   "duration_s": 52.3,
    "error": null
   },
   "jabil": {
@@ -201,7 +201,7 @@
    "adapter": "workday",
    "jobs_found": 80,
    "jobs_kept": 80,
-   "duration_s": 81.9,
+   "duration_s": 60.0,
    "error": null
   },
   "lego": {
@@ -209,7 +209,7 @@
    "adapter": "workday",
    "jobs_found": 8,
    "jobs_kept": 8,
-   "duration_s": 66.1,
+   "duration_s": 64.3,
    "error": null
   },
   "pwc": {
@@ -217,7 +217,7 @@
    "adapter": "workday",
    "jobs_found": 19,
    "jobs_kept": 19,
-   "duration_s": 18.4,
+   "duration_s": 24.1,
    "error": null
   },
   "pg": {
@@ -225,7 +225,7 @@
    "adapter": "workday",
    "jobs_found": 14,
    "jobs_kept": 14,
-   "duration_s": 19.5,
+   "duration_s": 19.2,
    "error": null
   },
   "jnj": {
@@ -233,7 +233,7 @@
    "adapter": "workday",
    "jobs_found": 4,
    "jobs_kept": 4,
-   "duration_s": 23.8,
+   "duration_s": 17.5,
    "error": null
   },
   "abb": {
@@ -241,7 +241,7 @@
    "adapter": "workday",
    "jobs_found": 18,
    "jobs_kept": 18,
-   "duration_s": 30.3,
+   "duration_s": 19.3,
    "error": null
   },
   "accenture": {
@@ -249,7 +249,7 @@
    "adapter": "workday",
    "jobs_found": 8,
    "jobs_kept": 8,
-   "duration_s": 25.6,
+   "duration_s": 19.2,
    "error": null
   },
   "manulife": {
@@ -257,7 +257,7 @@
    "adapter": "workday",
    "jobs_found": 17,
    "jobs_kept": 17,
-   "duration_s": 31.9,
+   "duration_s": 18.5,
    "error": null
   },
   "citi": {
@@ -265,7 +265,7 @@
    "adapter": "workday",
    "jobs_found": 1,
    "jobs_kept": 1,
-   "duration_s": 19.7,
+   "duration_s": 19.4,
    "error": null
   },
   "msd": {
@@ -273,7 +273,7 @@
    "adapter": "workday",
    "jobs_found": 4,
    "jobs_kept": 4,
-   "duration_s": 16.9,
+   "duration_s": 17.6,
    "error": null
   },
   "baxter": {
@@ -281,7 +281,7 @@
    "adapter": "workday",
    "jobs_found": 1,
    "jobs_kept": 1,
-   "duration_s": 17.2,
+   "duration_s": 17.4,
    "error": null
   },
   "thermo_fisher": {
@@ -289,7 +289,7 @@
    "adapter": "workday",
    "jobs_found": 5,
    "jobs_kept": 5,
-   "duration_s": 18.1,
+   "duration_s": 17.0,
    "error": null
   },
   "vf": {
@@ -297,7 +297,7 @@
    "adapter": "workday",
    "jobs_found": 48,
    "jobs_kept": 48,
-   "duration_s": 47.2,
+   "duration_s": 65.6,
    "error": null
   },
   "pvh": {
@@ -305,7 +305,7 @@
    "adapter": "workday",
    "jobs_found": 2,
    "jobs_kept": 2,
-   "duration_s": 17.8,
+   "duration_s": 17.9,
    "error": null
   },
   "ecolab": {
@@ -313,7 +313,7 @@
    "adapter": "workday",
    "jobs_found": 1,
    "jobs_kept": 1,
-   "duration_s": 17.8,
+   "duration_s": 18.3,
    "error": null
   },
   "visa": {
@@ -321,7 +321,7 @@
    "adapter": "workday",
    "jobs_found": 8,
    "jobs_kept": 8,
-   "duration_s": 18.4,
+   "duration_s": 17.8,
    "error": null
   },
   "workday": {
@@ -329,7 +329,7 @@
    "adapter": "workday",
    "jobs_found": 4,
    "jobs_kept": 4,
-   "duration_s": 21.6,
+   "duration_s": 20.6,
    "error": null
   },
   "bayer": {
@@ -337,7 +337,7 @@
    "adapter": "workday",
    "jobs_found": 1,
    "jobs_kept": 1,
-   "duration_s": 23.6,
+   "duration_s": 16.7,
    "error": null
   },
   "carrier": {
@@ -345,7 +345,7 @@
    "adapter": "workday",
    "jobs_found": 6,
    "jobs_kept": 6,
-   "duration_s": 18.3,
+   "duration_s": 19.0,
    "error": null
   },
   "air_liquide": {
@@ -353,7 +353,7 @@
    "adapter": "workday",
    "jobs_found": 6,
    "jobs_kept": 6,
-   "duration_s": 29.9,
+   "duration_s": 24.0,
    "error": null
   },
   "roche": {
@@ -361,7 +361,7 @@
    "adapter": "workday",
    "jobs_found": 6,
    "jobs_kept": 6,
-   "duration_s": 24.5,
+   "duration_s": 16.6,
    "error": null
   },
   "hitachi": {
@@ -369,7 +369,7 @@
    "adapter": "workday",
    "jobs_found": 92,
    "jobs_kept": 92,
-   "duration_s": 60.8,
+   "duration_s": 78.3,
    "error": null
   },
   "fwd": {
@@ -377,7 +377,7 @@
    "adapter": "workday",
    "jobs_found": 5,
    "jobs_kept": 5,
-   "duration_s": 29.3,
+   "duration_s": 18.1,
    "error": null
   },
   "toll": {
@@ -385,7 +385,7 @@
    "adapter": "workday",
    "jobs_found": 17,
    "jobs_kept": 17,
-   "duration_s": 24.2,
+   "duration_s": 30.1,
    "error": null
   },
   "aurecon": {
@@ -393,7 +393,7 @@
    "adapter": "workday",
    "jobs_found": 26,
    "jobs_kept": 26,
-   "duration_s": 35.9,
+   "duration_s": 71.3,
    "error": null
   },
   "uob": {
@@ -401,7 +401,7 @@
    "adapter": "workday",
    "jobs_found": 61,
    "jobs_kept": 61,
-   "duration_s": 270.5,
+   "duration_s": 178.1,
    "error": null
   },
   "damen": {
@@ -409,7 +409,7 @@
    "adapter": "workday",
    "jobs_found": 32,
    "jobs_kept": 32,
-   "duration_s": 214.2,
+   "duration_s": 24.2,
    "error": null
   },
   "jll": {
@@ -417,7 +417,7 @@
    "adapter": "workday",
    "jobs_found": 18,
    "jobs_kept": 18,
-   "duration_s": 126.2,
+   "duration_s": 25.0,
    "error": null
   },
   "concentrix": {
@@ -425,7 +425,7 @@
    "adapter": "workday",
    "jobs_found": 19,
    "jobs_kept": 19,
-   "duration_s": 133.5,
+   "duration_s": 18.8,
    "error": null
   },
   "vialto": {
@@ -433,7 +433,7 @@
    "adapter": "workday",
    "jobs_found": 3,
    "jobs_kept": 3,
-   "duration_s": 36.1,
+   "duration_s": 17.7,
    "error": null
   },
   "knight_frank": {
@@ -441,7 +441,7 @@
    "adapter": "workday",
    "jobs_found": 3,
    "jobs_kept": 3,
-   "duration_s": 36.0,
+   "duration_s": 17.2,
    "error": null
   },
   "pierre_fabre": {
@@ -449,7 +449,7 @@
    "adapter": "workday",
    "jobs_found": 2,
    "jobs_kept": 2,
-   "duration_s": 30.2,
+   "duration_s": 17.9,
    "error": null
   },
   "airbus": {
@@ -457,7 +457,7 @@
    "adapter": "workday",
    "jobs_found": 2,
    "jobs_kept": 2,
-   "duration_s": 31.1,
+   "duration_s": 18.8,
    "error": null
   },
   "jas": {
@@ -465,7 +465,7 @@
    "adapter": "workday",
    "jobs_found": 1,
    "jobs_kept": 1,
-   "duration_s": 24.1,
+   "duration_s": 17.8,
    "error": null
   },
   "galderma": {
@@ -473,7 +473,7 @@
    "adapter": "workday",
    "jobs_found": 1,
    "jobs_kept": 1,
-   "duration_s": 23.9,
+   "duration_s": 18.2,
    "error": null
   },
   "cushman_wakefield": {
@@ -481,7 +481,7 @@
    "adapter": "workday",
    "jobs_found": 6,
    "jobs_kept": 6,
-   "duration_s": 19.4,
+   "duration_s": 19.5,
    "error": null
   },
   "erm": {
@@ -489,7 +489,7 @@
    "adapter": "workday",
    "jobs_found": 3,
    "jobs_kept": 3,
-   "duration_s": 35.9,
+   "duration_s": 17.5,
    "error": null
   },
   "haleon": {
@@ -497,7 +497,7 @@
    "adapter": "workday",
    "jobs_found": 1,
    "jobs_kept": 1,
-   "duration_s": 23.5,
+   "duration_s": 19.6,
    "error": null
   },
   "rhenus": {
@@ -505,7 +505,7 @@
    "adapter": "workday",
    "jobs_found": 11,
    "jobs_kept": 11,
-   "duration_s": 59.2,
+   "duration_s": 17.8,
    "error": null
   },
   "michelin": {
@@ -513,13 +513,13 @@
    "adapter": "workday",
    "jobs_found": 9,
    "jobs_kept": 9,
-   "duration_s": 45.1,
+   "duration_s": 14.8,
    "error": null
   }
  },
  "hosts": {
   "nike.wd1.myworkdayjobs.com": {
-   "requests": 4,
+   "requests": 3,
    "errors": 0
   },
   "intel.wd1.myworkdayjobs.com": {
@@ -527,7 +527,7 @@
    "errors": 0
   },
   "cisco.wd5.myworkdayjobs.com": {
-   "requests": 5,
+   "requests": 6,
    "errors": 0
   },
   "gevernova.wd5.myworkdayjobs.com": {
@@ -539,7 +539,7 @@
    "errors": 0
   },
   "kimberlyclark.wd1.myworkdayjobs.com": {
-   "requests": 4,
+   "requests": 3,
    "errors": 0
   },
   "3m.wd1.myworkdayjobs.com": {
@@ -559,11 +559,11 @@
    "errors": 0
   },
   "gsk.wd5.myworkdayjobs.com": {
-   "requests": 5,
+   "requests": 4,
    "errors": 0
   },
   "astrazeneca.wd3.myworkdayjobs.com": {
-   "requests": 8,
+   "requests": 5,
    "errors": 0
   },
   "philips.wd3.myworkdayjobs.com": {
@@ -571,23 +571,23 @@
    "errors": 0
   },
   "maersk.wd3.myworkdayjobs.com": {
-   "requests": 7,
+   "requests": 8,
    "errors": 0
   },
   "mastercard.wd1.myworkdayjobs.com": {
-   "requests": 4,
-   "errors": 0
-  },
-  "medtronic.wd1.myworkdayjobs.com": {
    "requests": 3,
    "errors": 0
   },
+  "medtronic.wd1.myworkdayjobs.com": {
+   "requests": 4,
+   "errors": 0
+  },
   "pfizer.wd1.myworkdayjobs.com": {
-   "requests": 6,
+   "requests": 3,
    "errors": 0
   },
   "abbott.wd5.myworkdayjobs.com": {
-   "requests": 65,
+   "requests": 64,
    "errors": 0
   },
   "hp.wd5.myworkdayjobs.com": {
@@ -595,15 +595,15 @@
    "errors": 0
   },
   "marvell.wd1.myworkdayjobs.com": {
-   "requests": 6,
+   "requests": 4,
    "errors": 0
   },
   "nvidia.wd5.myworkdayjobs.com": {
-   "requests": 7,
+   "requests": 9,
    "errors": 0
   },
   "jabil.wd5.myworkdayjobs.com": {
-   "requests": 14,
+   "requests": 10,
    "errors": 0
   },
   "lego.wd103.myworkdayjobs.com": {
@@ -611,7 +611,7 @@
    "errors": 0
   },
   "pwc.wd3.myworkdayjobs.com": {
-   "requests": 3,
+   "requests": 4,
    "errors": 0
   },
   "pg.wd5.myworkdayjobs.com": {
@@ -619,19 +619,19 @@
    "errors": 0
   },
   "jj.wd5.myworkdayjobs.com": {
-   "requests": 4,
+   "requests": 3,
    "errors": 0
   },
   "abb.wd3.myworkdayjobs.com": {
-   "requests": 5,
+   "requests": 3,
    "errors": 0
   },
   "accenture.wd103.myworkdayjobs.com": {
-   "requests": 4,
+   "requests": 3,
    "errors": 0
   },
   "manulife.wd3.myworkdayjobs.com": {
-   "requests": 5,
+   "requests": 3,
    "errors": 0
   },
   "citi.wd5.myworkdayjobs.com": {
@@ -651,7 +651,7 @@
    "errors": 0
   },
   "vfc.wd5.myworkdayjobs.com": {
-   "requests": 8,
+   "requests": 11,
    "errors": 0
   },
   "pvh.wd1.myworkdayjobs.com": {
@@ -671,7 +671,7 @@
    "errors": 0
   },
   "bayer.wd103.myworkdayjobs.com": {
-   "requests": 4,
+   "requests": 3,
    "errors": 0
   },
   "carrier.wd5.myworkdayjobs.com": {
@@ -679,27 +679,27 @@
    "errors": 0
   },
   "airliquidehr.wd3.myworkdayjobs.com": {
-   "requests": 5,
+   "requests": 4,
    "errors": 0
   },
   "roche.wd3.myworkdayjobs.com": {
-   "requests": 4,
+   "requests": 3,
    "errors": 0
   },
   "hitachi.wd1.myworkdayjobs.com": {
-   "requests": 10,
+   "requests": 12,
    "errors": 0
   },
   "fwd.wd3.myworkdayjobs.com": {
-   "requests": 5,
+   "requests": 3,
    "errors": 0
   },
   "tollgroup.wd5.myworkdayjobs.com": {
-   "requests": 4,
+   "requests": 5,
    "errors": 0
   },
   "aurecongroup.wd3.myworkdayjobs.com": {
-   "requests": 6,
+   "requests": 12,
    "errors": 0
   },
   "uobgroup.wd3.myworkdayjobs.com": {
@@ -707,39 +707,39 @@
    "errors": 0
   },
   "damen.wd3.myworkdayjobs.com": {
-   "requests": 36,
+   "requests": 4,
    "errors": 0
   },
   "jll.wd1.myworkdayjobs.com": {
-   "requests": 21,
+   "requests": 4,
    "errors": 0
   },
   "cnx.wd1.myworkdayjobs.com": {
-   "requests": 22,
+   "requests": 3,
    "errors": 0
   },
   "vialto.wd107.myworkdayjobs.com": {
-   "requests": 6,
+   "requests": 3,
    "errors": 0
   },
   "knightfrank.wd103.myworkdayjobs.com": {
-   "requests": 6,
+   "requests": 3,
    "errors": 0
   },
   "pierrefabre.wd3.myworkdayjobs.com": {
-   "requests": 5,
+   "requests": 3,
    "errors": 0
   },
   "ag.wd3.myworkdayjobs.com": {
-   "requests": 5,
+   "requests": 3,
    "errors": 0
   },
   "jas.wd1.myworkdayjobs.com": {
-   "requests": 4,
+   "requests": 3,
    "errors": 0
   },
   "galderma.wd3.myworkdayjobs.com": {
-   "requests": 4,
+   "requests": 3,
    "errors": 0
   },
   "cw.wd1.myworkdayjobs.com": {
@@ -747,19 +747,19 @@
    "errors": 0
   },
   "erm.wd3.myworkdayjobs.com": {
-   "requests": 6,
+   "requests": 3,
    "errors": 0
   },
   "gsknch.wd3.myworkdayjobs.com": {
-   "requests": 4,
+   "requests": 3,
    "errors": 0
   },
   "rhe.wd3.myworkdayjobs.com": {
-   "requests": 14,
+   "requests": 3,
    "errors": 0
   },
   "michelinhr.wd3.myworkdayjobs.com": {
-   "requests": 12,
+   "requests": 3,
    "errors": 0
   }
  },

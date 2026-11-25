@@ -1,12 +1,5 @@
 [
  {
-  "run_at": "2026-11-19T04:36:16Z",
-  "total_open": 1106,
-  "sources": {
-   "custom": 0
-  }
- },
- {
   "run_at": "2026-11-19T04:37:38Z",
   "total_open": 1106,
   "sources": {
@@ -242,6 +235,13 @@
  {
   "run_at": "2026-11-25T00:34:07Z",
   "total_open": 1687,
+  "sources": {
+   "workday": 885
+  }
+ },
+ {
+  "run_at": "2026-11-25T01:01:06Z",
+  "total_open": 1689,
   "sources": {
    "workday": 885
   }
