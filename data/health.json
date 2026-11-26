@@ -1,15 +1,13 @@
 {
- "run_at": "2026-11-26T16:10:37Z",
- "total_open": 1710,
- "new": 22,
- "closed": 11,
- "pending_missing": 41,
+ "run_at": "2026-11-26T19:51:49Z",
+ "total_open": 1683,
+ "new": 27,
+ "closed": 20,
+ "pending_missing": 74,
  "stale_hidden": 0,
  "stale_hidden_by_company": {},
- "merged_duplicates": 39,
- "dropped": {
-  "excluded_keyword": 53
- },
+ "merged_duplicates": 30,
+ "dropped": {},
  "schema_errors_pct": 0.0,
  "llm_tokens": {
   "input": 0,
@@ -18,751 +16,940 @@
   "mode": "rules"
  },
  "sources": {
-  "workday": {
+  "smartrecruiters": {
    "ok": true,
-   "jobs_found": 892,
-   "jobs_kept": 839,
+   "jobs_found": 464,
+   "jobs_kept": 464,
    "http_errors": 0,
-   "duration_s": 2033.9,
-   "companies": 61
+   "duration_s": 88.6,
+   "companies": 7
+  },
+  "custom": {
+   "ok": true,
+   "jobs_found": 417,
+   "jobs_kept": 417,
+   "http_errors": 0,
+   "duration_s": 155.7,
+   "companies": 47
+  },
+  "greenhouse": {
+   "ok": true,
+   "jobs_found": 21,
+   "jobs_kept": 21,
+   "http_errors": 0,
+   "duration_s": 2.5,
+   "companies": 2
+  },
+  "lever": {
+   "ok": true,
+   "jobs_found": 10,
+   "jobs_kept": 10,
+   "http_errors": 0,
+   "duration_s": 4.2,
+   "companies": 3
+  },
+  "ybox": {
+   "ok": true,
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "http_errors": 0,
+   "duration_s": 1.5,
+   "companies": 1
   }
  },
  "companies": {
-  "nike": {
+  "bosch": {
    "ok": true,
-   "adapter": "workday",
-   "jobs_found": 9,
-   "jobs_kept": 9,
-   "duration_s": 10.8,
+   "adapter": "smartrecruiters",
+   "jobs_found": 217,
+   "jobs_kept": 217,
+   "duration_s": 26.2,
    "error": null
   },
-  "intel": {
+  "schneider_electric": {
    "ok": true,
-   "adapter": "workday",
-   "jobs_found": 7,
-   "jobs_kept": 7,
-   "duration_s": 25.6,
+   "adapter": "jibe",
+   "jobs_found": 16,
+   "jobs_kept": 16,
+   "duration_s": 5.3,
    "error": null
   },
-  "cisco": {
+  "siemens": {
    "ok": true,
-   "adapter": "workday",
-   "jobs_found": 15,
-   "jobs_kept": 15,
-   "duration_s": 32.5,
+   "adapter": "avature",
+   "jobs_found": 14,
+   "jobs_kept": 14,
+   "duration_s": 17.3,
    "error": null
   },
-  "ge_vernova": {
+  "sgs": {
    "ok": true,
-   "adapter": "workday",
-   "jobs_found": 4,
-   "jobs_kept": 4,
-   "duration_s": 15.7,
+   "adapter": "smartrecruiters",
+   "jobs_found": 124,
+   "jobs_kept": 124,
+   "duration_s": 32.3,
    "error": null
   },
-  "baker_hughes": {
+  "avery_dennison": {
    "ok": true,
-   "adapter": "workday",
-   "jobs_found": 10,
-   "jobs_kept": 10,
-   "duration_s": 17.8,
+   "adapter": "smartrecruiters",
+   "jobs_found": 41,
+   "jobs_kept": 41,
+   "duration_s": 6.2,
    "error": null
   },
-  "kimberly_clark": {
+  "expeditors": {
    "ok": true,
-   "adapter": "workday",
-   "jobs_found": 4,
-   "jobs_kept": 4,
-   "duration_s": 19.1,
-   "error": null
-  },
-  "three_m": {
-   "ok": true,
-   "adapter": "workday",
+   "adapter": "smartrecruiters",
    "jobs_found": 8,
    "jobs_kept": 8,
-   "duration_s": 18.3,
+   "duration_s": 3.2,
    "error": null
   },
-  "dow": {
+  "endava": {
    "ok": true,
-   "adapter": "workday",
-   "jobs_found": 4,
-   "jobs_kept": 4,
-   "duration_s": 18.2,
+   "adapter": "smartrecruiters",
+   "jobs_found": 7,
+   "jobs_kept": 7,
+   "duration_s": 4.0,
    "error": null
   },
-  "sanofi": {
+  "axon": {
    "ok": true,
-   "adapter": "workday",
-   "jobs_found": 2,
-   "jobs_kept": 2,
-   "duration_s": 18.2,
-   "error": null
-  },
-  "novartis": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 5,
-   "jobs_kept": 5,
-   "duration_s": 18.9,
-   "error": null
-  },
-  "gsk": {
-   "ok": true,
-   "adapter": "workday",
+   "adapter": "greenhouse",
    "jobs_found": 13,
    "jobs_kept": 13,
-   "duration_s": 35.2,
+   "duration_s": 1.3,
    "error": null
   },
-  "astrazeneca": {
+  "flexport": {
    "ok": true,
-   "adapter": "workday",
+   "adapter": "greenhouse",
+   "jobs_found": 8,
+   "jobs_kept": 8,
+   "duration_s": 1.2,
+   "error": null
+  },
+  "dhl": {
+   "ok": true,
+   "adapter": "phenom",
+   "jobs_found": 45,
+   "jobs_kept": 45,
+   "duration_s": 6.4,
+   "error": null
+  },
+  "kuehne_nagel": {
+   "ok": true,
+   "adapter": "successfactors",
    "jobs_found": 21,
    "jobs_kept": 21,
-   "duration_s": 21.6,
+   "duration_s": 4.4,
    "error": null
   },
-  "philips": {
+  "microsoft": {
    "ok": true,
-   "adapter": "workday",
-   "jobs_found": 1,
-   "jobs_kept": 1,
-   "duration_s": 20.2,
-   "error": null
-  },
-  "maersk": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 59,
-   "jobs_kept": 59,
-   "duration_s": 72.4,
-   "error": null
-  },
-  "mastercard": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 5,
-   "jobs_kept": 5,
-   "duration_s": 17.1,
-   "error": null
-  },
-  "medtronic": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 14,
-   "jobs_kept": 14,
-   "duration_s": 23.9,
-   "error": null
-  },
-  "pfizer": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 12,
-   "jobs_kept": 12,
-   "duration_s": 18.5,
-   "error": null
-  },
-  "abbott": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 87,
-   "jobs_kept": 34,
-   "duration_s": 299.2,
-   "error": null
-  },
-  "hp": {
-   "ok": true,
-   "adapter": "workday",
+   "adapter": "eightfold",
    "jobs_found": 2,
    "jobs_kept": 2,
-   "duration_s": 22.5,
+   "duration_s": 1.2,
    "error": null
   },
-  "marvell": {
+  "nokia": {
    "ok": true,
-   "adapter": "workday",
-   "jobs_found": 6,
-   "jobs_kept": 6,
-   "duration_s": 23.8,
-   "error": null
-  },
-  "nvidia": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 28,
-   "jobs_kept": 28,
-   "duration_s": 54.6,
-   "error": null
-  },
-  "jabil": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 82,
-   "jobs_kept": 82,
-   "duration_s": 75.7,
-   "error": null
-  },
-  "lego": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 8,
-   "jobs_kept": 8,
-   "duration_s": 66.4,
-   "error": null
-  },
-  "pwc": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 19,
-   "jobs_kept": 19,
-   "duration_s": 24.3,
-   "error": null
-  },
-  "pg": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 14,
-   "jobs_kept": 14,
-   "duration_s": 23.6,
-   "error": null
-  },
-  "jnj": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 4,
-   "jobs_kept": 4,
-   "duration_s": 17.7,
-   "error": null
-  },
-  "abb": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 18,
-   "jobs_kept": 18,
-   "duration_s": 21.5,
-   "error": null
-  },
-  "accenture": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 8,
-   "jobs_kept": 8,
-   "duration_s": 22.2,
-   "error": null
-  },
-  "manulife": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 14,
-   "jobs_kept": 14,
-   "duration_s": 19.1,
-   "error": null
-  },
-  "citi": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 1,
-   "jobs_kept": 1,
-   "duration_s": 19.2,
-   "error": null
-  },
-  "msd": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 5,
-   "jobs_kept": 5,
-   "duration_s": 16.8,
-   "error": null
-  },
-  "baxter": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 1,
-   "jobs_kept": 1,
-   "duration_s": 19.3,
-   "error": null
-  },
-  "thermo_fisher": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 5,
-   "jobs_kept": 5,
-   "duration_s": 16.8,
-   "error": null
-  },
-  "vf": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 48,
-   "jobs_kept": 48,
-   "duration_s": 81.3,
-   "error": null
-  },
-  "pvh": {
-   "ok": true,
-   "adapter": "workday",
+   "adapter": "oracle",
    "jobs_found": 2,
    "jobs_kept": 2,
-   "duration_s": 19.1,
+   "duration_s": 2.5,
    "error": null
   },
-  "ecolab": {
+  "kpmg": {
    "ok": true,
-   "adapter": "workday",
-   "jobs_found": 1,
-   "jobs_kept": 1,
-   "duration_s": 18.2,
+   "adapter": "successfactors",
+   "jobs_found": 14,
+   "jobs_kept": 14,
+   "duration_s": 2.9,
    "error": null
   },
-  "visa": {
+  "standard_chartered": {
    "ok": true,
-   "adapter": "workday",
-   "jobs_found": 8,
-   "jobs_kept": 8,
-   "duration_s": 16.9,
-   "error": null
-  },
-  "workday": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 5,
-   "jobs_kept": 5,
-   "duration_s": 26.1,
-   "error": null
-  },
-  "bayer": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 3,
-   "jobs_kept": 3,
-   "duration_s": 27.5,
-   "error": null
-  },
-  "carrier": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 6,
-   "jobs_kept": 6,
-   "duration_s": 19.0,
-   "error": null
-  },
-  "air_liquide": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 7,
-   "jobs_kept": 7,
-   "duration_s": 31.0,
-   "error": null
-  },
-  "roche": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 6,
-   "jobs_kept": 6,
-   "duration_s": 19.2,
-   "error": null
-  },
-  "hitachi": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 93,
-   "jobs_kept": 93,
-   "duration_s": 83.2,
-   "error": null
-  },
-  "fwd": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 5,
-   "jobs_kept": 5,
-   "duration_s": 17.6,
-   "error": null
-  },
-  "toll": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 17,
-   "jobs_kept": 17,
-   "duration_s": 25.8,
-   "error": null
-  },
-  "aurecon": {
-   "ok": true,
-   "adapter": "workday",
+   "adapter": "successfactors",
    "jobs_found": 27,
    "jobs_kept": 27,
-   "duration_s": 70.0,
+   "duration_s": 7.3,
    "error": null
   },
-  "uob": {
+  "loreal": {
    "ok": true,
-   "adapter": "workday",
-   "jobs_found": 59,
-   "jobs_kept": 59,
-   "duration_s": 164.9,
-   "error": null
-  },
-  "damen": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 31,
-   "jobs_kept": 31,
-   "duration_s": 24.0,
-   "error": null
-  },
-  "jll": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 17,
-   "jobs_kept": 17,
-   "duration_s": 18.8,
-   "error": null
-  },
-  "concentrix": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 19,
-   "jobs_kept": 19,
-   "duration_s": 19.4,
-   "error": null
-  },
-  "vialto": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 3,
-   "jobs_kept": 3,
-   "duration_s": 18.2,
-   "error": null
-  },
-  "knight_frank": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 3,
-   "jobs_kept": 3,
-   "duration_s": 20.3,
-   "error": null
-  },
-  "pierre_fabre": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 2,
-   "jobs_kept": 2,
-   "duration_s": 18.4,
-   "error": null
-  },
-  "airbus": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 2,
-   "jobs_kept": 2,
-   "duration_s": 18.2,
-   "error": null
-  },
-  "jas": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 1,
-   "jobs_kept": 1,
-   "duration_s": 19.0,
-   "error": null
-  },
-  "galderma": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 1,
-   "jobs_kept": 1,
-   "duration_s": 17.9,
-   "error": null
-  },
-  "cushman_wakefield": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 7,
-   "jobs_kept": 7,
-   "duration_s": 26.0,
-   "error": null
-  },
-  "erm": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 3,
-   "jobs_kept": 3,
-   "duration_s": 18.0,
-   "error": null
-  },
-  "haleon": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 1,
-   "jobs_kept": 1,
-   "duration_s": 18.4,
-   "error": null
-  },
-  "rhenus": {
-   "ok": true,
-   "adapter": "workday",
-   "jobs_found": 11,
-   "jobs_kept": 11,
-   "duration_s": 16.8,
-   "error": null
-  },
-  "michelin": {
-   "ok": true,
-   "adapter": "workday",
+   "adapter": "radancy",
    "jobs_found": 9,
    "jobs_kept": 9,
-   "duration_s": 14.0,
+   "duration_s": 1.0,
+   "error": null
+  },
+  "grab": {
+   "ok": true,
+   "adapter": "smartrecruiters",
+   "jobs_found": 57,
+   "jobs_kept": 57,
+   "duration_s": 14.1,
+   "error": null
+  },
+  "ninja_van": {
+   "ok": true,
+   "adapter": "lever",
+   "jobs_found": 2,
+   "jobs_kept": 2,
+   "duration_s": 1.4,
+   "error": null
+  },
+  "schaeffler": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 10,
+   "jobs_kept": 10,
+   "duration_s": 12.6,
+   "error": null
+  },
+  "dksh": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 15,
+   "jobs_kept": 15,
+   "duration_s": 2.5,
+   "error": null
+  },
+  "ey": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 51,
+   "jobs_kept": 51,
+   "duration_s": 4.5,
+   "error": null
+  },
+  "schindler": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 4,
+   "jobs_kept": 4,
+   "duration_s": 1.4,
+   "error": null
+  },
+  "zuellig_pharma": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 2.2,
+   "error": null
+  },
+  "bureau_veritas": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 29,
+   "jobs_kept": 29,
+   "duration_s": 4.4,
+   "error": null
+  },
+  "danfoss": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 1,
+   "jobs_kept": 1,
+   "duration_s": 2.1,
+   "error": null
+  },
+  "anz": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 1,
+   "jobs_kept": 1,
+   "duration_s": 1.5,
+   "error": null
+  },
+  "takeda": {
+   "ok": true,
+   "adapter": "radancy",
+   "jobs_found": 2,
+   "jobs_kept": 2,
+   "duration_s": 1.4,
+   "error": null
+  },
+  "boehringer": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 13,
+   "jobs_kept": 13,
+   "duration_s": 8.0,
+   "error": null
+  },
+  "gameloft": {
+   "ok": true,
+   "adapter": "smartrecruiters",
+   "jobs_found": 10,
+   "jobs_kept": 10,
+   "duration_s": 2.6,
+   "error": null
+  },
+  "elca": {
+   "ok": true,
+   "adapter": "oracle",
+   "jobs_found": 9,
+   "jobs_kept": 9,
+   "duration_s": 2.4,
+   "error": null
+  },
+  "servier": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 3,
+   "jobs_kept": 3,
+   "duration_s": 1.3,
+   "error": null
+  },
+  "novo_nordisk": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 6,
+   "jobs_kept": 6,
+   "duration_s": 1.3,
+   "error": null
+  },
+  "busch_pfeiffer": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 2.1,
+   "error": null
+  },
+  "dekra": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 5,
+   "jobs_kept": 5,
+   "duration_s": 1.3,
+   "error": null
+  },
+  "ajax_systems": {
+   "ok": true,
+   "adapter": "lever",
+   "jobs_found": 4,
+   "jobs_kept": 4,
+   "duration_s": 1.4,
+   "error": null
+  },
+  "gradion": {
+   "ok": true,
+   "adapter": "lever",
+   "jobs_found": 4,
+   "jobs_kept": 4,
+   "duration_s": 1.4,
+   "error": null
+  },
+  "vantive": {
+   "ok": true,
+   "adapter": "radancy",
+   "jobs_found": 2,
+   "jobs_kept": 2,
+   "duration_s": 1.0,
+   "error": null
+  },
+  "rkw": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 4.2,
+   "error": null
+  },
+  "kuka": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 1,
+   "jobs_kept": 1,
+   "duration_s": 3.5,
+   "error": null
+  },
+  "festo": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 3.7,
+   "error": null
+  },
+  "dnv": {
+   "ok": true,
+   "adapter": "oracle",
+   "jobs_found": 2,
+   "jobs_kept": 2,
+   "duration_s": 2.3,
+   "error": null
+  },
+  "astellas": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 1,
+   "jobs_kept": 1,
+   "duration_s": 2.8,
+   "error": null
+  },
+  "endress_hauser": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 1,
+   "jobs_kept": 1,
+   "duration_s": 1.4,
+   "error": null
+  },
+  "coats": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 1,
+   "jobs_kept": 1,
+   "duration_s": 2.3,
+   "error": null
+  },
+  "lrqa": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 2,
+   "jobs_kept": 2,
+   "duration_s": 1.3,
+   "error": null
+  },
+  "sherwin_williams": {
+   "ok": true,
+   "adapter": "oracle",
+   "jobs_found": 1,
+   "jobs_kept": 1,
+   "duration_s": 2.2,
+   "error": null
+  },
+  "boston_scientific": {
+   "ok": true,
+   "adapter": "successfactors",
+   "jobs_found": 1,
+   "jobs_kept": 1,
+   "duration_s": 1.2,
+   "error": null
+  },
+  "ao_shearman": {
+   "ok": true,
+   "adapter": "radancy",
+   "jobs_found": 1,
+   "jobs_kept": 1,
+   "duration_s": 1.0,
+   "error": null
+  },
+  "qualcomm": {
+   "ok": true,
+   "adapter": "eightfold",
+   "jobs_found": 23,
+   "jobs_kept": 23,
+   "duration_s": 3.2,
+   "error": null
+  },
+  "corning": {
+   "ok": true,
+   "adapter": "phenom",
+   "jobs_found": 5,
+   "jobs_kept": 5,
+   "duration_s": 4.5,
+   "error": null
+  },
+  "merck_kgaa": {
+   "ok": true,
+   "adapter": "phenom",
+   "jobs_found": 5,
+   "jobs_kept": 5,
+   "duration_s": 6.9,
+   "error": null
+  },
+  "ge_healthcare": {
+   "ok": true,
+   "adapter": "phenom",
+   "jobs_found": 2,
+   "jobs_kept": 2,
+   "duration_s": 1.1,
+   "error": null
+  },
+  "danaher": {
+   "ok": true,
+   "adapter": "phenom",
+   "jobs_found": 1,
+   "jobs_kept": 1,
+   "duration_s": 1.1,
+   "error": null
+  },
+  "thornton_tomasetti": {
+   "ok": true,
+   "adapter": "phenom",
+   "jobs_found": 4,
+   "jobs_kept": 4,
+   "duration_s": 1.1,
+   "error": null
+  },
+  "lineage": {
+   "ok": true,
+   "adapter": "phenom",
+   "jobs_found": 1,
+   "jobs_kept": 1,
+   "duration_s": 1.1,
+   "error": null
+  },
+  "brooks": {
+   "ok": true,
+   "adapter": "phenom",
+   "jobs_found": 3,
+   "jobs_kept": 3,
+   "duration_s": 1.1,
+   "error": null
+  },
+  "ups": {
+   "ok": true,
+   "adapter": "phenom",
+   "jobs_found": 2,
+   "jobs_kept": 2,
+   "duration_s": 1.1,
+   "error": null
+  },
+  "synopsys": {
+   "ok": true,
+   "adapter": "radancy",
+   "jobs_found": 49,
+   "jobs_kept": 49,
+   "duration_s": 9.0,
+   "error": null
+  },
+  "infineon": {
+   "ok": true,
+   "adapter": "eightfold",
+   "jobs_found": 10,
+   "jobs_kept": 10,
+   "duration_s": 1.3,
+   "error": null
+  },
+  "ybox": {
+   "ok": true,
+   "adapter": "ybox",
+   "jobs_found": 0,
+   "jobs_kept": 0,
+   "duration_s": 1.5,
    "error": null
   }
  },
  "hosts": {
-  "nike.wd1.myworkdayjobs.com": {
-   "requests": 3,
+  "api.smartrecruiters.com": {
+   "requests": 33,
    "errors": 0
   },
-  "intel.wd1.myworkdayjobs.com": {
-   "requests": 5,
+  "careers.se.com": {
+   "requests": 2,
    "errors": 0
   },
-  "cisco.wd5.myworkdayjobs.com": {
-   "requests": 6,
-   "errors": 0
-  },
-  "gevernova.wd5.myworkdayjobs.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "bakerhughes.wd5.myworkdayjobs.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "kimberlyclark.wd1.myworkdayjobs.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "3m.wd1.myworkdayjobs.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "dow.wd1.myworkdayjobs.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "sanofi.wd3.myworkdayjobs.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "novartis.wd3.myworkdayjobs.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "gsk.wd5.myworkdayjobs.com": {
-   "requests": 6,
-   "errors": 0
-  },
-  "astrazeneca.wd3.myworkdayjobs.com": {
-   "requests": 4,
-   "errors": 0
-  },
-  "philips.wd3.myworkdayjobs.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "mastercard.wd1.myworkdayjobs.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "maersk.wd3.myworkdayjobs.com": {
-   "requests": 12,
-   "errors": 0
-  },
-  "medtronic.wd1.myworkdayjobs.com": {
-   "requests": 4,
-   "errors": 0
-  },
-  "pfizer.wd1.myworkdayjobs.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "abbott.wd5.myworkdayjobs.com": {
-   "requests": 61,
-   "errors": 0
-  },
-  "hp.wd5.myworkdayjobs.com": {
-   "requests": 4,
-   "errors": 0
-  },
-  "marvell.wd1.myworkdayjobs.com": {
-   "requests": 4,
-   "errors": 0
-  },
-  "nvidia.wd5.myworkdayjobs.com": {
-   "requests": 9,
-   "errors": 0
-  },
-  "jabil.wd5.myworkdayjobs.com": {
+  "jobs.siemens.com": {
    "requests": 13,
    "errors": 0
   },
-  "lego.wd103.myworkdayjobs.com": {
-   "requests": 11,
-   "errors": 0
-  },
-  "pwc.wd3.myworkdayjobs.com": {
-   "requests": 4,
-   "errors": 0
-  },
-  "pg.wd5.myworkdayjobs.com": {
-   "requests": 4,
-   "errors": 0
-  },
-  "jj.wd5.myworkdayjobs.com": {
+  "boards-api.greenhouse.io": {
    "requests": 3,
    "errors": 0
   },
-  "abb.wd3.myworkdayjobs.com": {
-   "requests": 3,
+  "careers.dhl.com": {
+   "requests": 7,
    "errors": 0
   },
-  "accenture.wd103.myworkdayjobs.com": {
-   "requests": 3,
+  "apply.careers.microsoft.com": {
+   "requests": 2,
    "errors": 0
   },
-  "manulife.wd3.myworkdayjobs.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "citi.wd5.myworkdayjobs.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "msd.wd5.myworkdayjobs.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "baxter.wd1.myworkdayjobs.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "thermofisher.wd5.myworkdayjobs.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "vfc.wd5.myworkdayjobs.com": {
-   "requests": 11,
-   "errors": 0
-  },
-  "pvh.wd1.myworkdayjobs.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "ecolab.wd1.myworkdayjobs.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "visa.wd5.myworkdayjobs.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "workday.wd5.myworkdayjobs.com": {
-   "requests": 4,
-   "errors": 0
-  },
-  "bayer.wd103.myworkdayjobs.com": {
+  "careers.kuehne-nagel.com": {
    "requests": 5,
    "errors": 0
   },
-  "carrier.wd5.myworkdayjobs.com": {
+  "fa-evmr-saasfaprod1.fa.ocs.oraclecloud.com": {
    "requests": 3,
    "errors": 0
   },
-  "airliquidehr.wd3.myworkdayjobs.com": {
-   "requests": 5,
+  "jobs.standardchartered.com": {
+   "requests": 8,
    "errors": 0
   },
-  "roche.wd3.myworkdayjobs.com": {
-   "requests": 3,
+  "careers.loreal.com": {
+   "requests": 2,
    "errors": 0
   },
-  "hitachi.wd1.myworkdayjobs.com": {
-   "requests": 14,
+  "careers.kpmg.com.vn": {
+   "requests": 2,
    "errors": 0
   },
-  "fwd.wd3.myworkdayjobs.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "tollgroup.wd5.myworkdayjobs.com": {
-   "requests": 5,
-   "errors": 0
-  },
-  "aurecongroup.wd3.myworkdayjobs.com": {
-   "requests": 12,
-   "errors": 0
-  },
-  "uobgroup.wd3.myworkdayjobs.com": {
-   "requests": 64,
-   "errors": 0
-  },
-  "damen.wd3.myworkdayjobs.com": {
+  "api.lever.co": {
    "requests": 4,
    "errors": 0
   },
-  "jll.wd1.myworkdayjobs.com": {
+  "jobs.schaeffler.com": {
+   "requests": 13,
+   "errors": 0
+  },
+  "jobs.dksh.com": {
    "requests": 3,
    "errors": 0
   },
-  "cnx.wd1.myworkdayjobs.com": {
+  "careers.ey.com": {
+   "requests": 5,
+   "errors": 0
+  },
+  "job.schindler.com": {
+   "requests": 2,
+   "errors": 0
+  },
+  "careers.zuelligpharma.com": {
    "requests": 3,
    "errors": 0
   },
-  "vialto.wd107.myworkdayjobs.com": {
+  "jobs.danfoss.com": {
    "requests": 3,
    "errors": 0
   },
-  "pierrefabre.wd3.myworkdayjobs.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "knightfrank.wd103.myworkdayjobs.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "ag.wd3.myworkdayjobs.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "jas.wd1.myworkdayjobs.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "galderma.wd3.myworkdayjobs.com": {
-   "requests": 3,
-   "errors": 0
-  },
-  "cw.wd1.myworkdayjobs.com": {
+  "careers.bureauveritas.com": {
    "requests": 4,
    "errors": 0
   },
-  "erm.wd3.myworkdayjobs.com": {
+  "careers.anz.com": {
+   "requests": 2,
+   "errors": 0
+  },
+  "jobs.takeda.com": {
+   "requests": 2,
+   "errors": 0
+  },
+  "jobs.boehringer-ingelheim.com": {
+   "requests": 7,
+   "errors": 0
+  },
+  "iaaras.fa.ocs.oraclecloud.com": {
    "requests": 3,
    "errors": 0
   },
-  "gsknch.wd3.myworkdayjobs.com": {
+  "jobs.servier.com": {
+   "requests": 2,
+   "errors": 0
+  },
+  "careers.novonordisk.com": {
+   "requests": 2,
+   "errors": 0
+  },
+  "jobs.buschvacuum.com": {
    "requests": 3,
    "errors": 0
   },
-  "rhe.wd3.myworkdayjobs.com": {
+  "careers.dekra.com": {
+   "requests": 2,
+   "errors": 0
+  },
+  "jobs.vantive.com": {
+   "requests": 2,
+   "errors": 0
+  },
+  "jobs.festo.com": {
    "requests": 3,
    "errors": 0
   },
-  "michelinhr.wd3.myworkdayjobs.com": {
+  "jobs.kuka.com": {
+   "requests": 2,
+   "errors": 0
+  },
+  "ecyq.fa.em2.oraclecloud.com": {
    "requests": 3,
+   "errors": 0
+  },
+  "jobs.rkw-group.com": {
+   "requests": 4,
+   "errors": 0
+  },
+  "careers.astellas.com": {
+   "requests": 2,
+   "errors": 0
+  },
+  "careers.endress.com": {
+   "requests": 2,
+   "errors": 0
+  },
+  "jobs.bostonscientific.com": {
+   "requests": 2,
+   "errors": 0
+  },
+  "ejhp.fa.us6.oraclecloud.com": {
+   "requests": 3,
+   "errors": 0
+  },
+  "careers.coats.com": {
+   "requests": 3,
+   "errors": 0
+  },
+  "jobs.lrqa.com": {
+   "requests": 2,
+   "errors": 0
+  },
+  "careers.qualcomm.com": {
+   "requests": 4,
+   "errors": 0
+  },
+  "careers.aoshearman.com": {
+   "requests": 2,
+   "errors": 0
+  },
+  "careers.gehealthcare.com": {
+   "requests": 2,
+   "errors": 0
+  },
+  "careers.corning.com": {
+   "requests": 5,
+   "errors": 0
+  },
+  "jobs.danaher.com": {
+   "requests": 2,
+   "errors": 0
+  },
+  "careers.merckgroup.com": {
+   "requests": 7,
+   "errors": 0
+  },
+  "careers.thorntontomasetti.com": {
+   "requests": 2,
+   "errors": 0
+  },
+  "careers.onelineage.com": {
+   "requests": 2,
+   "errors": 0
+  },
+  "careers.emdgroup.com": {
+   "requests": 3,
+   "errors": 0
+  },
+  "careers.brooksrunning.com": {
+   "requests": 2,
+   "errors": 0
+  },
+  "careers.synopsys.com": {
+   "requests": 10,
+   "errors": 0
+  },
+  "www.jobs-ups.com": {
+   "requests": 2,
+   "errors": 0
+  },
+  "jobs.infineon.com": {
+   "requests": 2,
+   "errors": 0
+  },
+  "ybox.vn": {
+   "requests": 2,
    "errors": 0
   }
  },
- "ybox_rejected": [],
+ "ybox_rejected": [
+  {
+   "title": "[HCM] Ứng Dụng Đặt Phòng Online GO2JOY Tuyển Dụng Chuyên Viên Business Development & Partnership Full-time 2026",
+   "reason": "not_whitelisted"
+  },
+  {
+   "title": "[Online-HCM] Nhà Hàng Wok To Box Tuyển Dụng Cộng Tác Viên Content Part-time 2026",
+   "reason": "keyword:cộng tác viên"
+  },
+  {
+   "title": "[HN]  Hệ Thống Giáo Dục Stanford English Tuyển Dụng Nhân Viên Marketing - Content Và Media Full-time 2026",
+   "reason": "not_whitelisted"
+  },
+  {
+   "title": "[HCM] Trung Tâm Anh Ngữ Quốc Tế Ares English Tuyển Dụng Thực Tập Sinh Kinh Doanh (Sales/Telesales) Part-time 2026",
+   "reason": "not_whitelisted"
+  },
+  {
+   "title": "[HCM] Thương Hiệu Chăm Sóc Cá Nhân Dream Garden Tuyển Dụng Nhân Viên Chỉnh Sửa Video Ngắn (TikTok) Full-time 2026",
+   "reason": "not_whitelisted"
+  },
+  {
+   "title": "[HN] Công Ty Lữ Hành Luxury Inb Tuyển Dụng Thực Tập Sinh Marketing Part-time/full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Công Ty Công Nghệ Trường Minh Thịnh Tuyển Dụng Thực Tập Sinh Tổ Chức Sự Kiện Part-time 2026",
+   "reason": "keyword:sự kiện"
+  },
+  {
+   "title": "[Online] Công Ty JETDYNO Tuyển Dụng Cộng Tác Viên Tester Và Vận Hành Phần Mềm Thị Trường US Và SEA Part-time 2026",
+   "reason": "keyword:cộng tác viên"
+  },
+  {
+   "title": "[HCM] Công Ty SHOEFABRIK Tuyển Dụng Trợ Lý Receptionist Kiêm Admin Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HN] Thương Hiệu Thời Trang DEME Tuyển Dụng Nhân Viên Kinh Doanh Online Ca Tối Full-time 2026",
+   "reason": "not_whitelisted"
+  },
+  {
+   "title": "[ĐN] Công Ty TVG Software Tuyển Dụng Nhân Viên UA Marketing (Mobile App) Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Công Ty Giải Pháp Nhân Sự Ánh Sáng Light Human Tuyển Dụng Nhân Viên Tư Vấn Tài Chính Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Công Ty New Retail CPG Tuyển Dụng Nhân Viên MRP Planner Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[Phú Quốc] Công Ty Sharon Bakery Tuyển Dụng Nhân Viên Xưởng Bánh Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HN] Công Ty Lữ Hành INB Tuyển Dụng Thực Tập Sinh Marketing Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HN] Công Ty Việt Hàn Tuyển Dụng Nhân Viên Pháp Chế Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM ] Công Ty VIENTITY Tuyển Dụng Thực Tập Sinh Marketing Và Account Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HN] Công Ty MAXGROUP Tuyển Dụng Nhân Viên Content Writer Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Công Ty Light Human Tuyển Dụng Nhân Viên Tư Vấn Sản Phẩm Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Thương Hiệu Thời Trang Lơ Boutique Tuyển Dụng Nhân Viên Bán Hàng Part-time 2026",
+   "reason": "not_whitelisted"
+  },
+  {
+   "title": "[HCM] Cửa Hàng SAIGONSNEAKER Tuyển Dụng Nhân Viên Bán Giày Part-time/Full-time 2026",
+   "reason": "not_whitelisted"
+  },
+  {
+   "title": "[Hưng Yên] Công Ty Viêc Có Tuyển Dụng Nhân Viên Thời Vụ Kho, Nhân Viên Kho Part-time/Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Công Ty Thực Phẩm Quốc Tế Nam Dương Tuyển Dụng Nhân Viên Operational Planning Specialist Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Học Viện Gia Sư The TutorX Việt Nam Tuyển Dụng Chuyên Viên Content Marketing Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Công Ty Unity Sport Tuyển Dụng Nhân Viên Mobile App Optimization (ASO) Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Công Ty Pressure System Builders Vietnam Tuyển Dụng Thực Tập Sinh Human Resource Admin Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HN] Công Ty Katinat Saigon Káfe Tuyển Dụng Thực Tập Sinh Hành Chính Nhân Sự Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[Online] BETORAKU - Hiệp Hội Văn Hoá Nghệ Thuật Truyền Thống Việt Nam Tại Nhật Bản Tuyển Dụng Cộng Tác Viên Truyền Thông Dự Án Việt - Nhật Full-time 2026",
+   "reason": "keyword:cộng tác viên"
+  },
+  {
+   "title": "[HCM] Tập Đoàn Bất Động Sản Đa Quốc Gia Gamuda Land Tuyển Dụng Thực Tập Sinh Legal/Điều Phối Viên Dự Án/Township & Property Admin Full-time 2026",
+   "reason": "keyword:dự án"
+  },
+  {
+   "title": "[HCM] Trung Tâm Ngôn Ngữ Tiếng Hàn Tuyển Dụng Nhân Viên Hành Chính Full-time 2026 (Thu Nhập: 17.850.000 VNĐ/ Tháng)",
+   "reason": "not_whitelisted"
+  },
+  {
+   "title": "[HCM] Hệ Thống Bán Lẻ Di Động CELLPHONES Tuyển Dụng Thực Tập Sinh Logistics Full-time 2026",
+   "reason": "not_whitelisted"
+  },
+  {
+   "title": "[HCM] Công Ty Dệt May - Đầu Tư - Thương Mại Thành Công Tuyển Dụng Thực Tập Sinh Logistics Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Siêu Thị Hoa Sen Home Tuyển Dụng Thực Tập Sinh Thiết Kế Đồ Họa Full-time 2026",
+   "reason": "not_whitelisted"
+  },
+  {
+   "title": "[HN] Tập Đoàn Công Nghệ G-Group Tuyển Dụng Cộng Tác Viên Kiểm Tra Chất Lượng Linh Kiện (QC) Part-time 2026",
+   "reason": "keyword:cộng tác viên"
+  },
+  {
+   "title": "[Online-HCM] Công Ty Phần Mềm Kyanon Digital Tuyển Dụng Thực Tập Sinh Tuyển Dụng IT Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Công Ty Fujifilm Business Innovation Tuyển Dụng Nhân Viên Kế Toán Part-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HN/HCM] Ngân Hàng Xuất Nhập Khẩu Việt Nam Eximbank Tuyển Dụng Kiểm Toán Nội Bộ Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Công Ty Dịch Vụ Di Động Trực Tuyến Momo Tuyển Dụng Thực Tập Sinh AI Communication Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HN] Ngân Hàng Thương Mại Tiên Phong TP Bank Tuyển Dụng Cộng Tác Viên Hành Chính Full-time 2026",
+   "reason": "keyword:cộng tác viên"
+  },
+  {
+   "title": "[HN] Công Ty Công Nghệ Thông Tin SmartOSC Tuyển Dụng Internal Event Fresher Full-time 2026 (Hỗ Trợ: Lên Đến 6.000.000 VNĐ/ Tháng)",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Tập Đoàn Nhân Sự Đa Quốc Gia Manpower Group Việt Nam Tuyển Dụng Thực Tập Sinh Tuyển Dụng Và Hành Chính Nhân Sự Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Công Ty Leschaco Việt Nam Tuyển Dụng Thực Tập Sinh Hỗ Trợ Logistics Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Công Ty AEON Việt Nam Chi Nhánh Tân Phú Tuyển Dụng Thực Tập Sinh Pháp Chế (Legal) Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Tập Đoàn Công Nghệ Đa Quốc Gia AnyMind Group Tuyển Dụng Thực Tập Sinh Account/ Influencer Marketing Full-time 2026 (Thu Nhập: 5.000.000 VNĐ/ Tháng)",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM/Nghệ An/Bình Định/Bà Rịa - Vũng Tàu] Chương Trình Quản Trị Viên Dự Nguồn Tại Tập Đoàn Hoa Sen Full-time 2026",
+   "reason": "keyword:chương trình"
+  },
+  {
+   "title": "[HN] Công Ty Giao Nhận Toàn Cầu DHL Global Forwarding Việt Nam Tuyển Dụng Thực Tập Sinh Value Added Services Department Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HN] Công Ty Onsen Fuji Tuyển Dụng Thực Tập Sinh Tuyển Dụng Full-time 2026",
+   "reason": "no_employer"
+  },
+  {
+   "title": "[HN] Công Ty The Catalyst For English Tuyển Dụng Giáo Viên IELTS Part-time/Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HCM] Tập Đoàn Bán Lẻ Central Retail Việt Nam Tuyển Dụng Thực Tập Sinh Admin Full-time 2026",
+   "reason": "ambiguous_legal_entity_no_llm"
+  },
+  {
+   "title": "[HN/HCM] Chương Trình Tuyển Dụng MoMo Talent 2027 (Tech Edition): From Trainee To Future Leader Tại Công Ty Kỳ Lân Công Nghệ MoMo (Dành Cho Ứng Viên Mới Tốt Ngh",
+   "reason": "keyword:chương trình"
+  }
+ ],
  "alerts": []
 }
