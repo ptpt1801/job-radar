@@ -1,12 +1,5 @@
 [
  {
-  "run_at": "2026-11-19T10:24:32Z",
-  "total_open": 1278,
-  "sources": {
-   "workday": 0
-  }
- },
- {
   "run_at": "2026-11-19T13:38:09Z",
   "total_open": 1278,
   "sources": {
@@ -251,6 +244,13 @@
    "greenhouse": 21,
    "lever": 10,
    "ybox": 0
+  }
+ },
+ {
+  "run_at": "2026-11-27T00:13:47Z",
+  "total_open": 1683,
+  "sources": {
+   "workday": 0
   }
  }
 ]
