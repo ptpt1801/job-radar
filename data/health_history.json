@@ -1,12 +1,5 @@
 [
  {
-  "run_at": "2026-11-19T16:21:08Z",
-  "total_open": 1275,
-  "sources": {
-   "workday": 59
-  }
- },
- {
   "run_at": "2026-11-19T18:43:34Z",
   "total_open": 1275,
   "sources": {
@@ -251,6 +244,17 @@
   "total_open": 1678,
   "sources": {
    "workday": 893
+  }
+ },
+ {
+  "run_at": "2026-11-27T19:47:11Z",
+  "total_open": 1676,
+  "sources": {
+   "smartrecruiters": 463,
+   "custom": 417,
+   "greenhouse": 20,
+   "lever": 10,
+   "ybox": 0
   }
  }
 ]
