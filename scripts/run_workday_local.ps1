@@ -18,9 +18,14 @@ function Invoke-Retry([scriptblock]$block, [int]$tries = 4) {
     return $false
 }
 
-# Logon trigger catches up on runs missed while the PC was off; skip if a run succeeded recently.
+# Catch-up task (logon + every 2 h) re-runs only when a scheduled run was missed: skip if the last
+# success is under 11 hours old (scheduled runs are 12 hours apart).
 $okFile = Join-Path $repo "logs\last_ok.txt"
-if ($args -contains "-IfStale" -and (Test-Path $okFile) -and ((Get-Date) - (Get-Item $okFile).LastWriteTime).TotalHours -lt 8) { exit 0 }
+if ($args -contains "-IfStale" -and (Test-Path $okFile) -and ((Get-Date) - (Get-Item $okFile).LastWriteTime).TotalHours -lt 11) { exit 0 }
+
+# One run at a time: the scheduled and catch-up tasks overlapped on 2026-11-27 after a wake-up.
+$mutex = New-Object System.Threading.Mutex($false, "Local\JobRadarWorkday")
+if (-not $mutex.WaitOne(0)) { exit 0 }
 
 # Keep the PC awake while this runs (idle sleep killed a run on 2026-11-22).
 Add-Type -Namespace JR -Name Power -MemberDefinition '[DllImport("kernel32.dll")] public static extern uint SetThreadExecutionState(uint f);'

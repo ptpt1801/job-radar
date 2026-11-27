@@ -23,19 +23,25 @@ def stale_alert(meta: dict, now: dt.datetime, hours: int) -> str | None:
 
 def alerts(health: dict, history: list[dict], cfg: dict) -> list[str]:
     out = []
+    comps = health.get("companies", {})
+    # HTTP 429 = rate limit (Workday blocks GitHub runner IPs); expected and covered by the owner-PC
+    # run + stale hiding, so it does not count as a broken source.
+    limited = {c for c, v in comps.items() if not v.get("ok") and "429" in str(v.get("error") or "")}
+    by_adapter: dict[str, set] = {}
+    for c, v in comps.items():
+        by_adapter.setdefault(v.get("adapter"), set()).add(c)
+    all_limited = {a for a, cs in by_adapter.items() if cs and cs <= limited}
     recent = history[-7:]
     if recent:
         for src, h in health["sources"].items():
+            if src in all_limited:
+                continue
             avg = sum(r.get("sources", {}).get(src, 0) for r in recent) / len(recent)
             if h["jobs_found"] == 0 and avg > 0:
                 out.append(f"Source `{src}` returned 0 jobs (7-run average {avg:.1f}).")
         avg_total = sum(r.get("total_open", 0) for r in recent) / len(recent)
         if avg_total and health["total_open"] < avg_total * (1 - cfg["drop_pct_alert"] / 100):
             out.append(f"Open jobs dropped to {health['total_open']} (7-run average {avg_total:.0f}).")
-    comps = health.get("companies", {})
-    # HTTP 429 = rate limit (Workday blocks GitHub runner IPs); expected and covered by the owner-PC
-    # run + stale hiding, so it does not count as a broken source.
-    limited = {c for c, v in comps.items() if not v.get("ok") and "429" in str(v.get("error") or "")}
     failed = [c for c, v in comps.items() if not v.get("ok") and c not in limited]
     base = len(comps) - len(limited)
     if base and len(failed) / base > 0.2:
