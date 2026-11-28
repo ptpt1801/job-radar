@@ -1,5 +1,178 @@
 {
  "pending": {
+  "a0742862f21f": {
+   "job": {
+    "id": "a0742862f21f",
+    "source": "workday",
+    "source_job_id": "cushman_wakefield:R344777",
+    "company_id": "cushman_wakefield",
+    "company": "Cushman & Wakefield",
+    "hq_country": "US",
+    "region": "americas",
+    "industry": "consulting_finance",
+    "title": "EIC Intern - Commercial Real Estate 2027 Internship, Ho Chi Minh City",
+    "url": "https://cw.wd1.myworkdayjobs.com/External/job/CW-Site---VNM---Ho-Chi-Minh---District-1-9-11-Ton-Duc-Thang-Street-Sai-Gon-Ward/EIC-Intern---Commercial-Real-Estate-2027-Internship--Ho-Chi-Minh-City_R344777",
+    "lang": "en",
+    "city": "hcmc",
+    "address_raw": "CW Site - VNM - Ho Chi Minh - District 1, 9-11 Ton Duc Thang Street, Sai Gon Ward",
+    "work_mode": null,
+    "employment_type": "internship",
+    "posted_at": "2026-11-24T00:00:00Z",
+    "posted_text": "Posted 3 Days Ago",
+    "deadline": null,
+    "first_seen_at": "2026-11-24T14:56:31Z",
+    "last_seen_at": "2026-11-27T02:24:10Z",
+    "closed_at": null,
+    "status": "open",
+    "content_hash": "0dd9dd8de45d4fc6",
+    "level": "internship",
+    "function": "sales",
+    "skills": [
+     "english"
+    ],
+    "languages_required": [
+     "english"
+    ],
+    "experience_min_years": null,
+    "salary": null,
+    "match": 74
+   },
+   "missing_runs": 1
+  },
+  "60f61652009f": {
+   "job": {
+    "id": "60f61652009f",
+    "source": "workday",
+    "source_job_id": "thermo_fisher:R-01374777",
+    "company_id": "thermo_fisher",
+    "company": "Thermo Fisher Scientific",
+    "hq_country": "US",
+    "region": "americas",
+    "industry": "pharma_medtech",
+    "title": "FSP Local CTM - Vietnam",
+    "url": "https://thermofisher.wd5.myworkdayjobs.com/ThermoFisherCareers/job/Vietnam-Vietnam/FSP-Local-CTM---Vietnam_R-01374777-1",
+    "lang": "en",
+    "city": "other_vn",
+    "address_raw": "Vietnam - Remote",
+    "work_mode": "remote",
+    "employment_type": "full_time",
+    "posted_at": "2026-11-12T00:00:00Z",
+    "posted_text": "Posted 14 Days Ago",
+    "deadline": null,
+    "first_seen_at": "2026-11-18T11:09:30Z",
+    "last_seen_at": "2026-11-27T02:24:10Z",
+    "closed_at": null,
+    "status": "open",
+    "content_hash": "f8e316b6d3cb2c32",
+    "level": "experienced",
+    "function": "engineering",
+    "skills": [
+     "english",
+     "excel",
+     "communication",
+     "financial_analysis",
+     "leadership",
+     "problem_solving",
+     "cloud"
+    ],
+    "languages_required": [
+     "english"
+    ],
+    "experience_min_years": null,
+    "salary": null,
+    "match": 58,
+    "description_excerpt": "Work Schedule Standard (Mon-Fri) Environmental Conditions Office Job Description Join Us as a Clinical Trial Manager in Vietnam - Make an Impact at the Forefront of Innovation The Clinical Trial Manager is accountable for achieving the final clinical deliverable (usually clean data from evaluable patients as specified in the study protocol) within the time period specified in the contract with the customer. The Clinical Trial Manager interprets data on project issues and makes good business decisions with support from experienced team members or line manager. Works to ensure that all…"
+   },
+   "missing_runs": 1
+  },
+  "9b46b2dfc8f6": {
+   "job": {
+    "id": "9b46b2dfc8f6",
+    "source": "workday",
+    "source_job_id": "jll:REQ546208",
+    "company_id": "jll",
+    "company": "JLL",
+    "hq_country": "US",
+    "region": "americas",
+    "industry": "consulting_finance",
+    "title": "Senior Procurement Officer",
+    "url": "https://jll.wd1.myworkdayjobs.com/jllcareers/job/Ho-Chi-Minh-City-Vietnam/Senior-Procurement-Officer_REQ546208",
+    "lang": "en",
+    "city": "hcmc",
+    "address_raw": "VNM-CLIENT Ho Chi Minh City-IFM HSBC Centre Point",
+    "work_mode": null,
+    "employment_type": "full_time",
+    "posted_at": "2026-11-02T00:00:00Z",
+    "posted_text": "Posted 24 Days Ago",
+    "deadline": "2026-11-30",
+    "first_seen_at": "2026-11-21T11:04:47Z",
+    "last_seen_at": "2026-11-27T02:24:10Z",
+    "closed_at": null,
+    "status": "open",
+    "content_hash": "83dcd4d6846d56c1",
+    "level": "experienced",
+    "function": "supply_chain",
+    "skills": [
+     "english",
+     "excel",
+     "procurement",
+     "negotiation",
+     "problem_solving",
+     "machine_learning"
+    ],
+    "languages_required": [
+     "english"
+    ],
+    "experience_min_years": 5,
+    "salary": null,
+    "match": 65,
+    "description_excerpt": "JLL empowers you to shape a brighter way. Our people at JLL are shaping the future of real estate for a better world by combining world class services, advisory and technology for our clients. We are committed to hiring the best, most talented people and empowering them to thrive, grow meaningful careers and to find a place where they belong. Whether you’ve got deep experience in commercial real estate, skilled trades or technology, or you’re looking to apply your relevant experience to a new industry, join our team as we help shape a brighter way forward. Key Accountabilities Reporting…"
+   },
+   "missing_runs": 1
+  },
+  "8a2c83c6fe78": {
+   "job": {
+    "id": "8a2c83c6fe78",
+    "source": "workday",
+    "source_job_id": "thermo_fisher:R-01372489",
+    "company_id": "thermo_fisher",
+    "company": "Thermo Fisher Scientific",
+    "hq_country": "US",
+    "region": "americas",
+    "industry": "pharma_medtech",
+    "title": "Director HR, Enabling Functions, APMEA",
+    "url": "https://thermofisher.wd5.myworkdayjobs.com/ThermoFisherCareers/job/Singapore-Singapore/Director-HR--Enabling-Functions--APMEA_R-01372489-1",
+    "lang": "en",
+    "city": "other_vn",
+    "address_raw": "Singapore - Singapore - 1 Science Park Road",
+    "work_mode": "hybrid",
+    "employment_type": "full_time",
+    "posted_at": "2026-10-21T00:00:00Z",
+    "posted_text": "Posted 30+ Days Ago",
+    "deadline": null,
+    "first_seen_at": "2026-11-18T11:09:30Z",
+    "last_seen_at": "2026-11-27T02:24:10Z",
+    "closed_at": null,
+    "status": "open",
+    "content_hash": "ceda70d74c7df9ee",
+    "level": "manager",
+    "function": "hr",
+    "skills": [
+     "english",
+     "data_analysis",
+     "presentation",
+     "leadership"
+    ],
+    "languages_required": [
+     "english"
+    ],
+    "experience_min_years": 10,
+    "salary": null,
+    "match": 52,
+    "description_excerpt": "Work Schedule Standard (Mon-Fri) Environmental Conditions Office Job Description As part of the Thermo Fisher Scientific team, you'll discover meaningful work that makes a positive impact on a global scale. Join our colleagues in bringing our Mission to life every single day to enable our customers to make the world healthier, cleaner and safer. We provide our global teams with the resources needed to achieve individual career goals while helping to take science a step beyond by developing solutions for some of the world's toughest challenges, like protecting the environment, making sure our…"
+   },
+   "missing_runs": 1
+  },
   "957ea08298eb": {
    "job": {
     "id": "957ea08298eb",
@@ -607,50 +780,6 @@
     "salary": null,
     "match": 64,
     "description_excerpt": "Job Description: EHS Specialist – Carrier HVAC Vietnam Role Level: P2-P3 (Junior Specialist) Reports to: Associate Director EH&S HVAC APAC Sales and Aftermarket Service Location: Carrier Vietnam (CVN) Position Summary The EHS Specialist is responsible for the day-to-day operational execution of Environment, Health, and Safety programs for Carrier HVAC in Vietnam. This role focuses on maintaining local legal compliance, conducting routine inspections, coordinating training, and ensuring accurate data management. It is a hands-on role designed to support the APAC EHS Leader (Service and…"
-   },
-   "missing_runs": 1
-  },
-  "05134570da84": {
-   "job": {
-    "id": "05134570da84",
-    "source": "workday",
-    "source_job_id": "pg:R000154139",
-    "company_id": "pg",
-    "company": "Procter & Gamble",
-    "hq_country": "US",
-    "region": "americas",
-    "industry": "nonfood_consumer",
-    "title": "Analytics and Insights Manager",
-    "url": "https://pg.wd5.myworkdayjobs.com/1000/job/HO-CHI-MINH-CITY-OFFICE/Analytics-and-Insights-Manager_R000154139",
-    "lang": "vi",
-    "city": "hcmc",
-    "address_raw": "HO CHI MINH CITY OFFICE",
-    "work_mode": null,
-    "employment_type": "full_time",
-    "posted_at": "2026-09-14T00:00:00Z",
-    "posted_text": "Posted 30+ Days Ago",
-    "deadline": null,
-    "first_seen_at": "2026-11-18T11:09:30Z",
-    "last_seen_at": "2026-11-26T16:10:37Z",
-    "closed_at": null,
-    "status": "open",
-    "content_hash": "263fe7e75ec9c61b",
-    "level": "manager",
-    "function": "other",
-    "skills": [
-     "english",
-     "power_bi",
-     "data_analysis",
-     "leadership"
-    ],
-    "languages_required": [
-     "english",
-     "vietnamese"
-    ],
-    "experience_min_years": 2,
-    "salary": null,
-    "match": 40,
-    "description_excerpt": "Job Location HO CHI MINH CITY OFFICE Job Description Trước khi gửi hồ sơ ứng tuyển, bạn cần đọc và hoàn tất THƯ THÔNG BÁO & BIỂU MẪU ĐỒNG Ý TRAO QUYỀN XỬ LÝ DỮ LIỆU CÁ NHÂN DÀNH CHO ỨNG VIÊN tại ĐÂY. P&G chỉ có thể tiếp tục xử lý hồ sơ ứng tuyển sau khi nhận được sự đồng ý theo yêu cầu. Nếu bạn không đồng ý, P&G sẽ không thể tiếp tục xử lý hoặc xem xét hồ sơ ứng tuyển của bạn cho vị trí này. ---------------------------------------------------------------------- P&G is a leading global consumer goods company whose winning brands are built around the model of innovation. Whatever…"
    },
    "missing_runs": 1
   }
